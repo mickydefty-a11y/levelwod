@@ -1,0 +1,149 @@
+{
+  "programId": "olympic-weightlifting-deep-dive-8wk",
+  "weeks": [
+    {
+      "weekNumber": 3,
+      "focus": "Progressive loading begins — power and hang variations",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Snatch",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "power-snatch-light", "prescription": "5 sets x 2 reps, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "hang-snatch", "targetStageId": null, "prescription": "4 sets x 2 reps, light-moderate load", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Clean",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "power-clean-light", "prescription": "5 sets x 2 reps, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "hang-clean", "targetStageId": null, "prescription": "4 sets x 2 reps, light-moderate load", "notes": null },
+            { "blockType": "strength", "movementId": "front-squat", "targetStageId": "front-squat-empty-bar", "prescription": "3 sets x 6 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jerk",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-loaded", "prescription": "5 sets x 3 reps, light working weight", "notes": "First loaded reps this program." },
+            { "blockType": "strength", "movementId": "overhead-squat", "targetStageId": "ohs-loaded", "prescription": "4 sets x 4 reps, light working weight", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Lift + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 1-2 reps, light working weight", "notes": "First full squat snatch this program." },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 1-2 reps, light working weight", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Building working weights across full lifts",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Snatch",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "hang-snatch", "targetStageId": null, "prescription": "4 sets x 2 reps, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 2 reps, continued progression", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Clean",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "hang-clean", "targetStageId": null, "prescription": "4 sets x 2 reps, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 2 reps, continued progression", "notes": null },
+            { "blockType": "strength", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "3 sets x 5 reps, light working weight", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jerk",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-loaded", "prescription": "5 sets x 3 reps, continued progression", "notes": null },
+            { "blockType": "strength", "movementId": "overhead-squat", "targetStageId": "ohs-loaded", "prescription": "4 sets x 4 reps, continued progression", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Lift + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 2 reps, continued progression", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 2 reps, continued progression", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 5,
+      "focus": "Phase 2 consolidation before peak block",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Snatch",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "hang-snatch", "targetStageId": null, "prescription": "4 sets x 2 reps, near top of moderate range", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 2 reps, near top of this block's range", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Clean",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "hang-clean", "targetStageId": null, "prescription": "4 sets x 2 reps, near top of moderate range", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 2 reps, near top of this block's range", "notes": null },
+            { "blockType": "strength", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "3 sets x 5 reps, continued progression", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jerk",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-loaded", "prescription": "5 sets x 3 reps, near top of this block's range", "notes": null },
+            { "blockType": "strength", "movementId": "overhead-squat", "targetStageId": "ohs-loaded", "prescription": "4 sets x 4 reps, near top of this block's range", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Lift + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "6 sets x 1-2 reps", "notes": "Final week at this loading range before the peak block." },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "6 sets x 1-2 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

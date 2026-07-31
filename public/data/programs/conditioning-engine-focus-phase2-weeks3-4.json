@@ -1,0 +1,93 @@
+{
+  "programId": "conditioning-engine-focus-6wk",
+  "weeks": [
+    {
+      "weekNumber": 3,
+      "focus": "Building volume + interval work introduced",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Running",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "5 rounds: 2 min moderate pace, 1 min easy", "notes": "First interval structure this program — a step up from pure steady state." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Rowing",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "18 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "5 rounds: 500m at moderate pace, 90 sec rest", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bike + Jump Rope",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "double-unders", "targetStageId": "single-double-single-drill", "prescription": "5 sets, 30 seconds", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "6 rounds: 45 sec on, 75 sec off", "notes": null },
+            { "blockType": "strength", "movementId": "double-unders", "targetStageId": "du-attempts", "prescription": "6 sets, aiming for 2-5 unbroken", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — SkiErg",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            { "blockType": "metcon", "movementId": "skierg", "targetStageId": null, "prescription": "5 rounds: 400m moderate pace, 90 sec rest", "notes": null },
+            { "blockType": "strength", "movementId": "double-unders", "targetStageId": "du-attempts", "prescription": "6 sets, aiming for 3-5 unbroken", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Phase 2 consolidation — longer intervals",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Running",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "4 rounds: 3 min moderate pace, 90 sec easy", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Rowing",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "18 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "4 rounds: 750m moderate pace, 2 min rest", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bike + Jump Rope",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "double-unders", "targetStageId": "du-attempts", "prescription": "5 sets, aiming for 3-5 unbroken", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "6 rounds: 50 sec on, 70 sec off", "notes": null },
+            { "blockType": "strength", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "6 sets, aiming for 10+ unbroken", "notes": "First attempts at real unbroken sets this program." },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — SkiErg",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            { "blockType": "metcon", "movementId": "skierg", "targetStageId": null, "prescription": "4 rounds: 500m moderate pace, 2 min rest", "notes": null },
+            { "blockType": "strength", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "6 sets, aiming for 10+ unbroken", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

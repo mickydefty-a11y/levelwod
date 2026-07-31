@@ -23,6 +23,15 @@ const PROGRAM_FILES = [
   'gymnastics-track-phase2-weeks3-5.json',
   'gymnastics-track-phase3-weeks6-8.json',
   'gymnastics-track-phase4-weeks9-10.json',
+  'conditioning-engine-focus-phase1-weeks1-2.json',
+  'conditioning-engine-focus-phase2-weeks3-4.json',
+  'conditioning-engine-focus-phase3-weeks5-6.json',
+  'olympic-weightlifting-deep-dive-phase1-weeks1-2.json',
+  'olympic-weightlifting-deep-dive-phase2-weeks3-5.json',
+  'olympic-weightlifting-deep-dive-phase3-weeks6-8.json',
+  'strongman-functional-focus-phase1-weeks1-2.json',
+  'strongman-functional-focus-phase2-weeks3-4.json',
+  'strongman-functional-focus-phase3-weeks5-6.json',
 ]
 
 async function fetchJson<T>(path: string): Promise<T> {

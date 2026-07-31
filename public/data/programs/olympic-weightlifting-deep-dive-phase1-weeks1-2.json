@@ -1,0 +1,108 @@
+{
+  "id": "olympic-weightlifting-deep-dive-8wk",
+  "name": "Olympic Weightlifting Deep Dive",
+  "level": "Advanced",
+  "durationWeeks": 8,
+  "daysPerWeek": 4,
+  "description": "An 8-week purely technical program for lifters who already have a working Squat Clean and Squat Snatch from Strength Focus and want to refine technique and build toward heavier, more consistent lifts. Recommend a coach or video form-check throughout, given how technical these lifts are.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Positional mastery — slow, precise drilling",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Snatch Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "mobility", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold, Overhead Plate Hold", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "snatch-position-drills", "prescription": "5 sets x 3 reps with PVC, pausing 2 sec at each position", "notes": "Slower than a normal warmup drill — the whole point this week is precision, not speed." },
+            { "blockType": "skill", "movementId": "snatch-balance", "targetStageId": null, "prescription": "4 sets x 3 reps, empty bar", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Clean Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "mobility", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "clean-position-drills", "prescription": "5 sets x 3 reps with PVC, pausing 2 sec at each position", "notes": null },
+            { "blockType": "skill", "movementId": "front-squat", "targetStageId": "front-rack-hold", "prescription": "3 sets x 30 sec hold", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jerk Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-footwork", "prescription": "5 sets, footwork only, no bar", "notes": "Rebuilding the split from scratch with fresh focus this block." },
+            { "blockType": "skill", "movementId": "overhead-squat", "targetStageId": "ohs-empty-bar", "prescription": "4 sets x 5 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Lift Review + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "muscle-snatch-empty", "prescription": "4 sets x 5 reps", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "hang-power-clean-empty", "prescription": "4 sets x 3 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes easy pace", "notes": "Kept light on purpose — conditioning is secondary this program." },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "focus": "Continued positional work + light bar reintroduced",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Snatch Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "mobility", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "hang-power-snatch-empty", "prescription": "5 sets x 3 reps", "notes": null },
+            { "blockType": "skill", "movementId": "snatch-balance", "targetStageId": null, "prescription": "4 sets x 3 reps, light load", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Clean Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "mobility", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "hang-power-clean-empty", "prescription": "5 sets x 3 reps", "notes": null },
+            { "blockType": "skill", "movementId": "front-squat", "targetStageId": "front-squat-empty-bar", "prescription": "4 sets x 5 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jerk Positions",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-empty-bar", "prescription": "5 sets x 3 reps, empty bar", "notes": "Reintroducing the bar to the split — light and controlled." },
+            { "blockType": "skill", "movementId": "overhead-squat", "targetStageId": "ohs-empty-bar", "prescription": "4 sets x 5 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Lift Review + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "power-snatch-light", "prescription": "5 sets x 2 reps, light load", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "power-clean-light", "prescription": "5 sets x 2 reps, light load", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

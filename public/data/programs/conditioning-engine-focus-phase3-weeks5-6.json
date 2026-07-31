@@ -1,0 +1,121 @@
+{
+  "programId": "conditioning-engine-focus-6wk",
+  "weeks": [
+    {
+      "weekNumber": 5,
+      "focus": "Mixed-modal conditioning begins",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Run + Row Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "3 rounds: 800m run, 500m row, 2 min rest between rounds", "notes": "First mixed-modal piece this program — pacing both pieces evenly is the goal." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Bike + SkiErg Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "18 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "4 rounds: 45 sec bike, 45 sec skierg, 90 sec rest", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Jump Rope Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "5 sets, aiming for 10+ unbroken", "notes": null },
+            { "blockType": "strength", "movementId": "double-unders", "targetStageId": "du-volume", "prescription": "6 sets, aiming for 20-30 unbroken", "notes": "Building toward real volume." },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes continuous, moderate pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Full Engine Mix",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "3 rounds: 400m run, 250m row, 20 cal bike, 2 min rest", "notes": "The most demanding mixed piece of the program so far." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "focus": "Testing week — benchmark numbers across the board",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Test: 5k Run",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "Run 5k for time",
+              "notes": "Compare pacing and how it feels against Week 1's 15-minute easy run — same modality, far more capacity now."
+            },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Test: 2k Row",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "Row 2000m for time",
+              "notes": "A classic benchmark piece — note the time for future comparison."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Test: Bike + Double Unders",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "double-unders", "targetStageId": "du-volume", "prescription": "3 sets, easy volume", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "assault-bike",
+              "targetStageId": null,
+              "prescription": "Bike for max calories in 5 minutes",
+              "notes": "Compare pacing discipline here to Week 1, when the whole focus was learning not to blow up early."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "double-unders",
+              "targetStageId": "du-volume",
+              "prescription": "Test max unbroken double unders",
+              "notes": "Compare to zero at the start of this program."
+            },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Test: Mixed-Modal Benchmark",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "skierg",
+              "targetStageId": null,
+              "prescription": "For time: 1000m ski, 1000m row, 1000m run",
+              "notes": "A demanding closing benchmark across three modalities — a good one to repeat again in a future block to track overall engine progress."
+            },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-program note: 5k run, 2k row, bike test, and double under numbers have all been benchmarked and should show real progress from Week 1." }
+          ]
+        }
+      ]
+    }
+  ]
+}
