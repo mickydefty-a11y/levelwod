@@ -8,7 +8,11 @@ export interface ActiveProgramPointer {
   dayNumber: number
 }
 
-const store = createLocalStorageStore<ActiveProgramPointer | null>('levelwod:active-program', null)
+export const activeProgramStore = createLocalStorageStore<ActiveProgramPointer | null>(
+  'levelwod:active-program',
+  null,
+)
+const store = activeProgramStore
 
 export function useActiveProgram() {
   const pointer = useSyncExternalStore(store.subscribe, store.getSnapshot)

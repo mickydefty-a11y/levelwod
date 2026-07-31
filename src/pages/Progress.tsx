@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
+import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
 import { loadMovements } from '../lib/loadData'
 import { useProgress } from '../lib/useProgress'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
@@ -9,6 +10,37 @@ export default function Progress() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const { progress, clearMovementProgress } = useProgress()
   const { log } = useWorkoutLog()
+  const [importMessage, setImportMessage] = useState<string | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  function handleImportFile(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+
+    const reader = new FileReader()
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result as string)
+        const result = restoreBackup(data)
+        setImportMessage(result.ok ? 'Backup restored.' : result.error)
+      } catch {
+        setImportMessage("That file couldn't be read — is it a LevelWOD backup JSON file?")
+      }
+    }
+    reader.readAsText(file)
+  }
+
+  function handleReset() {
+    if (
+      window.confirm(
+        'This clears everything — saved levels, active program, and workout history. This cannot be undone. Continue?',
+      )
+    ) {
+      resetAllData()
+      setImportMessage('All data cleared.')
+    }
+  }
 
   useEffect(() => {
     loadMovements().then(setMovements)
@@ -103,6 +135,43 @@ export default function Progress() {
             ))}
           </ul>
         )}
+      </div>
+
+      <div className="mt-6">
+        <h2 className="text-sm font-semibold text-coral">Your data</h2>
+        <p className="mt-1.5 text-xs text-ink-muted">
+          Everything above is stored only in this browser. Back it up regularly so you don't lose
+          it if you clear browser data or switch devices.
+        </p>
+        <div className="mt-2 flex gap-2">
+          <button
+            onClick={downloadBackup}
+            className="flex-1 rounded-lg bg-bg-surface py-2 text-sm font-medium"
+          >
+            Export backup
+          </button>
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="flex-1 rounded-lg bg-bg-surface py-2 text-sm font-medium"
+          >
+            Import backup
+          </button>
+        </div>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="application/json"
+          onChange={handleImportFile}
+          className="hidden"
+        />
+        {importMessage && <p className="mt-2 text-xs text-coral-light">{importMessage}</p>}
+
+        <button
+          onClick={handleReset}
+          className="mt-3 w-full rounded-lg bg-white/5 py-2 text-xs text-ink-muted"
+        >
+          Clear all my data
+        </button>
       </div>
     </div>
   )

@@ -20,7 +20,11 @@ export interface WorkoutLogEntry {
   results: LoggedResult[]
 }
 
-const store = createLocalStorageStore<WorkoutLogEntry[]>('levelwod:workout-log', [])
+export const workoutLogStore = createLocalStorageStore<WorkoutLogEntry[]>(
+  'levelwod:workout-log',
+  [],
+)
+const store = workoutLogStore
 
 export function useWorkoutLog() {
   const log = useSyncExternalStore(store.subscribe, store.getSnapshot)

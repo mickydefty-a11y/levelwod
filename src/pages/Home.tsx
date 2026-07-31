@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
 import { useActiveProgram } from '../lib/useActiveProgram'
+import { useOnboarding } from '../lib/useOnboarding'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
 import type { Movement } from '../types/movement'
@@ -15,6 +16,7 @@ export default function Home() {
   const { pointer } = useActiveProgram()
   const { progress } = useProgress()
   const { completed } = useProgramHistory()
+  const { hasSeenIntro } = useOnboarding()
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -27,6 +29,10 @@ export default function Home() {
   )
 
   const progressCount = Object.keys(progress).length
+
+  if (!hasSeenIntro) {
+    return <Navigate to="/welcome" replace />
+  }
 
   if (!programs || !movementIndex) {
     return <p className="mt-4 text-ink-muted">Loading…</p>
@@ -44,7 +50,16 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold">LevelWOD</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">LevelWOD</h1>
+        <Link
+          to="/welcome"
+          aria-label="How this app works"
+          className="flex h-7 w-7 items-center justify-center rounded-full bg-bg-surface text-sm text-ink-muted"
+        >
+          ?
+        </Link>
+      </div>
 
       <div className="mt-4 flex gap-3">
         <div className="flex-1 rounded-xl bg-bg-surface p-3">

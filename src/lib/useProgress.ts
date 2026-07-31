@@ -9,7 +9,8 @@ export interface ProgressEntry {
 
 export type ProgressMap = Record<string, ProgressEntry>
 
-const store = createLocalStorageStore<ProgressMap>('levelwod:progress', {})
+export const progressStore = createLocalStorageStore<ProgressMap>('levelwod:progress', {})
+const store = progressStore
 
 export function useProgress() {
   const progress = useSyncExternalStore(store.subscribe, store.getSnapshot)

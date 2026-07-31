@@ -6,7 +6,11 @@ export interface CompletedProgram {
   completedAt: string
 }
 
-const store = createLocalStorageStore<CompletedProgram[]>('levelwod:completed-programs', [])
+export const programHistoryStore = createLocalStorageStore<CompletedProgram[]>(
+  'levelwod:completed-programs',
+  [],
+)
+const store = programHistoryStore
 
 export function useProgramHistory() {
   const completed = useSyncExternalStore(store.subscribe, store.getSnapshot)
