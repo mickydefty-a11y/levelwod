@@ -71,7 +71,7 @@ export default function Progress() {
       ) : entries.length === 0 ? (
         <p className="mt-4 text-sm text-ink-muted">
           No progress saved yet. Open any movement in the{' '}
-          <Link to="/library" className="text-coral-light underline">
+          <Link to="/library" className="text-accent-light underline">
             Library
           </Link>{' '}
           and tap a stage or level to mark where you're at.
@@ -85,7 +85,7 @@ export default function Progress() {
             >
               <Link to={`/library/${e.movementId}`} className="text-sm">
                 {e.movement!.name}
-                <span className="ml-2 text-xs text-coral-light">{e.label}</span>
+                <span className="ml-2 text-xs text-accent-light">{e.label}</span>
               </Link>
               <button
                 onClick={() => clearMovementProgress(e.movementId)}
@@ -99,7 +99,7 @@ export default function Progress() {
       )}
 
       <div className="mt-6">
-        <h2 className="text-sm font-semibold text-coral">Workout history</h2>
+        <h2 className="text-sm font-semibold text-accent">Workout history</h2>
         {log.length === 0 ? (
           <p className="mt-1.5 text-sm text-ink-muted">
             Completed days will show up here once you mark a session done.
@@ -121,7 +121,7 @@ export default function Progress() {
                   <ul className="mt-1.5 space-y-0.5">
                     {entry.results.map((r) => (
                       <li key={r.blockIndex} className="text-xs">
-                        <Link to={`/library/${r.movementId}`} className="text-coral-light">
+                        <Link to={`/library/${r.movementId}`} className="text-accent-light">
                           {r.movementName}
                         </Link>
                         <span className="text-ink-muted"> — {r.result}</span>
@@ -138,7 +138,7 @@ export default function Progress() {
       </div>
 
       <div className="mt-6">
-        <h2 className="text-sm font-semibold text-coral">Your data</h2>
+        <h2 className="text-sm font-semibold text-accent">Your data</h2>
         <p className="mt-1.5 text-xs text-ink-muted">
           Everything above is stored only in this browser. Back it up regularly so you don't lose
           it if you clear browser data or switch devices.
@@ -164,7 +164,7 @@ export default function Progress() {
           onChange={handleImportFile}
           className="hidden"
         />
-        {importMessage && <p className="mt-2 text-xs text-coral-light">{importMessage}</p>}
+        {importMessage && <p className="mt-2 text-xs text-accent-light">{importMessage}</p>}
 
         <button
           onClick={handleReset}

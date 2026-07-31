@@ -82,7 +82,7 @@ export default function Home() {
           </p>
           <Link
             to="/programs"
-            className="mt-3 inline-block rounded-lg bg-coral px-3 py-2 text-sm font-medium text-bg"
+            className="mt-3 inline-block rounded-lg bg-accent px-3 py-2 text-sm font-medium text-bg"
           >
             Browse programs
           </Link>
@@ -90,7 +90,7 @@ export default function Home() {
       ) : (
         <div className="mt-4">
           <div className="flex items-baseline justify-between">
-            <h2 className="text-sm font-semibold text-coral">{program.name}</h2>
+            <h2 className="text-sm font-semibold text-accent">{program.name}</h2>
             <Link to={`/programs/${program.id}`} className="text-xs text-ink-muted underline">
               Full program
             </Link>
@@ -114,7 +114,7 @@ export default function Home() {
 
       {readyToTry.length > 0 && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Ready to try next</h2>
+          <h2 className="text-sm font-semibold text-accent">Ready to try next</h2>
           <p className="mt-0.5 text-xs text-ink-muted">
             You've made progress on everything these need first.
           </p>
@@ -136,7 +136,7 @@ export default function Home() {
 
       {recentlyCompleted.length > 0 && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Completed programs</h2>
+          <h2 className="text-sm font-semibold text-accent">Completed programs</h2>
           <ul className="mt-1.5 space-y-1.5">
             {recentlyCompleted.map((c) => (
               <li

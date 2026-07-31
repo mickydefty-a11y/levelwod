@@ -22,7 +22,7 @@ function movementHasLevel(movement: Movement, level: string): boolean {
 }
 
 const typeBadge: Record<Movement['type'], string> = {
-  progression: 'bg-coral/20 text-coral-light',
+  progression: 'bg-accent/20 text-accent-light',
   tutorial: 'bg-white/10 text-ink-muted',
   composite: 'bg-white/20 text-ink',
 }
@@ -78,7 +78,7 @@ export default function Library() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Search movements…"
-        className="mt-4 w-full rounded-lg bg-bg-surface px-3 py-2 text-sm placeholder:text-ink-muted focus:outline-none focus:ring-1 focus:ring-coral"
+        className="mt-4 w-full rounded-lg bg-bg-surface px-3 py-2 text-sm placeholder:text-ink-muted focus:outline-none focus:ring-1 focus:ring-accent"
       />
 
       {movements && (
@@ -89,7 +89,7 @@ export default function Library() {
                 key={c}
                 onClick={() => setCategory(c)}
                 className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium ${
-                  category === c ? 'bg-coral text-bg' : 'bg-bg-surface text-ink-muted'
+                  category === c ? 'bg-accent text-bg' : 'bg-bg-surface text-ink-muted'
                 }`}
               >
                 {c === ALL ? 'All categories' : c}
@@ -103,7 +103,7 @@ export default function Library() {
                 key={l}
                 onClick={() => setLevel(l)}
                 className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium ${
-                  level === l ? 'bg-coral text-bg' : 'bg-bg-surface text-ink-muted'
+                  level === l ? 'bg-accent text-bg' : 'bg-bg-surface text-ink-muted'
                 }`}
               >
                 {l === ALL ? 'All levels' : l}
@@ -112,7 +112,7 @@ export default function Library() {
             <button
               onClick={() => setBodyweightOnly((v) => !v)}
               className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium ${
-                bodyweightOnly ? 'bg-coral text-bg' : 'bg-bg-surface text-ink-muted'
+                bodyweightOnly ? 'bg-accent text-bg' : 'bg-bg-surface text-ink-muted'
               }`}
             >
               Bodyweight only
@@ -135,7 +135,7 @@ export default function Library() {
         <div className="mt-4 space-y-6">
           {[...grouped.entries()].map(([cat, subgroups]) => (
             <section key={cat}>
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-coral">{cat}</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-accent">{cat}</h2>
               <div className="mt-2 space-y-4">
                 {[...subgroups.entries()].map(([subcategory, items]) => (
                   <div key={subcategory}>

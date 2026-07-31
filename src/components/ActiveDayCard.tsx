@@ -82,7 +82,7 @@ export default function ActiveDayCard({
       </ul>
       <button
         onClick={handleComplete}
-        className="mt-2 w-full rounded-lg bg-coral py-2 text-sm font-medium text-bg"
+        className="mt-2 w-full rounded-lg bg-accent py-2 text-sm font-medium text-bg"
       >
         {isFinalDay ? 'Finish program 🎉' : 'Mark day complete'}
       </button>

@@ -42,7 +42,7 @@ export default function ProgramDetail() {
     return (
       <div>
         <p className="text-ink-muted">Program not found.</p>
-        <Link to="/programs" className="mt-2 inline-block text-coral-light underline">
+        <Link to="/programs" className="mt-2 inline-block text-accent-light underline">
           Back to Programs
         </Link>
       </div>
@@ -60,15 +60,15 @@ export default function ProgramDetail() {
         {program.level} · {program.durationWeeks} weeks · {program.daysPerWeek} days/week
       </p>
       {isCompleted(program.id) && (
-        <p className="mt-1 text-xs text-coral-light">
+        <p className="mt-1 text-xs text-accent-light">
           🎉 Completed {new Date(completedAt(program.id)!).toLocaleDateString()}
         </p>
       )}
       <p className="mt-3 text-sm leading-relaxed">{program.description}</p>
 
       {isActive ? (
-        <div className="mt-4 flex items-center justify-between rounded-lg bg-coral/15 px-3 py-2.5 text-sm">
-          <span className="font-medium text-coral-light">
+        <div className="mt-4 flex items-center justify-between rounded-lg bg-accent/15 px-3 py-2.5 text-sm">
+          <span className="font-medium text-accent-light">
             Active — Week {pointer!.weekNumber}, Day {pointer!.dayNumber}
           </span>
           <button onClick={stopProgram} className="text-xs text-ink-muted underline">
@@ -78,7 +78,7 @@ export default function ProgramDetail() {
       ) : (
         <button
           onClick={() => startProgram(program.id)}
-          className="mt-4 w-full rounded-lg bg-coral py-2.5 text-sm font-medium text-bg"
+          className="mt-4 w-full rounded-lg bg-accent py-2.5 text-sm font-medium text-bg"
         >
           {isCompleted(program.id) ? 'Start again' : 'Start this program'}
         </button>
@@ -114,7 +114,7 @@ export default function ProgramDetail() {
                             {day.name}
                           </h3>
                           {isCurrentDay && (
-                            <span className="rounded-full bg-coral/20 px-2 py-0.5 text-[10px] font-medium text-coral-light">
+                            <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-medium text-accent-light">
                               You are here
                             </span>
                           )}

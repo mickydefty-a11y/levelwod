@@ -50,8 +50,8 @@ export default function Welcome() {
         ))}
       </div>
 
-      <div className="mt-4 rounded-xl bg-coral/15 p-4">
-        <h2 className="font-medium text-coral-light">Two different kinds of "progress"</h2>
+      <div className="mt-4 rounded-xl bg-accent/15 p-4">
+        <h2 className="font-medium text-accent-light">Two different kinds of "progress"</h2>
         <p className="mt-1 text-sm text-ink-muted">
           <strong className="text-ink">Setting your level</strong> (in the Library) is about a
           skill overall — e.g. "I'm currently at Negative Pull-Ups." It doesn't change day to day.
@@ -65,7 +65,7 @@ export default function Welcome() {
 
       <button
         onClick={handleGetStarted}
-        className="mt-4 w-full rounded-lg bg-coral py-2.5 text-sm font-medium text-bg"
+        className="mt-4 w-full rounded-lg bg-accent py-2.5 text-sm font-medium text-bg"
       >
         Get started
       </button>

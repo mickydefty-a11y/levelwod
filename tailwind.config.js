@@ -5,14 +5,14 @@ export default {
     extend: {
       colors: {
         bg: {
-          DEFAULT: '#121212',
-          surface: '#1c1c1e',
-          raised: '#26262a',
+          DEFAULT: '#000000',
+          surface: '#141414',
+          raised: '#1f1f1f',
         },
-        coral: {
-          DEFAULT: '#ff6b5b',
-          light: '#ff8a7d',
-          dark: '#e2503f',
+        accent: {
+          DEFAULT: '#c6ff33',
+          light: '#ddff85',
+          dark: '#9fd400',
         },
         ink: {
           DEFAULT: '#f2f2f2',

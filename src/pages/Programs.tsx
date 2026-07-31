@@ -29,7 +29,7 @@ export default function Programs() {
                   <h2 className="font-medium">{program.name}</h2>
                   <span className="flex shrink-0 items-center gap-1.5">
                     {isCompleted(program.id) && <span className="text-xs">✅</span>}
-                    <span className="text-xs text-coral-light">{program.level}</span>
+                    <span className="text-xs text-accent-light">{program.level}</span>
                   </span>
                 </div>
                 <p className="mt-1 text-sm text-ink-muted">{program.description}</p>

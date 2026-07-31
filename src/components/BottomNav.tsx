@@ -62,7 +62,7 @@ export default function BottomNav() {
               end={item.to === '/'}
               className={({ isActive }) =>
                 `flex flex-col items-center gap-1 py-2.5 text-xs font-medium transition-colors ${
-                  isActive ? 'text-coral' : 'text-ink-muted'
+                  isActive ? 'text-accent' : 'text-ink-muted'
                 }`
               }
             >

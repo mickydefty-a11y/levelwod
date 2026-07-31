@@ -10,7 +10,7 @@ import type { Movement } from '../types/movement'
 function MovementLink({ id, index }: { id: string; index: Map<string, Movement> }) {
   const target = index.get(id)
   return (
-    <Link to={`/library/${id}`} className="text-coral-light underline underline-offset-2">
+    <Link to={`/library/${id}`} className="text-accent-light underline underline-offset-2">
       {target?.name ?? id}
     </Link>
   )
@@ -38,7 +38,7 @@ export default function MovementDetail() {
     return (
       <div>
         <p className="text-ink-muted">Movement not found.</p>
-        <Link to="/library" className="mt-2 inline-block text-coral-light underline">
+        <Link to="/library" className="mt-2 inline-block text-accent-light underline">
           Back to Library
         </Link>
       </div>
@@ -125,7 +125,7 @@ export default function MovementDetail() {
 
       {movement.commonFaults.length > 0 && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Common faults</h2>
+          <h2 className="text-sm font-semibold text-accent">Common faults</h2>
           <ul className="mt-1.5 space-y-1.5">
             {movement.commonFaults.map((f) => (
               <li key={f.fault} className="rounded-lg bg-bg-surface px-3 py-2 text-sm">
@@ -138,9 +138,9 @@ export default function MovementDetail() {
       )}
 
       {current && (
-        <div className="mt-4 flex items-center justify-between rounded-lg bg-coral/15 px-3 py-2 text-sm">
+        <div className="mt-4 flex items-center justify-between rounded-lg bg-accent/15 px-3 py-2 text-sm">
           <span>
-            Your level: <span className="font-medium text-coral-light">{currentLabel}</span>
+            Your level: <span className="font-medium text-accent-light">{currentLabel}</span>
           </span>
           <button
             onClick={() => clearMovementProgress(movement.id)}
@@ -153,7 +153,7 @@ export default function MovementDetail() {
 
       {recentResults.length > 0 && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Recent results</h2>
+          <h2 className="text-sm font-semibold text-accent">Recent results</h2>
           <ul className="mt-1.5 space-y-1.5">
             {recentResults.map((r, i) => (
               <li
@@ -172,7 +172,7 @@ export default function MovementDetail() {
 
       {movement.type === 'progression' && movement.stages && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Stages</h2>
+          <h2 className="text-sm font-semibold text-accent">Stages</h2>
           <ol className="mt-1.5 space-y-1.5">
             {movement.stages.map((stage, i) => {
               const reached = currentStageIndex >= 0 && i <= currentStageIndex
@@ -183,9 +183,9 @@ export default function MovementDetail() {
                     onClick={() => setMovementProgress(movement.id, stage.id)}
                     className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
                       isCurrent
-                        ? 'bg-coral text-bg'
+                        ? 'bg-accent text-bg'
                         : reached
-                          ? 'bg-coral/20'
+                          ? 'bg-accent/20'
                           : 'bg-bg-surface hover:bg-bg-raised'
                     }`}
                   >
@@ -213,7 +213,7 @@ export default function MovementDetail() {
 
       {movement.type === 'tutorial' && movement.scaling && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Scaling</h2>
+          <h2 className="text-sm font-semibold text-accent">Scaling</h2>
           <ol className="mt-1.5 space-y-1.5">
             {movement.scaling.map((scale) => {
               const isCurrent = current?.value === scale.level
@@ -224,9 +224,9 @@ export default function MovementDetail() {
                     onClick={() => setMovementProgress(movement.id, scale.level)}
                     className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
                       isCurrent
-                        ? 'bg-coral text-bg'
+                        ? 'bg-accent text-bg'
                         : reached
-                          ? 'bg-coral/20'
+                          ? 'bg-accent/20'
                           : 'bg-bg-surface hover:bg-bg-raised'
                     }`}
                   >
@@ -246,7 +246,7 @@ export default function MovementDetail() {
 
       {movement.drills && movement.drills.length > 0 && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Example drills</h2>
+          <h2 className="text-sm font-semibold text-accent">Example drills</h2>
           <ul className="mt-1.5 space-y-1.5">
             {movement.drills.map((d) => (
               <li key={d.name} className="rounded-lg bg-bg-surface px-3 py-2 text-sm">
@@ -260,7 +260,7 @@ export default function MovementDetail() {
 
       {movement.type === 'composite' && movement.requiredMovements && (
         <div className="mt-4">
-          <h2 className="text-sm font-semibold text-coral">Unlocks when you reach</h2>
+          <h2 className="text-sm font-semibold text-accent">Unlocks when you reach</h2>
           <ul className="mt-1.5 space-y-1.5">
             {movement.requiredMovements.map((req) => (
               <li
