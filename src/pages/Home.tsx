@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
+import { getReadyToTry } from '../lib/suggestions'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useOnboarding } from '../lib/useOnboarding'
 import { useProgramHistory } from '../lib/useProgramHistory'
@@ -47,6 +48,8 @@ export default function Home() {
     .sort((a, b) => b.completedAt.localeCompare(a.completedAt))
     .map((c) => ({ ...c, program: programs.find((p) => p.id === c.programId) }))
     .filter((c) => c.program)
+
+  const readyToTry = movements ? getReadyToTry(movements, progress) : []
 
   return (
     <div>
@@ -106,6 +109,28 @@ export default function Home() {
               isFinalDay={isFinalDay}
             />
           </div>
+        </div>
+      )}
+
+      {readyToTry.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-sm font-semibold text-coral">Ready to try next</h2>
+          <p className="mt-0.5 text-xs text-ink-muted">
+            You've made progress on everything these need first.
+          </p>
+          <ul className="mt-1.5 space-y-1.5">
+            {readyToTry.map((m) => (
+              <li key={m.id}>
+                <Link
+                  to={`/library/${m.id}`}
+                  className="flex items-center justify-between rounded-lg bg-bg-surface px-3 py-2 hover:bg-bg-raised"
+                >
+                  <span className="text-sm">{m.name}</span>
+                  <span className="text-xs text-ink-muted">{m.category}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
