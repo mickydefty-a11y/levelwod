@@ -1,0 +1,146 @@
+{
+  "id": "beginner-foundations-12wk",
+  "name": "Beginner Foundations",
+  "level": "Beginner",
+  "durationWeeks": 12,
+  "daysPerWeek": 3,
+  "description": "A 12-week on-ramp covering the core movement patterns — squat, hinge, push, pull, and a conditioning base — before moving on to more advanced skill work.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Squat mechanics + conditioning base",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Full Body Foundations",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "5 reps, slow and controlled",
+              "notes": "Focus on the hamstring stretch at the bottom of each rep."
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side on 90/90 Stretch and Couch Stretch",
+              "notes": "Skip anything that causes sharp pain — mild stretch discomfort only."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "scapular-pull-up",
+              "prescription": "3 sets x 8 reps",
+              "notes": "This is the very first pulling skill in the program — quality over speed."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "targetStageId": "air-squat-full",
+              "prescription": "3 sets x 15 reps, bodyweight",
+              "notes": "Full depth every rep. If depth breaks down, reduce reps rather than rush."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "5 minutes easy pace",
+              "notes": "This should feel conversational — not a hard effort yet."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "plank",
+              "targetStageId": null,
+              "prescription": "3 x 20 sec hold",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Pushing + Conditioning",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 10 taps/side, in plank position",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "push-up",
+              "targetStageId": "incline-push-up",
+              "prescription": "3 sets x 10 reps",
+              "notes": "Choose an incline height where the last 2 reps of each set are challenging but clean."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "hip-hinge-drill",
+              "prescription": "3 sets x 10 reps with PVC pipe",
+              "notes": "This is a technique day — no load yet, just the hinge pattern."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "4 rounds: 1 min run, 1 min walk",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "8 reps/side, Thread the Needle",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Full Body + Light Conditioning",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 10m",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "l-sit",
+              "targetStageId": "tuck-hold",
+              "prescription": "4 sets x 10-15 sec hold",
+              "notes": "Ground-based core/skill work — inversions like handstands are introduced later in the program once foundational strength is built."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "kettlebell-swing",
+              "targetStageId": "russian-swing",
+              "prescription": "4 sets x 10 reps",
+              "notes": "Light kettlebell — this is a technique day for the hip hinge under a dynamic load."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "assault-bike",
+              "targetStageId": null,
+              "prescription": "3 rounds: 30 sec on, 90 sec off",
+              "notes": "Deliberately short and easy this week — building pacing awareness, not fitness yet."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side, Wall Calf Stretch",
+              "notes": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

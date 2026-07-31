@@ -1,0 +1,410 @@
+[
+  {
+    "id": "kettlebell-clean",
+    "name": "Kettlebell Clean",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Kettlebells",
+    "type": "progression",
+    "equipment": ["Kettlebell"],
+    "prerequisites": ["deadlift"],
+    "variantOf": null,
+    "description": "Bringing a kettlebell from the floor/hang to the rack position — technical focus on avoiding the bell 'banging' into the forearm.",
+    "commonFaults": [{ "fault": "Bell crashing into the forearm/wrist", "cue": "Rotate the hand around the bell smoothly rather than muscling it up" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "kb-clean-technique", "level": "Intermediate", "name": "KB Clean — Light Bell", "description": "Technique focus on the no-bang catch.", "graduationCriteria": "8-10 clean reps/side" },
+      { "id": "kb-clean-loaded", "level": "RX", "name": "KB Clean — Moderate/Heavy Bell", "description": "Progressive loading.", "graduationCriteria": "8-10 reps/side" }
+    ]
+  },
+  {
+    "id": "kettlebell-snatch",
+    "name": "Kettlebell Snatch",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Kettlebells",
+    "type": "progression",
+    "equipment": ["Kettlebell"],
+    "prerequisites": ["kettlebell-swing"],
+    "variantOf": null,
+    "description": "Taking a kettlebell from between the legs to full overhead lockout in one motion.",
+    "commonFaults": [{ "fault": "Bell banging the forearm at the top", "cue": "Punch the hand through as the bell reaches the top, avoiding a hard catch" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "kb-snatch-light", "level": "Intermediate", "name": "KB Snatch — Light Bell", "description": "Technique focus, avoiding forearm bang.", "graduationCriteria": "8-10 clean reps/side" },
+      { "id": "kb-snatch-moderate", "level": "RX", "name": "KB Snatch — Moderate Bell", "description": "Progressive loading.", "graduationCriteria": "8-10 reps/side" },
+      { "id": "kb-snatch-heavy", "level": "Elite", "name": "KB Snatch — Heavy Bell", "description": "High volume/for time.", "graduationCriteria": "High-volume sets" }
+    ]
+  },
+  {
+    "id": "turkish-get-up",
+    "name": "Turkish Get-Up",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Kettlebells",
+    "type": "progression",
+    "equipment": ["Kettlebell"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Multi-stage movement from lying to standing while keeping a weight locked out overhead — full-body stability and coordination.",
+    "commonFaults": [{ "fault": "Rushing through the transitions", "cue": "Move slowly and deliberately through each position" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "getup-bodyweight", "level": "Beginner", "name": "Get-Up Without Weight", "description": "Slow bodyweight pattern practice.", "graduationCriteria": "3 clean reps/side" },
+      { "id": "getup-light-kb", "level": "Intermediate", "name": "Get-Up With Light KB", "description": "Adding light load.", "graduationCriteria": "3 reps/side" },
+      { "id": "getup-moderate-kb", "level": "RX", "name": "Get-Up With Moderate KB", "description": "Progressive loading.", "graduationCriteria": "3-5 reps/side" },
+      { "id": "getup-heavy-kb", "level": "Elite", "name": "Get-Up With Heavy KB", "description": "Advanced strength target.", "graduationCriteria": "3+ reps/side" }
+    ]
+  },
+  {
+    "id": "windmill",
+    "name": "Windmill",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Kettlebells",
+    "type": "tutorial",
+    "equipment": ["Kettlebell"],
+    "prerequisites": ["turkish-get-up"],
+    "variantOf": null,
+    "description": "Standing hip hinge with a kettlebell locked out overhead, opposite hand reaching toward the floor.",
+    "commonFaults": [{ "fault": "Bending the overhead arm during the hinge", "cue": "Keep the overhead arm locked out throughout the movement" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "No weight, focus on hip hinge and hamstring stretch" },
+      { "level": "RX", "description": "Light-moderate KB overhead, 5 reps/side" }
+    ]
+  },
+  {
+    "id": "dumbbell-snatch",
+    "name": "Dumbbell Snatch",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "progression",
+    "equipment": ["Dumbbell"],
+    "prerequisites": ["deadlift"],
+    "variantOf": null,
+    "description": "Single-arm dumbbell taken from the floor to full overhead lockout in one motion.",
+    "commonFaults": [{ "fault": "Muscling the dumbbell up with the arm alone", "cue": "Drive with the hips and legs, let the arm guide rather than lift" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "db-snatch-separate", "level": "Beginner", "name": "Deadlift + High Pull (separate reps)", "description": "Feeder movement pattern.", "graduationCriteria": "10 reps clean form" },
+      { "id": "db-snatch-light", "level": "Intermediate", "name": "DB Snatch — Light Dumbbell", "description": "Full motion, floor to overhead.", "graduationCriteria": "8-10 reps/side" },
+      { "id": "db-snatch-rx", "level": "RX", "name": "DB Snatch — Rx Weight", "description": "50/35 lb typical benchmark.", "graduationCriteria": "10+ reps/side" },
+      { "id": "db-snatch-elite", "level": "Elite", "name": "DB Snatch — Heavier Dumbbell", "description": "Advanced loading.", "graduationCriteria": "10+ reps/side" }
+    ]
+  },
+  {
+    "id": "dumbbell-clean",
+    "name": "Dumbbell Clean",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "progression",
+    "equipment": ["Dumbbells"],
+    "prerequisites": ["deadlift"],
+    "variantOf": null,
+    "description": "Bringing dumbbells from the floor to the front rack position.",
+    "commonFaults": [{ "fault": "Rounding the back during the initial pull", "cue": "Hinge and brace as with a deadlift before pulling" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "db-clean-hip", "level": "Beginner", "name": "DB Deadlift to Hip", "description": "Light dumbbells.", "graduationCriteria": "10 clean reps" },
+      { "id": "db-clean-full", "level": "Intermediate", "name": "Full DB Clean to Front Rack", "description": "Light-moderate dumbbells.", "graduationCriteria": "8-10 reps" },
+      { "id": "db-clean-rx", "level": "RX", "name": "DB Clean — Working Weight", "description": "Progressive loading.", "graduationCriteria": "8-10 reps" }
+    ]
+  },
+  {
+    "id": "dumbbell-thruster",
+    "name": "Dumbbell Thruster",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "progression",
+    "equipment": ["Dumbbells"],
+    "prerequisites": ["dumbbell-clean"],
+    "variantOf": "thruster",
+    "description": "Front squat linked into a press using dumbbells instead of a barbell — same pattern as the barbell Thruster.",
+    "commonFaults": [{ "fault": "Pausing at the top of the squat before pressing", "cue": "Use the rebound out of the squat to drive the press" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "db-thruster-light", "level": "Intermediate", "name": "DB Thruster — Light Dumbbells", "description": "Linking squat and press.", "graduationCriteria": "10 clean reps" },
+      { "id": "db-thruster-rx", "level": "RX", "name": "DB Thruster — Working Weight", "description": "Progressive loading.", "graduationCriteria": "10+ unbroken" }
+    ]
+  },
+  {
+    "id": "devils-press",
+    "name": "Devil's Press",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "composite",
+    "equipment": ["Dumbbells"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "A Burpee combined directly into a two-arm Dumbbell Snatch — a demanding, CrossFit Games-style movement.",
+    "commonFaults": [{ "fault": "Rushing the transition from burpee to snatch", "cue": "Reset grip and breath before initiating the snatch" }],
+    "media": { "video": null, "thumbnail": null },
+    "requiredMovements": [
+      { "movementId": "burpee", "requiredLevel": "Intermediate" },
+      { "movementId": "dumbbell-snatch", "requiredLevel": "Intermediate" }
+    ]
+  },
+  {
+    "id": "renegade-row",
+    "name": "Renegade Row",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "tutorial",
+    "equipment": ["Dumbbells"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Plank position, rowing one dumbbell at a time while stabilizing with the other arm.",
+    "commonFaults": [{ "fault": "Hips rotating with each row", "cue": "Keep hips square, widen stance if needed for stability" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Knees down, light dumbbells" },
+      { "level": "RX", "description": "Full plank, working weight, 8-10 reps/side" }
+    ]
+  },
+  {
+    "id": "dumbbell-shoulder-to-overhead",
+    "name": "Shoulder-to-Overhead (Dumbbell)",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "tutorial",
+    "equipment": ["Dumbbells"],
+    "prerequisites": [],
+    "variantOf": "strict-press",
+    "description": "Pressing dumbbells from the shoulder to overhead lockout, strict or with leg drive.",
+    "commonFaults": [{ "fault": "Uneven press between arms", "cue": "Press both dumbbells at the same pace and path" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light dumbbells, strict press pattern" },
+      { "level": "RX", "description": "Working weight, push press or push jerk pattern" }
+    ]
+  },
+  {
+    "id": "dumbbell-bench-press",
+    "name": "Dumbbell Bench Press",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Dumbbells",
+    "type": "tutorial",
+    "equipment": ["Dumbbells", "Bench"],
+    "prerequisites": [],
+    "variantOf": "bench-press",
+    "description": "Bench press variation using dumbbells — allows a greater range of motion than a barbell.",
+    "commonFaults": [{ "fault": "Dumbbells drifting together or apart", "cue": "Keep dumbbells stacked over the shoulders throughout" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Intermediate", "description": "Light dumbbells, technique focus" },
+      { "level": "RX", "description": "Working weight, 8-10 reps" }
+    ]
+  },
+  {
+    "id": "medicine-ball-clean",
+    "name": "Medicine Ball Clean",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Medicine Ball",
+    "type": "tutorial",
+    "equipment": ["Medicine Ball"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Lifting a medicine ball from the floor to the chest/shoulder — feeder movement for Wall Ball.",
+    "commonFaults": [{ "fault": "Rounding the back to scoop the ball", "cue": "Hinge and brace as with a deadlift" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light ball, 8-10 reps" },
+      { "level": "RX", "description": "Moderate-heavy ball, 10+ reps" }
+    ]
+  },
+  {
+    "id": "medicine-ball-slam",
+    "name": "Medicine Ball Slam",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Medicine Ball",
+    "type": "tutorial",
+    "equipment": ["Medicine Ball"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Explosively slamming a medicine ball to the ground from overhead — power and conditioning movement.",
+    "commonFaults": [{ "fault": "Only using the arms, not the hips", "cue": "Drive the slam with hip flexion, not just the arms" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light ball, 10 reps" },
+      { "level": "RX", "description": "Heavier ball, high volume/for time" }
+    ]
+  },
+  {
+    "id": "medicine-ball-carry",
+    "name": "Medicine Ball Carry",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Medicine Ball",
+    "type": "tutorial",
+    "equipment": ["Medicine Ball"],
+    "prerequisites": [],
+    "variantOf": "farmer-carry",
+    "description": "Loaded carry using a medicine ball held at the chest — same coaching cues as Farmer Carry.",
+    "commonFaults": [{ "fault": "Ball drifting away from the chest", "cue": "Hug the ball tight against the chest throughout" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light ball, 20m" },
+      { "level": "RX", "description": "Heavier ball, 40m+" }
+    ]
+  },
+  {
+    "id": "overhead-stability",
+    "name": "Overhead Stability",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": ["Kettlebell, Plate, or Dumbbell"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Umbrella entry for overhead-position stability drills supporting Strict Press, Overhead Squat, and Snatch work.",
+    "commonFaults": [{ "fault": "Load drifting forward of the ear", "cue": "Stack the load directly over the shoulder/ear" }],
+    "media": { "video": null, "thumbnail": null },
+    "drills": [
+      { "name": "Bottoms-Up Kettlebell Hold", "description": "KB held upside down at rack/overhead position, forces active grip and shoulder stabilization." },
+      { "name": "Overhead Plate Hold", "description": "Light plate held overhead with arms locked out, walking or static." },
+      { "name": "Waiter's Carry", "description": "Single dumbbell/KB balanced overhead, palm up, walking." }
+    ],
+    "scaling": [
+      { "level": "Beginner", "description": "Light load, short holds (10-15 sec)" },
+      { "level": "RX", "description": "Moderate load, longer holds (30 sec+)" }
+    ]
+  },
+  {
+    "id": "shoulder-stability",
+    "name": "Shoulder Stability",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": ["Resistance Band"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Umbrella entry for band-based accessory work supporting all pressing and pulling movements.",
+    "commonFaults": [{ "fault": "Using momentum instead of controlled tension", "cue": "Slow the tempo, keep constant tension on the band" }],
+    "media": { "video": null, "thumbnail": null },
+    "drills": [
+      { "name": "Band Pull-Apart", "description": "Band held at shoulder width, pulled apart across the chest." },
+      { "name": "Band External Rotation", "description": "Elbow pinned at side, rotating forearm outward against band tension." },
+      { "name": "Wall Slide", "description": "Back against wall, sliding arms up/down maintaining contact." }
+    ],
+    "scaling": [
+      { "level": "Beginner", "description": "Light band, 15 reps" },
+      { "level": "RX", "description": "Heavier band, 20+ reps" }
+    ]
+  },
+  {
+    "id": "scapular-push-ups",
+    "name": "Scapular Push-ups",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": "push-up",
+    "description": "Plank position, protracting and retracting the shoulder blades without bending the elbows — feeder for Push-up and HSPU work.",
+    "commonFaults": [{ "fault": "Bending the elbows", "cue": "Keep arms locked straight, movement comes only from the shoulder blades" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "8-10 reps" },
+      { "level": "RX", "description": "15+ reps, slow controlled tempo" }
+    ]
+  },
+  {
+    "id": "hip-mobility",
+    "name": "Hip Mobility",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Umbrella entry for hip-opening drills supporting squat depth and Olympic lifting positions.",
+    "commonFaults": [{ "fault": "Forcing range of motion with momentum", "cue": "Ease into each stretch gradually, avoid bouncing" }],
+    "media": { "video": null, "thumbnail": null },
+    "drills": [
+      { "name": "90/90 Stretch", "description": "Seated, both legs bent at 90 degrees in opposite rotations, shifting weight between sides." },
+      { "name": "Couch Stretch", "description": "Rear-foot-elevated hip flexor stretch, back knee down near a wall/couch." },
+      { "name": "Pigeon Pose", "description": "Front leg bent across the body, back leg extended, folding forward." },
+      { "name": "World's Greatest Stretch", "description": "Lunge position with a rotational reach, covers hips and thoracic spine together." }
+    ],
+    "scaling": [
+      { "level": "Beginner", "description": "Hold each 20-30 sec/side" },
+      { "level": "RX", "description": "Hold each 45-60 sec/side, deeper range" }
+    ]
+  },
+  {
+    "id": "thoracic-mobility",
+    "name": "Thoracic Mobility",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": ["Foam Roller (optional)"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Umbrella entry for upper-back mobility drills supporting overhead positions and front rack.",
+    "commonFaults": [{ "fault": "Rotating from the lower back instead of the upper spine", "cue": "Keep hips still, isolate the rotation to the upper back" }],
+    "media": { "video": null, "thumbnail": null },
+    "drills": [
+      { "name": "Foam Roll Extension", "description": "Foam roller under mid-back, extending over it to open the upper spine." },
+      { "name": "Open Book Stretch", "description": "Side-lying, rotating top arm across the body to open the chest." },
+      { "name": "Thread the Needle", "description": "Quadruped position, threading one arm under the body to rotate the spine." }
+    ],
+    "scaling": [
+      { "level": "Beginner", "description": "Slow, 8-10 reps/side" },
+      { "level": "RX", "description": "Deeper range, held briefly at end range" }
+    ]
+  },
+  {
+    "id": "ankle-mobility",
+    "name": "Ankle Mobility",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": ["Resistance Band (optional)"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Umbrella entry for ankle dorsiflexion drills supporting squat depth, especially for Pistol Squat and Front Squat.",
+    "commonFaults": [{ "fault": "Heel lifting during the stretch", "cue": "Keep the heel planted, only drive the knee forward" }],
+    "media": { "video": null, "thumbnail": null },
+    "drills": [
+      { "name": "Banded Ankle Distraction Stretch", "description": "Band anchored low, looped around the ankle, driving the knee forward over the toes." },
+      { "name": "Wall Calf Stretch (Knee-to-Wall)", "description": "Foot staggered back, driving the front knee toward a wall without heel lift." },
+      { "name": "Heel-Elevated Squat Hold", "description": "Holding a deep squat with small plates under the heels, gradually reducing elevation over time." }
+    ],
+    "scaling": [
+      { "level": "Beginner", "description": "Short holds, more elevation/assistance" },
+      { "level": "RX", "description": "Longer holds, minimal or no elevation" }
+    ]
+  },
+  {
+    "id": "single-leg-balance",
+    "name": "Single-Leg Balance",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Mobility & Stability",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Simple single-leg stance holds — a feeder drill for Pistol Squat.",
+    "commonFaults": [{ "fault": "Gripping the floor with the toes for stability", "cue": "Relax the foot, balance through the whole foot" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "15-20 sec/side, eyes open" },
+      { "level": "RX", "description": "30 sec+/side, eyes closed or on an unstable surface" }
+    ]
+  },
+  {
+    "id": "burpee",
+    "name": "Burpee",
+    "category": "Accessory & Skill Development",
+    "subcategory": "Conditioning Fundamentals",
+    "type": "progression",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Full-body conditioning movement combining a squat, plank, push-up, and jump — a CrossFit staple and prerequisite for Burpee Box Jump (Over) and Devil's Press.",
+    "commonFaults": [{ "fault": "Not achieving full hip extension at the top", "cue": "Fully stand and extend the hips before dropping back down" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "burpee-step-back", "level": "Beginner", "name": "Step-Back Burpee (no push-up)", "description": "Stepping instead of jumping back, no push-up.", "graduationCriteria": "10 reps" },
+      { "id": "burpee-standard", "level": "Intermediate", "name": "Standard Burpee", "description": "Full burpee with push-up.", "graduationCriteria": "10 reps" },
+      { "id": "burpee-rx", "level": "RX", "name": "Burpee with Jump/Clap", "description": "Jump and clap overhead at the top.", "graduationCriteria": "15+ reps" },
+      { "id": "burpee-elite", "level": "Elite", "name": "Burpee for Max Reps/Speed", "description": "Benchmark WOD pace.", "graduationCriteria": "Sustained fast pace, high volume" }
+    ]
+  }
+]

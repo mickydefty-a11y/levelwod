@@ -1,0 +1,386 @@
+[
+  {
+    "id": "wall-ball",
+    "name": "Wall Ball",
+    "category": "Functional Movements",
+    "subcategory": "Squatting",
+    "type": "progression",
+    "equipment": ["Medicine Ball", "Wall Target"],
+    "prerequisites": ["front-squat"],
+    "variantOf": null,
+    "description": "Front squat combined with an overhead toss to a wall target — a CrossFit benchmark movement.",
+    "commonFaults": [{ "fault": "Not using the legs to drive the toss", "cue": "Let the squat rebound power the throw, not just the arms" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "wb-separate-reps", "level": "Beginner", "name": "Squat + Toss (separate reps)", "description": "Light ball, distinct movements.", "graduationCriteria": "10 reps each, clean form" },
+      { "id": "wb-light-low", "level": "Intermediate", "name": "Wall Ball — Light Ball, Low Target", "description": "Linking the motion together.", "graduationCriteria": "10 clean reps" },
+      { "id": "wb-rx", "level": "RX", "name": "Wall Ball — Rx Weight/Height", "description": "20/14 lb ball, 10/9 ft target.", "graduationCriteria": "15+ unbroken" },
+      { "id": "wb-elite", "level": "Elite", "name": "Wall Ball — Heavier/Higher", "description": "Advanced loading or target height.", "graduationCriteria": "High-volume unbroken sets" }
+    ]
+  },
+  {
+    "id": "pistol-squat",
+    "name": "Pistol Squat",
+    "category": "Functional Movements",
+    "subcategory": "Squatting",
+    "type": "progression",
+    "equipment": [],
+    "prerequisites": ["back-squat"],
+    "variantOf": null,
+    "description": "Single-leg squat to full depth with the other leg extended forward — significant balance and strength demand.",
+    "commonFaults": [{ "fault": "Heel lifting off the ground", "cue": "Keep weight through the heel, work on ankle mobility if this persists" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "single-leg-box-squat", "level": "Beginner", "name": "Single-Leg Box Squat", "description": "Assisted, sitting to a box.", "graduationCriteria": "5 reps/side" },
+      { "id": "assisted-pistol", "level": "Intermediate", "name": "Assisted Pistol", "description": "Holding a rig or band for balance.", "graduationCriteria": "5 reps/side" },
+      { "id": "pistol-full", "level": "RX", "name": "Pistol Squat — Full", "description": "Unassisted, full depth.", "graduationCriteria": "3-5 reps/side" },
+      { "id": "pistol-weighted", "level": "Elite", "name": "Weighted Pistol Squat", "description": "Added external load.", "graduationCriteria": "3-5 reps/side with load" }
+    ]
+  },
+  {
+    "id": "walking-lunge",
+    "name": "Walking Lunge",
+    "category": "Functional Movements",
+    "subcategory": "Lunging",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Stepping forward into alternating lunges — foundational single-leg strength and stability movement.",
+    "commonFaults": [{ "fault": "Knee caving inward or past the toes excessively", "cue": "Track the knee over the toes, control the step length" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Bodyweight, 10 steps/side" },
+      { "level": "RX", "description": "Loaded (dumbbells or barbell back rack), 20+ steps/side" },
+      { "level": "Elite", "description": "Heavy load, distance-based (50m+)" }
+    ]
+  },
+  {
+    "id": "reverse-lunge",
+    "name": "Reverse Lunge",
+    "category": "Functional Movements",
+    "subcategory": "Lunging",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": "walking-lunge",
+    "description": "Stepping backward into a lunge instead of forward — generally gentler on the front knee.",
+    "commonFaults": [{ "fault": "Leaning too far forward", "cue": "Keep torso upright throughout the step" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Bodyweight, 10 reps/side" },
+      { "level": "RX", "description": "Loaded, 10-15 reps/side" }
+    ]
+  },
+  {
+    "id": "front-rack-lunge",
+    "name": "Front Rack Lunge",
+    "category": "Functional Movements",
+    "subcategory": "Lunging",
+    "type": "tutorial",
+    "equipment": ["Barbell or Dumbbells"],
+    "prerequisites": ["walking-lunge"],
+    "variantOf": "walking-lunge",
+    "description": "Lunge performed with load held in the front rack position — adds core and upper back demand.",
+    "commonFaults": [{ "fault": "Elbows dropping under load", "cue": "Keep elbows up throughout each step" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Intermediate", "description": "Light load, 10 reps/side" },
+      { "level": "RX", "description": "Working weight, 10-15 reps/side" }
+    ]
+  },
+  {
+    "id": "overhead-lunge",
+    "name": "Overhead Lunge",
+    "category": "Functional Movements",
+    "subcategory": "Lunging",
+    "type": "tutorial",
+    "equipment": ["Barbell or Plate"],
+    "prerequisites": ["overhead-squat"],
+    "variantOf": "walking-lunge",
+    "description": "Lunge with the load locked out overhead throughout — significant shoulder stability demand.",
+    "commonFaults": [{ "fault": "Bar drifting forward of midline", "cue": "Keep the load stacked directly overhead" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Intermediate", "description": "Light load, 10 reps/side" },
+      { "level": "RX", "description": "Working weight, 10-15 reps/side" }
+    ]
+  },
+  {
+    "id": "sandbag-lunge",
+    "name": "Sandbag Lunge",
+    "category": "Functional Movements",
+    "subcategory": "Lunging",
+    "type": "tutorial",
+    "equipment": ["Sandbag"],
+    "prerequisites": [],
+    "variantOf": "walking-lunge",
+    "description": "Lunge carrying a sandbag in front rack, on the shoulder, or bear-hugged.",
+    "commonFaults": [{ "fault": "Losing bracing under the shifting load", "cue": "Brace core hard before each step" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light bag, 10 reps/side" },
+      { "level": "RX", "description": "Heavier bag, 15-20 reps/side" }
+    ]
+  },
+  {
+    "id": "romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "category": "Functional Movements",
+    "subcategory": "Hinging",
+    "type": "tutorial",
+    "equipment": ["Barbell"],
+    "prerequisites": [],
+    "variantOf": "deadlift",
+    "description": "Deadlift variation with a smaller range of motion, bar staying above the knee — emphasizes hamstrings.",
+    "commonFaults": [{ "fault": "Squatting the movement instead of hinging", "cue": "Push hips back, keep knees only slightly bent" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Intermediate", "description": "Light-moderate load, 10 reps" },
+      { "level": "RX", "description": "Working weight, 8-10 reps" }
+    ]
+  },
+  {
+    "id": "kettlebell-swing",
+    "name": "Kettlebell Swing",
+    "category": "Functional Movements",
+    "subcategory": "Hinging",
+    "type": "progression",
+    "equipment": ["Kettlebell"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Hip-hinge-powered swing of a kettlebell — foundational conditioning and posterior chain movement.",
+    "commonFaults": [{ "fault": "Squatting the swing instead of hinging", "cue": "Drive with the hips, keep the movement a hinge not a squat" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "russian-swing", "level": "Beginner", "name": "Russian Swing", "description": "Swing to chest height, light KB.", "graduationCriteria": "10 reps" },
+      { "id": "russian-swing-mod", "level": "Intermediate", "name": "Russian Swing — Moderate Load", "description": "Heavier KB.", "graduationCriteria": "15+ reps" },
+      { "id": "american-swing", "level": "RX", "name": "American Swing", "description": "Full overhead swing, Rx KB weight.", "graduationCriteria": "15+ unbroken" },
+      { "id": "american-swing-heavy", "level": "Elite", "name": "American Swing — Heavy/Volume", "description": "Heavier KB, high volume.", "graduationCriteria": "25+ unbroken" }
+    ]
+  },
+  {
+    "id": "good-morning",
+    "name": "Good Morning",
+    "category": "Functional Movements",
+    "subcategory": "Hinging",
+    "type": "tutorial",
+    "equipment": ["Barbell"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Hip hinge with the bar racked on the back (like a squat setup) — posterior chain accessory movement.",
+    "commonFaults": [{ "fault": "Rounding the back at the bottom", "cue": "Keep a neutral spine, stop the hinge before the back rounds" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Empty bar or PVC, 10 reps" },
+      { "level": "RX", "description": "Light-moderate load, 10 reps" }
+    ]
+  },
+  {
+    "id": "front-rack-carry",
+    "name": "Front Rack Carry",
+    "category": "Functional Movements",
+    "subcategory": "Carries",
+    "type": "tutorial",
+    "equipment": ["Kettlebells or Dumbbells"],
+    "prerequisites": [],
+    "variantOf": "farmer-carry",
+    "description": "Loaded carry with implements held in the front rack position instead of at the sides.",
+    "commonFaults": [{ "fault": "Elbows dropping under load", "cue": "Keep elbows up, load resting on the shoulders" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light load, 20m" },
+      { "level": "RX", "description": "Moderate-heavy load, 40m+" }
+    ]
+  },
+  {
+    "id": "overhead-carry",
+    "name": "Overhead Carry",
+    "category": "Functional Movements",
+    "subcategory": "Carries",
+    "type": "tutorial",
+    "equipment": ["Barbell, Dumbbell, or Plate"],
+    "prerequisites": ["strict-press"],
+    "variantOf": "farmer-carry",
+    "description": "Loaded carry with the implement locked out overhead throughout the walk.",
+    "commonFaults": [{ "fault": "Arm drifting forward of the ear", "cue": "Keep the load stacked directly overhead, bicep by the ear" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light load, 20m" },
+      { "level": "RX", "description": "Moderate load, 40m+" }
+    ]
+  },
+  {
+    "id": "suitcase-carry",
+    "name": "Suitcase Carry",
+    "category": "Functional Movements",
+    "subcategory": "Carries",
+    "type": "tutorial",
+    "equipment": ["Dumbbell or Kettlebell"],
+    "prerequisites": [],
+    "variantOf": "farmer-carry",
+    "description": "Single implement carried on one side only — strong anti-lateral-flexion core demand.",
+    "commonFaults": [{ "fault": "Leaning toward the loaded side", "cue": "Keep torso upright, resist leaning" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light load, 20m/side" },
+      { "level": "RX", "description": "Moderate-heavy load, 40m+/side" }
+    ]
+  },
+  {
+    "id": "bear-hug-carry",
+    "name": "Bear Hug Carry",
+    "category": "Functional Movements",
+    "subcategory": "Carries",
+    "type": "tutorial",
+    "equipment": ["Sandbag or Atlas Stone"],
+    "prerequisites": [],
+    "variantOf": "farmer-carry",
+    "description": "Loaded carry with the implement hugged against the chest.",
+    "commonFaults": [{ "fault": "Losing bracing partway through the carry", "cue": "Brace hard, reset breath if needed" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Light load, 20m" },
+      { "level": "RX", "description": "Moderate-heavy load, 40m+" }
+    ]
+  },
+  {
+    "id": "box-jump",
+    "name": "Box Jump",
+    "category": "Functional Movements",
+    "subcategory": "Jumping",
+    "type": "progression",
+    "equipment": ["Plyo Box"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Jumping onto an elevated box — power and coordination movement.",
+    "commonFaults": [{ "fault": "Landing with a hard, stiff-kneed impact", "cue": "Land soft, knees tracking over toes, absorb through the hips" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "step-up", "level": "Beginner", "name": "Step-Up", "description": "No jump, stepping onto a low box.", "graduationCriteria": "10 reps/side" },
+      { "id": "box-jump-low", "level": "Intermediate", "name": "Box Jump — Low Box", "description": "12-16 inch box.", "graduationCriteria": "10 reps" },
+      { "id": "box-jump-standard", "level": "RX", "name": "Box Jump — Standard Height", "description": "20/24 inch box.", "graduationCriteria": "10+ reps" },
+      { "id": "box-jump-high", "level": "Elite", "name": "Box Jump — High Box", "description": "30 inch+ box.", "graduationCriteria": "5+ reps" }
+    ]
+  },
+  {
+    "id": "box-jump-over",
+    "name": "Box Jump Over",
+    "category": "Functional Movements",
+    "subcategory": "Jumping",
+    "type": "progression",
+    "equipment": ["Plyo Box"],
+    "prerequisites": ["box-jump"],
+    "variantOf": "box-jump",
+    "description": "Jumping onto the box and immediately over to the other side, rather than stepping back down.",
+    "commonFaults": [{ "fault": "Landing heavily on the far side", "cue": "Absorb the landing softly, same as the jump up" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "step-over", "level": "Intermediate", "name": "Step Over (no jump on top)", "description": "Low box.", "graduationCriteria": "10 reps" },
+      { "id": "full-jump-over", "level": "RX", "name": "Full Jump Over", "description": "Standard height, for reps.", "graduationCriteria": "10+ reps" },
+      { "id": "jump-over-high", "level": "Elite", "name": "Full Jump Over — High Box", "description": "High volume unbroken.", "graduationCriteria": "15+ unbroken" }
+    ]
+  },
+  {
+    "id": "broad-jump",
+    "name": "Broad Jump",
+    "category": "Functional Movements",
+    "subcategory": "Jumping",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Standing long jump for horizontal distance — power and landing mechanics.",
+    "commonFaults": [{ "fault": "Landing off-balance or falling forward", "cue": "Focus on sticking the landing before chasing max distance" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Focus on landing mechanics, moderate distance" },
+      { "level": "RX", "description": "Max distance for reps/rounds" }
+    ]
+  },
+  {
+    "id": "burpee-box-jump",
+    "name": "Burpee Box Jump",
+    "category": "Functional Movements",
+    "subcategory": "Jumping",
+    "type": "composite",
+    "equipment": ["Plyo Box"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "A Burpee immediately followed by a Box Jump — unlocked once both parent movements are reliable.",
+    "commonFaults": [{ "fault": "Rushing the transition from burpee to jump", "cue": "Stand fully before initiating the jump" }],
+    "media": { "video": null, "thumbnail": null },
+    "requiredMovements": [
+      { "movementId": "burpee", "requiredLevel": "Intermediate" },
+      { "movementId": "box-jump", "requiredLevel": "RX" }
+    ]
+  },
+  {
+    "id": "burpee-box-jump-over",
+    "name": "Burpee Box Jump Over",
+    "category": "Functional Movements",
+    "subcategory": "Jumping",
+    "type": "composite",
+    "equipment": ["Plyo Box"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "A Burpee immediately followed by jumping over the box, rather than stepping down — unlocked once both parent movements are reliable.",
+    "commonFaults": [{ "fault": "Landing heavily on the far side", "cue": "Absorb the landing softly on both sides of the box" }],
+    "media": { "video": null, "thumbnail": null },
+    "requiredMovements": [
+      { "movementId": "burpee", "requiredLevel": "Intermediate" },
+      { "movementId": "box-jump-over", "requiredLevel": "RX" }
+    ]
+  },
+  {
+    "id": "bear-crawl",
+    "name": "Bear Crawl",
+    "category": "Functional Movements",
+    "subcategory": "Crawling",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Quadrupedal movement on hands and feet, knees hovering just off the ground.",
+    "commonFaults": [{ "fault": "Hips popping up too high", "cue": "Keep hips low and level with the shoulders" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Short distance (10m), focus on control" },
+      { "level": "RX", "description": "Longer distance (20m+) or timed intervals" }
+    ]
+  },
+  {
+    "id": "crab-walk",
+    "name": "Crab Walk",
+    "category": "Functional Movements",
+    "subcategory": "Crawling",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": "bear-crawl",
+    "description": "Reverse of the Bear Crawl — facing up, hips lifted, moving on hands and feet.",
+    "commonFaults": [{ "fault": "Hips sagging toward the floor", "cue": "Keep hips lifted throughout the walk" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Short distance (10m)" },
+      { "level": "RX", "description": "Longer distance (20m+)" }
+    ]
+  },
+  {
+    "id": "inchworm",
+    "name": "Inchworm",
+    "category": "Functional Movements",
+    "subcategory": "Crawling",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Walking the hands out from standing to a plank position and back — a mobility/warm-up staple as much as a standalone movement.",
+    "commonFaults": [{ "fault": "Rushing through without feeling the stretch", "cue": "Pause briefly in the plank position each rep" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "5-8 reps, focus on hamstring stretch and control" },
+      { "level": "RX", "description": "10+ reps, added push-up at the bottom" }
+    ]
+  }
+]

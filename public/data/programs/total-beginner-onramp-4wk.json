@@ -1,0 +1,158 @@
+{
+  "id": "total-beginner-onramp-4wk",
+  "name": "Total Beginner On-Ramp",
+  "level": "Beginner",
+  "durationWeeks": 4,
+  "daysPerWeek": 3,
+  "description": "A gentle 4-week starting point for people who have never exercised before. Short sessions, no equipment, and a direct handoff into Beginner Foundations Week 1 once complete.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Just moving — building the habit",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Getting Started",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "5 minute walk", "notes": "This is the whole warmup — just get moving." },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "box-squat", "prescription": "2 sets x 8 reps, sitting to a chair", "notes": "A regular chair is fine — this is about the pattern, not depth yet." },
+            { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 10 sec hold", "notes": "Short holds are fine — this is everyone's starting point." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side, gentle stretch only", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Getting Started",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "5 minute walk", "notes": null },
+            { "blockType": "strength", "movementId": "push-up", "targetStageId": "incline-push-up", "prescription": "2 sets x 6 reps", "notes": "Use a wall or high surface if a bench feels like too much." },
+            { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 10 sec hold, knees bent", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "5 reps/side, gentle", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Getting Started",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "6 minute walk", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "box-squat", "prescription": "2 sets x 10 reps", "notes": null },
+            { "blockType": "skill", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "10 sec/side", "notes": "A wobble is completely normal here." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "focus": "Building a little more each session",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Building Consistency",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "6 minute walk", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "box-squat", "prescription": "3 sets x 10 reps", "notes": null },
+            { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 15 sec hold", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Building Consistency",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "7 minute walk", "notes": null },
+            { "blockType": "strength", "movementId": "push-up", "targetStageId": "incline-push-up", "prescription": "3 sets x 8 reps", "notes": null },
+            { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 15 sec hold, knees bent", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "8 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Building Consistency",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "running", "targetStageId": null, "prescription": "7 minute walk", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "box-squat", "prescription": "3 sets x 12 reps", "notes": null },
+            { "blockType": "skill", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "15 sec/side", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "focus": "First real structure — slightly longer sessions",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "4 reps, slow", "notes": "First time introducing this warmup movement — take it slow." },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 10 reps", "notes": "First attempt at a full squat without the chair — go as low as feels comfortable." },
+            { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 20 sec hold", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "3 minutes very easy pace", "notes": "First time on a rowing machine if you have access to one — otherwise substitute another 3 minute walk." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "5 reps", "notes": null },
+            { "blockType": "strength", "movementId": "push-up", "targetStageId": "knee-push-up", "prescription": "3 sets x 8 reps", "notes": "Progressing from incline to knee push-ups this week." },
+            { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 15-20 sec hold", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "8 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "5 reps", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 12 reps", "notes": null },
+            { "blockType": "skill", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "15-20 sec/side", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "3 rounds: 1 min walk, 30 sec light jog if comfortable", "notes": "The jog is entirely optional this week — walking throughout is completely fine." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Final week — preparing for the handoff to Beginner Foundations",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "5 reps", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 15 reps", "notes": "This is the exact stage and rep target Beginner Foundations Week 1 opens with." },
+            { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 20-25 sec hold", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "5 minutes easy pace", "notes": "Matches the exact opening piece of Beginner Foundations Week 1." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 8 taps/side", "notes": "First introduction of this movement, which opens Beginner Foundations Day 2." },
+            { "blockType": "strength", "movementId": "push-up", "targetStageId": "incline-push-up", "prescription": "3 sets x 10 reps", "notes": "Matches Beginner Foundations Week 1 Day 2 exactly." },
+            { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 20 sec hold, knees bent", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "8 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Full Body + Welcome to Week 1",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 8m", "notes": "First introduction — this is exactly how Beginner Foundations Day 3 opens." },
+            { "blockType": "skill", "movementId": "l-sit", "targetStageId": "tuck-hold", "prescription": "3 sets x 10-15 sec hold", "notes": "This is the same movement and stage Beginner Foundations Week 1 Day 3 uses." },
+            { "blockType": "strength", "movementId": "kettlebell-swing", "targetStageId": "russian-swing", "prescription": "3 sets x 10 reps, light kettlebell", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "3 rounds: 30 sec on, 90 sec off", "notes": "Matches Beginner Foundations Week 1 Day 3 exactly." },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "20 sec/side", "notes": "End-of-program note: you're now ready to move straight into Beginner Foundations, Week 1 — the movements and stages will feel familiar." }
+          ]
+        }
+      ]
+    }
+  ]
+}

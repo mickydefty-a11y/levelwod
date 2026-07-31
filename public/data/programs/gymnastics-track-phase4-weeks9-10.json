@@ -1,0 +1,129 @@
+{
+  "programId": "gymnastics-skills-track-10wk",
+  "weeks": [
+    {
+      "weekNumber": 9,
+      "focus": "Putting it together — first muscle-up attempts",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Pulling Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "scapular-push-ups", "targetStageId": null, "prescription": "2 sets x 12 reps", "notes": null },
+            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "chest-to-bar-pull-up", "prescription": "5 sets x 8 reps", "notes": null },
+            {
+              "blockType": "skill",
+              "movementId": "bar-muscle-up",
+              "targetStageId": "kipping-bmu",
+              "prescription": "6 attempts at a first unassisted rep",
+              "notes": "The milestone moment of the track — even one clean rep is a huge marker of progress from Week 1."
+            },
+            { "blockType": "strength", "movementId": "hollow-hold", "targetStageId": null, "prescription": "4 sets x 45 sec", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "14 minutes steady pace", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Pushing Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            { "blockType": "skill", "movementId": "handstand-walk", "targetStageId": "hs-walk-short", "prescription": "6 attempts, aiming for consistent 5-10 ft", "notes": null },
+            { "blockType": "strength", "movementId": "handstand-hold", "targetStageId": "freestanding-handstand", "prescription": "4 sets x 30 sec", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "7 rounds: 45 sec on, 45 sec off", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Core + Balance",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "skill", "movementId": "ring-dip", "targetStageId": "full-ring-dip", "prescription": "4 sets x 3-5 reps", "notes": "First full unassisted ring dip reps." },
+            { "blockType": "strength", "movementId": "toes-to-bar", "targetStageId": "kipping-t2b", "prescription": "3 sets x 12 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "22 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 10,
+      "focus": "Retest week — measuring progress against Week 1",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Retest: Strict Pull-Up + Toes-to-Bar",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "scapular-push-ups", "targetStageId": null, "prescription": "2 sets x 12 reps", "notes": null },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "strict-pull-up",
+              "prescription": "Test max unbroken strict reps",
+              "notes": "Compare directly to the Week 1 baseline number — expect a real jump."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "toes-to-bar",
+              "targetStageId": "kipping-t2b",
+              "prescription": "Test max unbroken kipping toes-to-bar",
+              "notes": "Compare to zero at the start of the track."
+            },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes easy pace", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Retest: Handstand Hold + Walk",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            {
+              "blockType": "strength",
+              "movementId": "handstand-hold",
+              "targetStageId": "freestanding-handstand",
+              "prescription": "Test max freestanding hold",
+              "notes": "Compare to a wall-facing hold being the only option back in Week 1."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "handstand-walk",
+              "targetStageId": "hs-walk-short",
+              "prescription": "Test max distance walked",
+              "notes": null
+            },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "5 rounds: 30 sec on, 90 sec off, easy effort", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Retest: Muscle-Up + Wrap-Up",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            {
+              "blockType": "skill",
+              "movementId": "bar-muscle-up",
+              "targetStageId": "kipping-bmu",
+              "prescription": "Attempt for a clean rep, or first unbroken multiple if already achieved",
+              "notes": "The headline test of the whole track — this movement didn't exist in the program until Phase 3."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "dip",
+              "targetStageId": "full-dip",
+              "prescription": "Test max unbroken reps",
+              "notes": "Compare to the Week 1 baseline."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "Row 1000m for time",
+              "notes": "A good benchmark to close the track — note the time for future comparison."
+            },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-track note: strict pull-up, dip, handstand hold, and toes-to-bar numbers have all been retested and should show real progress from Week 1." }
+          ]
+        }
+      ]
+    }
+  ]
+}

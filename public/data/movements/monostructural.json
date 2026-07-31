@@ -1,0 +1,167 @@
+[
+  {
+    "id": "running",
+    "name": "Running",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Running",
+    "type": "tutorial",
+    "equipment": [],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Foundational conditioning modality. Progression here is primarily about pacing and distance rather than a skill ladder.",
+    "commonFaults": [{ "fault": "Overstriding", "cue": "Aim for a quicker cadence with a shorter stride, midfoot strike" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Run/walk intervals, focus on form over speed" },
+      { "level": "Intermediate", "description": "Continuous running, moderate pace, 1-3 miles" },
+      { "level": "RX", "description": "Benchmark distances at a solid pace (400m-5k)" },
+      { "level": "Elite", "description": "Fast pace across benchmark distances, sustained" }
+    ]
+  },
+  {
+    "id": "rowing",
+    "name": "Rowing",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Rowing",
+    "type": "tutorial",
+    "equipment": ["Rowing Machine"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Full-body conditioning modality on the erg. Progression is primarily about pacing and distance rather than a skill ladder.",
+    "commonFaults": [{ "fault": "Rushing the recovery", "cue": "Sequence arms-body-legs on the recovery, let it be unhurried" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Focus purely on the stroke sequence, easy pace, short pieces (250-500m)" },
+      { "level": "Intermediate", "description": "Steady pace, 1000-2000m pieces" },
+      { "level": "RX", "description": "Benchmark pace on 500m/2k/5k pieces" },
+      { "level": "Elite", "description": "Fast benchmark pace, sustained over longer pieces" }
+    ]
+  },
+  {
+    "id": "skierg",
+    "name": "SkiErg",
+    "category": "Monostructural Conditioning",
+    "subcategory": "SkiErg",
+    "type": "tutorial",
+    "equipment": ["SkiErg Machine"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Upper-body-dominant conditioning modality mimicking a double-pole skiing motion.",
+    "commonFaults": [{ "fault": "Pulling with arms alone", "cue": "Let the hip hinge drive the pull, arms finish it" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Focus on the hip-hinge pattern, easy pace" },
+      { "level": "Intermediate", "description": "Steady pace, 500-1000m pieces" },
+      { "level": "RX", "description": "Benchmark pace, sustained pieces" },
+      { "level": "Elite", "description": "Fast benchmark pace, sustained over longer pieces" }
+    ]
+  },
+  {
+    "id": "bikeerg",
+    "name": "BikeErg",
+    "category": "Monostructural Conditioning",
+    "subcategory": "BikeErg",
+    "type": "tutorial",
+    "equipment": ["BikeErg Machine"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Low-impact conditioning modality, gentler on joints than running.",
+    "commonFaults": [{ "fault": "Seat height too low or high", "cue": "Set seat so the knee has a slight bend at full leg extension" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Easy pace, focus on comfortable cadence" },
+      { "level": "Intermediate", "description": "Steady effort, moderate calorie/distance targets" },
+      { "level": "RX", "description": "Benchmark pace/calorie targets" },
+      { "level": "Elite", "description": "High-output sustained pace" }
+    ]
+  },
+  {
+    "id": "assault-bike",
+    "name": "Assault Bike / Echo Bike",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Assault Bike / Echo Bike",
+    "type": "tutorial",
+    "equipment": ["Assault or Echo Bike"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "High-intensity full-body conditioning modality using both arms and legs — notoriously easy to overpace early.",
+    "commonFaults": [{ "fault": "Going out too hard early and fading badly", "cue": "Hold back on the first 30-60 seconds, build into the effort" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Easy pace, short intervals, pacing awareness" },
+      { "level": "Intermediate", "description": "Steady moderate effort, longer intervals" },
+      { "level": "RX", "description": "Benchmark calorie targets at pace" },
+      { "level": "Elite", "description": "High-output sustained or repeated efforts" }
+    ]
+  },
+  {
+    "id": "single-unders",
+    "name": "Single Unders",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Jump Rope",
+    "type": "tutorial",
+    "equipment": ["Jump Rope"],
+    "prerequisites": [],
+    "variantOf": null,
+    "description": "Foundational jump rope skill — one rope pass per jump.",
+    "commonFaults": [{ "fault": "Jumping too high", "cue": "Keep jumps small and quick, just enough to clear the rope" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "Beginner", "description": "Consistency, 20-30 unbroken" },
+      { "level": "RX", "description": "50+ unbroken, comfortable rhythm" }
+    ]
+  },
+  {
+    "id": "double-unders",
+    "name": "Double Unders",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Jump Rope",
+    "type": "progression",
+    "equipment": ["Jump Rope"],
+    "prerequisites": ["single-unders"],
+    "variantOf": null,
+    "description": "Two rope passes per jump — a common sticking point that rewards consistent practice more than raw fitness.",
+    "commonFaults": [{ "fault": "Jumping too high and losing rhythm", "cue": "Keep jumps low, spin the rope faster with the wrists" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "single-double-single-drill", "level": "Beginner", "name": "Single-Double-Single Drill", "description": "Mixing one double into a string of singles.", "graduationCriteria": "Consistent single double" },
+      { "id": "du-attempts", "level": "Intermediate", "name": "Double Under Attempts", "description": "Small unbroken sets.", "graduationCriteria": "2-5 unbroken" },
+      { "id": "du-unbroken", "level": "RX", "name": "Double Unders Unbroken", "description": "Building consistency.", "graduationCriteria": "10+ unbroken" },
+      { "id": "du-volume", "level": "Elite", "name": "Double Unders at Volume", "description": "Ready for use inside WODs.", "graduationCriteria": "50+ unbroken" }
+    ]
+  },
+  {
+    "id": "crossovers",
+    "name": "Crossovers",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Jump Rope",
+    "type": "tutorial",
+    "equipment": ["Jump Rope"],
+    "prerequisites": ["double-unders"],
+    "variantOf": "double-unders",
+    "description": "Arms cross in front of the body during the rope pass — a significant coordination step up from double unders.",
+    "commonFaults": [{ "fault": "Rushing the arm cross and catching the rope", "cue": "Slow the cross down until timing feels natural" }],
+    "media": { "video": null, "thumbnail": null },
+    "scaling": [
+      { "level": "RX", "description": "3-5 unbroken crossovers mixed into a set" },
+      { "level": "Elite", "description": "10+ unbroken crossovers" }
+    ]
+  },
+  {
+    "id": "triple-unders",
+    "name": "Triple Unders",
+    "category": "Monostructural Conditioning",
+    "subcategory": "Jump Rope",
+    "type": "progression",
+    "equipment": ["Jump Rope"],
+    "prerequisites": ["double-unders"],
+    "variantOf": null,
+    "description": "Three rope passes per jump — an elite-level jump rope skill requiring significant jump height and rope speed.",
+    "commonFaults": [{ "fault": "Not jumping high enough for the third pass", "cue": "Add a touch more jump height than for double unders" }],
+    "media": { "video": null, "thumbnail": null },
+    "stages": [
+      { "id": "tu-first-attempts", "level": "RX", "name": "First Successful Attempts", "description": "Single successful reps.", "graduationCriteria": "1+ successful rep" },
+      { "id": "tu-unbroken", "level": "Elite", "name": "Triple Unders Unbroken", "description": "Stringing reps together.", "graduationCriteria": "3+ unbroken" }
+    ]
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "programId": "strength-focus-8wk",
+  "weeks": [
+    {
+      "weekNumber": 6,
+      "focus": "Peak block begins — Split Jerk introduced",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Squat Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "5 sets x 3 reps, heavier load, lower reps", "notes": "Shifting to a strength-focused rep range for the final phase." },
+            { "blockType": "skill", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "4 sets x 5 reps, light working weight", "notes": "First loaded front squat reps." },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Pull Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "5 sets x 3 reps, heavier load, lower reps", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 2 reps, light working weight", "notes": "First full squat clean attempts at load." },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "7 rounds: 45 sec on, 45 sec off", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Press Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "5 sets x 3 reps, heavier load, lower reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-footwork", "prescription": "4 sets, footwork only, no bar", "notes": "Introducing the split jerk — building a stable, repeatable split before adding a bar." },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "9 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Olympic Technique + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 2 reps, light working weight", "notes": "First full squat snatch attempts at load." },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 7,
+      "focus": "Heavier working sets + Split Jerk with a bar",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Squat Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "5 sets x 3 reps, continued increase", "notes": null },
+            { "blockType": "skill", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "4 sets x 5 reps, continued increase", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Pull Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "5 sets x 3 reps, continued increase", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "5 sets x 2 reps, continued increase", "notes": null },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "8 rounds: 45 sec on, 45 sec off", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Press Focus",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "5 sets x 3 reps, continued increase", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-empty-bar", "prescription": "4 sets x 3 reps, empty bar", "notes": "First reps with a bar, low weight, focus purely on the split landing." },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "9 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Olympic Technique + Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "5 sets x 2 reps, continued increase", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes steady pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 8,
+      "focus": "Testing week — establish new working maxes",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Test: Back Squat + Front Squat",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "Work up to a new heavy set of 3 reps", "notes": "Compare to your working weight from Week 1 of this program." },
+            { "blockType": "skill", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "Work up to a new heavy set of 3 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes easy pace, active recovery", "notes": "Kept light on purpose — today's focus is the strength test." },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Test: Deadlift + Clean",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "Work up to a new heavy set of 3 reps", "notes": null },
+            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "Work up to a new heavy single or double", "notes": "First real test of the squat clean since Week 6." },
+            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "5 rounds: 30 sec on, 90 sec off, easy effort", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Test: Strict Press + Split Jerk",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "Work up to a new heavy set of 3 reps", "notes": null },
+            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-empty-bar", "prescription": "Attempt Split Jerk with light load if the footwork feels stable", "notes": "This is still early technical work — success here means a clean, stable landing, not a heavy number." },
+            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "8 minutes easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Test: Snatch + Wrap-Up Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "Work up to a new heavy single or double", "notes": "Compare to where the Squat Snatch started in Week 6." },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "Row 2000m for time",
+              "notes": "A good benchmark piece to close out the block — note the time for future comparison."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": "End-of-program note: new working numbers across all five main lifts should now be set for the next block." }
+          ]
+        }
+      ]
+    }
+  ]
+}
