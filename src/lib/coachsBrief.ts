@@ -11,6 +11,13 @@ import type { CoachsBriefInput } from '../types/coachsBrief'
 export function generateCoachsBrief(input: CoachsBriefInput): string[] {
   const streakLine = input.currentStreak > 0 ? `Day ${input.currentStreak} streak — nice consistency.` : null
 
+  // Rule 0 (highest priority): an auto-regulation nudge based on recent
+  // logged effort — takes precedence over even a retest day, since noticing
+  // someone's been grinding matters more than any other greeting.
+  if (input.autoregulationNudge) {
+    return [input.autoregulationNudge]
+  }
+
   // Rule 1: today is a retest day
   if (input.isRetestDay) {
     const subject = input.retestMovementName ? `${input.retestMovementName} time` : 'retest time'

@@ -18,6 +18,9 @@ export interface WorkoutLogEntry {
   dayName: string
   completedAt: string
   results: LoggedResult[]
+  // 1-10 Rate of Perceived Exertion, optional — someone can mark a day done
+  // without rating it
+  rpe?: number
 }
 
 export const workoutLogStore = createLocalStorageStore<WorkoutLogEntry[]>(

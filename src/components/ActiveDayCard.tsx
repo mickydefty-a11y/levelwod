@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import CoachsBriefBanner from './CoachsBriefBanner'
 import ProgramBlockRow from './ProgramBlockRow'
+import RpeGrid from './RpeGrid'
 import { resolveLoadContext } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
@@ -34,6 +35,7 @@ export default function ActiveDayCard({
   const { dataFor } = useTrainingMax()
   const [results, setResults] = useState<Record<number, string>>({})
   const [done, setDone] = useState<Record<number, boolean>>({})
+  const [showRpeGrid, setShowRpeGrid] = useState(false)
 
   const trainingMaxData = dataFor(program.id)
   const loadContext = trainingMaxData
@@ -60,9 +62,10 @@ export default function ActiveDayCard({
   useEffect(() => {
     setResults({})
     setDone({})
+    setShowRpeGrid(false)
   }, [program.id, week.weekNumber, day.dayNumber])
 
-  function handleComplete() {
+  function handleComplete(rpe?: number) {
     const loggedResults = day.blocks
       .map((block, i) => {
         const text = (results[i] ?? '').trim()
@@ -85,6 +88,7 @@ export default function ActiveDayCard({
       dayName: day.name,
       completedAt: new Date().toISOString(),
       results: loggedResults,
+      rpe,
     })
 
     if (isFinalDay) {
@@ -117,12 +121,18 @@ export default function ActiveDayCard({
           />
         ))}
       </ul>
-      <button
-        onClick={handleComplete}
-        className="mt-2 w-full rounded-lg bg-accent py-2 text-sm font-medium text-bg"
-      >
-        {isFinalDay ? 'Finish program 🎉' : 'Mark day complete'}
-      </button>
+      {showRpeGrid ? (
+        <div className="mt-2">
+          <RpeGrid onSelect={(rpe) => handleComplete(rpe)} onSkip={() => handleComplete(undefined)} />
+        </div>
+      ) : (
+        <button
+          onClick={() => setShowRpeGrid(true)}
+          className="mt-2 w-full rounded-lg bg-accent py-2 text-sm font-medium text-bg"
+        >
+          {isFinalDay ? 'Finish program 🎉' : 'Mark day complete'}
+        </button>
+      )}
     </div>
   )
 }

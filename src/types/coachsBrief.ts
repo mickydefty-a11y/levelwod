@@ -15,6 +15,10 @@ export interface CoachsBriefRecentUnlock {
 export interface CoachsBriefInput {
   // used only by the rule-6 fallback ("Welcome to {sessionName}...")
   sessionName: string
+  // rule 0 (highest priority): an auto-regulation nudge, already resolved
+  // by the caller (deload-week suppression already applied) — a plain
+  // message string, single line, no combination with the streak
+  autoregulationNudge?: string | null
   isRetestDay: boolean
   retestMovementName?: string | null
   // rule 2: the first session movement (in session order) with a past

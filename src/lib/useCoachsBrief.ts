@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { generateCoachsBrief } from './coachsBrief'
 import { formatValue } from './prFormat'
+import { detectAutoregulationNudge } from './rpeAutoregulation'
 import { getCurrentStreak } from './streakStats'
 import { usePRHistory } from './usePRHistory'
 import { useProgress } from './useProgress'
@@ -42,8 +43,20 @@ export function useCoachsBrief({
   const { progress } = useProgress()
   const { log } = useWorkoutLog()
   const currentStreak = getCurrentStreak(log)
+  // Deload weeks are already handling recovery — a redundant nudge there
+  // would just be noise. Reuses the same weekFocus text rule 4 already
+  // reads, so this naturally only ever applies within structured-program
+  // sessions (the WOD Generator and Benchmark pages don't pass a
+  // weekFocus, so there's nothing to suppress against there).
+  const isDeloadWeek = (weekFocus ?? '').toLowerCase().includes('deload')
 
   return useMemo(() => {
+    // Rule 0: recent effort trend, regardless of which session this is —
+    // "how have you been feeling lately" isn't scoped to today's program.
+    const rpeHistory = log.map((e) => e.rpe).filter((rpe): rpe is number => rpe != null)
+    const nudge = isDeloadWeek ? null : detectAutoregulationNudge(rpeHistory)
+
+
     // Rule 2: first session movement (in order) with a recent logged result
     let recentResult: CoachsBriefInput['recentResult'] = null
     for (const movementId of sessionMovementIds) {
@@ -76,6 +89,7 @@ export function useCoachsBrief({
 
     return generateCoachsBrief({
       sessionName,
+      autoregulationNudge: nudge?.message ?? null,
       isRetestDay,
       retestMovementName,
       recentResult,
@@ -84,5 +98,17 @@ export function useCoachsBrief({
       currentStreak,
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sessionMovementIds, movementIndex, historyFor, progress, weekFocus, isRetestDay, retestMovementName, currentStreak, sessionName])
+  }, [
+    sessionMovementIds,
+    movementIndex,
+    historyFor,
+    progress,
+    weekFocus,
+    isRetestDay,
+    retestMovementName,
+    currentStreak,
+    sessionName,
+    log,
+    isDeloadWeek,
+  ])
 }
