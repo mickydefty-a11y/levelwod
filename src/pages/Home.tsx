@@ -21,6 +21,7 @@ export default function Home() {
   const { completed } = useProgramHistory()
   const { hasSeenIntro } = useOnboarding()
   const { log } = useWorkoutLog()
+  const [showBreathingOffer, setShowBreathingOffer] = useState(false)
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -115,10 +116,46 @@ export default function Home() {
               day={day}
               movementIndex={movementIndex}
               isFinalDay={isFinalDay}
+              onCompleted={() => setShowBreathingOffer(true)}
             />
           </div>
         </div>
       )}
+
+      {showBreathingOffer && (
+        <div className="mt-4 flex items-center justify-between rounded-xl bg-bg-surface p-4">
+          <div>
+            <p className="text-sm font-medium">Nice work.</p>
+            <p className="mt-0.5 text-xs text-ink-muted">Want to cool down with some breathing?</p>
+          </div>
+          <div className="flex shrink-0 items-center gap-2">
+            <Link
+              to="/breathing"
+              className="rounded-lg bg-accent px-3 py-1.5 text-xs font-medium text-bg"
+            >
+              Let's go
+            </Link>
+            <button
+              onClick={() => setShowBreathingOffer(false)}
+              aria-label="Dismiss"
+              className="text-xs text-ink-muted underline"
+            >
+              No thanks
+            </button>
+          </div>
+        </div>
+      )}
+
+      <Link
+        to="/breathing"
+        className="mt-4 flex items-center justify-between rounded-xl bg-bg-surface p-4 hover:bg-bg-raised"
+      >
+        <div>
+          <p className="text-sm font-medium">Take 5 minutes</p>
+          <p className="mt-0.5 text-xs text-ink-muted">Guided breathing for a cooldown or reset.</p>
+        </div>
+        <span className="text-ink-muted">→</span>
+      </Link>
 
       {readyToTry.length > 0 && (
         <div className="mt-4">

@@ -14,12 +14,17 @@ export default function ActiveDayCard({
   day,
   movementIndex,
   isFinalDay,
+  onCompleted,
 }: {
   program: Program
   week: ProgramWeek
   day: ProgramDay
   movementIndex: Map<string, Movement>
   isFinalDay: boolean
+  // fired after a day is marked complete — used by Home to offer a
+  // post-workout breathing session; has no effect on the completion logic
+  // itself
+  onCompleted?: () => void
 }) {
   const { advanceDay, stopProgram } = useActiveProgram()
   const { markCompleted } = useProgramHistory()
@@ -71,6 +76,8 @@ export default function ActiveDayCard({
     } else {
       advanceDay(program)
     }
+
+    onCompleted?.()
   }
 
   return (

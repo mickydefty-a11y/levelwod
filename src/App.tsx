@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import BottomNav from './components/BottomNav'
+import Breathing from './pages/Breathing'
 import Home from './pages/Home'
 import Library from './pages/Library'
 import MovementDetail from './pages/MovementDetail'
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/timer" element={<Timer />} />
+          <Route path="/breathing" element={<Breathing />} />
         </Routes>
       </main>
       {!hideNav && <BottomNav />}
