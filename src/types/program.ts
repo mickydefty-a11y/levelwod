@@ -49,10 +49,13 @@ export interface RequiresInput {
   oneRepMaxInputs: string[]
 }
 
+export type ProgramCategory = 'Foundations' | 'Strength' | 'Weightlifting' | 'Skills' | 'Conditioning'
+
 export interface Program {
   id: string
   name: string
   level: string
+  category?: ProgramCategory
   durationWeeks: number
   daysPerWeek: number
   description: string
