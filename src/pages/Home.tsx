@@ -3,11 +3,13 @@ import { Link, Navigate } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
+import { getMovementsAtOrAboveRX, getCurrentStreak, getThisWeekSessionCount } from '../lib/streakStats'
 import { getReadyToTry } from '../lib/suggestions'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useOnboarding } from '../lib/useOnboarding'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
+import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
 import type { Program } from '../types/program'
 
@@ -18,6 +20,7 @@ export default function Home() {
   const { progress } = useProgress()
   const { completed } = useProgramHistory()
   const { hasSeenIntro } = useOnboarding()
+  const { log } = useWorkoutLog()
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -29,7 +32,9 @@ export default function Home() {
     [movements],
   )
 
-  const progressCount = Object.keys(progress).length
+  const dayStreak = getCurrentStreak(log)
+  const skillsUnlocked = movements ? getMovementsAtOrAboveRX(movements, progress) : 0
+  const thisWeekCount = getThisWeekSessionCount(log)
 
   if (!hasSeenIntro) {
     return <Navigate to="/welcome" replace />
@@ -66,12 +71,12 @@ export default function Home() {
 
       <div className="mt-4 flex gap-3">
         <div className="flex-1 rounded-xl bg-bg-surface p-3">
-          <p className="text-xs text-ink-muted">Movements tracked</p>
-          <p className="mt-1 text-xl font-semibold">{progressCount}</p>
+          <p className="text-xs text-ink-muted">Day streak</p>
+          <p className="mt-1 text-xl font-semibold">{dayStreak}</p>
         </div>
         <div className="flex-1 rounded-xl bg-bg-surface p-3">
-          <p className="text-xs text-ink-muted">Active program</p>
-          <p className="mt-1 text-xl font-semibold">{program ? '1' : '0'}</p>
+          <p className="text-xs text-ink-muted">Skills unlocked</p>
+          <p className="mt-1 text-xl font-semibold">{skillsUnlocked}</p>
         </div>
       </div>
 
@@ -98,6 +103,9 @@ export default function Home() {
           <p className="mt-0.5 text-xs text-ink-muted">
             Week {week.weekNumber} · {day.name}
             {isFinalDay && ' · Final day 🏁'}
+          </p>
+          <p className="mt-0.5 text-xs text-ink-muted">
+            This week: {thisWeekCount} of {program.daysPerWeek}
           </p>
 
           <div className="mt-3">

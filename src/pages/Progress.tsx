@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
 import { loadMovements } from '../lib/loadData'
+import { getLongestStreak, getMovementsAtOrAboveRX, getTotalSessions } from '../lib/streakStats'
+import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
@@ -10,6 +12,7 @@ export default function Progress() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const { progress, clearMovementProgress } = useProgress()
   const { log } = useWorkoutLog()
+  const { completed } = useProgramHistory()
   const [importMessage, setImportMessage] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -62,14 +65,41 @@ export default function Progress() {
       .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
   }, [movements, progress])
 
+  const longestStreak = getLongestStreak(log)
+  const totalSessions = getTotalSessions(log)
+  const skillsUnlocked = movements ? getMovementsAtOrAboveRX(movements, progress) : 0
+
   return (
     <div>
       <h1 className="text-2xl font-semibold">Progress</h1>
 
+      <div className="mt-4">
+        <h2 className="text-sm font-semibold text-accent">Your stats</h2>
+        <div className="mt-1.5 grid grid-cols-2 gap-2">
+          <div className="rounded-xl bg-bg-surface p-3">
+            <p className="text-xs text-ink-muted">Longest streak</p>
+            <p className="mt-1 text-xl font-semibold">{longestStreak}</p>
+          </div>
+          <div className="rounded-xl bg-bg-surface p-3">
+            <p className="text-xs text-ink-muted">Total sessions</p>
+            <p className="mt-1 text-xl font-semibold">{totalSessions}</p>
+          </div>
+          <div className="rounded-xl bg-bg-surface p-3">
+            <p className="text-xs text-ink-muted">Programs completed</p>
+            <p className="mt-1 text-xl font-semibold">{completed.length}</p>
+          </div>
+          <div className="rounded-xl bg-bg-surface p-3">
+            <p className="text-xs text-ink-muted">Skills at RX+</p>
+            <p className="mt-1 text-xl font-semibold">{skillsUnlocked}</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="mt-6 text-sm font-semibold text-accent">Movements tracked</h2>
       {!movements ? (
-        <p className="mt-4 text-ink-muted">Loading…</p>
+        <p className="mt-1.5 text-ink-muted">Loading…</p>
       ) : entries.length === 0 ? (
-        <p className="mt-4 text-sm text-ink-muted">
+        <p className="mt-1.5 text-sm text-ink-muted">
           No progress saved yet. Open any movement in the{' '}
           <Link to="/library" className="text-accent-light underline">
             Library
@@ -77,7 +107,7 @@ export default function Progress() {
           and tap a stage or level to mark where you're at.
         </p>
       ) : (
-        <ul className="mt-4 space-y-1.5">
+        <ul className="mt-1.5 space-y-1.5">
           {entries.map((e) => (
             <li
               key={e.movementId}
