@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
+import BenchmarkDetail from './pages/BenchmarkDetail'
 import BottomNav from './components/BottomNav'
 import Breathing from './pages/Breathing'
 import Home from './pages/Home'
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/timer" element={<Timer />} />
           <Route path="/breathing" element={<Breathing />} />
           <Route path="/wod" element={<Wod />} />
+          <Route path="/benchmarks/:id" element={<BenchmarkDetail />} />
         </Routes>
       </main>
       {!hideNav && <BottomNav />}
