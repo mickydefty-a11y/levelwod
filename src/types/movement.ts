@@ -29,6 +29,11 @@ export interface RequiredMovement {
   requiredLevel: SkillLevel
 }
 
+export interface SuggestedSubstitute {
+  movementId: string
+  reason: string
+}
+
 export interface MovementMedia {
   video: string | null
   thumbnail: string | null
@@ -53,4 +58,6 @@ export interface Movement {
   drills?: Drill[]
   // present when type === 'composite'
   requiredMovements?: RequiredMovement[]
+  // hand-curated substitutes, checked before falling back to automatic matching
+  suggestedSubstitutes?: SuggestedSubstitute[]
 }

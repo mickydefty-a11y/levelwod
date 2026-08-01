@@ -5,16 +5,44 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Rings or TRX"],
+    "equipment": [
+      "Rings or TRX"
+    ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Horizontal pulling movement using rings or a bar — builds pulling strength safely before full pull-ups.",
-    "commonFaults": [{ "fault": "Hips sagging", "cue": "Keep a straight line from shoulders to heels" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Horizontal pulling movement using rings or a bar \u2014 builds pulling strength safely before full pull-ups.",
+    "commonFaults": [
+      {
+        "fault": "Hips sagging",
+        "cue": "Keep a straight line from shoulders to heels"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "ring-row-assisted", "level": "Beginner", "name": "Feet-Forward Ring Row", "description": "More upright angle, easier leverage.", "graduationCriteria": "10 reps clean form" },
-      { "id": "ring-row-standard", "level": "Intermediate", "name": "Standard Ring Row", "description": "Body angled closer to horizontal.", "graduationCriteria": "10-12 reps clean form" },
-      { "id": "ring-row-elevated", "level": "RX", "name": "Feet-Elevated Ring Row", "description": "Feet on box, near-horizontal body line.", "graduationCriteria": "10+ reps clean form" }
+      {
+        "id": "ring-row-assisted",
+        "level": "Beginner",
+        "name": "Feet-Forward Ring Row",
+        "description": "More upright angle, easier leverage.",
+        "graduationCriteria": "10 reps clean form"
+      },
+      {
+        "id": "ring-row-standard",
+        "level": "Intermediate",
+        "name": "Standard Ring Row",
+        "description": "Body angled closer to horizontal.",
+        "graduationCriteria": "10-12 reps clean form"
+      },
+      {
+        "id": "ring-row-elevated",
+        "level": "RX",
+        "name": "Feet-Elevated Ring Row",
+        "description": "Feet on box, near-horizontal body line.",
+        "graduationCriteria": "10+ reps clean form"
+      }
     ]
   },
   {
@@ -23,21 +51,87 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Pull-up Bar"],
-    "prerequisites": ["ring-row"],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "prerequisites": [
+      "ring-row"
+    ],
     "variantOf": null,
-    "description": "Foundational vertical pulling movement — gateway skill to muscle-ups and advanced gymnastics.",
-    "commonFaults": [{ "fault": "Kipping too early before strict strength exists", "cue": "Build strict reps first" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Foundational vertical pulling movement \u2014 gateway skill to muscle-ups and advanced gymnastics.",
+    "commonFaults": [
+      {
+        "fault": "Kipping too early before strict strength exists",
+        "cue": "Build strict reps first"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "dead-hang", "level": "Beginner", "name": "Dead Hang", "description": "Hang from bar, arms straight.", "graduationCriteria": "20-30 sec hold" },
-      { "id": "scapular-pull-up", "level": "Beginner", "name": "Scapular Pull-Up", "description": "Pull shoulder blades down/back without bending arms.", "graduationCriteria": "8-10 reps" },
-      { "id": "negative-pull-up", "level": "Beginner", "name": "Negative Pull-Up", "description": "Jump to top, lower slowly.", "graduationCriteria": "5 reps, 3-5 sec descent" },
-      { "id": "banded-pull-up", "level": "Intermediate", "name": "Banded/Jumping Pull-Up", "description": "Assisted full rep.", "graduationCriteria": "5-8 reps" },
-      { "id": "strict-pull-up", "level": "RX", "name": "Strict Pull-Up", "description": "Full unassisted rep, no kip.", "graduationCriteria": "5+ reps unbroken" },
-      { "id": "kipping-pull-up", "level": "RX", "name": "Kipping Pull-Up", "description": "Using hip drive for efficiency.", "graduationCriteria": "10+ reps unbroken" },
-      { "id": "chest-to-bar-pull-up", "level": "Elite", "name": "Chest-to-Bar Pull-Up", "description": "Kipping pull-up with chest contacting the bar.", "graduationCriteria": "5+ reps unbroken" },
-      { "id": "butterfly-pull-up", "level": "Elite", "name": "Butterfly Pull-Up", "description": "Continuous circular kip for speed and volume.", "graduationCriteria": "10+ reps unbroken" }
+      {
+        "id": "dead-hang",
+        "level": "Beginner",
+        "name": "Dead Hang",
+        "description": "Hang from bar, arms straight.",
+        "graduationCriteria": "20-30 sec hold"
+      },
+      {
+        "id": "scapular-pull-up",
+        "level": "Beginner",
+        "name": "Scapular Pull-Up",
+        "description": "Pull shoulder blades down/back without bending arms.",
+        "graduationCriteria": "8-10 reps"
+      },
+      {
+        "id": "negative-pull-up",
+        "level": "Beginner",
+        "name": "Negative Pull-Up",
+        "description": "Jump to top, lower slowly.",
+        "graduationCriteria": "5 reps, 3-5 sec descent"
+      },
+      {
+        "id": "banded-pull-up",
+        "level": "Intermediate",
+        "name": "Banded/Jumping Pull-Up",
+        "description": "Assisted full rep.",
+        "graduationCriteria": "5-8 reps"
+      },
+      {
+        "id": "strict-pull-up",
+        "level": "RX",
+        "name": "Strict Pull-Up",
+        "description": "Full unassisted rep, no kip.",
+        "graduationCriteria": "5+ reps unbroken"
+      },
+      {
+        "id": "kipping-pull-up",
+        "level": "RX",
+        "name": "Kipping Pull-Up",
+        "description": "Using hip drive for efficiency.",
+        "graduationCriteria": "10+ reps unbroken"
+      },
+      {
+        "id": "chest-to-bar-pull-up",
+        "level": "Elite",
+        "name": "Chest-to-Bar Pull-Up",
+        "description": "Kipping pull-up with chest contacting the bar.",
+        "graduationCriteria": "5+ reps unbroken"
+      },
+      {
+        "id": "butterfly-pull-up",
+        "level": "Elite",
+        "name": "Butterfly Pull-Up",
+        "description": "Continuous circular kip for speed and volume.",
+        "graduationCriteria": "10+ reps unbroken"
+      }
+    ],
+    "suggestedSubstitutes": [
+      {
+        "movementId": "ring-row",
+        "reason": "No pull-up bar available, or easier pulling angle"
+      }
     ]
   },
   {
@@ -46,19 +140,67 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Climbing Rope"],
-    "prerequisites": ["pull-up"],
+    "equipment": [
+      "Climbing Rope"
+    ],
+    "prerequisites": [
+      "pull-up"
+    ],
     "variantOf": null,
     "description": "Vertical climbing skill combining grip, pulling strength, and foot-lock technique.",
-    "commonFaults": [{ "fault": "Losing the foot lock under fatigue", "cue": "Practice the foot-lock drill on the ground first" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Losing the foot lock under fatigue",
+        "cue": "Practice the foot-lock drill on the ground first"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "rope-hang", "level": "Beginner", "name": "Rope Hang", "description": "Hang and hold, no legs.", "graduationCriteria": "10 sec hold" },
-      { "id": "legless-pull-low", "level": "Intermediate", "name": "Legless Rope Pull (low)", "description": "A few pulls from seated/low position.", "graduationCriteria": "3-5 pulls" },
-      { "id": "foot-lock-drill", "level": "Intermediate", "name": "Foot-Lock Drill", "description": "Practicing foot-lock technique on the ground.", "graduationCriteria": "Consistent lock on first attempt" },
-      { "id": "assisted-climb", "level": "RX", "name": "Assisted-Height Climb", "description": "Climb with foot lock, partial height.", "graduationCriteria": "Comfortable partial ascent" },
-      { "id": "full-rope-climb", "level": "RX", "name": "Full Rope Climb", "description": "Complete 15ft ascent.", "graduationCriteria": "1 clean ascent" },
-      { "id": "legless-rope-climb", "level": "Elite", "name": "Legless Rope Climb", "description": "Full climb with no foot lock, arms/lats only.", "graduationCriteria": "1 clean ascent" }
+      {
+        "id": "rope-hang",
+        "level": "Beginner",
+        "name": "Rope Hang",
+        "description": "Hang and hold, no legs.",
+        "graduationCriteria": "10 sec hold"
+      },
+      {
+        "id": "legless-pull-low",
+        "level": "Intermediate",
+        "name": "Legless Rope Pull (low)",
+        "description": "A few pulls from seated/low position.",
+        "graduationCriteria": "3-5 pulls"
+      },
+      {
+        "id": "foot-lock-drill",
+        "level": "Intermediate",
+        "name": "Foot-Lock Drill",
+        "description": "Practicing foot-lock technique on the ground.",
+        "graduationCriteria": "Consistent lock on first attempt"
+      },
+      {
+        "id": "assisted-climb",
+        "level": "RX",
+        "name": "Assisted-Height Climb",
+        "description": "Climb with foot lock, partial height.",
+        "graduationCriteria": "Comfortable partial ascent"
+      },
+      {
+        "id": "full-rope-climb",
+        "level": "RX",
+        "name": "Full Rope Climb",
+        "description": "Complete 15ft ascent.",
+        "graduationCriteria": "1 clean ascent"
+      },
+      {
+        "id": "legless-rope-climb",
+        "level": "Elite",
+        "name": "Legless Rope Climb",
+        "description": "Full climb with no foot lock, arms/lats only.",
+        "graduationCriteria": "1 clean ascent"
+      }
     ]
   },
   {
@@ -67,19 +209,67 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Pull-up Bar"],
-    "prerequisites": ["pull-up"],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "prerequisites": [
+      "pull-up"
+    ],
     "variantOf": null,
     "description": "Core and hip-flexor movement combining a hang with a controlled or kipping leg raise to bar contact.",
-    "commonFaults": [{ "fault": "Bent knees instead of straight legs", "cue": "Point toes, keep legs straight through the raise" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Bent knees instead of straight legs",
+        "cue": "Point toes, keep legs straight through the raise"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "hanging-knee-raise", "level": "Beginner", "name": "Hanging Knee Raise", "description": "Knees to chest from a hang.", "graduationCriteria": "10 reps" },
-      { "id": "hanging-knee-to-chest", "level": "Beginner", "name": "Hanging Knee-to-Chest", "description": "Fuller hip flexion, controlled.", "graduationCriteria": "10 reps" },
-      { "id": "kipping-knee-raise", "level": "Intermediate", "name": "Kipping Knee Raise", "description": "Adding hip swing for momentum.", "graduationCriteria": "10 reps" },
-      { "id": "single-leg-t2b", "level": "Intermediate", "name": "Single-Leg Toes-to-Bar", "description": "Alternating single leg to bar.", "graduationCriteria": "5 reps/side" },
-      { "id": "strict-t2b", "level": "RX", "name": "Strict Toes-to-Bar", "description": "No kip, full control.", "graduationCriteria": "3-5 reps" },
-      { "id": "kipping-t2b", "level": "RX", "name": "Kipping Toes-to-Bar", "description": "Full kipping version, unbroken sets.", "graduationCriteria": "10+ unbroken" }
+      {
+        "id": "hanging-knee-raise",
+        "level": "Beginner",
+        "name": "Hanging Knee Raise",
+        "description": "Knees to chest from a hang.",
+        "graduationCriteria": "10 reps"
+      },
+      {
+        "id": "hanging-knee-to-chest",
+        "level": "Beginner",
+        "name": "Hanging Knee-to-Chest",
+        "description": "Fuller hip flexion, controlled.",
+        "graduationCriteria": "10 reps"
+      },
+      {
+        "id": "kipping-knee-raise",
+        "level": "Intermediate",
+        "name": "Kipping Knee Raise",
+        "description": "Adding hip swing for momentum.",
+        "graduationCriteria": "10 reps"
+      },
+      {
+        "id": "single-leg-t2b",
+        "level": "Intermediate",
+        "name": "Single-Leg Toes-to-Bar",
+        "description": "Alternating single leg to bar.",
+        "graduationCriteria": "5 reps/side"
+      },
+      {
+        "id": "strict-t2b",
+        "level": "RX",
+        "name": "Strict Toes-to-Bar",
+        "description": "No kip, full control.",
+        "graduationCriteria": "3-5 reps"
+      },
+      {
+        "id": "kipping-t2b",
+        "level": "RX",
+        "name": "Kipping Toes-to-Bar",
+        "description": "Full kipping version, unbroken sets.",
+        "graduationCriteria": "10+ unbroken"
+      }
     ]
   },
   {
@@ -88,15 +278,31 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "tutorial",
-    "equipment": ["Pull-up Bar"],
+    "equipment": [
+      "Pull-up Bar"
+    ],
     "prerequisites": [],
     "variantOf": "toes-to-bar",
-    "description": "Regression of Toes-to-Bar with a shorter range of motion — bringing knees to elbows instead of toes to bar.",
-    "commonFaults": [{ "fault": "Excessive swinging without control", "cue": "Slow the kip down, prioritize control over speed" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Regression of Toes-to-Bar with a shorter range of motion \u2014 bringing knees to elbows instead of toes to bar.",
+    "commonFaults": [
+      {
+        "fault": "Excessive swinging without control",
+        "cue": "Slow the kip down, prioritize control over speed"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Small controlled reps, focus on the movement pattern" },
-      { "level": "RX", "description": "10+ unbroken reps" }
+      {
+        "level": "Beginner",
+        "description": "Small controlled reps, focus on the movement pattern"
+      },
+      {
+        "level": "RX",
+        "description": "10+ unbroken reps"
+      }
     ]
   },
   {
@@ -105,15 +311,33 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "tutorial",
-    "equipment": ["Rings"],
-    "prerequisites": ["toes-to-bar"],
+    "equipment": [
+      "Rings"
+    ],
+    "prerequisites": [
+      "toes-to-bar"
+    ],
     "variantOf": "toes-to-bar",
     "description": "Harder variation of Toes-to-Bar performed on unstable rings instead of a fixed bar.",
-    "commonFaults": [{ "fault": "Rings swinging excessively", "cue": "Control the rings with a firm grip and slower tempo" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Rings swinging excessively",
+        "cue": "Control the rings with a firm grip and slower tempo"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "RX", "description": "5+ reps, controlled" },
-      { "level": "Elite", "description": "10+ unbroken reps" }
+      {
+        "level": "RX",
+        "description": "5+ reps, controlled"
+      },
+      {
+        "level": "Elite",
+        "description": "10+ unbroken reps"
+      }
     ]
   },
   {
@@ -122,18 +346,74 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Pull-up Bar"],
-    "prerequisites": ["pull-up"],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "prerequisites": [
+      "pull-up"
+    ],
     "variantOf": null,
-    "description": "Transitioning from a pull-up to a dip on top of the bar — a major gymnastics milestone.",
-    "commonFaults": [{ "fault": "Not pulling high enough before the transition", "cue": "Pull the bar to the lower chest before turning over" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Transitioning from a pull-up to a dip on top of the bar \u2014 a major gymnastics milestone.",
+    "commonFaults": [
+      {
+        "fault": "Not pulling high enough before the transition",
+        "cue": "Pull the bar to the lower chest before turning over"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "bar-support-hold", "level": "Intermediate", "name": "Bar Support Hold", "description": "Top-of-dip position on the bar.", "graduationCriteria": "10-20 sec hold" },
-      { "id": "transition-drill", "level": "Intermediate", "name": "Transition Drill", "description": "Practicing the pull-to-push transition low to the ground.", "graduationCriteria": "Consistent transition low to ground" },
-      { "id": "banded-bmu", "level": "RX", "name": "Banded Bar Muscle-Up", "description": "Full rep with band assistance.", "graduationCriteria": "3-5 reps" },
-      { "id": "kipping-bmu", "level": "RX", "name": "Kipping Bar Muscle-Up", "description": "First unassisted reps.", "graduationCriteria": "1+ rep" },
-      { "id": "multiple-bmu", "level": "Elite", "name": "Multiple Unbroken Bar Muscle-Ups", "description": "Stringing reps together.", "graduationCriteria": "3+ unbroken" }
+      {
+        "id": "bar-support-hold",
+        "level": "Intermediate",
+        "name": "Bar Support Hold",
+        "description": "Top-of-dip position on the bar.",
+        "graduationCriteria": "10-20 sec hold"
+      },
+      {
+        "id": "transition-drill",
+        "level": "Intermediate",
+        "name": "Transition Drill",
+        "description": "Practicing the pull-to-push transition low to the ground.",
+        "graduationCriteria": "Consistent transition low to ground"
+      },
+      {
+        "id": "banded-bmu",
+        "level": "RX",
+        "name": "Banded Bar Muscle-Up",
+        "description": "Full rep with band assistance.",
+        "graduationCriteria": "3-5 reps"
+      },
+      {
+        "id": "kipping-bmu",
+        "level": "RX",
+        "name": "Kipping Bar Muscle-Up",
+        "description": "First unassisted reps.",
+        "graduationCriteria": "1+ rep"
+      },
+      {
+        "id": "multiple-bmu",
+        "level": "Elite",
+        "name": "Multiple Unbroken Bar Muscle-Ups",
+        "description": "Stringing reps together.",
+        "graduationCriteria": "3+ unbroken"
+      }
+    ],
+    "suggestedSubstitutes": [
+      {
+        "movementId": "ring-row",
+        "reason": "No rig or bar available"
+      },
+      {
+        "movementId": "pull-up",
+        "reason": "Build strict pulling strength first"
+      },
+      {
+        "movementId": "dip",
+        "reason": "Build the pushing half first"
+      }
     ]
   },
   {
@@ -142,16 +422,62 @@
     "category": "Gymnastics",
     "subcategory": "Pulling Movements",
     "type": "progression",
-    "equipment": ["Rings"],
-    "prerequisites": ["ring-row", "ring-dip", "pull-up"],
+    "equipment": [
+      "Rings"
+    ],
+    "prerequisites": [
+      "ring-row",
+      "ring-dip",
+      "pull-up"
+    ],
     "variantOf": null,
-    "description": "Similar transition to the Bar Muscle-Up, but on unstable rings — generally considered more technical.",
-    "commonFaults": [{ "fault": "False grip discomfort/slipping", "cue": "Build false-grip hangs separately before attempting full reps" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Similar transition to the Bar Muscle-Up, but on unstable rings \u2014 generally considered more technical.",
+    "commonFaults": [
+      {
+        "fault": "False grip discomfort/slipping",
+        "cue": "Build false-grip hangs separately before attempting full reps"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "ring-support-hold", "level": "Intermediate", "name": "Ring Support Hold", "description": "Top-of-dip position on rings.", "graduationCriteria": "10-20 sec hold" },
-      { "id": "banded-rmu", "level": "RX", "name": "Banded Ring Muscle-Up", "description": "Full rep with band assistance.", "graduationCriteria": "3-5 reps" },
-      { "id": "strict-rmu", "level": "Elite", "name": "Strict Ring Muscle-Up", "description": "No kip, full control.", "graduationCriteria": "1+ rep" }
+      {
+        "id": "ring-support-hold",
+        "level": "Intermediate",
+        "name": "Ring Support Hold",
+        "description": "Top-of-dip position on rings.",
+        "graduationCriteria": "10-20 sec hold"
+      },
+      {
+        "id": "banded-rmu",
+        "level": "RX",
+        "name": "Banded Ring Muscle-Up",
+        "description": "Full rep with band assistance.",
+        "graduationCriteria": "3-5 reps"
+      },
+      {
+        "id": "strict-rmu",
+        "level": "Elite",
+        "name": "Strict Ring Muscle-Up",
+        "description": "No kip, full control.",
+        "graduationCriteria": "1+ rep"
+      }
+    ],
+    "suggestedSubstitutes": [
+      {
+        "movementId": "ring-row",
+        "reason": "No rig or rings available"
+      },
+      {
+        "movementId": "ring-dip",
+        "reason": "Build the pushing half first"
+      },
+      {
+        "movementId": "pull-up",
+        "reason": "Build strict pulling strength first"
+      }
     ]
   },
   {
@@ -164,13 +490,45 @@
     "prerequisites": [],
     "variantOf": null,
     "description": "Foundational horizontal pushing movement.",
-    "commonFaults": [{ "fault": "Hips sagging or piking up", "cue": "Keep a straight line, brace core throughout" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Hips sagging or piking up",
+        "cue": "Keep a straight line, brace core throughout"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "incline-push-up", "level": "Beginner", "name": "Incline Push-Up", "description": "Hands elevated on a bench/box.", "graduationCriteria": "10 reps" },
-      { "id": "knee-push-up", "level": "Beginner", "name": "Knee Push-Up", "description": "Knees on ground.", "graduationCriteria": "10 reps" },
-      { "id": "full-push-up", "level": "Intermediate", "name": "Full Push-Up", "description": "Standard full range.", "graduationCriteria": "10+ reps" },
-      { "id": "hand-release-push-up", "level": "RX", "name": "Hand-Release Push-Up", "description": "Hands lift off floor at bottom of each rep.", "graduationCriteria": "10+ reps" }
+      {
+        "id": "incline-push-up",
+        "level": "Beginner",
+        "name": "Incline Push-Up",
+        "description": "Hands elevated on a bench/box.",
+        "graduationCriteria": "10 reps"
+      },
+      {
+        "id": "knee-push-up",
+        "level": "Beginner",
+        "name": "Knee Push-Up",
+        "description": "Knees on ground.",
+        "graduationCriteria": "10 reps"
+      },
+      {
+        "id": "full-push-up",
+        "level": "Intermediate",
+        "name": "Full Push-Up",
+        "description": "Standard full range.",
+        "graduationCriteria": "10+ reps"
+      },
+      {
+        "id": "hand-release-push-up",
+        "level": "RX",
+        "name": "Hand-Release Push-Up",
+        "description": "Hands lift off floor at bottom of each rep.",
+        "graduationCriteria": "10+ reps"
+      }
     ]
   },
   {
@@ -179,15 +537,33 @@
     "category": "Gymnastics",
     "subcategory": "Pushing Movements",
     "type": "tutorial",
-    "equipment": ["Rings"],
-    "prerequisites": ["push-up"],
+    "equipment": [
+      "Rings"
+    ],
+    "prerequisites": [
+      "push-up"
+    ],
     "variantOf": "push-up",
-    "description": "Push-up performed on unstable rings — harder due to added stabilization demand.",
-    "commonFaults": [{ "fault": "Rings drifting apart or together", "cue": "Keep rings stacked directly under shoulders" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Push-up performed on unstable rings \u2014 harder due to added stabilization demand.",
+    "commonFaults": [
+      {
+        "fault": "Rings drifting apart or together",
+        "cue": "Keep rings stacked directly under shoulders"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "RX", "description": "10 reps, controlled" },
-      { "level": "Elite", "description": "Add a deficit or tempo" }
+      {
+        "level": "RX",
+        "description": "10 reps, controlled"
+      },
+      {
+        "level": "Elite",
+        "description": "Add a deficit or tempo"
+      }
     ]
   },
   {
@@ -196,17 +572,53 @@
     "category": "Gymnastics",
     "subcategory": "Pushing Movements",
     "type": "progression",
-    "equipment": ["Parallel Bars / Dip Station"],
-    "prerequisites": ["push-up"],
+    "equipment": [
+      "Parallel Bars / Dip Station"
+    ],
+    "prerequisites": [
+      "push-up"
+    ],
     "variantOf": null,
     "description": "Vertical pushing movement on stable parallel bars.",
-    "commonFaults": [{ "fault": "Excessive shoulder shrug", "cue": "Keep shoulders down and back throughout" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Excessive shoulder shrug",
+        "cue": "Keep shoulders down and back throughout"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "dip-support-hold", "level": "Beginner", "name": "Support Hold", "description": "Top position hold.", "graduationCriteria": "20-30 sec" },
-      { "id": "banded-dip", "level": "Beginner", "name": "Banded Dip", "description": "Assisted full rep.", "graduationCriteria": "8-10 reps" },
-      { "id": "full-dip", "level": "Intermediate", "name": "Full Dip", "description": "Unassisted full rep.", "graduationCriteria": "8-10 reps" },
-      { "id": "weighted-dip", "level": "RX", "name": "Weighted Dip", "description": "Added external load.", "graduationCriteria": "5 reps with load" }
+      {
+        "id": "dip-support-hold",
+        "level": "Beginner",
+        "name": "Support Hold",
+        "description": "Top position hold.",
+        "graduationCriteria": "20-30 sec"
+      },
+      {
+        "id": "banded-dip",
+        "level": "Beginner",
+        "name": "Banded Dip",
+        "description": "Assisted full rep.",
+        "graduationCriteria": "8-10 reps"
+      },
+      {
+        "id": "full-dip",
+        "level": "Intermediate",
+        "name": "Full Dip",
+        "description": "Unassisted full rep.",
+        "graduationCriteria": "8-10 reps"
+      },
+      {
+        "id": "weighted-dip",
+        "level": "RX",
+        "name": "Weighted Dip",
+        "description": "Added external load.",
+        "graduationCriteria": "5 reps with load"
+      }
     ]
   },
   {
@@ -215,16 +627,46 @@
     "category": "Gymnastics",
     "subcategory": "Pushing Movements",
     "type": "progression",
-    "equipment": ["Rings"],
-    "prerequisites": ["dip"],
+    "equipment": [
+      "Rings"
+    ],
+    "prerequisites": [
+      "dip"
+    ],
     "variantOf": null,
-    "description": "Dip performed on unstable rings — a prerequisite skill for the ring muscle-up.",
-    "commonFaults": [{ "fault": "Rings flaring outward at the bottom", "cue": "Actively press rings toward the body" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Dip performed on unstable rings \u2014 a prerequisite skill for the ring muscle-up.",
+    "commonFaults": [
+      {
+        "fault": "Rings flaring outward at the bottom",
+        "cue": "Actively press rings toward the body"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "ring-support-hold-dip", "level": "Beginner", "name": "Ring Support Hold", "description": "Top position hold on rings.", "graduationCriteria": "15-20 sec" },
-      { "id": "banded-ring-dip", "level": "Intermediate", "name": "Banded Ring Dip", "description": "Assisted full rep.", "graduationCriteria": "5-8 reps" },
-      { "id": "full-ring-dip", "level": "RX", "name": "Full Ring Dip", "description": "Unassisted full rep.", "graduationCriteria": "5+ reps" }
+      {
+        "id": "ring-support-hold-dip",
+        "level": "Beginner",
+        "name": "Ring Support Hold",
+        "description": "Top position hold on rings.",
+        "graduationCriteria": "15-20 sec"
+      },
+      {
+        "id": "banded-ring-dip",
+        "level": "Intermediate",
+        "name": "Banded Ring Dip",
+        "description": "Assisted full rep.",
+        "graduationCriteria": "5-8 reps"
+      },
+      {
+        "id": "full-ring-dip",
+        "level": "RX",
+        "name": "Full Ring Dip",
+        "description": "Unassisted full rep.",
+        "graduationCriteria": "5+ reps"
+      }
     ]
   },
   {
@@ -234,14 +676,30 @@
     "subcategory": "Pushing Movements",
     "type": "tutorial",
     "equipment": [],
-    "prerequisites": ["push-up"],
+    "prerequisites": [
+      "push-up"
+    ],
     "variantOf": null,
-    "description": "Feet-elevated, hips-high push-up that mimics the overhead pressing angle — key feeder movement for handstand push-ups.",
-    "commonFaults": [{ "fault": "Not enough hip flexion (hips too low)", "cue": "Aim to get hips as high as shoulders, forming an inverted V" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Feet-elevated, hips-high push-up that mimics the overhead pressing angle \u2014 key feeder movement for handstand push-ups.",
+    "commonFaults": [
+      {
+        "fault": "Not enough hip flexion (hips too low)",
+        "cue": "Aim to get hips as high as shoulders, forming an inverted V"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Feet on ground, hips lifted as high as possible, 8 reps" },
-      { "level": "RX", "description": "Feet elevated on a box, 8+ reps" }
+      {
+        "level": "Beginner",
+        "description": "Feet on ground, hips lifted as high as possible, 8 reps"
+      },
+      {
+        "level": "RX",
+        "description": "Feet elevated on a box, 8+ reps"
+      }
     ]
   },
   {
@@ -250,17 +708,67 @@
     "category": "Gymnastics",
     "subcategory": "Pushing Movements",
     "type": "progression",
-    "equipment": ["Wall"],
-    "prerequisites": ["pike-push-up"],
+    "equipment": [
+      "Wall"
+    ],
+    "prerequisites": [
+      "pike-push-up"
+    ],
     "variantOf": null,
     "description": "Full strict press from an inverted position, typically against a wall for balance.",
-    "commonFaults": [{ "fault": "Flaring elbows too wide", "cue": "Keep elbows tracking roughly over the wrists" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Flaring elbows too wide",
+        "cue": "Keep elbows tracking roughly over the wrists"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "wall-handstand-hold-hspu", "level": "Beginner", "name": "Wall Handstand Hold", "description": "Facing the wall, building shoulder tolerance.", "graduationCriteria": "30-60 sec" },
-      { "id": "box-hspu", "level": "Intermediate", "name": "Box/Piked HSPU", "description": "Feet on box, head lowers to floor.", "graduationCriteria": "5 reps" },
-      { "id": "strict-hspu-full", "level": "RX", "name": "Strict HSPU", "description": "Full strict rep against the wall.", "graduationCriteria": "5+ reps" },
-      { "id": "deficit-handstand-push-up", "level": "Elite", "name": "Deficit Handstand Push-Up", "description": "Hands elevated on parallettes/plates for extra range.", "graduationCriteria": "3-5 reps" }
+      {
+        "id": "wall-handstand-hold-hspu",
+        "level": "Beginner",
+        "name": "Wall Handstand Hold",
+        "description": "Facing the wall, building shoulder tolerance.",
+        "graduationCriteria": "30-60 sec"
+      },
+      {
+        "id": "box-hspu",
+        "level": "Intermediate",
+        "name": "Box/Piked HSPU",
+        "description": "Feet on box, head lowers to floor.",
+        "graduationCriteria": "5 reps"
+      },
+      {
+        "id": "strict-hspu-full",
+        "level": "RX",
+        "name": "Strict HSPU",
+        "description": "Full strict rep against the wall.",
+        "graduationCriteria": "5+ reps"
+      },
+      {
+        "id": "deficit-handstand-push-up",
+        "level": "Elite",
+        "name": "Deficit Handstand Push-Up",
+        "description": "Hands elevated on parallettes/plates for extra range.",
+        "graduationCriteria": "3-5 reps"
+      }
+    ],
+    "suggestedSubstitutes": [
+      {
+        "movementId": "pike-push-up",
+        "reason": "No wall or space to invert"
+      },
+      {
+        "movementId": "push-up",
+        "reason": "Simpler horizontal pushing pattern"
+      },
+      {
+        "movementId": "dip",
+        "reason": "Alternative vertical pushing movement"
+      }
     ]
   },
   {
@@ -269,15 +777,39 @@
     "category": "Gymnastics",
     "subcategory": "Pushing Movements",
     "type": "progression",
-    "equipment": ["Wall"],
-    "prerequisites": ["strict-handstand-push-up"],
+    "equipment": [
+      "Wall"
+    ],
+    "prerequisites": [
+      "strict-handstand-push-up"
+    ],
     "variantOf": null,
     "description": "Uses a small kip (kick) to assist the press, allowing more reps for volume/conditioning work.",
-    "commonFaults": [{ "fault": "Over-kicking and losing wall contact", "cue": "Keep the kip small and controlled" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Over-kicking and losing wall contact",
+        "cue": "Keep the kip small and controlled"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "kip-technique-drill", "level": "Intermediate", "name": "Kip Technique Drill", "description": "Practicing the small leg kick without pressing.", "graduationCriteria": "Consistent controlled kip" },
-      { "id": "kipping-hspu-reps", "level": "RX", "name": "Kipping HSPU for Reps", "description": "Full kipping reps.", "graduationCriteria": "5+ unbroken" }
+      {
+        "id": "kip-technique-drill",
+        "level": "Intermediate",
+        "name": "Kip Technique Drill",
+        "description": "Practicing the small leg kick without pressing.",
+        "graduationCriteria": "Consistent controlled kip"
+      },
+      {
+        "id": "kipping-hspu-reps",
+        "level": "RX",
+        "name": "Kipping HSPU for Reps",
+        "description": "Full kipping reps.",
+        "graduationCriteria": "5+ unbroken"
+      }
     ]
   },
   {
@@ -286,16 +818,44 @@
     "category": "Gymnastics",
     "subcategory": "Inversions & Balance",
     "type": "progression",
-    "equipment": ["Wall (early stages)"],
+    "equipment": [
+      "Wall (early stages)"
+    ],
     "prerequisites": [],
     "variantOf": null,
     "description": "Foundational inverted balance position, underpinning all other inversion skills.",
-    "commonFaults": [{ "fault": "Over-arching the lower back", "cue": "Brace core, press through the shoulders, keep ribs down" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Over-arching the lower back",
+        "cue": "Brace core, press through the shoulders, keep ribs down"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "wall-hs-facing", "level": "Beginner", "name": "Wall Handstand (facing wall)", "description": "Chest to wall for support.", "graduationCriteria": "30 sec" },
-      { "id": "wall-hs-back", "level": "Intermediate", "name": "Wall Handstand (back to wall)", "description": "Harder balance challenge.", "graduationCriteria": "30 sec" },
-      { "id": "freestanding-handstand", "level": "RX", "name": "Freestanding Handstand", "description": "No wall support.", "graduationCriteria": "10-30 sec" }
+      {
+        "id": "wall-hs-facing",
+        "level": "Beginner",
+        "name": "Wall Handstand (facing wall)",
+        "description": "Chest to wall for support.",
+        "graduationCriteria": "30 sec"
+      },
+      {
+        "id": "wall-hs-back",
+        "level": "Intermediate",
+        "name": "Wall Handstand (back to wall)",
+        "description": "Harder balance challenge.",
+        "graduationCriteria": "30 sec"
+      },
+      {
+        "id": "freestanding-handstand",
+        "level": "RX",
+        "name": "Freestanding Handstand",
+        "description": "No wall support.",
+        "graduationCriteria": "10-30 sec"
+      }
     ]
   },
   {
@@ -304,15 +864,31 @@
     "category": "Gymnastics",
     "subcategory": "Inversions & Balance",
     "type": "tutorial",
-    "equipment": ["Wall"],
+    "equipment": [
+      "Wall"
+    ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Walking the feet up a wall from a plank into a handstand position — builds shoulder strength and confidence inverting.",
-    "commonFaults": [{ "fault": "Walking hands too far from the wall", "cue": "Keep hands close to the wall as feet climb" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Walking the feet up a wall from a plank into a handstand position \u2014 builds shoulder strength and confidence inverting.",
+    "commonFaults": [
+      {
+        "fault": "Walking hands too far from the wall",
+        "cue": "Keep hands close to the wall as feet climb"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Partial walk-up, pause partway" },
-      { "level": "RX", "description": "Full walk to handstand, 3 reps" }
+      {
+        "level": "Beginner",
+        "description": "Partial walk-up, pause partway"
+      },
+      {
+        "level": "RX",
+        "description": "Full walk to handstand, 3 reps"
+      }
     ]
   },
   {
@@ -322,15 +898,54 @@
     "subcategory": "Inversions & Balance",
     "type": "progression",
     "equipment": [],
-    "prerequisites": ["handstand-hold", "wall-walk"],
+    "prerequisites": [
+      "handstand-hold",
+      "wall-walk"
+    ],
     "variantOf": null,
-    "description": "Walking on the hands in a freestanding handstand — an advanced balance and strength skill.",
-    "commonFaults": [{ "fault": "Looking straight down instead of slightly forward", "cue": "Fix eyes on a point slightly ahead of the hands" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Walking on the hands in a freestanding handstand \u2014 an advanced balance and strength skill.",
+    "commonFaults": [
+      {
+        "fault": "Looking straight down instead of slightly forward",
+        "cue": "Fix eyes on a point slightly ahead of the hands"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "kick-up-attempts", "level": "Intermediate", "name": "Kick-Up to Freestanding", "description": "With spotter or wall nearby.", "graduationCriteria": "Consistent kick-up to balance" },
-      { "id": "hs-walk-short", "level": "RX", "name": "Handstand Walk (short distance)", "description": "5-10 ft.", "graduationCriteria": "10 ft" },
-      { "id": "hs-walk-distance", "level": "Elite", "name": "Handstand Walk (distance/obstacles)", "description": "25 ft+, turns, obstacles.", "graduationCriteria": "25 ft+" }
+      {
+        "id": "kick-up-attempts",
+        "level": "Intermediate",
+        "name": "Kick-Up to Freestanding",
+        "description": "With spotter or wall nearby.",
+        "graduationCriteria": "Consistent kick-up to balance"
+      },
+      {
+        "id": "hs-walk-short",
+        "level": "RX",
+        "name": "Handstand Walk (short distance)",
+        "description": "5-10 ft.",
+        "graduationCriteria": "10 ft"
+      },
+      {
+        "id": "hs-walk-distance",
+        "level": "Elite",
+        "name": "Handstand Walk (distance/obstacles)",
+        "description": "25 ft+, turns, obstacles.",
+        "graduationCriteria": "25 ft+"
+      }
+    ],
+    "suggestedSubstitutes": [
+      {
+        "movementId": "wall-walk",
+        "reason": "Building block toward freestanding walking"
+      },
+      {
+        "movementId": "handstand-hold",
+        "reason": "Master the hold before moving"
+      }
     ]
   },
   {
@@ -342,12 +957,26 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Stability drill performed in plank or handstand, tapping alternating hands to shoulders — builds anti-rotation core control.",
-    "commonFaults": [{ "fault": "Hips rotating with each tap", "cue": "Keep hips square, brace core throughout" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Stability drill performed in plank or handstand, tapping alternating hands to shoulders \u2014 builds anti-rotation core control.",
+    "commonFaults": [
+      {
+        "fault": "Hips rotating with each tap",
+        "cue": "Keep hips square, brace core throughout"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Plank position, 10 taps/side" },
-      { "level": "RX", "description": "Handstand position against wall, 10 taps/side" }
+      {
+        "level": "Beginner",
+        "description": "Plank position, 10 taps/side"
+      },
+      {
+        "level": "RX",
+        "description": "Handstand position against wall, 10 taps/side"
+      }
     ]
   },
   {
@@ -357,13 +986,26 @@
     "subcategory": "Inversions & Balance",
     "type": "tutorial",
     "equipment": [],
-    "prerequisites": ["handstand-walk"],
+    "prerequisites": [
+      "handstand-walk"
+    ],
     "variantOf": null,
     "description": "Advanced skill rotating 180 degrees while balancing in a freestanding handstand.",
-    "commonFaults": [{ "fault": "Losing balance mid-rotation", "cue": "Rotate from one hand at a time, keep the turn slow and controlled" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Losing balance mid-rotation",
+        "cue": "Rotate from one hand at a time, keep the turn slow and controlled"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Elite", "description": "Full 180-degree turn, controlled landing" }
+      {
+        "level": "Elite",
+        "description": "Full 180-degree turn, controlled landing"
+      }
     ]
   },
   {
@@ -375,12 +1017,26 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Foundational core position used throughout gymnastics — a slight curl with lower back pressed to the floor.",
-    "commonFaults": [{ "fault": "Lower back arching off the floor", "cue": "Press low back down, brace ribs to hips" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Foundational core position used throughout gymnastics \u2014 a slight curl with lower back pressed to the floor.",
+    "commonFaults": [
+      {
+        "fault": "Lower back arching off the floor",
+        "cue": "Press low back down, brace ribs to hips"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Knees bent, 15-20 sec hold" },
-      { "level": "RX", "description": "Full extension, 30-45 sec hold" }
+      {
+        "level": "Beginner",
+        "description": "Knees bent, 15-20 sec hold"
+      },
+      {
+        "level": "RX",
+        "description": "Full extension, 30-45 sec hold"
+      }
     ]
   },
   {
@@ -390,13 +1046,26 @@
     "subcategory": "Core & Midline",
     "type": "tutorial",
     "equipment": [],
-    "prerequisites": ["hollow-hold"],
+    "prerequisites": [
+      "hollow-hold"
+    ],
     "variantOf": null,
     "description": "Dynamic version of the hollow hold, rocking back and forth while maintaining the shape.",
-    "commonFaults": [{ "fault": "Losing hollow shape while rocking", "cue": "Maintain constant tension throughout the rock" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Losing hollow shape while rocking",
+        "cue": "Maintain constant tension throughout the rock"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "RX", "description": "15-20 continuous rocks" }
+      {
+        "level": "RX",
+        "description": "15-20 continuous rocks"
+      }
     ]
   },
   {
@@ -408,12 +1077,26 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Posterior chain counterpart to the hollow hold — lying face down, lifting chest and legs.",
-    "commonFaults": [{ "fault": "Only lifting legs, not chest", "cue": "Lift both chest and legs evenly" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Posterior chain counterpart to the hollow hold \u2014 lying face down, lifting chest and legs.",
+    "commonFaults": [
+      {
+        "fault": "Only lifting legs, not chest",
+        "cue": "Lift both chest and legs evenly"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "15-20 sec hold" },
-      { "level": "RX", "description": "30-45 sec hold" }
+      {
+        "level": "Beginner",
+        "description": "15-20 sec hold"
+      },
+      {
+        "level": "RX",
+        "description": "30-45 sec hold"
+      }
     ]
   },
   {
@@ -423,14 +1106,30 @@
     "subcategory": "Core & Midline",
     "type": "tutorial",
     "equipment": [],
-    "prerequisites": ["hollow-hold"],
+    "prerequisites": [
+      "hollow-hold"
+    ],
     "variantOf": null,
     "description": "Dynamic core movement folding the body into a V shape, touching hands to toes.",
-    "commonFaults": [{ "fault": "Bending knees to reach toes", "cue": "Keep legs straight, focus on hip flexion" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Bending knees to reach toes",
+        "cue": "Keep legs straight, focus on hip flexion"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Bent-knee version, 10 reps" },
-      { "level": "RX", "description": "Full straight-leg version, 10+ reps" }
+      {
+        "level": "Beginner",
+        "description": "Bent-knee version, 10 reps"
+      },
+      {
+        "level": "RX",
+        "description": "Full straight-leg version, 10+ reps"
+      }
     ]
   },
   {
@@ -443,11 +1142,25 @@
     "prerequisites": [],
     "variantOf": null,
     "description": "Standard bodyweight sit-up, often anchored feet.",
-    "commonFaults": [{ "fault": "Using momentum/hands to pull up", "cue": "Lead with the chest, control the movement" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Using momentum/hands to pull up",
+        "cue": "Lead with the chest, control the movement"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Feet anchored, 10 reps" },
-      { "level": "RX", "description": "20+ reps unbroken" }
+      {
+        "level": "Beginner",
+        "description": "Feet anchored, 10 reps"
+      },
+      {
+        "level": "RX",
+        "description": "20+ reps unbroken"
+      }
     ]
   },
   {
@@ -456,15 +1169,33 @@
     "category": "Gymnastics",
     "subcategory": "Core & Midline",
     "type": "tutorial",
-    "equipment": ["GHD Machine"],
-    "prerequisites": ["sit-up"],
+    "equipment": [
+      "GHD Machine"
+    ],
+    "prerequisites": [
+      "sit-up"
+    ],
     "variantOf": "sit-up",
-    "description": "Sit-up performed on a Glute-Ham Developer for a much larger range of motion — high risk of soreness/injury if progressed too fast.",
-    "commonFaults": [{ "fault": "Going too far back too soon", "cue": "Limit range of motion initially, build up volume slowly over weeks" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Sit-up performed on a Glute-Ham Developer for a much larger range of motion \u2014 high risk of soreness/injury if progressed too fast.",
+    "commonFaults": [
+      {
+        "fault": "Going too far back too soon",
+        "cue": "Limit range of motion initially, build up volume slowly over weeks"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "Small range of motion, 5-8 reps" },
-      { "level": "RX", "description": "Full range, 15+ reps" }
+      {
+        "level": "Beginner",
+        "description": "Small range of motion, 5-8 reps"
+      },
+      {
+        "level": "RX",
+        "description": "Full range, 15+ reps"
+      }
     ]
   },
   {
@@ -473,17 +1204,53 @@
     "category": "Gymnastics",
     "subcategory": "Core & Midline",
     "type": "progression",
-    "equipment": ["Parallettes or Rings (optional)"],
-    "prerequisites": ["hollow-hold"],
+    "equipment": [
+      "Parallettes or Rings (optional)"
+    ],
+    "prerequisites": [
+      "hollow-hold"
+    ],
     "variantOf": null,
-    "description": "Static hold with legs extended straight out in front, supported on hands — heavy core and hip-flexor demand.",
-    "commonFaults": [{ "fault": "Shoulders creeping up toward ears", "cue": "Actively press shoulders down away from ears" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Static hold with legs extended straight out in front, supported on hands \u2014 heavy core and hip-flexor demand.",
+    "commonFaults": [
+      {
+        "fault": "Shoulders creeping up toward ears",
+        "cue": "Actively press shoulders down away from ears"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "stages": [
-      { "id": "tuck-hold", "level": "Beginner", "name": "Tuck Hold", "description": "Knees pulled to chest, supported on hands.", "graduationCriteria": "15-20 sec" },
-      { "id": "one-leg-extended", "level": "Intermediate", "name": "One-Leg Extended Hold", "description": "One leg out, one tucked.", "graduationCriteria": "10-15 sec/side" },
-      { "id": "full-l-sit", "level": "RX", "name": "Full L-Sit", "description": "Both legs extended straight.", "graduationCriteria": "20-30 sec" },
-      { "id": "l-sit-rings", "level": "Elite", "name": "L-Sit on Rings", "description": "Same hold on unstable rings.", "graduationCriteria": "15-20 sec" }
+      {
+        "id": "tuck-hold",
+        "level": "Beginner",
+        "name": "Tuck Hold",
+        "description": "Knees pulled to chest, supported on hands.",
+        "graduationCriteria": "15-20 sec"
+      },
+      {
+        "id": "one-leg-extended",
+        "level": "Intermediate",
+        "name": "One-Leg Extended Hold",
+        "description": "One leg out, one tucked.",
+        "graduationCriteria": "10-15 sec/side"
+      },
+      {
+        "id": "full-l-sit",
+        "level": "RX",
+        "name": "Full L-Sit",
+        "description": "Both legs extended straight.",
+        "graduationCriteria": "20-30 sec"
+      },
+      {
+        "id": "l-sit-rings",
+        "level": "Elite",
+        "name": "L-Sit on Rings",
+        "description": "Same hold on unstable rings.",
+        "graduationCriteria": "15-20 sec"
+      }
     ]
   },
   {
@@ -495,12 +1262,26 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Static front-support hold — a baseline core stability movement.",
-    "commonFaults": [{ "fault": "Hips sagging or piking", "cue": "Keep a straight line from head to heels" }],
-    "media": { "video": null, "thumbnail": null },
+    "description": "Static front-support hold \u2014 a baseline core stability movement.",
+    "commonFaults": [
+      {
+        "fault": "Hips sagging or piking",
+        "cue": "Keep a straight line from head to heels"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "20-30 sec hold" },
-      { "level": "RX", "description": "60 sec+ hold" }
+      {
+        "level": "Beginner",
+        "description": "20-30 sec hold"
+      },
+      {
+        "level": "RX",
+        "description": "60 sec+ hold"
+      }
     ]
   },
   {
@@ -510,14 +1291,30 @@
     "subcategory": "Core & Midline",
     "type": "tutorial",
     "equipment": [],
-    "prerequisites": ["plank"],
+    "prerequisites": [
+      "plank"
+    ],
     "variantOf": "plank",
     "description": "Lateral core stability hold, targeting obliques.",
-    "commonFaults": [{ "fault": "Hips dropping toward the floor", "cue": "Lift hips high, stack shoulders/hips/ankles" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Hips dropping toward the floor",
+        "cue": "Lift hips high, stack shoulders/hips/ankles"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "15-20 sec/side" },
-      { "level": "RX", "description": "45 sec+/side" }
+      {
+        "level": "Beginner",
+        "description": "15-20 sec/side"
+      },
+      {
+        "level": "RX",
+        "description": "45 sec+/side"
+      }
     ]
   },
   {
@@ -530,11 +1327,25 @@
     "prerequisites": [],
     "variantOf": null,
     "description": "Posterior chain hold lying face down, arms and legs extended and lifted.",
-    "commonFaults": [{ "fault": "Overextending the neck", "cue": "Keep neck neutral, eyes toward the floor" }],
-    "media": { "video": null, "thumbnail": null },
+    "commonFaults": [
+      {
+        "fault": "Overextending the neck",
+        "cue": "Keep neck neutral, eyes toward the floor"
+      }
+    ],
+    "media": {
+      "video": null,
+      "thumbnail": null
+    },
     "scaling": [
-      { "level": "Beginner", "description": "15-20 sec hold" },
-      { "level": "RX", "description": "30-45 sec hold" }
+      {
+        "level": "Beginner",
+        "description": "15-20 sec hold"
+      },
+      {
+        "level": "RX",
+        "description": "30-45 sec hold"
+      }
     ]
   }
 ]

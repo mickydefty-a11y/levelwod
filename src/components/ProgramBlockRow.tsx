@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import CantDoThis from './CantDoThis'
 import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
 import { timerConfigToPath } from '../lib/timerUrl'
+import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
 import type { ProgramBlock } from '../types/program'
 
@@ -39,6 +41,9 @@ export default function ProgramBlockRow({
   const movement = index.get(block.movementId)
   const stage = findStage(movement, block.targetStageId)
   const [showPRForm, setShowPRForm] = useState(false)
+  const { activeSubstituteFor } = useSubstitutions()
+  const substituteId = movement ? activeSubstituteFor(movement.id) : null
+  const displayMovement = (substituteId && index.get(substituteId)) || movement
 
   return (
     <li className={`rounded-lg px-3 py-2 ${done ? 'bg-accent/15' : 'bg-bg-surface'}`}>
@@ -55,8 +60,8 @@ export default function ProgramBlockRow({
               ✓
             </button>
           )}
-          <Link to={`/library/${block.movementId}`} className="text-sm font-medium">
-            {movement?.name ?? block.movementId}
+          <Link to={`/library/${displayMovement?.id ?? block.movementId}`} className="text-sm font-medium">
+            {displayMovement?.name ?? block.movementId}
           </Link>
         </div>
         <span
@@ -65,9 +70,10 @@ export default function ProgramBlockRow({
           {block.blockType}
         </span>
       </div>
-      {stage && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
+      {stage && !substituteId && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
       <p className="mt-1 text-xs text-ink-muted">{block.prescription}</p>
       {block.notes && <p className="mt-1 text-xs italic text-ink-muted">{block.notes}</p>}
+      {movement && <CantDoThis movement={movement} movementIndex={index} />}
 
       <div className="mt-2 flex flex-wrap gap-1.5">
         {block.timerConfig && (

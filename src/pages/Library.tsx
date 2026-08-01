@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { LEVEL_ORDER } from '../lib/levels'
 import { loadMovements } from '../lib/loadData'
+import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
 
 function groupByCategory(movements: Movement[]) {
@@ -35,10 +36,17 @@ export default function Library() {
   const [category, setCategory] = useState(ALL)
   const [level, setLevel] = useState(ALL)
   const [bodyweightOnly, setBodyweightOnly] = useState(false)
+  const { choiceFor } = useSubstitutions()
 
   useEffect(() => {
     loadMovements().then(setMovements)
   }, [])
+
+  const byId = useMemo(() => {
+    const map = new Map<string, Movement>()
+    for (const m of movements ?? []) map.set(m.id, m)
+    return map
+  }, [movements])
 
   const categories = useMemo(() => {
     if (!movements) return []
@@ -141,21 +149,33 @@ export default function Library() {
                   <div key={subcategory}>
                     <h3 className="text-xs font-medium text-ink-muted">{subcategory}</h3>
                     <ul className="mt-1.5 space-y-1.5">
-                      {items.map((movement) => (
-                        <li key={movement.id}>
-                          <Link
-                            to={`/library/${movement.id}`}
-                            className="flex items-center justify-between rounded-lg bg-bg-surface px-3 py-2 hover:bg-bg-raised"
-                          >
-                            <span className="text-sm">{movement.name}</span>
-                            <span
-                              className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${typeBadge[movement.type]}`}
+                      {items.map((movement) => {
+                        const choice = choiceFor(movement.id)
+                        const ongoingSub =
+                          choice?.scope === 'ongoing' ? byId.get(choice.substitutedWith) : null
+                        return (
+                          <li key={movement.id}>
+                            <Link
+                              to={`/library/${movement.id}`}
+                              className="flex items-center justify-between rounded-lg bg-bg-surface px-3 py-2 hover:bg-bg-raised"
                             >
-                              {movement.type}
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
+                              <span className="text-sm">
+                                {movement.name}
+                                {ongoingSub && (
+                                  <span className="block text-[10px] text-accent-light">
+                                    Swapped for {ongoingSub.name}
+                                  </span>
+                                )}
+                              </span>
+                              <span
+                                className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${typeBadge[movement.type]}`}
+                              >
+                                {movement.type}
+                              </span>
+                            </Link>
+                          </li>
+                        )
+                      })}
                     </ul>
                   </div>
                 ))}
