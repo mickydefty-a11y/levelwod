@@ -1,0 +1,276 @@
+{
+  "programId": "531-strength-9wk",
+  "weeks": [
+    {
+      "weekNumber": 9,
+      "focus": "Retest week \u2014 establishing genuine new 1RMs across all five lifts",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 \u2014 Test: Back Squat 1RM",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 40,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 60,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "targetStageId": "back-squat-elite",
+              "prescription": "Work up to a true new 1-rep max, taking small jumps and resting fully between attempts",
+              "notes": "Compare directly to the 1RM you entered at the start of this program \u2014 this is the real payoff moment of the whole 9 weeks.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Back Squat 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 \u2014 Test: Front Squat 1RM",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "front-squat",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 40,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "front-squat",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 60,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "front-squat",
+              "targetStageId": "front-squat-elite",
+              "prescription": "Work up to a true new 1-rep max",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Front Squat 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 \u2014 Test: Deadlift 1RM",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 40,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 60,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-elite",
+              "prescription": "Work up to a true new 1-rep max",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Deadlift 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 \u2014 Test: Bench Press 1RM",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-stability",
+              "targetStageId": null,
+              "prescription": "15 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "bench-press",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 40,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "bench-press",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 60,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "bench-press",
+              "targetStageId": "bench-elite",
+              "prescription": "Work up to a true new 1-rep max",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Bench Press 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 5,
+          "name": "Day 5 \u2014 Test: Strict Press 1RM + Program Wrap-Up",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-stability",
+              "targetStageId": null,
+              "prescription": "15 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 40,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "loadConfig": {
+                "basedOn": "trainingMax",
+                "percentage": 60,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "targetStageId": "strict-press-elite",
+              "prescription": "Work up to a true new 1-rep max",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Strict Press 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "overhead-stability",
+              "targetStageId": null,
+              "prescription": "30 sec hold",
+              "notes": "End-of-program note: five new 1RMs have now been logged. These become the new starting numbers if you want to run another 9-week cycle of this program."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -32,6 +32,9 @@ const PROGRAM_FILES = [
   'strongman-functional-focus-phase1-weeks1-2.json',
   'strongman-functional-focus-phase2-weeks3-4.json',
   'strongman-functional-focus-phase3-weeks5-6.json',
+  '531-strength-cycle1-weeks1-4.json',
+  '531-strength-cycle2-weeks5-8.json',
+  '531-strength-week9-retest.json',
 ]
 
 async function fetchJson<T>(path: string): Promise<T> {

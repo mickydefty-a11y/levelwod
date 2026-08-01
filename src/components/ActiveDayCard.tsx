@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import ProgramBlockRow from './ProgramBlockRow'
+import { trainingMaxForWeekAllLifts } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useProgramHistory } from '../lib/useProgramHistory'
+import { useTrainingMax } from '../lib/useTrainingMax'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
 import type { Program, ProgramDay, ProgramWeek } from '../types/program'
@@ -22,8 +24,14 @@ export default function ActiveDayCard({
   const { advanceDay, stopProgram } = useActiveProgram()
   const { markCompleted } = useProgramHistory()
   const { addEntry } = useWorkoutLog()
+  const { dataFor } = useTrainingMax()
   const [results, setResults] = useState<Record<number, string>>({})
   const [done, setDone] = useState<Record<number, boolean>>({})
+
+  const trainingMaxData = dataFor(program.id)
+  const loadContext = trainingMaxData
+    ? trainingMaxForWeekAllLifts(trainingMaxData, week.weekNumber, program)
+    : null
 
   // Clear any typed-in results when the current day changes underneath us
   // (e.g. after marking the previous day complete).
@@ -78,6 +86,7 @@ export default function ActiveDayCard({
             done={done[i] ?? false}
             onToggleDone={() => setDone((prev) => ({ ...prev, [i]: !prev[i] }))}
             programContext={`${program.id} / week ${week.weekNumber} / day ${day.dayNumber}`}
+            loadContext={loadContext}
           />
         ))}
       </ul>

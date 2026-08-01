@@ -1,0 +1,215 @@
+{
+  "programId": "531-strength-9wk",
+  "note": "Training Max for each lift increments automatically at the start of this cycle, per trainingMaxIncrementsPerCycle in the main program file. The percentage structure below is identical to Cycle 1 — same waves, same math, just calculated off the new, higher Training Max.",
+  "weeks": [
+    {
+      "weekNumber": 5,
+      "focus": "Wave 2, Week 1 — the '5s' week (new Training Max)",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Back Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 65, "reps": 5, "isAmrap": false }, "prescription": "65% x 5" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 5, "isAmrap": true }, "prescription": "85% x 5+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Front Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 65, "reps": 5, "isAmrap": false }, "prescription": "65% x 5" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 5, "isAmrap": true }, "prescription": "85% x 5+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Deadlift", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 65, "reps": 5, "isAmrap": false }, "prescription": "65% x 5" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 5, "isAmrap": true }, "prescription": "85% x 5+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "renegade-row", "targetStageId": null, "prescription": "3 sets x 8 reps/side", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Bench Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 65, "reps": 5, "isAmrap": false }, "prescription": "65% x 5" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 5, "isAmrap": true }, "prescription": "85% x 5+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Strict Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 65, "reps": 5, "isAmrap": false }, "prescription": "65% x 5" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 5, "isAmrap": true }, "prescription": "85% x 5+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "overhead-stability", "targetStageId": null, "prescription": "3 sets x 20 sec hold", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "focus": "Wave 2, Week 2 — the '3s' week",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Back Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 70, "reps": 3, "isAmrap": false }, "prescription": "70% x 3" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 80, "reps": 3, "isAmrap": false }, "prescription": "80% x 3" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 90, "reps": 3, "isAmrap": true }, "prescription": "90% x 3+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Front Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 70, "reps": 3, "isAmrap": false }, "prescription": "70% x 3" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 80, "reps": 3, "isAmrap": false }, "prescription": "80% x 3" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 90, "reps": 3, "isAmrap": true }, "prescription": "90% x 3+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Deadlift", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 70, "reps": 3, "isAmrap": false }, "prescription": "70% x 3" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 80, "reps": 3, "isAmrap": false }, "prescription": "80% x 3" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 90, "reps": 3, "isAmrap": true }, "prescription": "90% x 3+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "renegade-row", "targetStageId": null, "prescription": "3 sets x 8 reps/side", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Bench Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 70, "reps": 3, "isAmrap": false }, "prescription": "70% x 3" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 80, "reps": 3, "isAmrap": false }, "prescription": "80% x 3" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 90, "reps": 3, "isAmrap": true }, "prescription": "90% x 3+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Strict Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 70, "reps": 3, "isAmrap": false }, "prescription": "70% x 3" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 80, "reps": 3, "isAmrap": false }, "prescription": "80% x 3" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 90, "reps": 3, "isAmrap": true }, "prescription": "90% x 3+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "overhead-stability", "targetStageId": null, "prescription": "3 sets x 20 sec hold", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 7,
+      "focus": "Wave 2, Week 3 — the '5/3/1' week (heaviest week of this cycle)",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Back Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 3, "isAmrap": false }, "prescription": "85% x 3" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 95, "reps": 1, "isAmrap": true }, "prescription": "95% x 1+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "hollow-hold", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Front Squat", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 3, "isAmrap": false }, "prescription": "85% x 3" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 95, "reps": 1, "isAmrap": true }, "prescription": "95% x 1+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "plank", "targetStageId": null, "prescription": "3 sets x 40 sec", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Deadlift", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 3, "isAmrap": false }, "prescription": "85% x 3" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 95, "reps": 1, "isAmrap": true }, "prescription": "95% x 1+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "renegade-row", "targetStageId": null, "prescription": "3 sets x 8 reps/side", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Bench Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 3, "isAmrap": false }, "prescription": "85% x 3" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 95, "reps": 1, "isAmrap": true }, "prescription": "95% x 1+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Strict Press", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 3, "isAmrap": false }, "prescription": "50% x 3 (warmup ramp)" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 75, "reps": 5, "isAmrap": false }, "prescription": "75% x 5" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 85, "reps": 3, "isAmrap": false }, "prescription": "85% x 3" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 95, "reps": 1, "isAmrap": true }, "prescription": "95% x 1+ (AMRAP)" },
+          { "blockType": "skill", "movementId": "overhead-stability", "targetStageId": null, "prescription": "3 sets x 20 sec hold", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 8,
+      "focus": "Wave 2, Week 4 — Deload (no AMRAP, no grinding)",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Back Squat (Deload)", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5" },
+          { "blockType": "strength", "movementId": "back-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 60, "reps": 5, "isAmrap": false }, "prescription": "60% x 5 — light, no AMRAP this week" },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Front Squat (Deload)", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5" },
+          { "blockType": "strength", "movementId": "front-squat", "loadConfig": { "basedOn": "trainingMax", "percentage": 60, "reps": 5, "isAmrap": false }, "prescription": "60% x 5 — light, no AMRAP this week" },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Deadlift (Deload)", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5" },
+          { "blockType": "strength", "movementId": "deadlift", "loadConfig": { "basedOn": "trainingMax", "percentage": 60, "reps": 5, "isAmrap": false }, "prescription": "60% x 5 — light, no AMRAP this week" },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Bench Press (Deload)", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5" },
+          { "blockType": "strength", "movementId": "bench-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 60, "reps": 5, "isAmrap": false }, "prescription": "60% x 5 — light, no AMRAP this week" },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Strict Press (Deload)", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 40, "reps": 5, "isAmrap": false }, "prescription": "40% x 5" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 50, "reps": 5, "isAmrap": false }, "prescription": "50% x 5" },
+          { "blockType": "strength", "movementId": "strict-press", "loadConfig": { "basedOn": "trainingMax", "percentage": 60, "reps": 5, "isAmrap": false }, "prescription": "60% x 5 — light, no AMRAP this week" },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]}
+      ]
+    }
+  ]
+}

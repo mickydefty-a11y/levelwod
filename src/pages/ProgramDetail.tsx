@@ -1,11 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
+import OneRepMaxForm from '../components/OneRepMaxForm'
 import ProgramBlockRow from '../components/ProgramBlockRow'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
+import { trainingMaxForWeekAllLifts } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useProgramHistory } from '../lib/useProgramHistory'
+import { useTrainingMax } from '../lib/useTrainingMax'
 import type { Movement } from '../types/movement'
 import type { Program } from '../types/program'
 
@@ -15,6 +18,8 @@ export default function ProgramDetail() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const { pointer, startProgram, stopProgram } = useActiveProgram()
   const { isCompleted, completedAt } = useProgramHistory()
+  const { dataFor } = useTrainingMax()
+  const [showOneRepMaxForm, setShowOneRepMaxForm] = useState(false)
 
   const isActive = pointer?.programId === id
   const [openWeek, setOpenWeek] = useState<number | null>(isActive ? pointer!.weekNumber : 1)
@@ -49,6 +54,8 @@ export default function ProgramDetail() {
     )
   }
 
+  const trainingMaxData = dataFor(program.id)
+
   return (
     <div>
       <Link to="/programs" className="text-sm text-ink-muted">
@@ -75,9 +82,22 @@ export default function ProgramDetail() {
             Stop
           </button>
         </div>
+      ) : showOneRepMaxForm && program.requiresInput ? (
+        <div className="mt-4">
+          <OneRepMaxForm
+            programId={program.id}
+            movementIds={program.requiresInput.oneRepMaxInputs}
+            movementIndex={movementIndex}
+            onDone={() => {
+              startProgram(program.id)
+              setShowOneRepMaxForm(false)
+            }}
+            onCancel={() => setShowOneRepMaxForm(false)}
+          />
+        </div>
       ) : (
         <button
-          onClick={() => startProgram(program.id)}
+          onClick={() => (program.requiresInput ? setShowOneRepMaxForm(true) : startProgram(program.id))}
           className="mt-4 w-full rounded-lg bg-accent py-2.5 text-sm font-medium text-bg"
         >
           {isCompleted(program.id) ? 'Start again' : 'Start this program'}
@@ -132,7 +152,16 @@ export default function ProgramDetail() {
                         ) : (
                           <ul className="mt-1.5 space-y-1.5">
                             {day.blocks.map((block, i) => (
-                              <ProgramBlockRow key={i} block={block} index={movementIndex} />
+                              <ProgramBlockRow
+                                key={i}
+                                block={block}
+                                index={movementIndex}
+                                loadContext={
+                                  trainingMaxData
+                                    ? trainingMaxForWeekAllLifts(trainingMaxData, week.weekNumber, program)
+                                    : null
+                                }
+                              />
                             ))}
                           </ul>
                         )}

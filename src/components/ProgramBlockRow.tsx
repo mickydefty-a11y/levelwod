@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom'
 import CantDoThis from './CantDoThis'
 import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
+import { calculateLoadWeight } from '../lib/trainingMax'
 import { timerConfigToPath } from '../lib/timerUrl'
 import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
-import type { ProgramBlock } from '../types/program'
+import type { ProgramBlock, WeightUnit } from '../types/program'
+
+// Resolved Training Max for the week a block is being shown in — only
+// present for programs whose blocks carry a loadConfig (e.g. 5/3/1).
+export interface LoadContext {
+  trainingMax: Record<string, number>
+  unit: WeightUnit
+}
 
 const blockTypeStyle: Record<ProgramBlock['blockType'], string> = {
   warmup: 'bg-white/10 text-ink-muted',
@@ -25,6 +33,7 @@ export default function ProgramBlockRow({
   done,
   onToggleDone,
   programContext,
+  loadContext,
 }: {
   block: ProgramBlock
   index: Map<string, Movement>
@@ -37,6 +46,9 @@ export default function ProgramBlockRow({
   // "{programId} / week {N} / day {N}" — only needed alongside onLogChange,
   // used to tag PR entries logged from this block with where they came from
   programContext?: string | null
+  // resolved Training Max for percentage-based programs; omitted entirely
+  // for every other program, so this has no effect on them
+  loadContext?: LoadContext | null
 }) {
   const movement = index.get(block.movementId)
   const stage = findStage(movement, block.targetStageId)
@@ -44,6 +56,12 @@ export default function ProgramBlockRow({
   const { activeSubstituteFor } = useSubstitutions()
   const substituteId = movement ? activeSubstituteFor(movement.id) : null
   const displayMovement = (substituteId && index.get(substituteId)) || movement
+
+  const trainingMax = loadContext?.trainingMax[block.movementId]
+  const loadWeight =
+    block.loadConfig && trainingMax != null
+      ? calculateLoadWeight(block.loadConfig, trainingMax, loadContext!.unit)
+      : null
 
   return (
     <li className={`rounded-lg px-3 py-2 ${done ? 'bg-accent/15' : 'bg-bg-surface'}`}>
@@ -71,7 +89,15 @@ export default function ProgramBlockRow({
         </span>
       </div>
       {stage && !substituteId && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
-      <p className="mt-1 text-xs text-ink-muted">{block.prescription}</p>
+      <p className="mt-1 text-xs text-ink-muted">
+        {loadWeight != null && (
+          <span className="font-semibold text-ink">
+            {loadWeight}
+            {loadContext!.unit}{' '}
+          </span>
+        )}
+        {block.prescription}
+      </p>
       {block.notes && <p className="mt-1 text-xs italic text-ink-muted">{block.notes}</p>}
       {movement && <CantDoThis movement={movement} movementIndex={index} />}
 
