@@ -3,18 +3,11 @@ import { Link } from 'react-router-dom'
 import CantDoThis from './CantDoThis'
 import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
-import { calculateLoadWeight } from '../lib/trainingMax'
+import { calculateLoadWeight, type LoadContext } from '../lib/trainingMax'
 import { timerConfigToPath } from '../lib/timerUrl'
 import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
-import type { ProgramBlock, WeightUnit } from '../types/program'
-
-// Resolved Training Max for the week a block is being shown in — only
-// present for programs whose blocks carry a loadConfig (e.g. 5/3/1).
-export interface LoadContext {
-  trainingMax: Record<string, number>
-  unit: WeightUnit
-}
+import type { ProgramBlock } from '../types/program'
 
 const blockTypeStyle: Record<ProgramBlock['blockType'], string> = {
   warmup: 'bg-white/10 text-ink-muted',
@@ -57,11 +50,12 @@ export default function ProgramBlockRow({
   const substituteId = movement ? activeSubstituteFor(movement.id) : null
   const displayMovement = (substituteId && index.get(substituteId)) || movement
 
-  const trainingMax = loadContext?.trainingMax[block.movementId]
+  const base =
+    block.loadConfig?.basedOn === 'oneRepMax'
+      ? loadContext?.oneRepMax[block.movementId]
+      : loadContext?.trainingMax[block.movementId]
   const loadWeight =
-    block.loadConfig && trainingMax != null
-      ? calculateLoadWeight(block.loadConfig, trainingMax, loadContext!.unit)
-      : null
+    block.loadConfig && base != null ? calculateLoadWeight(block.loadConfig, base, loadContext!.unit) : null
 
   return (
     <li className={`rounded-lg px-3 py-2 ${done ? 'bg-accent/15' : 'bg-bg-surface'}`}>

@@ -24,21 +24,27 @@ export function trainingMaxForWeek(baseTrainingMax: number, weekNumber: number, 
   return weekNumber >= 5 ? baseTrainingMax + increment : baseTrainingMax
 }
 
-export function calculateLoadWeight(loadConfig: LoadConfig, trainingMax: number, unit: WeightUnit): number {
-  return roundToNearestIncrement(trainingMax * (loadConfig.percentage / 100), unit)
+export function calculateLoadWeight(loadConfig: LoadConfig, base: number, unit: WeightUnit): number {
+  return roundToNearestIncrement(base * (loadConfig.percentage / 100), unit)
 }
 
-// Resolves every lift's Training Max for a given week, applying each lift's
-// own increment (if any) once the week is in wave 2 or later.
-export function trainingMaxForWeekAllLifts(
-  data: TrainingMaxData,
-  weekNumber: number,
-  program: Program,
-): { trainingMax: Record<string, number>; unit: WeightUnit } {
+export interface LoadContext {
+  unit: WeightUnit
+  // resolved for the current week (only meaningful for basedOn: 'trainingMax' blocks)
+  trainingMax: Record<string, number>
+  // raw entered 1RM, unmodified (only meaningful for basedOn: 'oneRepMax' blocks)
+  oneRepMax: Record<string, number>
+}
+
+// Resolves both possible percentage bases for a given week: each lift's
+// Training Max (with its own increment applied once wave 2 begins) and the
+// raw 1RM as entered, untouched. A block picks whichever it needs via its
+// own loadConfig.basedOn — the two bases never interfere with each other.
+export function resolveLoadContext(data: TrainingMaxData, weekNumber: number, program: Program): LoadContext {
   const trainingMax: Record<string, number> = {}
   for (const [movementId, base] of Object.entries(data.trainingMax)) {
     const increment = program.trainingMaxIncrementsPerCycle?.[movementId]?.[data.unit] ?? 0
     trainingMax[movementId] = trainingMaxForWeek(base, weekNumber, increment)
   }
-  return { trainingMax, unit: data.unit }
+  return { trainingMax, oneRepMax: data.oneRepMax, unit: data.unit }
 }

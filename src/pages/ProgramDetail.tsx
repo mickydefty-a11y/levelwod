@@ -5,7 +5,7 @@ import OneRepMaxForm from '../components/OneRepMaxForm'
 import ProgramBlockRow from '../components/ProgramBlockRow'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
-import { trainingMaxForWeekAllLifts } from '../lib/trainingMax'
+import { resolveLoadContext } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useTrainingMax } from '../lib/useTrainingMax'
@@ -72,6 +72,13 @@ export default function ProgramDetail() {
         </p>
       )}
       <p className="mt-3 text-sm leading-relaxed">{program.description}</p>
+
+      {program.safetyNote && (
+        <div className="mt-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2.5">
+          <p className="text-xs font-semibold text-amber-400">⚠ Before you start</p>
+          <p className="mt-1 text-xs leading-relaxed text-amber-100/90">{program.safetyNote}</p>
+        </div>
+      )}
 
       {isActive ? (
         <div className="mt-4 flex items-center justify-between rounded-lg bg-accent/15 px-3 py-2.5 text-sm">
@@ -158,7 +165,7 @@ export default function ProgramDetail() {
                                 index={movementIndex}
                                 loadContext={
                                   trainingMaxData
-                                    ? trainingMaxForWeekAllLifts(trainingMaxData, week.weekNumber, program)
+                                    ? resolveLoadContext(trainingMaxData, week.weekNumber, program)
                                     : null
                                 }
                               />

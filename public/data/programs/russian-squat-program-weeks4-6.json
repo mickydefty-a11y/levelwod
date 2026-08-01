@@ -1,0 +1,579 @@
+{
+  "programId": "russian-squat-program-6wk",
+  "weeks": [
+    {
+      "weekNumber": 4,
+      "focus": "Taper begins \u2014 volume drops, intensity keeps climbing",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 60,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 80,
+                "sets": 4,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "80% x 4 sets x 3 reps",
+              "notes": "A noticeably lighter session after Week 3 \u2014 this is intentional, not a sign of losing progress."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 65,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "65% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 85,
+                "sets": 5,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "85% x 5 sets x 3 reps"
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 65,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "65% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 75,
+                "sets": 1,
+                "reps": 2,
+                "isAmrap": false
+              },
+              "prescription": "75% x 2 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 90,
+                "sets": 4,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "90% x 4 sets x 3 reps",
+              "notes": "Heaviest single session so far \u2014 but far less total volume than Week 3."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 5,
+      "focus": "Taper continues \u2014 low volume, high intensity",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 60,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 80,
+                "sets": 3,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "80% x 3 sets x 3 reps"
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 65,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "65% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 85,
+                "sets": 3,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "85% x 3 sets x 3 reps"
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 65,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "65% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 75,
+                "sets": 1,
+                "reps": 2,
+                "isAmrap": false
+              },
+              "prescription": "75% x 2 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 90,
+                "sets": 3,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "90% x 3 sets x 3 reps",
+              "notes": "Last heavy session before the max attempt \u2014 should feel notably fresher than Week 3 or 4."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "focus": "Final taper into a genuine new 1RM",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 60,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 80,
+                "sets": 3,
+                "reps": 2,
+                "isAmrap": false
+              },
+              "prescription": "80% x 3 sets x 2 reps",
+              "notes": "Light and sharp \u2014 the goal here is staying fresh, not adding more fatigue."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 60,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 85,
+                "sets": 3,
+                "reps": 2,
+                "isAmrap": false
+              },
+              "prescription": "85% x 3 sets x 2 reps",
+              "notes": "Last loaded session before the test \u2014 should feel light and fast."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 \u2014 Test: New Back Squat 1RM",
+          "blocks": [
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "45 sec/side, extra time today",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 40,
+                "sets": 1,
+                "reps": 5,
+                "isAmrap": false
+              },
+              "prescription": "40% x 5 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 60,
+                "sets": 1,
+                "reps": 3,
+                "isAmrap": false
+              },
+              "prescription": "60% x 3 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 75,
+                "sets": 1,
+                "reps": 2,
+                "isAmrap": false
+              },
+              "prescription": "75% x 2 (warmup ramp)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "loadConfig": {
+                "basedOn": "oneRepMax",
+                "percentage": 90,
+                "sets": 1,
+                "reps": 1,
+                "isAmrap": false
+              },
+              "prescription": "90% x 1 (final warmup single)"
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "targetStageId": "back-squat-elite",
+              "prescription": "Work up to a true new 1-rep max, resting fully between attempts",
+              "notes": "This is the entire point of the last 6 weeks \u2014 take your time, rest fully between attempts, and trust the taper. Compare directly to the 1RM you entered at the start of this program.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "Back Squat 1RM"
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": "End-of-program note: this new number becomes the starting point if you want to run the program again."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

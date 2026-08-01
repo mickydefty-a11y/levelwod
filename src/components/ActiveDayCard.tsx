@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import ProgramBlockRow from './ProgramBlockRow'
-import { trainingMaxForWeekAllLifts } from '../lib/trainingMax'
+import { resolveLoadContext } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useTrainingMax } from '../lib/useTrainingMax'
@@ -30,7 +30,7 @@ export default function ActiveDayCard({
 
   const trainingMaxData = dataFor(program.id)
   const loadContext = trainingMaxData
-    ? trainingMaxForWeekAllLifts(trainingMaxData, week.weekNumber, program)
+    ? resolveLoadContext(trainingMaxData, week.weekNumber, program)
     : null
 
   // Clear any typed-in results when the current day changes underneath us

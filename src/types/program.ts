@@ -5,12 +5,17 @@ export type BlockType = 'warmup' | 'skill' | 'strength' | 'metcon' | 'mobility' 
 
 export type WeightUnit = 'kg' | 'lb'
 
-// A block's weight is calculated from a percentage of the lift's Training
-// Max rather than given as a literal number (used by percentage-based
-// strength programs like 5/3/1).
+// A block's weight is calculated rather than given as a literal number.
+// 'trainingMax' (5/3/1) uses a 90%-reduced buffer that increments between
+// waves; 'oneRepMax' (Russian Squat) uses the raw entered 1RM directly with
+// no reduction and no increment.
 export interface LoadConfig {
-  basedOn: 'trainingMax'
+  basedOn: 'trainingMax' | 'oneRepMax'
   percentage: number
+  // number of identical sets at this percentage — authoring convenience only,
+  // doesn't affect the weight (every set at a given percentage is the same
+  // weight); defaults to 1 when omitted (as in every existing 5/3/1 block)
+  sets?: number
   reps: number
   isAmrap: boolean
 }
@@ -56,6 +61,9 @@ export interface Program {
   // per-lift Training Max increase applied once a new wave begins, keyed by
   // movementId then unit
   trainingMaxIncrementsPerCycle?: Record<string, Record<WeightUnit, number>>
+  // shown as a prominent callout before someone starts the program (e.g.
+  // "not recommended for beginners")
+  safetyNote?: string
 }
 
 // Phase files (e.g. strength-focus-phase2-weeks3-5.json) continue an existing

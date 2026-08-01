@@ -35,6 +35,8 @@ const PROGRAM_FILES = [
   '531-strength-cycle1-weeks1-4.json',
   '531-strength-cycle2-weeks5-8.json',
   '531-strength-week9-retest.json',
+  'russian-squat-program-weeks1-3.json',
+  'russian-squat-program-weeks4-6.json',
 ]
 
 async function fetchJson<T>(path: string): Promise<T> {
