@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { findStage } from '../lib/loadData'
+import { timerConfigToPath } from '../lib/timerUrl'
 import type { Movement } from '../types/movement'
 import type { ProgramBlock } from '../types/program'
 
@@ -60,6 +61,14 @@ export default function ProgramBlockRow({
       {stage && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
       <p className="mt-1 text-xs text-ink-muted">{block.prescription}</p>
       {block.notes && <p className="mt-1 text-xs italic text-ink-muted">{block.notes}</p>}
+      {block.timerConfig && (
+        <Link
+          to={timerConfigToPath(block.timerConfig)}
+          className="mt-2 inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
+        >
+          ⏱ Start Timer
+        </Link>
+      )}
       {onLogChange && (
         <input
           type="text"

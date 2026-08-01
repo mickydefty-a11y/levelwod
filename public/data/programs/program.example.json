@@ -4,7 +4,7 @@
   "level": "Beginner",
   "durationWeeks": 12,
   "daysPerWeek": 3,
-  "description": "A 12-week on-ramp covering the core movement patterns — squat, hinge, push, pull, and a conditioning base — before moving on to more advanced skill work.",
+  "description": "A 12-week on-ramp covering the core movement patterns \u2014 squat, hinge, push, pull, and a conditioning base \u2014 before moving on to more advanced skill work.",
   "weeks": [
     {
       "weekNumber": 1,
@@ -12,7 +12,7 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Full Body Foundations",
+          "name": "Day 1 \u2014 Full Body Foundations",
           "blocks": [
             {
               "blockType": "warmup",
@@ -26,14 +26,14 @@
               "movementId": "hip-mobility",
               "targetStageId": null,
               "prescription": "30 sec/side on 90/90 Stretch and Couch Stretch",
-              "notes": "Skip anything that causes sharp pain — mild stretch discomfort only."
+              "notes": "Skip anything that causes sharp pain \u2014 mild stretch discomfort only."
             },
             {
               "blockType": "skill",
               "movementId": "pull-up",
               "targetStageId": "scapular-pull-up",
               "prescription": "3 sets x 8 reps",
-              "notes": "This is the very first pulling skill in the program — quality over speed."
+              "notes": "This is the very first pulling skill in the program \u2014 quality over speed."
             },
             {
               "blockType": "strength",
@@ -47,7 +47,7 @@
               "movementId": "rowing",
               "targetStageId": null,
               "prescription": "5 minutes easy pace",
-              "notes": "This should feel conversational — not a hard effort yet."
+              "notes": "This should feel conversational \u2014 not a hard effort yet."
             },
             {
               "blockType": "cooldown",
@@ -60,7 +60,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing + Conditioning",
+          "name": "Day 2 \u2014 Pushing + Conditioning",
           "blocks": [
             {
               "blockType": "warmup",
@@ -81,7 +81,7 @@
               "movementId": "deadlift",
               "targetStageId": "hip-hinge-drill",
               "prescription": "3 sets x 10 reps with PVC pipe",
-              "notes": "This is a technique day — no load yet, just the hinge pattern."
+              "notes": "This is a technique day \u2014 no load yet, just the hinge pattern."
             },
             {
               "blockType": "metcon",
@@ -101,7 +101,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Full Body + Light Conditioning",
+          "name": "Day 3 \u2014 Full Body + Light Conditioning",
           "blocks": [
             {
               "blockType": "warmup",
@@ -115,21 +115,27 @@
               "movementId": "l-sit",
               "targetStageId": "tuck-hold",
               "prescription": "4 sets x 10-15 sec hold",
-              "notes": "Ground-based core/skill work — inversions like handstands are introduced later in the program once foundational strength is built."
+              "notes": "Ground-based core/skill work \u2014 inversions like handstands are introduced later in the program once foundational strength is built."
             },
             {
               "blockType": "strength",
               "movementId": "kettlebell-swing",
               "targetStageId": "russian-swing",
               "prescription": "4 sets x 10 reps",
-              "notes": "Light kettlebell — this is a technique day for the hip hinge under a dynamic load."
+              "notes": "Light kettlebell \u2014 this is a technique day for the hip hinge under a dynamic load."
             },
             {
               "blockType": "metcon",
               "movementId": "assault-bike",
               "targetStageId": null,
               "prescription": "3 rounds: 30 sec on, 90 sec off",
-              "notes": "Deliberately short and easy this week — building pacing awareness, not fitness yet."
+              "notes": "Deliberately short and easy this week \u2014 building pacing awareness, not fitness yet.",
+              "timerConfig": {
+                "type": "intervals",
+                "workSeconds": 30,
+                "restSeconds": 90,
+                "rounds": 3
+              }
             },
             {
               "blockType": "cooldown",

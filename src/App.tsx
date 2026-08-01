@@ -6,6 +6,7 @@ import MovementDetail from './pages/MovementDetail'
 import Programs from './pages/Programs'
 import ProgramDetail from './pages/ProgramDetail'
 import Progress from './pages/Progress'
+import Timer from './pages/Timer'
 import Welcome from './pages/Welcome'
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
       </main>
       {!hideNav && <BottomNav />}

@@ -1,3 +1,5 @@
+import type { TimerConfig } from './timer'
+
 export type BlockType = 'warmup' | 'skill' | 'strength' | 'metcon' | 'mobility' | 'cooldown'
 
 export interface ProgramBlock {
@@ -6,6 +8,7 @@ export interface ProgramBlock {
   targetStageId: string | null
   prescription: string
   notes: string | null
+  timerConfig?: TimerConfig
 }
 
 export interface ProgramDay {

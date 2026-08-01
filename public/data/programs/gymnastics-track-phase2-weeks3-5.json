@@ -3,39 +3,135 @@
   "weeks": [
     {
       "weekNumber": 3,
-      "focus": "Kipping mechanics begin — pull-up and HSPU",
+      "focus": "Kipping mechanics begin \u2014 pull-up and HSPU",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Pulling Focus",
+          "name": "Day 1 \u2014 Pulling Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "scapular-push-ups", "targetStageId": null, "prescription": "2 sets x 12 reps", "notes": null },
-            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "kipping-pull-up", "prescription": "5 sets x 5 reps, technique focus", "notes": "First kipping technique work — small, controlled kip before chasing volume." },
-            { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "hanging-knee-to-chest", "prescription": "3 sets x 10 reps", "notes": null },
-            { "blockType": "strength", "movementId": "hollow-hold", "targetStageId": null, "prescription": "4 sets x 35 sec", "notes": null },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes steady pace", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "scapular-push-ups",
+              "targetStageId": null,
+              "prescription": "2 sets x 12 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "kipping-pull-up",
+              "prescription": "5 sets x 5 reps, technique focus",
+              "notes": "First kipping technique work \u2014 small, controlled kip before chasing volume."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "toes-to-bar",
+              "targetStageId": "hanging-knee-to-chest",
+              "prescription": "3 sets x 10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "hollow-hold",
+              "targetStageId": null,
+              "prescription": "4 sets x 35 sec",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "12 minutes steady pace",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing Focus",
+          "name": "Day 2 \u2014 Pushing Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
-            { "blockType": "skill", "movementId": "kipping-handstand-push-up", "targetStageId": "kip-technique-drill", "prescription": "4 sets, practicing the small leg kick without pressing", "notes": "Learning the kip mechanics before adding the press." },
-            { "blockType": "strength", "movementId": "handstand-hold", "targetStageId": "wall-hs-back", "prescription": "4 sets x 20-25 sec hold", "notes": null },
-            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "6 rounds: 35 sec on, 55 sec off", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "kipping-handstand-push-up",
+              "targetStageId": "kip-technique-drill",
+              "prescription": "4 sets, practicing the small leg kick without pressing",
+              "notes": "Learning the kip mechanics before adding the press."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "handstand-hold",
+              "targetStageId": "wall-hs-back",
+              "prescription": "4 sets x 20-25 sec hold",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "assault-bike",
+              "targetStageId": null,
+              "prescription": "6 rounds: 35 sec on, 55 sec off",
+              "notes": null,
+              "timerConfig": {
+                "type": "intervals",
+                "workSeconds": 35,
+                "restSeconds": 55,
+                "rounds": 6
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Core + Balance",
+          "name": "Day 3 \u2014 Core + Balance",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-            { "blockType": "skill", "movementId": "l-sit", "targetStageId": "full-l-sit", "prescription": "4 sets x 15-20 sec", "notes": "First attempts at the full extended-leg L-sit." },
-            { "blockType": "strength", "movementId": "arch-hold", "targetStageId": null, "prescription": "4 sets x 30 sec", "notes": null },
-            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "18 minutes steady pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "8 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "l-sit",
+              "targetStageId": "full-l-sit",
+              "prescription": "4 sets x 15-20 sec",
+              "notes": "First attempts at the full extended-leg L-sit."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "arch-hold",
+              "targetStageId": null,
+              "prescription": "4 sets x 30 sec",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "18 minutes steady pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         }
       ]
@@ -46,35 +142,131 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Pulling Focus",
+          "name": "Day 1 \u2014 Pulling Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "scapular-push-ups", "targetStageId": null, "prescription": "2 sets x 12 reps", "notes": null },
-            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "kipping-pull-up", "prescription": "5 sets x 8 reps", "notes": "Building volume on the kip now that mechanics feel controlled." },
-            { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "kipping-knee-raise", "prescription": "3 sets x 10 reps", "notes": "First kipping knee raise work — adding hip swing to the toes-to-bar pattern." },
-            { "blockType": "strength", "movementId": "hollow-hold", "targetStageId": null, "prescription": "4 sets x 40 sec", "notes": null },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes steady pace", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "scapular-push-ups",
+              "targetStageId": null,
+              "prescription": "2 sets x 12 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "kipping-pull-up",
+              "prescription": "5 sets x 8 reps",
+              "notes": "Building volume on the kip now that mechanics feel controlled."
+            },
+            {
+              "blockType": "skill",
+              "movementId": "toes-to-bar",
+              "targetStageId": "kipping-knee-raise",
+              "prescription": "3 sets x 10 reps",
+              "notes": "First kipping knee raise work \u2014 adding hip swing to the toes-to-bar pattern."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "hollow-hold",
+              "targetStageId": null,
+              "prescription": "4 sets x 40 sec",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "12 minutes steady pace",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing Focus",
+          "name": "Day 2 \u2014 Pushing Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
-            { "blockType": "skill", "movementId": "kipping-handstand-push-up", "targetStageId": "kipping-hspu-reps", "prescription": "4 sets x 3 reps", "notes": "First full kipping HSPU reps." },
-            { "blockType": "strength", "movementId": "handstand-hold", "targetStageId": "freestanding-handstand", "prescription": "4 sets x 5-10 sec, away from the wall", "notes": "First freestanding attempts — expect this to feel unstable at first, that's normal." },
-            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "6 rounds: 40 sec on, 50 sec off", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "kipping-handstand-push-up",
+              "targetStageId": "kipping-hspu-reps",
+              "prescription": "4 sets x 3 reps",
+              "notes": "First full kipping HSPU reps."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "handstand-hold",
+              "targetStageId": "freestanding-handstand",
+              "prescription": "4 sets x 5-10 sec, away from the wall",
+              "notes": "First freestanding attempts \u2014 expect this to feel unstable at first, that's normal."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "assault-bike",
+              "targetStageId": null,
+              "prescription": "6 rounds: 40 sec on, 50 sec off",
+              "notes": null,
+              "timerConfig": {
+                "type": "intervals",
+                "workSeconds": 40,
+                "restSeconds": 50,
+                "rounds": 6
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Core + Balance",
+          "name": "Day 3 \u2014 Core + Balance",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-            { "blockType": "skill", "movementId": "l-sit", "targetStageId": "full-l-sit", "prescription": "4 sets x 20 sec", "notes": null },
-            { "blockType": "strength", "movementId": "toes-to-bar", "targetStageId": "single-leg-t2b", "prescription": "3 sets x 5 reps/side", "notes": null },
-            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes steady pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "8 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "l-sit",
+              "targetStageId": "full-l-sit",
+              "prescription": "4 sets x 20 sec",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "toes-to-bar",
+              "targetStageId": "single-leg-t2b",
+              "prescription": "3 sets x 5 reps/side",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "20 minutes steady pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         }
       ]
@@ -85,35 +277,131 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Pulling Focus",
+          "name": "Day 1 \u2014 Pulling Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "scapular-push-ups", "targetStageId": null, "prescription": "2 sets x 12 reps", "notes": null },
-            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "kipping-pull-up", "prescription": "5 sets x 10 reps", "notes": null },
-            { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "strict-t2b", "prescription": "3 sets x 3-5 reps", "notes": "First strict toes-to-bar attempts, no kip." },
-            { "blockType": "strength", "movementId": "hollow-hold", "targetStageId": null, "prescription": "4 sets x 45 sec", "notes": null },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "14 minutes steady pace", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "scapular-push-ups",
+              "targetStageId": null,
+              "prescription": "2 sets x 12 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "kipping-pull-up",
+              "prescription": "5 sets x 10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "toes-to-bar",
+              "targetStageId": "strict-t2b",
+              "prescription": "3 sets x 3-5 reps",
+              "notes": "First strict toes-to-bar attempts, no kip."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "hollow-hold",
+              "targetStageId": null,
+              "prescription": "4 sets x 45 sec",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "14 minutes steady pace",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing Focus",
+          "name": "Day 2 \u2014 Pushing Focus",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
-            { "blockType": "skill", "movementId": "kipping-handstand-push-up", "targetStageId": "kipping-hspu-reps", "prescription": "4 sets x 5 reps", "notes": null },
-            { "blockType": "strength", "movementId": "handstand-hold", "targetStageId": "freestanding-handstand", "prescription": "4 sets x 10-15 sec", "notes": "Should feel a bit steadier than last week." },
-            { "blockType": "metcon", "movementId": "assault-bike", "targetStageId": null, "prescription": "7 rounds: 40 sec on, 50 sec off", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "kipping-handstand-push-up",
+              "targetStageId": "kipping-hspu-reps",
+              "prescription": "4 sets x 5 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "handstand-hold",
+              "targetStageId": "freestanding-handstand",
+              "prescription": "4 sets x 10-15 sec",
+              "notes": "Should feel a bit steadier than last week."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "assault-bike",
+              "targetStageId": null,
+              "prescription": "7 rounds: 40 sec on, 50 sec off",
+              "notes": null,
+              "timerConfig": {
+                "type": "intervals",
+                "workSeconds": 40,
+                "restSeconds": 50,
+                "rounds": 7
+              }
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Core + Balance",
+          "name": "Day 3 \u2014 Core + Balance",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-            { "blockType": "skill", "movementId": "l-sit", "targetStageId": "full-l-sit", "prescription": "4 sets x 25 sec", "notes": "Approaching readiness for L-sit on rings in a later program." },
-            { "blockType": "strength", "movementId": "toes-to-bar", "targetStageId": "single-leg-t2b", "prescription": "3 sets x 8 reps/side", "notes": null },
-            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes steady pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "8 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "l-sit",
+              "targetStageId": "full-l-sit",
+              "prescription": "4 sets x 25 sec",
+              "notes": "Approaching readiness for L-sit on rings in a later program."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "toes-to-bar",
+              "targetStageId": "single-leg-t2b",
+              "prescription": "3 sets x 8 reps/side",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "20 minutes steady pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         }
       ]

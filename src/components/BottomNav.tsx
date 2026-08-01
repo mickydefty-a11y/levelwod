@@ -40,6 +40,17 @@ const items: NavItem[] = [
     ),
   },
   {
+    to: '/timer',
+    label: 'Timer',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+        <circle cx="12" cy="13" r="8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 13V9" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 2h6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
     to: '/progress',
     label: 'Progress',
     icon: (

@@ -7,25 +7,49 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Carry + Sandbag Medley",
+          "name": "Day 1 \u2014 Carry + Sandbag Medley",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "metcon",
               "movementId": "farmer-carry",
               "targetStageId": null,
               "prescription": "3 rounds: 30m farmer carry, 5 sandbag over-shoulder reps, 90 sec rest",
-              "notes": "First combined medley piece this program — moderate loads throughout."
+              "notes": "First combined medley piece this program \u2014 moderate loads throughout."
             },
-            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "4 sets x 5 reps", "notes": null },
-            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-loaded",
+              "prescription": "4 sets x 5 reps",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Atlas Stone + Yoke Medley",
+          "name": "Day 2 \u2014 Atlas Stone + Yoke Medley",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "metcon",
               "movementId": "atlas-stone",
@@ -33,15 +57,33 @@
               "prescription": "3 rounds: 5 atlas stone reps, 20m yoke carry, 2 min rest",
               "notes": null
             },
-            { "blockType": "strength", "movementId": "kettlebell-swing", "targetStageId": "american-swing", "prescription": "4 sets x 15 reps", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "strength",
+              "movementId": "kettlebell-swing",
+              "targetStageId": "american-swing",
+              "prescription": "4 sets x 15 reps",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Sled + Carry Medley",
+          "name": "Day 3 \u2014 Sled + Carry Medley",
           "blocks": [
-            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 15m",
+              "notes": null
+            },
             {
               "blockType": "metcon",
               "movementId": "sled-push",
@@ -49,21 +91,39 @@
               "prescription": "4 rounds: 20m sled push, 20m sled pull, 20m farmer carry, 2 min rest",
               "notes": "The most demanding combined piece so far this program."
             },
-            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         }
       ]
     },
     {
       "weekNumber": 6,
-      "focus": "Testing week — full strongman medley benchmark",
+      "focus": "Testing week \u2014 full strongman medley benchmark",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Test: Deadlift + Carry",
+          "name": "Day 1 \u2014 Test: Deadlift + Carry",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "Work up to a new heavy set of 5 reps", "notes": "Compare to your Week 1 working weight." },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-loaded",
+              "prescription": "Work up to a new heavy set of 5 reps",
+              "notes": "Compare to your Week 1 working weight."
+            },
             {
               "blockType": "metcon",
               "movementId": "farmer-carry",
@@ -71,14 +131,26 @@
               "prescription": "Max distance in 3 minutes, heavy implements",
               "notes": "Compare pacing and load to Week 1's light 20m sets."
             },
-            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Test: Atlas Stone + Sandbag",
+          "name": "Day 2 \u2014 Test: Atlas Stone + Sandbag",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "atlas-stone",
@@ -93,22 +165,43 @@
               "prescription": "Work up to a new heavy bag for 5 reps/side",
               "notes": null
             },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Test: Full Strongman Medley",
+          "name": "Day 3 \u2014 Test: Full Strongman Medley",
           "blocks": [
-            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 15m",
+              "notes": null
+            },
             {
               "blockType": "metcon",
               "movementId": "sled-push",
               "targetStageId": null,
               "prescription": "For time: 20m sled push, 20m yoke carry, 5 atlas stone to shoulder, 20m sled pull, 20m farmer carry",
-              "notes": "The headline test of the whole program — a full strongman medley combining every implement trained across the six weeks."
+              "notes": "The headline test of the whole program \u2014 a full strongman medley combining every implement trained across the six weeks.",
+              "timerConfig": {
+                "type": "stopwatch"
+              }
             },
-            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-program note: this medley is a great one to repeat in a future block to measure real progress across all the implements." }
+            {
+              "blockType": "cooldown",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": "End-of-program note: this medley is a great one to repeat in a future block to measure real progress across all the implements."
+            }
           ]
         }
       ]
