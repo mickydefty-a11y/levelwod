@@ -122,7 +122,11 @@
               "movementId": "deadlift",
               "targetStageId": "deadlift-loaded",
               "prescription": "Work up to a new heavy set of 5 reps",
-              "notes": "Compare to your Week 1 working weight."
+              "notes": "Compare to your Week 1 working weight.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Deadlift weight"
+              }
             },
             {
               "blockType": "metcon",
@@ -156,14 +160,22 @@
               "movementId": "atlas-stone",
               "targetStageId": "stone-over-platform",
               "prescription": "Work up to a new heavy stone for 3 reps",
-              "notes": "First attempt at stone-over-platform since it was introduced only as hip/shoulder work earlier."
+              "notes": "First attempt at stone-over-platform since it was introduced only as hip/shoulder work earlier.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Atlas Stone weight"
+              }
             },
             {
               "blockType": "strength",
               "movementId": "sandbag-over-shoulder",
               "targetStageId": "sb-over-shoulder-heavy",
               "prescription": "Work up to a new heavy bag for 5 reps/side",
-              "notes": null
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Sandbag Over Shoulder weight"
+              }
             },
             {
               "blockType": "cooldown",

@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
 import { timerConfigToPath } from '../lib/timerUrl'
 import type { Movement } from '../types/movement'
@@ -20,6 +22,7 @@ export default function ProgramBlockRow({
   onLogChange,
   done,
   onToggleDone,
+  programContext,
 }: {
   block: ProgramBlock
   index: Map<string, Movement>
@@ -29,9 +32,13 @@ export default function ProgramBlockRow({
   onLogChange?: (value: string) => void
   done?: boolean
   onToggleDone?: () => void
+  // "{programId} / week {N} / day {N}" — only needed alongside onLogChange,
+  // used to tag PR entries logged from this block with where they came from
+  programContext?: string | null
 }) {
   const movement = index.get(block.movementId)
   const stage = findStage(movement, block.targetStageId)
+  const [showPRForm, setShowPRForm] = useState(false)
 
   return (
     <li className={`rounded-lg px-3 py-2 ${done ? 'bg-accent/15' : 'bg-bg-surface'}`}>
@@ -61,14 +68,39 @@ export default function ProgramBlockRow({
       {stage && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
       <p className="mt-1 text-xs text-ink-muted">{block.prescription}</p>
       {block.notes && <p className="mt-1 text-xs italic text-ink-muted">{block.notes}</p>}
-      {block.timerConfig && (
-        <Link
-          to={timerConfigToPath(block.timerConfig)}
-          className="mt-2 inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
-        >
-          ⏱ Start Timer
-        </Link>
+
+      <div className="mt-2 flex flex-wrap gap-1.5">
+        {block.timerConfig && (
+          <Link
+            to={timerConfigToPath(block.timerConfig)}
+            className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
+          >
+            ⏱ Start Timer
+          </Link>
+        )}
+        {block.logPrompt && onLogChange && !showPRForm && (
+          <button
+            onClick={() => setShowPRForm(true)}
+            className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
+          >
+            🏆 Log {block.logPrompt.suggestedLabel}
+          </button>
+        )}
+      </div>
+
+      {showPRForm && block.logPrompt && (
+        <div className="mt-2">
+          <PRLogForm
+            movementId={block.movementId}
+            defaultMetricType={block.logPrompt.metricType}
+            label={block.logPrompt.suggestedLabel}
+            programContext={programContext ?? null}
+            onSaved={() => setShowPRForm(false)}
+            onCancel={() => setShowPRForm(false)}
+          />
+        </div>
       )}
+
       {onLogChange && (
         <input
           type="text"

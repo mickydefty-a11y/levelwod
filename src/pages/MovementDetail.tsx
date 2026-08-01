@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import PersonalBests from '../components/PersonalBests'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { levelIndex } from '../lib/levels'
 import { useProgress } from '../lib/useProgress'
@@ -169,6 +170,8 @@ export default function MovementDetail() {
           </ul>
         </div>
       )}
+
+      <PersonalBests movementId={movement.id} />
 
       {movement.type === 'progression' && movement.stages && (
         <div className="mt-4">

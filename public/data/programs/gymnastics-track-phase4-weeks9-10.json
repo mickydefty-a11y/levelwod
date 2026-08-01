@@ -156,14 +156,22 @@
               "movementId": "pull-up",
               "targetStageId": "strict-pull-up",
               "prescription": "Test max unbroken strict reps",
-              "notes": "Compare directly to the Week 1 baseline number \u2014 expect a real jump."
+              "notes": "Compare directly to the Week 1 baseline number \u2014 expect a real jump.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Pull-Up reps"
+              }
             },
             {
               "blockType": "skill",
               "movementId": "toes-to-bar",
               "targetStageId": "kipping-t2b",
               "prescription": "Test max unbroken kipping toes-to-bar",
-              "notes": "Compare to zero at the start of the track."
+              "notes": "Compare to zero at the start of the track.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Toes-to-Bar reps"
+              }
             },
             {
               "blockType": "metcon",
@@ -190,14 +198,22 @@
               "movementId": "handstand-hold",
               "targetStageId": "freestanding-handstand",
               "prescription": "Test max freestanding hold",
-              "notes": "Compare to a wall-facing hold being the only option back in Week 1."
+              "notes": "Compare to a wall-facing hold being the only option back in Week 1.",
+              "logPrompt": {
+                "metricType": "holdTime",
+                "suggestedLabel": "Max Handstand Hold hold"
+              }
             },
             {
               "blockType": "skill",
               "movementId": "handstand-walk",
               "targetStageId": "hs-walk-short",
               "prescription": "Test max distance walked",
-              "notes": null
+              "notes": null,
+              "logPrompt": {
+                "metricType": "distance",
+                "suggestedLabel": "Max Handstand Walk distance"
+              }
             },
             {
               "blockType": "metcon",
@@ -237,7 +253,11 @@
               "movementId": "dip",
               "targetStageId": "full-dip",
               "prescription": "Test max unbroken reps",
-              "notes": "Compare to the Week 1 baseline."
+              "notes": "Compare to the Week 1 baseline.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Parallel Bar Dip reps"
+              }
             },
             {
               "blockType": "metcon",
@@ -247,6 +267,10 @@
               "notes": "A good benchmark to close the track \u2014 note the time for future comparison.",
               "timerConfig": {
                 "type": "stopwatch"
+              },
+              "logPrompt": {
+                "metricType": "time",
+                "suggestedLabel": "Rowing time"
               }
             },
             {

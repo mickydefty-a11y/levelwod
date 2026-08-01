@@ -7,37 +7,103 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Snatch",
+          "name": "Day 1 \u2014 Snatch",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that", "notes": "First true heavy singles this program — stop if positions break down." },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "snatch",
+              "targetStageId": "squat-snatch-loaded",
+              "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that",
+              "notes": "First true heavy singles this program \u2014 stop if positions break down."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Clean",
+          "name": "Day 2 \u2014 Clean",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that", "notes": null },
-            { "blockType": "strength", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "3 sets x 4 reps, heavier load", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "clean",
+              "targetStageId": "squat-clean-loaded",
+              "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "front-squat",
+              "targetStageId": "front-squat-loaded",
+              "prescription": "3 sets x 4 reps, heavier load",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Jerk",
+          "name": "Day 3 \u2014 Jerk",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
-            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-loaded", "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that", "notes": null },
-            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-stability",
+              "targetStageId": null,
+              "prescription": "20 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "split-jerk",
+              "targetStageId": "split-jerk-loaded",
+              "prescription": "Build to a heavy single, then 3 sets x 1 rep at 90% of that",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "overhead-stability",
+              "targetStageId": null,
+              "prescription": "35 sec hold",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 — Clean & Jerk Combined + Conditioning",
+          "name": "Day 4 \u2014 Clean & Jerk Combined + Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "clean-and-jerk",
@@ -45,8 +111,20 @@
               "prescription": "Build to a moderate-heavy Clean & Jerk complex, 5 sets x 1 rep",
               "notes": "First time training the full Clean & Jerk as one combined lift in this program, now that both parent lifts are solid."
             },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 minutes easy pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "10 minutes easy pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         }
       ]
@@ -57,37 +135,103 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Snatch",
+          "name": "Day 1 \u2014 Snatch",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "snatch", "targetStageId": "squat-snatch-loaded", "prescription": "Build to a new heavy single", "notes": "Compare to last week's heavy single." },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "snatch",
+              "targetStageId": "squat-snatch-loaded",
+              "prescription": "Build to a new heavy single",
+              "notes": "Compare to last week's heavy single."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Clean",
+          "name": "Day 2 \u2014 Clean",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "Build to a new heavy single", "notes": null },
-            { "blockType": "strength", "movementId": "front-squat", "targetStageId": "front-squat-loaded", "prescription": "3 sets x 4 reps, continued increase", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "clean",
+              "targetStageId": "squat-clean-loaded",
+              "prescription": "Build to a new heavy single",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "front-squat",
+              "targetStageId": "front-squat-loaded",
+              "prescription": "3 sets x 4 reps, continued increase",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Jerk",
+          "name": "Day 3 \u2014 Jerk",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
-            { "blockType": "skill", "movementId": "split-jerk", "targetStageId": "split-jerk-loaded", "prescription": "Build to a new heavy single", "notes": null },
-            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-stability",
+              "targetStageId": null,
+              "prescription": "20 reps",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "split-jerk",
+              "targetStageId": "split-jerk-loaded",
+              "prescription": "Build to a new heavy single",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "overhead-stability",
+              "targetStageId": null,
+              "prescription": "35 sec hold",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 — Clean & Jerk Combined + Conditioning",
+          "name": "Day 4 \u2014 Clean & Jerk Combined + Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "clean-and-jerk",
@@ -95,72 +239,142 @@
               "prescription": "Build to a heavier Clean & Jerk complex, 5 sets x 1 rep",
               "notes": null
             },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes easy pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "12 minutes easy pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         }
       ]
     },
     {
       "weekNumber": 8,
-      "focus": "Testing week — new 1RMs across Snatch, Clean & Jerk",
+      "focus": "Testing week \u2014 new 1RMs across Snatch, Clean & Jerk",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Test: Snatch 1RM",
+          "name": "Day 1 \u2014 Test: Snatch 1RM",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "snatch",
               "targetStageId": "squat-snatch-loaded",
               "prescription": "Work up to a new 1-rep max",
-              "notes": "Compare to where the Squat Snatch started back in Week 3 of this program — this is the full arc from positional drills to a tested max."
+              "notes": "Compare to where the Squat Snatch started back in Week 3 of this program \u2014 this is the full arc from positional drills to a tested max.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Snatch weight"
+              }
             },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Test: Clean 1RM",
+          "name": "Day 2 \u2014 Test: Clean 1RM",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "clean",
               "targetStageId": "squat-clean-loaded",
               "prescription": "Work up to a new 1-rep max",
-              "notes": null
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Clean weight"
+              }
             },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Test: Split Jerk 1RM",
+          "name": "Day 3 \u2014 Test: Split Jerk 1RM",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-stability",
+              "targetStageId": null,
+              "prescription": "20 reps",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "split-jerk",
               "targetStageId": "split-jerk-loaded",
               "prescription": "Work up to a new 1-rep max",
-              "notes": "Compare to the footwork-only drills back in Week 1 — a long way from where this lift started."
+              "notes": "Compare to the footwork-only drills back in Week 1 \u2014 a long way from where this lift started.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Split Jerk weight"
+              }
             },
-            { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "35 sec hold", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "overhead-stability",
+              "targetStageId": null,
+              "prescription": "35 sec hold",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 — Test: Clean & Jerk 1RM + Wrap-Up",
+          "name": "Day 4 \u2014 Test: Clean & Jerk 1RM + Wrap-Up",
           "blocks": [
-            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "clean-and-jerk",
               "targetStageId": null,
               "prescription": "Work up to a new 1-rep max Clean & Jerk",
-              "notes": "The headline test of this program — combining everything tested this week into one complete lift."
+              "notes": "The headline test of this program \u2014 combining everything tested this week into one complete lift.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Clean & Jerk weight"
+              }
             },
             {
               "blockType": "metcon",
@@ -169,7 +383,13 @@
               "prescription": "10 minutes easy pace",
               "notes": "A gentle close to a demanding program."
             },
-            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": "End-of-program note: new 1-rep maxes have now been set across Snatch, Clean, Split Jerk, and Clean & Jerk." }
+            {
+              "blockType": "cooldown",
+              "movementId": "thoracic-mobility",
+              "targetStageId": null,
+              "prescription": "10 reps/side",
+              "notes": "End-of-program note: new 1-rep maxes have now been set across Snatch, Clean, Split Jerk, and Clean & Jerk."
+            }
           ]
         }
       ]

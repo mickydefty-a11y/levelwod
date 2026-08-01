@@ -145,6 +145,10 @@
               "notes": "Compare pacing and how it feels against Week 1's 15-minute easy run \u2014 same modality, far more capacity now.",
               "timerConfig": {
                 "type": "stopwatch"
+              },
+              "logPrompt": {
+                "metricType": "time",
+                "suggestedLabel": "Running time"
               }
             },
             {
@@ -175,6 +179,10 @@
               "notes": "A classic benchmark piece \u2014 note the time for future comparison.",
               "timerConfig": {
                 "type": "stopwatch"
+              },
+              "logPrompt": {
+                "metricType": "time",
+                "suggestedLabel": "Rowing time"
               }
             },
             {
@@ -209,7 +217,11 @@
               "movementId": "double-unders",
               "targetStageId": "du-volume",
               "prescription": "Test max unbroken double unders",
-              "notes": "Compare to zero at the start of this program."
+              "notes": "Compare to zero at the start of this program.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Double Unders reps"
+              }
             },
             {
               "blockType": "cooldown",

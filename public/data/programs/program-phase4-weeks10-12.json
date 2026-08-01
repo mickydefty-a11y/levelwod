@@ -7,36 +7,132 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Full Body Foundations",
+          "name": "Day 1 \u2014 Full Body Foundations",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "10 reps", "notes": null },
-            { "blockType": "mobility", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "negative-pull-up", "prescription": "3 sets x 5 reps, 3-5 sec descent", "notes": "First negatives — a big step toward the first strict pull-up." },
-            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "4 sets x 8 reps, light working weight", "notes": "First loaded barbell squat in the program." },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "12 minutes continuous, steady pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "plank", "targetStageId": null, "prescription": "3 x 45 sec hold", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "negative-pull-up",
+              "prescription": "3 sets x 5 reps, 3-5 sec descent",
+              "notes": "First negatives \u2014 a big step toward the first strict pull-up."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "targetStageId": "back-squat-loaded",
+              "prescription": "4 sets x 8 reps, light working weight",
+              "notes": "First loaded barbell squat in the program."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "12 minutes continuous, steady pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "plank",
+              "targetStageId": null,
+              "prescription": "3 x 45 sec hold",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing + Conditioning",
+          "name": "Day 2 \u2014 Pushing + Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
-            { "blockType": "skill", "movementId": "handstand-hold", "targetStageId": "wall-hs-back", "prescription": "4 sets x 15-20 sec hold", "notes": "First back-to-wall handstand — a harder balance challenge than facing the wall." },
-            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "4 sets x 6 reps, light working weight", "notes": "First loaded barbell deadlift in the program." },
-            { "blockType": "metcon", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "6 sets, aiming for 10+ unbroken", "notes": null },
-            { "blockType": "mobility", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "handstand-hold",
+              "targetStageId": "wall-hs-back",
+              "prescription": "4 sets x 15-20 sec hold",
+              "notes": "First back-to-wall handstand \u2014 a harder balance challenge than facing the wall."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-loaded",
+              "prescription": "4 sets x 6 reps, light working weight",
+              "notes": "First loaded barbell deadlift in the program."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "double-unders",
+              "targetStageId": "du-unbroken",
+              "prescription": "6 sets, aiming for 10+ unbroken",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Full Body + Light Conditioning",
+          "name": "Day 3 \u2014 Full Body + Light Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
-            { "blockType": "skill", "movementId": "box-jump", "targetStageId": "box-jump-low", "prescription": "4 sets x 10 reps", "notes": null },
-            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "4 sets x 8 reps, light working weight", "notes": "First loaded overhead press in the program." },
-            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "10 minutes continuous, easy-moderate pace", "notes": "First continuous run without walk breaks." },
-            { "blockType": "cooldown", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "30 sec/side, eyes closed", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 15m",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "box-jump",
+              "targetStageId": "box-jump-low",
+              "prescription": "4 sets x 10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "targetStageId": "strict-press-loaded",
+              "prescription": "4 sets x 8 reps, light working weight",
+              "notes": "First loaded overhead press in the program."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "10 minutes continuous, easy-moderate pace",
+              "notes": "First continuous run without walk breaks."
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "single-leg-balance",
+              "targetStageId": null,
+              "prescription": "30 sec/side, eyes closed",
+              "notes": null
+            }
           ]
         }
       ]
@@ -47,97 +143,271 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Full Body Foundations",
+          "name": "Day 1 \u2014 Full Body Foundations",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "10 reps", "notes": null },
-            { "blockType": "mobility", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
-            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "negative-pull-up", "prescription": "3 sets x 6 reps", "notes": null },
-            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "4 sets x 8 reps, slight increase in load", "notes": "Add load only if last week's reps all looked clean." },
-            { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "14 minutes continuous, steady pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "plank", "targetStageId": null, "prescription": "3 x 45 sec hold", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "pull-up",
+              "targetStageId": "negative-pull-up",
+              "prescription": "3 sets x 6 reps",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "back-squat",
+              "targetStageId": "back-squat-loaded",
+              "prescription": "4 sets x 8 reps, slight increase in load",
+              "notes": "Add load only if last week's reps all looked clean."
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "rowing",
+              "targetStageId": null,
+              "prescription": "14 minutes continuous, steady pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "plank",
+              "targetStageId": null,
+              "prescription": "3 x 45 sec hold",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Pushing + Conditioning",
+          "name": "Day 2 \u2014 Pushing + Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
-            { "blockType": "skill", "movementId": "handstand-hold", "targetStageId": "wall-hs-back", "prescription": "4 sets x 20-25 sec hold", "notes": null },
-            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "4 sets x 6 reps, slight increase in load", "notes": null },
-            { "blockType": "metcon", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "6 sets, aiming for 15+ unbroken", "notes": null },
-            { "blockType": "mobility", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "handstand-hold",
+              "targetStageId": "wall-hs-back",
+              "prescription": "4 sets x 20-25 sec hold",
+              "notes": null
+            },
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-loaded",
+              "prescription": "4 sets x 6 reps, slight increase in load",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "double-unders",
+              "targetStageId": "du-unbroken",
+              "prescription": "6 sets, aiming for 15+ unbroken",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Full Body + Light Conditioning",
+          "name": "Day 3 \u2014 Full Body + Light Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
-            { "blockType": "skill", "movementId": "box-jump", "targetStageId": "box-jump-low", "prescription": "4 sets x 12 reps", "notes": "Final week on low box before attempting standard height post-program." },
-            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "4 sets x 8 reps, slight increase in load", "notes": null },
-            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "12 minutes continuous, easy-moderate pace", "notes": null },
-            { "blockType": "cooldown", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "30 sec/side, eyes closed", "notes": null }
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 15m",
+              "notes": null
+            },
+            {
+              "blockType": "skill",
+              "movementId": "box-jump",
+              "targetStageId": "box-jump-low",
+              "prescription": "4 sets x 12 reps",
+              "notes": "Final week on low box before attempting standard height post-program."
+            },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "targetStageId": "strict-press-loaded",
+              "prescription": "4 sets x 8 reps, slight increase in load",
+              "notes": null
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "12 minutes continuous, easy-moderate pace",
+              "notes": null
+            },
+            {
+              "blockType": "cooldown",
+              "movementId": "single-leg-balance",
+              "targetStageId": null,
+              "prescription": "30 sec/side, eyes closed",
+              "notes": null
+            }
           ]
         }
       ]
     },
     {
       "weekNumber": 12,
-      "focus": "Retest week — measuring progress against Week 1",
+      "focus": "Retest week \u2014 measuring progress against Week 1",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 — Retest: Squat + Row",
+          "name": "Day 1 \u2014 Retest: Squat + Row",
           "blocks": [
-            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "10 reps", "notes": null },
-            { "blockType": "mobility", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "inchworm",
+              "targetStageId": null,
+              "prescription": "10 reps",
+              "notes": null
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "hip-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            },
             {
               "blockType": "strength",
               "movementId": "back-squat",
               "targetStageId": "back-squat-loaded",
               "prescription": "Find a comfortable working set of 8 reps and note the weight",
-              "notes": "Compare this to the empty-bar work from Week 7 — same movement, now loaded and far more comfortable."
+              "notes": "Compare this to the empty-bar work from Week 7 \u2014 same movement, now loaded and far more comfortable.",
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Back Squat weight"
+              }
             },
             {
               "blockType": "metcon",
               "movementId": "rowing",
               "targetStageId": null,
               "prescription": "Retest: row continuously for time, same duration as Week 1's 5-minute piece, but note how the pace feels now",
-              "notes": "This isn't about going faster necessarily — notice how much easier the same effort feels."
+              "notes": "This isn't about going faster necessarily \u2014 notice how much easier the same effort feels."
             },
-            { "blockType": "cooldown", "movementId": "plank", "targetStageId": null, "prescription": "Hold for max time, compare to Week 1's 20 sec", "notes": null }
+            {
+              "blockType": "cooldown",
+              "movementId": "plank",
+              "targetStageId": null,
+              "prescription": "Hold for max time, compare to Week 1's 20 sec",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 — Retest: Pull-Up Progress + Conditioning",
+          "name": "Day 2 \u2014 Retest: Pull-Up Progress + Conditioning",
           "blocks": [
-            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 15 taps/side", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "shoulder-taps",
+              "targetStageId": null,
+              "prescription": "2 sets x 15 taps/side",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "pull-up",
               "targetStageId": "negative-pull-up",
               "prescription": "Attempt a strict pull-up if negatives have felt controlled",
-              "notes": "This is the milestone moment of the program — going from a dead hang in Week 1 to a first strict rep attempt now."
+              "notes": "This is the milestone moment of the program \u2014 going from a dead hang in Week 1 to a first strict rep attempt now.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Pull-Up reps"
+              }
             },
-            { "blockType": "strength", "movementId": "deadlift", "targetStageId": "deadlift-loaded", "prescription": "Find a comfortable working set of 6 reps and note the weight", "notes": null },
-            { "blockType": "metcon", "movementId": "double-unders", "targetStageId": "du-unbroken", "prescription": "Test max unbroken double unders", "notes": "Compare to zero at the start of Phase 3." },
-            { "blockType": "mobility", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+            {
+              "blockType": "strength",
+              "movementId": "deadlift",
+              "targetStageId": "deadlift-loaded",
+              "prescription": "Find a comfortable working set of 6 reps and note the weight",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Deadlift weight"
+              }
+            },
+            {
+              "blockType": "metcon",
+              "movementId": "double-unders",
+              "targetStageId": "du-unbroken",
+              "prescription": "Test max unbroken double unders",
+              "notes": "Compare to zero at the start of Phase 3.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Double Unders reps"
+              }
+            },
+            {
+              "blockType": "mobility",
+              "movementId": "ankle-mobility",
+              "targetStageId": null,
+              "prescription": "30 sec/side",
+              "notes": null
+            }
           ]
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 — Retest: Conditioning + Wrap-Up",
+          "name": "Day 3 \u2014 Retest: Conditioning + Wrap-Up",
           "blocks": [
-            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
+            {
+              "blockType": "warmup",
+              "movementId": "bear-crawl",
+              "targetStageId": null,
+              "prescription": "2 x 15m",
+              "notes": null
+            },
             {
               "blockType": "skill",
               "movementId": "handstand-hold",
               "targetStageId": "wall-hs-back",
               "prescription": "Max hold, back-to-wall",
-              "notes": "Compare to Week 1, when being upside down wasn't part of the program at all yet."
+              "notes": "Compare to Week 1, when being upside down wasn't part of the program at all yet.",
+              "logPrompt": {
+                "metricType": "holdTime",
+                "suggestedLabel": "Max Handstand Hold hold"
+              }
             },
-            { "blockType": "strength", "movementId": "strict-press", "targetStageId": "strict-press-loaded", "prescription": "Find a comfortable working set of 8 reps and note the weight", "notes": null },
+            {
+              "blockType": "strength",
+              "movementId": "strict-press",
+              "targetStageId": "strict-press-loaded",
+              "prescription": "Find a comfortable working set of 8 reps and note the weight",
+              "notes": null,
+              "logPrompt": {
+                "metricType": "weight",
+                "suggestedLabel": "New Strict Press weight"
+              }
+            },
             {
               "blockType": "metcon",
               "movementId": "running",
@@ -145,7 +415,17 @@
               "prescription": "Run continuously for the same total time as Week 1's run/walk intervals, note the difference",
               "notes": "A good note-to-self moment before moving on to Strength Focus or Gymnastics Skills Track."
             },
-            { "blockType": "cooldown", "movementId": "single-leg-balance", "targetStageId": null, "prescription": "Max hold, eyes closed", "notes": "End-of-program note: this quiet feeder sets up Pistol Squat work in later programs." }
+            {
+              "blockType": "cooldown",
+              "movementId": "single-leg-balance",
+              "targetStageId": null,
+              "prescription": "Max hold, eyes closed",
+              "notes": "End-of-program note: this quiet feeder sets up Pistol Squat work in later programs.",
+              "logPrompt": {
+                "metricType": "holdTime",
+                "suggestedLabel": "Max Single-Leg Balance hold"
+              }
+            }
           ]
         }
       ]

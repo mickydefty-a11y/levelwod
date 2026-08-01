@@ -1,4 +1,5 @@
 import type { TimerConfig } from './timer'
+import type { LogPrompt } from './pr'
 
 export type BlockType = 'warmup' | 'skill' | 'strength' | 'metcon' | 'mobility' | 'cooldown'
 
@@ -9,6 +10,7 @@ export interface ProgramBlock {
   prescription: string
   notes: string | null
   timerConfig?: TimerConfig
+  logPrompt?: LogPrompt
 }
 
 export interface ProgramDay {

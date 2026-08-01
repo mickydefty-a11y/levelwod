@@ -77,6 +77,7 @@ export default function ActiveDayCard({
             onLogChange={(value) => setResults((prev) => ({ ...prev, [i]: value }))}
             done={done[i] ?? false}
             onToggleDone={() => setDone((prev) => ({ ...prev, [i]: !prev[i] }))}
+            programContext={`${program.id} / week ${week.weekNumber} / day ${day.dayNumber}`}
           />
         ))}
       </ul>

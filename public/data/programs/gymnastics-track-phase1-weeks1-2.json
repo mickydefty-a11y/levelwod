@@ -26,7 +26,11 @@
               "movementId": "pull-up",
               "targetStageId": "strict-pull-up",
               "prescription": "Test max unbroken strict reps, then 4 sets x 70% of that number",
-              "notes": "This baseline number is what the rest of the track's pulling volume is built around."
+              "notes": "This baseline number is what the rest of the track's pulling volume is built around.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Pull-Up reps"
+              }
             },
             {
               "blockType": "strength",
@@ -67,7 +71,11 @@
               "movementId": "dip",
               "targetStageId": "full-dip",
               "prescription": "Test max unbroken reps, then 4 sets x 70% of that number",
-              "notes": "Same baseline approach as the pull-up test \u2014 this sets the pushing volume for the track."
+              "notes": "Same baseline approach as the pull-up test \u2014 this sets the pushing volume for the track.",
+              "logPrompt": {
+                "metricType": "reps",
+                "suggestedLabel": "Max Parallel Bar Dip reps"
+              }
             },
             {
               "blockType": "strength",
