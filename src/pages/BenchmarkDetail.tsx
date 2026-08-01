@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import BenchmarkResults from '../components/BenchmarkResults'
+import WarmupSection from '../components/WarmupSection'
 import { movementFillLabel } from '../lib/benchmarkDisplay'
 import { getBenchmarkWod } from '../lib/benchmarkWods'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
@@ -82,7 +83,14 @@ export default function BenchmarkDetail() {
         <p className="mt-4 text-ink-muted">Loading…</p>
       ) : (
         <div className="mt-3">
-          <ul className="space-y-2">
+          <WarmupSection
+            movements={tierData.movements
+              .map((fill) => movementIndex.get(fill.movementId))
+              .filter((m): m is Movement => !!m)}
+            movementIndex={movementIndex}
+          />
+
+          <ul className="mt-4 space-y-2">
             {tierData.movements.map((fill, i) => {
               const movement = movementIndex.get(fill.movementId)
               return (

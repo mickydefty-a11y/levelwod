@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import WarmupSection from '../components/WarmupSection'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { useTodaysWod } from '../lib/useTodaysWod'
 import { tierFillLabel, wodFormatLabel } from '../lib/wodDisplay'
@@ -53,25 +54,34 @@ export default function Wod() {
       {!movementIndex ? (
         <p className="mt-4 text-ink-muted">Loading…</p>
       ) : (
-        <ul className="mt-4 space-y-2">
-          {wod.slots.map((slot, i) => {
-            const fill = slot.tiers[tier]
-            const movement = movementIndex.get(fill.movementId)
-            return (
-              <li key={i} className="rounded-xl bg-bg-surface p-4">
-                <p className="text-xs text-ink-muted">{slot.subcategory}</p>
-                <Link
-                  to={`/library/${fill.movementId}`}
-                  className="mt-0.5 block text-base font-medium"
-                >
-                  {tierFillLabel(fill, movement)}
-                </Link>
-                <p className="mt-1 text-sm text-accent-light">{fill.amount}</p>
-                {fill.loadNote && <p className="mt-0.5 text-xs text-ink-muted">{fill.loadNote}</p>}
-              </li>
-            )
-          })}
-        </ul>
+        <>
+          <WarmupSection
+            movements={wod.slots
+              .map((slot) => movementIndex.get(slot.tiers[tier].movementId))
+              .filter((m): m is Movement => !!m)}
+            movementIndex={movementIndex}
+          />
+
+          <ul className="mt-4 space-y-2">
+            {wod.slots.map((slot, i) => {
+              const fill = slot.tiers[tier]
+              const movement = movementIndex.get(fill.movementId)
+              return (
+                <li key={i} className="rounded-xl bg-bg-surface p-4">
+                  <p className="text-xs text-ink-muted">{slot.subcategory}</p>
+                  <Link
+                    to={`/library/${fill.movementId}`}
+                    className="mt-0.5 block text-base font-medium"
+                  >
+                    {tierFillLabel(fill, movement)}
+                  </Link>
+                  <p className="mt-1 text-sm text-accent-light">{fill.amount}</p>
+                  {fill.loadNote && <p className="mt-0.5 text-xs text-ink-muted">{fill.loadNote}</p>}
+                </li>
+              )
+            })}
+          </ul>
+        </>
       )}
     </div>
   )
