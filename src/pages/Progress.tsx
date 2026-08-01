@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
+import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
 import { loadMovements } from '../lib/loadData'
 import { getLongestStreak, getMovementsAtOrAboveRX, getTotalSessions } from '../lib/streakStats'
@@ -166,6 +167,8 @@ export default function Progress() {
           </ul>
         )}
       </div>
+
+      <VoiceSettingsPanel />
 
       <div className="mt-6">
         <h2 className="text-sm font-semibold text-accent">Your data</h2>

@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import BreathingCircle from '../components/BreathingCircle'
 import BreathingRectangle from '../components/BreathingRectangle'
+import VoiceModeToggle from '../components/VoiceModeToggle'
 import { BREATHING_TECHNIQUES } from '../lib/breathingTechniques'
 import { useBreathingSession } from '../lib/useBreathingSession'
 import { useBreathingUjjayiNote } from '../lib/useBreathingUjjayiNote'
+import { useBreathingVoiceCues } from '../lib/useBreathingVoiceCues'
 import { useWakeLock } from '../lib/useWakeLock'
 import type { BreathingTechnique } from '../types/breathing'
 
@@ -29,6 +31,7 @@ export default function Breathing() {
   const technique = BREATHING_TECHNIQUES.find((t) => t.id === techniqueId) ?? null
   const session = useBreathingSession(technique?.phases ?? [], durationMinutes)
   useWakeLock(session.status === 'running')
+  useBreathingVoiceCues(session)
 
   function selectTechnique(t: BreathingTechnique) {
     setTechniqueId(t.id)
@@ -44,7 +47,10 @@ export default function Breathing() {
   if (!technique) {
     return (
       <div>
-        <h1 className="text-2xl font-semibold">Breathing</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Breathing</h1>
+          <VoiceModeToggle />
+        </div>
         <p className="mt-1 text-sm text-ink-muted">
           A few minutes of guided breathing — pick a technique to get started.
         </p>
@@ -74,15 +80,18 @@ export default function Breathing() {
         <button onClick={backToPicker} className="text-sm text-ink-muted">
           ← Techniques
         </button>
-        {technique.firstTimeNote && (
-          <button
-            onClick={() => setShowUjjayiNote(true)}
-            aria-label={`About ${technique.label}`}
-            className="flex h-6 w-6 items-center justify-center rounded-full bg-bg-surface text-xs text-ink-muted"
-          >
-            ⓘ
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {technique.firstTimeNote && (
+            <button
+              onClick={() => setShowUjjayiNote(true)}
+              aria-label={`About ${technique.label}`}
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-bg-surface text-xs text-ink-muted"
+            >
+              ⓘ
+            </button>
+          )}
+          <VoiceModeToggle />
+        </div>
       </div>
 
       <h1 className="mt-2 self-start text-2xl font-semibold">{technique.label}</h1>

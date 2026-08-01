@@ -1,8 +1,11 @@
 import type { TimerConfig } from '../types/timer'
 
-export function timerConfigToParams(config: TimerConfig): URLSearchParams {
+// Optional movement name, spoken once by voice mode when the timer starts —
+// purely additive, existing links/configs are unaffected when omitted.
+export function timerConfigToParams(config: TimerConfig, label?: string | null): URLSearchParams {
   const params = new URLSearchParams()
   params.set('type', config.type)
+  if (label) params.set('label', label)
   switch (config.type) {
     case 'stopwatch':
       if (config.capSeconds) params.set('cap', String(config.capSeconds))
@@ -26,8 +29,8 @@ export function timerConfigToParams(config: TimerConfig): URLSearchParams {
   return params
 }
 
-export function timerConfigToPath(config: TimerConfig): string {
-  return `/timer?${timerConfigToParams(config).toString()}`
+export function timerConfigToPath(config: TimerConfig, label?: string | null): string {
+  return `/timer?${timerConfigToParams(config, label).toString()}`
 }
 
 export function paramsToTimerConfig(params: URLSearchParams): TimerConfig | null {

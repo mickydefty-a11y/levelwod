@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import VoiceModeToggle from '../components/VoiceModeToggle'
 import { paramsToTimerConfig } from '../lib/timerUrl'
 import { useTimer } from '../lib/useTimer'
+import { useTimerVoiceCues } from '../lib/useTimerVoiceCues'
 import { useWakeLock } from '../lib/useWakeLock'
 import type { TimerConfig, TimerType } from '../types/timer'
 
@@ -67,6 +69,7 @@ function Stepper({
 export default function TimerPage() {
   const [searchParams] = useSearchParams()
   const initial = useMemo(() => paramsToTimerConfig(searchParams), [searchParams])
+  const movementLabel = searchParams.get('label')
 
   const [type, setType] = useState<TimerType>(initial?.type ?? 'intervals')
   const [workSeconds, setWorkSeconds] = useState(
@@ -109,12 +112,16 @@ export default function TimerPage() {
 
   const timer = useTimer(config)
   useWakeLock(timer.status === 'countdown' || timer.status === 'running')
+  useTimerVoiceCues(timer, config, movementLabel)
 
   const isEditing = timer.status === 'idle'
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Timer</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">Timer</h1>
+        <VoiceModeToggle />
+      </div>
 
       {isEditing && (
         <div className="mt-4">

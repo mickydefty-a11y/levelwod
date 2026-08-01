@@ -98,7 +98,7 @@ export default function ProgramBlockRow({
       <div className="mt-2 flex flex-wrap gap-1.5">
         {block.timerConfig && (
           <Link
-            to={timerConfigToPath(block.timerConfig)}
+            to={timerConfigToPath(block.timerConfig, displayMovement?.name)}
             className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
           >
             ⏱ Start Timer
