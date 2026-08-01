@@ -9,7 +9,9 @@ import { useActiveProgram } from '../lib/useActiveProgram'
 import { useOnboarding } from '../lib/useOnboarding'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
+import { useTodaysWod } from '../lib/useTodaysWod'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
+import { wodSummary } from '../lib/wodDisplay'
 import type { Movement } from '../types/movement'
 import type { Program } from '../types/program'
 
@@ -22,6 +24,7 @@ export default function Home() {
   const { hasSeenIntro } = useOnboarding()
   const { log } = useWorkoutLog()
   const [showBreathingOffer, setShowBreathingOffer] = useState(false)
+  const todaysWod = useTodaysWod()
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -121,6 +124,17 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      <Link
+        to="/wod"
+        className="mt-4 flex items-center justify-between rounded-xl bg-bg-surface p-4 hover:bg-bg-raised"
+      >
+        <div>
+          <p className="text-sm font-medium">Today's WOD</p>
+          <p className="mt-0.5 text-xs text-ink-muted">{wodSummary(todaysWod, movementIndex)}</p>
+        </div>
+        <span className="text-ink-muted">→</span>
+      </Link>
 
       {showBreathingOffer && (
         <div className="mt-4 flex items-center justify-between rounded-xl bg-bg-surface p-4">

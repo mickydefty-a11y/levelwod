@@ -9,6 +9,7 @@ import ProgramDetail from './pages/ProgramDetail'
 import Progress from './pages/Progress'
 import Timer from './pages/Timer'
 import Welcome from './pages/Welcome'
+import Wod from './pages/Wod'
 
 export default function App() {
   const location = useLocation()
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/progress" element={<Progress />} />
           <Route path="/timer" element={<Timer />} />
           <Route path="/breathing" element={<Breathing />} />
+          <Route path="/wod" element={<Wod />} />
         </Routes>
       </main>
       {!hideNav && <BottomNav />}
