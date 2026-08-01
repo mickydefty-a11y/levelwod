@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import BenchmarkResults from '../components/BenchmarkResults'
+import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
 import { movementFillLabel } from '../lib/benchmarkDisplay'
 import { getBenchmarkWod } from '../lib/benchmarkWods'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
+import { useCoachsBrief } from '../lib/useCoachsBrief'
 import type { Movement } from '../types/movement'
 import type { WodTier } from '../types/wod'
 
@@ -25,6 +27,14 @@ export default function BenchmarkDetail() {
 
   const benchmark = id ? getBenchmarkWod(id) : undefined
   const movementIndex = movements ? buildMovementIndex(movements) : null
+  const sessionMovementIds = [
+    ...new Set((benchmark?.tiers[tier].movements ?? []).map((fill) => fill.movementId)),
+  ]
+  const briefLines = useCoachsBrief({
+    sessionName: benchmark?.name ?? 'this benchmark',
+    sessionMovementIds,
+    movementIndex: movementIndex ?? new Map(),
+  })
 
   if (!benchmark) {
     return (
@@ -63,6 +73,12 @@ export default function BenchmarkDetail() {
       )}
       {!benchmark.memorialTribute && benchmark.originNote && (
         <p className="mt-2 text-xs italic leading-relaxed text-ink-muted">{benchmark.originNote}</p>
+      )}
+
+      {movementIndex && (
+        <div className="mt-3">
+          <CoachsBriefBanner lines={briefLines} />
+        </div>
       )}
 
       <div className="mt-4 flex gap-1.5">

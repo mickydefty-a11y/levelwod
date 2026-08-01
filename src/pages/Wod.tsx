@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
+import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useTodaysWod } from '../lib/useTodaysWod'
 import { tierFillLabel, wodFormatLabel } from '../lib/wodDisplay'
 import type { Movement } from '../types/movement'
@@ -23,6 +25,12 @@ export default function Wod() {
   }, [])
 
   const movementIndex = movements ? buildMovementIndex(movements) : null
+  const sessionMovementIds = [...new Set(wod.slots.map((slot) => slot.tiers[tier].movementId))]
+  const briefLines = useCoachsBrief({
+    sessionName: "Today's WOD",
+    sessionMovementIds,
+    movementIndex: movementIndex ?? new Map(),
+  })
 
   return (
     <div>
@@ -34,6 +42,12 @@ export default function Wod() {
       <p className="mt-1 text-xs text-ink-muted">
         Completely optional — an extra if you feel like it, not a replacement for your program.
       </p>
+
+      {movementIndex && (
+        <div className="mt-3">
+          <CoachsBriefBanner lines={briefLines} />
+        </div>
+      )}
 
       <p className="mt-3 text-sm font-medium text-accent-light">{wodFormatLabel(wod)}</p>
 

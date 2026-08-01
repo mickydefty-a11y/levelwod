@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import CoachsBriefBanner from './CoachsBriefBanner'
 import ProgramBlockRow from './ProgramBlockRow'
 import { resolveLoadContext } from '../lib/trainingMax'
 import { useActiveProgram } from '../lib/useActiveProgram'
+import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useTrainingMax } from '../lib/useTrainingMax'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
@@ -37,6 +39,21 @@ export default function ActiveDayCard({
   const loadContext = trainingMaxData
     ? resolveLoadContext(trainingMaxData, week.weekNumber, program)
     : null
+
+  const isRetestDay = week.focus.toLowerCase().includes('test')
+  const mainBlock = day.blocks.find((b) => b.blockType === 'strength' || b.blockType === 'skill')
+  const retestMovementName = isRetestDay
+    ? (movementIndex.get(mainBlock?.movementId ?? '')?.name ?? null)
+    : null
+  const sessionMovementIds = [...new Set(day.blocks.map((b) => b.movementId))]
+  const briefLines = useCoachsBrief({
+    sessionName: program.name,
+    isRetestDay,
+    retestMovementName,
+    sessionMovementIds,
+    weekFocus: week.focus,
+    movementIndex,
+  })
 
   // Clear any typed-in results when the current day changes underneath us
   // (e.g. after marking the previous day complete).
@@ -82,6 +99,9 @@ export default function ActiveDayCard({
 
   return (
     <div>
+      <div className="mb-3">
+        <CoachsBriefBanner lines={briefLines} />
+      </div>
       <ul className="space-y-1.5">
         {day.blocks.map((block, i) => (
           <ProgramBlockRow
