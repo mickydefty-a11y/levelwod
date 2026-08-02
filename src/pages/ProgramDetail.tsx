@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
 import BackLink from '../components/BackLink'
 import OneRepMaxForm from '../components/OneRepMaxForm'
@@ -15,6 +15,10 @@ import type { Program } from '../types/program'
 
 export default function ProgramDetail() {
   const { id } = useParams<{ id: string }>()
+  const [searchParams] = useSearchParams()
+  // present only when arriving from the program-recommendation quiz's
+  // "View program" link — carried into the Coach's Brief on day 1
+  const quizReason = searchParams.get('quizReason') ?? undefined
   const [programs, setPrograms] = useState<Program[] | null>(null)
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const { pointer, startProgram, stopProgram } = useActiveProgram()
@@ -95,7 +99,7 @@ export default function ProgramDetail() {
             movementIds={program.requiresInput.oneRepMaxInputs}
             movementIndex={movementIndex}
             onDone={() => {
-              startProgram(program.id)
+              startProgram(program.id, quizReason)
               setShowOneRepMaxForm(false)
             }}
             onCancel={() => setShowOneRepMaxForm(false)}
@@ -103,7 +107,9 @@ export default function ProgramDetail() {
         </div>
       ) : (
         <button
-          onClick={() => (program.requiresInput ? setShowOneRepMaxForm(true) : startProgram(program.id))}
+          onClick={() =>
+            program.requiresInput ? setShowOneRepMaxForm(true) : startProgram(program.id, quizReason)
+          }
           className="mt-4 w-full rounded-lg bg-accent py-2.5 text-sm font-medium text-bg"
         >
           {isCompleted(program.id) ? 'Start again' : 'Start this program'}

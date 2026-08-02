@@ -55,6 +55,14 @@ export default function Programs() {
     <div>
       <h1 className="text-2xl font-semibold">Programs</h1>
 
+      <Link
+        to="/programs/quiz"
+        className="mt-3 flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
+      >
+        <span className="font-medium">Not sure where to start?</span>
+        <span className="text-xs text-accent-light">Take the quiz →</span>
+      </Link>
+
       {programs && (
         <div className="mt-3 space-y-2">
           <div className="flex gap-1.5 overflow-x-auto pb-1">

@@ -6,6 +6,9 @@ export interface ActiveProgramPointer {
   programId: string
   weekNumber: number
   dayNumber: number
+  // present when this program was started from the recommendation quiz —
+  // referenced by the Coach's Brief on this program's very first session
+  startReason?: string
 }
 
 export const activeProgramStore = createLocalStorageStore<ActiveProgramPointer | null>(
@@ -17,8 +20,8 @@ const store = activeProgramStore
 export function useActiveProgram() {
   const pointer = useSyncExternalStore(store.subscribe, store.getSnapshot)
 
-  const startProgram = useCallback((programId: string) => {
-    store.set({ programId, weekNumber: 1, dayNumber: 1 })
+  const startProgram = useCallback((programId: string, startReason?: string) => {
+    store.set({ programId, weekNumber: 1, dayNumber: 1, ...(startReason ? { startReason } : {}) })
   }, [])
 
   const stopProgram = useCallback(() => store.set(null), [])

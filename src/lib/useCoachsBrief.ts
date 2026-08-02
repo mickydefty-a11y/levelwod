@@ -31,6 +31,8 @@ export function useCoachsBrief({
   sessionMovementIds,
   weekFocus = null,
   movementIndex,
+  isFirstSession = false,
+  startReason = null,
 }: {
   sessionName: string
   isRetestDay?: boolean
@@ -38,6 +40,10 @@ export function useCoachsBrief({
   sessionMovementIds: string[]
   weekFocus?: string | null
   movementIndex: Map<string, Movement>
+  // only meaningful for structured-program sessions — the program-quiz's
+  // reason for recommending the current program, shown once on week 1 day 1
+  isFirstSession?: boolean
+  startReason?: string | null
 }): string[] {
   const { historyFor } = usePRHistory()
   const { progress } = useProgress()
@@ -90,6 +96,8 @@ export function useCoachsBrief({
     return generateCoachsBrief({
       sessionName,
       autoregulationNudge: nudge?.message ?? null,
+      isFirstSession,
+      startReason,
       isRetestDay,
       retestMovementName,
       recentResult,
@@ -110,5 +118,7 @@ export function useCoachsBrief({
     sessionName,
     log,
     isDeloadWeek,
+    isFirstSession,
+    startReason,
   ])
 }

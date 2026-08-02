@@ -29,7 +29,7 @@ export default function ActiveDayCard({
   // itself
   onCompleted?: () => void
 }) {
-  const { advanceDay, stopProgram } = useActiveProgram()
+  const { pointer, advanceDay, stopProgram } = useActiveProgram()
   const { markCompleted } = useProgramHistory()
   const { addEntry } = useWorkoutLog()
   const { dataFor } = useTrainingMax()
@@ -48,6 +48,7 @@ export default function ActiveDayCard({
     ? (movementIndex.get(mainBlock?.movementId ?? '')?.name ?? null)
     : null
   const sessionMovementIds = [...new Set(day.blocks.map((b) => b.movementId))]
+  const isFirstSession = week.weekNumber === 1 && day.dayNumber === 1
   const briefLines = useCoachsBrief({
     sessionName: program.name,
     isRetestDay,
@@ -55,6 +56,8 @@ export default function ActiveDayCard({
     sessionMovementIds,
     weekFocus: week.focus,
     movementIndex,
+    isFirstSession,
+    startReason: pointer?.startReason ?? null,
   })
 
   // Clear any typed-in results when the current day changes underneath us

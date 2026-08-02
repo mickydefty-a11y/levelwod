@@ -19,6 +19,12 @@ export interface CoachsBriefInput {
   // by the caller (deload-week suppression already applied) — a plain
   // message string, single line, no combination with the streak
   autoregulationNudge?: string | null
+  // rule 1: the reason behind a program-recommendation-quiz pick, shown
+  // only on that program's very first session (week 1, day 1) — the caller
+  // is responsible for both conditions; this field being present is not
+  // itself enough
+  isFirstSession?: boolean
+  startReason?: string | null
   isRetestDay: boolean
   retestMovementName?: string | null
   // rule 2: the first session movement (in session order) with a past
