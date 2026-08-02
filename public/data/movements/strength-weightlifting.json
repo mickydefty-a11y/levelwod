@@ -11,7 +11,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "The foundational squat pattern loaded across the upper back \u2014 base strength movement for most other lifts.",
+    "description": "The foundational squat pattern loaded across the upper back — base strength movement for most other lifts.",
     "commonFaults": [
       {
         "fault": "Knees caving inward",
@@ -23,7 +23,7 @@
       }
     ],
     "media": {
-      "video": null,
+      "video": "https://youtube.com/shorts/PWY0oFBNB4c?feature=share",
       "thumbnail": null
     },
     "stages": [
@@ -32,42 +32,48 @@
         "level": "Beginner",
         "name": "Box Squat",
         "description": "Sit back to a box, bodyweight only.",
-        "graduationCriteria": "10 controlled reps"
+        "graduationCriteria": "10 controlled reps",
+        "video": "https://youtube.com/shorts/KtpDcpTr2ws?feature=share"
       },
       {
         "id": "air-squat-full",
         "level": "Beginner",
         "name": "Air Squat",
         "description": "Full bodyweight squat, full depth.",
-        "graduationCriteria": "15+ reps clean form"
+        "graduationCriteria": "15+ reps clean form",
+        "video": "https://youtube.com/shorts/8u57t5SVBu4?feature=share"
       },
       {
         "id": "goblet-squat",
         "level": "Intermediate",
         "name": "Goblet Squat",
         "description": "Light load held at chest.",
-        "graduationCriteria": "10 reps, upright torso"
+        "graduationCriteria": "10 reps, upright torso",
+        "video": "https://youtube.com/shorts/aGsl4rI1IMw?feature=share"
       },
       {
         "id": "back-squat-empty-bar",
         "level": "Intermediate",
-        "name": "Back Squat \u2014 Empty Bar",
+        "name": "Back Squat — Empty Bar",
         "description": "Bar on back, technique and bar path focus.",
-        "graduationCriteria": "10 clean reps"
+        "graduationCriteria": "10 clean reps",
+        "video": "https://youtube.com/shorts/Mn0FYre50-I?feature=share"
       },
       {
         "id": "back-squat-loaded",
         "level": "RX",
-        "name": "Back Squat \u2014 Loaded",
+        "name": "Back Squat — Loaded",
         "description": "Progressive overload toward bodyweight.",
-        "graduationCriteria": "5 reps at bodyweight load"
+        "graduationCriteria": "5 reps at bodyweight load",
+        "video": "https://youtube.com/shorts/PWY0oFBNB4c?feature=share"
       },
       {
         "id": "back-squat-elite",
         "level": "Elite",
-        "name": "Back Squat \u2014 Elite Load",
+        "name": "Back Squat — Elite Load",
         "description": "Continued strength progression.",
-        "graduationCriteria": "1RM at 1.5x+ bodyweight"
+        "graduationCriteria": "1RM at 1.5x+ bodyweight",
+        "video": "https://youtube.com/shorts/PWY0oFBNB4c?feature=share"
       }
     ]
   },
@@ -93,7 +99,7 @@
       }
     ],
     "media": {
-      "video": null,
+      "video": "https://youtube.com/shorts/tsd4nJe5_08?feature=share",
       "thumbnail": null
     },
     "stages": [
@@ -102,28 +108,32 @@
         "level": "Beginner",
         "name": "Front Rack Hold",
         "description": "PVC or bar, position and mobility check.",
-        "graduationCriteria": "20 sec hold, elbows up"
+        "graduationCriteria": "20 sec hold, elbows up",
+        "video": "https://youtube.com/shorts/ZmVUtfZ9JHc?feature=share"
       },
       {
         "id": "front-squat-empty-bar",
         "level": "Intermediate",
-        "name": "Front Squat \u2014 Empty Bar",
+        "name": "Front Squat — Empty Bar",
         "description": "Technique-focused reps.",
-        "graduationCriteria": "10 clean reps"
+        "graduationCriteria": "10 clean reps",
+        "video": "https://youtube.com/shorts/yqKEUpDHznM?feature=share"
       },
       {
         "id": "front-squat-loaded",
         "level": "RX",
-        "name": "Front Squat \u2014 Loaded",
+        "name": "Front Squat — Loaded",
         "description": "Progressive overload.",
-        "graduationCriteria": "5 reps at solid working weight"
+        "graduationCriteria": "5 reps at solid working weight",
+        "video": "https://youtube.com/shorts/tsd4nJe5_08?feature=share"
       },
       {
         "id": "front-squat-elite",
         "level": "Elite",
-        "name": "Front Squat \u2014 Elite Load",
+        "name": "Front Squat — Elite Load",
         "description": "Advanced strength target.",
-        "graduationCriteria": "1RM at 1.2x+ bodyweight"
+        "graduationCriteria": "1RM at 1.2x+ bodyweight",
+        "video": "https://youtube.com/shorts/tsd4nJe5_08?feature=share"
       }
     ]
   },
@@ -140,7 +150,7 @@
       "front-squat"
     ],
     "variantOf": null,
-    "description": "Squat with the bar locked out overhead \u2014 heavy mobility and stability demand. Also tagged under Olympic Weightlifting.",
+    "description": "Squat with the bar locked out overhead — heavy mobility and stability demand. Also tagged under Olympic Weightlifting.",
     "commonFaults": [
       {
         "fault": "Bar drifting forward of midline",
@@ -162,21 +172,21 @@
       {
         "id": "ohs-empty-bar",
         "level": "Intermediate",
-        "name": "Overhead Squat \u2014 Empty Bar",
+        "name": "Overhead Squat — Empty Bar",
         "description": "Technique-focused reps.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "ohs-loaded",
         "level": "RX",
-        "name": "Overhead Squat \u2014 Loaded",
+        "name": "Overhead Squat — Loaded",
         "description": "Progressive overload.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "ohs-elite",
         "level": "Elite",
-        "name": "Overhead Squat \u2014 Elite Load",
+        "name": "Overhead Squat — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at bodyweight+"
       }
@@ -193,7 +203,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Hip-hinge pattern lifting a loaded bar from the floor \u2014 one of the most fundamental strength movements.",
+    "description": "Hip-hinge pattern lifting a loaded bar from the floor — one of the most fundamental strength movements.",
     "commonFaults": [
       {
         "fault": "Rounding the lower back",
@@ -201,7 +211,7 @@
       }
     ],
     "media": {
-      "video": null,
+      "video": "https://youtube.com/shorts/xYlkioNmv9g?feature=share",
       "thumbnail": null
     },
     "stages": [
@@ -217,28 +227,32 @@
         "level": "Beginner",
         "name": "Kettlebell Deadlift",
         "description": "Light load, teaches the hinge.",
-        "graduationCriteria": "10 clean reps"
+        "graduationCriteria": "10 clean reps",
+        "video": "https://youtube.com/shorts/HHWvyQLFReE?feature=share"
       },
       {
         "id": "deadlift-empty-bar",
         "level": "Intermediate",
-        "name": "Deadlift \u2014 Empty Bar",
+        "name": "Deadlift — Empty Bar",
         "description": "Technique focus.",
-        "graduationCriteria": "10 clean reps"
+        "graduationCriteria": "10 clean reps",
+        "video": "https://youtube.com/shorts/LYTwMZPZfj8?feature=share"
       },
       {
         "id": "deadlift-loaded",
         "level": "RX",
-        "name": "Deadlift \u2014 Loaded",
+        "name": "Deadlift — Loaded",
         "description": "Progressive overload.",
-        "graduationCriteria": "5 reps at solid working weight"
+        "graduationCriteria": "5 reps at solid working weight",
+        "video": "https://youtube.com/shorts/xYlkioNmv9g?feature=share"
       },
       {
         "id": "deadlift-elite",
         "level": "Elite",
-        "name": "Deadlift \u2014 Elite Load",
+        "name": "Deadlift — Elite Load",
         "description": "Advanced strength target.",
-        "graduationCriteria": "1RM at 2x+ bodyweight"
+        "graduationCriteria": "1RM at 2x+ bodyweight",
+        "video": "https://youtube.com/shorts/xYlkioNmv9g?feature=share"
       }
     ]
   },
@@ -256,7 +270,7 @@
       "push-up"
     ],
     "variantOf": null,
-    "description": "Horizontal pressing movement lying on a bench \u2014 included occasionally in CrossFit programming.",
+    "description": "Horizontal pressing movement lying on a bench — included occasionally in CrossFit programming.",
     "commonFaults": [
       {
         "fault": "Bouncing the bar off the chest",
@@ -271,21 +285,21 @@
       {
         "id": "bench-empty-bar",
         "level": "Intermediate",
-        "name": "Bench Press \u2014 Empty Bar",
+        "name": "Bench Press — Empty Bar",
         "description": "Technique focus.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "bench-loaded",
         "level": "RX",
-        "name": "Bench Press \u2014 Loaded",
+        "name": "Bench Press — Loaded",
         "description": "Progressive overload toward bodyweight.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "bench-elite",
         "level": "Elite",
-        "name": "Bench Press \u2014 Elite Load",
+        "name": "Bench Press — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at 1.5x+ bodyweight"
       }
@@ -304,7 +318,7 @@
       "pike-push-up"
     ],
     "variantOf": null,
-    "description": "Standing overhead press with no leg drive \u2014 pure shoulder/triceps strength.",
+    "description": "Standing overhead press with no leg drive — pure shoulder/triceps strength.",
     "commonFaults": [
       {
         "fault": "Leaning back excessively",
@@ -319,21 +333,21 @@
       {
         "id": "strict-press-empty-bar",
         "level": "Intermediate",
-        "name": "Strict Press \u2014 Empty Bar",
+        "name": "Strict Press — Empty Bar",
         "description": "Technique focus.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "strict-press-loaded",
         "level": "RX",
-        "name": "Strict Press \u2014 Loaded",
+        "name": "Strict Press — Loaded",
         "description": "Progressive overload.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "strict-press-elite",
         "level": "Elite",
-        "name": "Strict Press \u2014 Elite Load",
+        "name": "Strict Press — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at 0.75x+ bodyweight"
       }
@@ -367,21 +381,21 @@
       {
         "id": "push-press-empty-bar",
         "level": "Intermediate",
-        "name": "Push Press \u2014 Empty Bar",
+        "name": "Push Press — Empty Bar",
         "description": "Learning leg drive timing.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "push-press-loaded",
         "level": "RX",
-        "name": "Push Press \u2014 Loaded",
+        "name": "Push Press — Loaded",
         "description": "Progressive overload.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "push-press-elite",
         "level": "Elite",
-        "name": "Push Press \u2014 Elite Load",
+        "name": "Push Press — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at bodyweight+"
       }
@@ -400,7 +414,7 @@
       "push-press"
     ],
     "variantOf": null,
-    "description": "Overhead press assisted by leg drive and a re-bend of the knees to receive the bar \u2014 allows heavier loads than push press. Also tagged under Olympic Weightlifting.",
+    "description": "Overhead press assisted by leg drive and a re-bend of the knees to receive the bar — allows heavier loads than push press. Also tagged under Olympic Weightlifting.",
     "commonFaults": [
       {
         "fault": "Not re-bending the knees to receive the bar",
@@ -415,21 +429,21 @@
       {
         "id": "push-jerk-empty-bar",
         "level": "Intermediate",
-        "name": "Push Jerk \u2014 Empty Bar",
+        "name": "Push Jerk — Empty Bar",
         "description": "Footwork and receiving position.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "push-jerk-loaded",
         "level": "RX",
-        "name": "Push Jerk \u2014 Loaded",
+        "name": "Push Jerk — Loaded",
         "description": "Progressive overload.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "push-jerk-elite",
         "level": "Elite",
-        "name": "Push Jerk \u2014 Elite Load",
+        "name": "Push Jerk — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at 1.2x+ bodyweight"
       }
@@ -448,7 +462,7 @@
       "push-jerk"
     ],
     "variantOf": null,
-    "description": "Jerk variation receiving the bar in a front-to-back split stance \u2014 allows the heaviest jerk loads. Also tagged under Olympic Weightlifting. Recommend a coach/video form-check at RX+.",
+    "description": "Jerk variation receiving the bar in a front-to-back split stance — allows the heaviest jerk loads. Also tagged under Olympic Weightlifting. Recommend a coach/video form-check at RX+.",
     "commonFaults": [
       {
         "fault": "Front-to-back foot line not aligned",
@@ -470,21 +484,21 @@
       {
         "id": "split-jerk-empty-bar",
         "level": "Intermediate",
-        "name": "Split Jerk \u2014 Empty Bar",
+        "name": "Split Jerk — Empty Bar",
         "description": "Adding the bar.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "split-jerk-loaded",
         "level": "RX",
-        "name": "Split Jerk \u2014 Loaded",
+        "name": "Split Jerk — Loaded",
         "description": "Progressive overload.",
         "graduationCriteria": "5 reps at working weight"
       },
       {
         "id": "split-jerk-elite",
         "level": "Elite",
-        "name": "Split Jerk \u2014 Elite Load",
+        "name": "Split Jerk — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at 1.3x+ bodyweight"
       }
@@ -505,7 +519,7 @@
       "deadlift"
     ],
     "variantOf": null,
-    "description": "Pulling the bar from the floor to the front rack in one motion \u2014 a highly technical lift. Recommend a coach/video form-check at RX+.",
+    "description": "Pulling the bar from the floor to the front rack in one motion — a highly technical lift. Recommend a coach/video form-check at RX+.",
     "commonFaults": [
       {
         "fault": "Pulling early with the arms",
@@ -527,28 +541,28 @@
       {
         "id": "hang-power-clean-empty",
         "level": "Intermediate",
-        "name": "Hang Power Clean \u2014 Empty Bar",
+        "name": "Hang Power Clean — Empty Bar",
         "description": "Simplified starting position.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "power-clean-light",
         "level": "Intermediate",
-        "name": "Power Clean \u2014 Light Load",
+        "name": "Power Clean — Light Load",
         "description": "From the floor, partial-squat catch.",
         "graduationCriteria": "5 reps, good positions"
       },
       {
         "id": "squat-clean-loaded",
         "level": "RX",
-        "name": "Squat Clean \u2014 Loaded",
+        "name": "Squat Clean — Loaded",
         "description": "Full squat catch, working weight.",
         "graduationCriteria": "3-5 reps"
       },
       {
         "id": "squat-clean-elite",
         "level": "Elite",
-        "name": "Squat Clean \u2014 Elite Load",
+        "name": "Squat Clean — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at 1.5x+ bodyweight"
       }
@@ -655,7 +669,7 @@
       "deadlift"
     ],
     "variantOf": null,
-    "description": "Pulling the bar from the floor directly overhead in one motion \u2014 the most technical lift in the sport. Recommend a coach/video form-check at RX+.",
+    "description": "Pulling the bar from the floor directly overhead in one motion — the most technical lift in the sport. Recommend a coach/video form-check at RX+.",
     "commonFaults": [
       {
         "fault": "Bar looping away from the body",
@@ -677,35 +691,35 @@
       {
         "id": "muscle-snatch-empty",
         "level": "Beginner",
-        "name": "Muscle Snatch \u2014 Empty Bar",
+        "name": "Muscle Snatch — Empty Bar",
         "description": "Teaches turnover without dropping under.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "hang-power-snatch-empty",
         "level": "Intermediate",
-        "name": "Hang Power Snatch \u2014 Empty Bar",
+        "name": "Hang Power Snatch — Empty Bar",
         "description": "Simplified starting position.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "power-snatch-light",
         "level": "Intermediate",
-        "name": "Power Snatch \u2014 Light Load",
+        "name": "Power Snatch — Light Load",
         "description": "From the floor, partial-squat catch.",
         "graduationCriteria": "5 reps, good positions"
       },
       {
         "id": "squat-snatch-loaded",
         "level": "RX",
-        "name": "Squat Snatch \u2014 Loaded",
+        "name": "Squat Snatch — Loaded",
         "description": "Full squat catch, working weight.",
         "graduationCriteria": "3-5 reps"
       },
       {
         "id": "squat-snatch-elite",
         "level": "Elite",
-        "name": "Squat Snatch \u2014 Elite Load",
+        "name": "Squat Snatch — Elite Load",
         "description": "Advanced strength target.",
         "graduationCriteria": "1RM at bodyweight+"
       }
@@ -808,7 +822,7 @@
     ],
     "prerequisites": [],
     "variantOf": "snatch",
-    "description": "Standalone drill pulling the bar all the way to overhead lockout without dropping under it \u2014 used as a teaching tool for the Snatch, not a lift trained for its own max.",
+    "description": "Standalone drill pulling the bar all the way to overhead lockout without dropping under it — used as a teaching tool for the Snatch, not a lift trained for its own max.",
     "commonFaults": [
       {
         "fault": "Bending the arms too early",
@@ -843,7 +857,7 @@
       "overhead-squat"
     ],
     "variantOf": null,
-    "description": "Drill for the 'drop under the bar' reflex \u2014 starts from behind the neck, drive and drop into an overhead squat. Feeder drill for Snatch RX stages.",
+    "description": "Drill for the 'drop under the bar' reflex — starts from behind the neck, drive and drop into an overhead squat. Feeder drill for Snatch RX stages.",
     "commonFaults": [
       {
         "fault": "Pressing the bar up instead of dropping under it",
@@ -877,7 +891,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Combination lift \u2014 a Clean immediately followed by a Jerk. Unlocked once both parent lifts are reliable under load.",
+    "description": "Combination lift — a Clean immediately followed by a Jerk. Unlocked once both parent lifts are reliable under load.",
     "commonFaults": [
       {
         "fault": "Rushing the transition from Clean to Jerk",
@@ -945,21 +959,21 @@
       {
         "id": "thruster-empty-bar",
         "level": "Intermediate",
-        "name": "Thruster \u2014 Empty Bar",
+        "name": "Thruster — Empty Bar",
         "description": "Linking squat and press into one motion.",
         "graduationCriteria": "10 clean reps"
       },
       {
         "id": "thruster-loaded",
         "level": "RX",
-        "name": "Thruster \u2014 Loaded",
+        "name": "Thruster — Loaded",
         "description": "Rx benchmark loading (95/65 lb typical).",
         "graduationCriteria": "10+ unbroken reps at Rx weight"
       },
       {
         "id": "thruster-elite",
         "level": "Elite",
-        "name": "Thruster \u2014 Heavier Load",
+        "name": "Thruster — Heavier Load",
         "description": "135/95 lb+ loading.",
         "graduationCriteria": "5+ reps"
       }
@@ -1013,7 +1027,7 @@
     ],
     "prerequisites": [],
     "variantOf": "farmer-carry",
-    "description": "Carrying an unstable, shifting load \u2014 bear-hug or shouldered position.",
+    "description": "Carrying an unstable, shifting load — bear-hug or shouldered position.",
     "commonFaults": [
       {
         "fault": "Not bracing for the sand shifting mid-carry",
@@ -1048,7 +1062,7 @@
       "deadlift"
     ],
     "variantOf": null,
-    "description": "Lifting a sandbag from the floor to the front rack \u2014 feeder movement for Sandbag Over Shoulder.",
+    "description": "Lifting a sandbag from the floor to the front rack — feeder movement for Sandbag Over Shoulder.",
     "commonFaults": [
       {
         "fault": "Rounding the back to scoop the bag",
@@ -1096,7 +1110,7 @@
       "sandbag-clean"
     ],
     "variantOf": null,
-    "description": "Lifting a sandbag from the ground up and over one shoulder \u2014 common Strongman-style CrossFit movement.",
+    "description": "Lifting a sandbag from the ground up and over one shoulder — common Strongman-style CrossFit movement.",
     "commonFaults": [
       {
         "fault": "Trying to muscle the bag up with arms only",
@@ -1125,7 +1139,7 @@
       {
         "id": "sb-over-shoulder-heavy",
         "level": "RX",
-        "name": "Over-Shoulder \u2014 Heavy Bag",
+        "name": "Over-Shoulder — Heavy Bag",
         "description": "Heavy bag, for reps.",
         "graduationCriteria": "5+ reps"
       }
@@ -1175,7 +1189,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Pushing a loaded sled across the floor \u2014 full-body power and conditioning movement.",
+    "description": "Pushing a loaded sled across the floor — full-body power and conditioning movement.",
     "commonFaults": [
       {
         "fault": "Standing too upright",
@@ -1219,7 +1233,7 @@
     ],
     "prerequisites": [],
     "variantOf": "sled-push",
-    "description": "Pulling a loaded sled via rope or harness \u2014 posterior chain and grip focused.",
+    "description": "Pulling a loaded sled via rope or harness — posterior chain and grip focused.",
     "commonFaults": [
       {
         "fault": "Standing too upright while pulling",
@@ -1342,14 +1356,14 @@
       {
         "id": "log-press-light",
         "level": "Intermediate",
-        "name": "Log Press \u2014 Light/Moderate Load",
+        "name": "Log Press — Light/Moderate Load",
         "description": "Building strength.",
         "graduationCriteria": "5 reps"
       },
       {
         "id": "log-press-heavy",
         "level": "RX",
-        "name": "Log Press \u2014 Heavy Load",
+        "name": "Log Press — Heavy Load",
         "description": "Working toward max.",
         "graduationCriteria": "3 reps"
       },
@@ -1385,7 +1399,7 @@
       "deadlift"
     ],
     "variantOf": null,
-    "description": "Flipping a heavy tire end over end \u2014 combines a deadlift-style pull with a push through the top.",
+    "description": "Flipping a heavy tire end over end — combines a deadlift-style pull with a push through the top.",
     "commonFaults": [
       {
         "fault": "Not repositioning hands after the initial pull",
@@ -1428,7 +1442,7 @@
     ],
     "prerequisites": [],
     "variantOf": "farmer-carry",
-    "description": "Umbrella entry for odd-object carrying variations not otherwise listed \u2014 shares the same coaching cues as Farmer/Yoke Carry.",
+    "description": "Umbrella entry for odd-object carrying variations not otherwise listed — shares the same coaching cues as Farmer/Yoke Carry.",
     "commonFaults": [
       {
         "fault": "Losing bracing partway through the carry",

@@ -10,7 +10,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Horizontal pulling movement using rings or a bar \u2014 builds pulling strength safely before full pull-ups.",
+    "description": "Horizontal pulling movement using rings or a bar — builds pulling strength safely before full pull-ups.",
     "commonFaults": [
       {
         "fault": "Hips sagging",
@@ -58,7 +58,7 @@
       "ring-row"
     ],
     "variantOf": null,
-    "description": "Foundational vertical pulling movement \u2014 gateway skill to muscle-ups and advanced gymnastics.",
+    "description": "Foundational vertical pulling movement — gateway skill to muscle-ups and advanced gymnastics.",
     "commonFaults": [
       {
         "fault": "Kipping too early before strict strength exists",
@@ -66,7 +66,7 @@
       }
     ],
     "media": {
-      "video": null,
+      "video": "https://youtube.com/shorts/pBVxHSZlbEI?feature=share",
       "thumbnail": null
     },
     "stages": [
@@ -75,56 +75,64 @@
         "level": "Beginner",
         "name": "Dead Hang",
         "description": "Hang from bar, arms straight.",
-        "graduationCriteria": "20-30 sec hold"
+        "graduationCriteria": "20-30 sec hold",
+        "video": "https://youtube.com/shorts/nwLPBadoQBo?feature=share"
       },
       {
         "id": "scapular-pull-up",
         "level": "Beginner",
         "name": "Scapular Pull-Up",
         "description": "Pull shoulder blades down/back without bending arms.",
-        "graduationCriteria": "8-10 reps"
+        "graduationCriteria": "8-10 reps",
+        "video": "https://youtube.com/shorts/KNqifyx59QY?feature=share"
       },
       {
         "id": "negative-pull-up",
         "level": "Beginner",
         "name": "Negative Pull-Up",
         "description": "Jump to top, lower slowly.",
-        "graduationCriteria": "5 reps, 3-5 sec descent"
+        "graduationCriteria": "5 reps, 3-5 sec descent",
+        "video": "https://youtube.com/shorts/2V0XywAKxgE?feature=share"
       },
       {
         "id": "banded-pull-up",
         "level": "Intermediate",
         "name": "Banded/Jumping Pull-Up",
         "description": "Assisted full rep.",
-        "graduationCriteria": "5-8 reps"
+        "graduationCriteria": "5-8 reps",
+        "video": "https://youtube.com/shorts/2IU605ymmQw?feature=share"
       },
       {
         "id": "strict-pull-up",
         "level": "RX",
         "name": "Strict Pull-Up",
         "description": "Full unassisted rep, no kip.",
-        "graduationCriteria": "5+ reps unbroken"
+        "graduationCriteria": "5+ reps unbroken",
+        "video": "https://youtube.com/shorts/L1oMCMGt520?feature=share"
       },
       {
         "id": "kipping-pull-up",
         "level": "RX",
         "name": "Kipping Pull-Up",
         "description": "Using hip drive for efficiency.",
-        "graduationCriteria": "10+ reps unbroken"
+        "graduationCriteria": "10+ reps unbroken",
+        "video": "https://youtube.com/shorts/THhIq5_rcGQ?feature=share"
       },
       {
         "id": "chest-to-bar-pull-up",
         "level": "Elite",
         "name": "Chest-to-Bar Pull-Up",
         "description": "Kipping pull-up with chest contacting the bar.",
-        "graduationCriteria": "5+ reps unbroken"
+        "graduationCriteria": "5+ reps unbroken",
+        "video": "https://youtube.com/shorts/Nqq1zZsD0zQ?feature=share"
       },
       {
         "id": "butterfly-pull-up",
         "level": "Elite",
         "name": "Butterfly Pull-Up",
         "description": "Continuous circular kip for speed and volume.",
-        "graduationCriteria": "10+ reps unbroken"
+        "graduationCriteria": "10+ reps unbroken",
+        "video": "https://youtube.com/shorts/pBVxHSZlbEI?feature=share"
       }
     ],
     "suggestedSubstitutes": [
@@ -283,7 +291,7 @@
     ],
     "prerequisites": [],
     "variantOf": "toes-to-bar",
-    "description": "Regression of Toes-to-Bar with a shorter range of motion \u2014 bringing knees to elbows instead of toes to bar.",
+    "description": "Regression of Toes-to-Bar with a shorter range of motion — bringing knees to elbows instead of toes to bar.",
     "commonFaults": [
       {
         "fault": "Excessive swinging without control",
@@ -353,7 +361,7 @@
       "pull-up"
     ],
     "variantOf": null,
-    "description": "Transitioning from a pull-up to a dip on top of the bar \u2014 a major gymnastics milestone.",
+    "description": "Transitioning from a pull-up to a dip on top of the bar — a major gymnastics milestone.",
     "commonFaults": [
       {
         "fault": "Not pulling high enough before the transition",
@@ -431,7 +439,7 @@
       "pull-up"
     ],
     "variantOf": null,
-    "description": "Similar transition to the Bar Muscle-Up, but on unstable rings \u2014 generally considered more technical.",
+    "description": "Similar transition to the Bar Muscle-Up, but on unstable rings — generally considered more technical.",
     "commonFaults": [
       {
         "fault": "False grip discomfort/slipping",
@@ -544,7 +552,7 @@
       "push-up"
     ],
     "variantOf": "push-up",
-    "description": "Push-up performed on unstable rings \u2014 harder due to added stabilization demand.",
+    "description": "Push-up performed on unstable rings — harder due to added stabilization demand.",
     "commonFaults": [
       {
         "fault": "Rings drifting apart or together",
@@ -634,7 +642,7 @@
       "dip"
     ],
     "variantOf": null,
-    "description": "Dip performed on unstable rings \u2014 a prerequisite skill for the ring muscle-up.",
+    "description": "Dip performed on unstable rings — a prerequisite skill for the ring muscle-up.",
     "commonFaults": [
       {
         "fault": "Rings flaring outward at the bottom",
@@ -680,7 +688,7 @@
       "push-up"
     ],
     "variantOf": null,
-    "description": "Feet-elevated, hips-high push-up that mimics the overhead pressing angle \u2014 key feeder movement for handstand push-ups.",
+    "description": "Feet-elevated, hips-high push-up that mimics the overhead pressing angle — key feeder movement for handstand push-ups.",
     "commonFaults": [
       {
         "fault": "Not enough hip flexion (hips too low)",
@@ -869,7 +877,7 @@
     ],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Walking the feet up a wall from a plank into a handstand position \u2014 builds shoulder strength and confidence inverting.",
+    "description": "Walking the feet up a wall from a plank into a handstand position — builds shoulder strength and confidence inverting.",
     "commonFaults": [
       {
         "fault": "Walking hands too far from the wall",
@@ -903,7 +911,7 @@
       "wall-walk"
     ],
     "variantOf": null,
-    "description": "Walking on the hands in a freestanding handstand \u2014 an advanced balance and strength skill.",
+    "description": "Walking on the hands in a freestanding handstand — an advanced balance and strength skill.",
     "commonFaults": [
       {
         "fault": "Looking straight down instead of slightly forward",
@@ -957,7 +965,7 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Stability drill performed in plank or handstand, tapping alternating hands to shoulders \u2014 builds anti-rotation core control.",
+    "description": "Stability drill performed in plank or handstand, tapping alternating hands to shoulders — builds anti-rotation core control.",
     "commonFaults": [
       {
         "fault": "Hips rotating with each tap",
@@ -1017,7 +1025,7 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Foundational core position used throughout gymnastics \u2014 a slight curl with lower back pressed to the floor.",
+    "description": "Foundational core position used throughout gymnastics — a slight curl with lower back pressed to the floor.",
     "commonFaults": [
       {
         "fault": "Lower back arching off the floor",
@@ -1077,7 +1085,7 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Posterior chain counterpart to the hollow hold \u2014 lying face down, lifting chest and legs.",
+    "description": "Posterior chain counterpart to the hollow hold — lying face down, lifting chest and legs.",
     "commonFaults": [
       {
         "fault": "Only lifting legs, not chest",
@@ -1176,7 +1184,7 @@
       "sit-up"
     ],
     "variantOf": "sit-up",
-    "description": "Sit-up performed on a Glute-Ham Developer for a much larger range of motion \u2014 high risk of soreness/injury if progressed too fast.",
+    "description": "Sit-up performed on a Glute-Ham Developer for a much larger range of motion — high risk of soreness/injury if progressed too fast.",
     "commonFaults": [
       {
         "fault": "Going too far back too soon",
@@ -1211,7 +1219,7 @@
       "hollow-hold"
     ],
     "variantOf": null,
-    "description": "Static hold with legs extended straight out in front, supported on hands \u2014 heavy core and hip-flexor demand.",
+    "description": "Static hold with legs extended straight out in front, supported on hands — heavy core and hip-flexor demand.",
     "commonFaults": [
       {
         "fault": "Shoulders creeping up toward ears",
@@ -1262,7 +1270,7 @@
     "equipment": [],
     "prerequisites": [],
     "variantOf": null,
-    "description": "Static front-support hold \u2014 a baseline core stability movement.",
+    "description": "Static front-support hold — a baseline core stability movement.",
     "commonFaults": [
       {
         "fault": "Hips sagging or piking",
