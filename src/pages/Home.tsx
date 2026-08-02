@@ -6,7 +6,7 @@ import { isLastDayOf } from '../lib/programProgress'
 import { getMovementsAtOrAboveRX, getCurrentStreak, getThisWeekSessionCount } from '../lib/streakStats'
 import { getReadyToTry } from '../lib/suggestions'
 import { useActiveProgram } from '../lib/useActiveProgram'
-import { useOnboarding } from '../lib/useOnboarding'
+import { useBodyweightProfile } from '../lib/useBodyweightProfile'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
 import { useTodaysWod } from '../lib/useTodaysWod'
@@ -21,7 +21,7 @@ export default function Home() {
   const { pointer } = useActiveProgram()
   const { progress } = useProgress()
   const { completed } = useProgramHistory()
-  const { hasSeenIntro } = useOnboarding()
+  const { profile } = useBodyweightProfile()
   const { log } = useWorkoutLog()
   const [showBreathingOffer, setShowBreathingOffer] = useState(false)
   const todaysWod = useTodaysWod()
@@ -40,8 +40,8 @@ export default function Home() {
   const skillsUnlocked = movements ? getMovementsAtOrAboveRX(movements, progress) : 0
   const thisWeekCount = getThisWeekSessionCount(log)
 
-  if (!hasSeenIntro) {
-    return <Navigate to="/welcome" replace />
+  if (!profile.onboardingCompletedAt) {
+    return <Navigate to="/onboarding" replace />
   }
 
   if (!programs || !movementIndex) {

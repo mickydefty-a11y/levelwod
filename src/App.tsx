@@ -5,6 +5,7 @@ import Breathing from './pages/Breathing'
 import Home from './pages/Home'
 import Library from './pages/Library'
 import MovementDetail from './pages/MovementDetail'
+import OnboardingFlow from './pages/OnboardingFlow'
 import OneRepMaxCalculatorPage from './pages/OneRepMaxCalculatorPage'
 import Programs from './pages/Programs'
 import ProgramDetail from './pages/ProgramDetail'
@@ -16,7 +17,7 @@ import Wod from './pages/Wod'
 
 export default function App() {
   const location = useLocation()
-  const hideNav = location.pathname === '/welcome'
+  const hideNav = location.pathname === '/welcome' || location.pathname === '/onboarding'
 
   return (
     <div className="min-h-screen bg-bg text-ink">
@@ -26,6 +27,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/onboarding" element={<OnboardingFlow />} />
           <Route path="/library" element={<Library />} />
           <Route path="/library/:id" element={<MovementDetail />} />
           <Route path="/programs" element={<Programs />} />
