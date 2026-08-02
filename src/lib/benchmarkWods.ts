@@ -308,6 +308,320 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
       },
     },
   },
+  {
+    id: 'angie',
+    name: 'Angie',
+    wodCategory: 'Girl',
+    format: 'For time, complete each movement fully before moving to the next',
+    repScheme: '100-100-100-100, in order',
+    description:
+      '100 reps each of four bodyweight movements, done in order — a real test of pure work capacity and mental toughness rather than skill.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'kipping-pull-up' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'air-squat-full' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'banded-pull-up' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'air-squat-full' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'ring-row', stageId: 'ring-row-standard' },
+          { movementId: 'push-up', stageId: 'knee-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'box-squat' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'barbara',
+    name: 'Barbara',
+    wodCategory: 'Girl',
+    format: '5 rounds for time, 3 min rest between rounds',
+    repScheme: '20-30-40-50, x5 rounds, 3 min rest between',
+    description:
+      'Five identical rounds of the same four bodyweight movements as Angie, but broken up with mandatory rest — tests both output and recovery within a session.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'kipping-pull-up' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'air-squat-full' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'banded-pull-up' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'air-squat-full' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'ring-row', stageId: 'ring-row-standard' },
+          { movementId: 'push-up', stageId: 'knee-push-up' },
+          { movementId: 'sit-up' },
+          { movementId: 'back-squat', stageId: 'box-squat' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'elizabeth',
+    name: 'Elizabeth',
+    wodCategory: 'Girl',
+    format: '21-15-9 for time',
+    repScheme: '21-15-9',
+    description:
+      'A short, heavy pairing of a technical lift and a gymnastics push movement — similar shape to Fran, but with Clean and Ring Dip instead of Thruster and Pull-up.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'clean', stageId: 'squat-clean-loaded', loadNote: '135/95 lb' },
+          { movementId: 'ring-dip', stageId: 'full-ring-dip' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'clean', stageId: 'power-clean-light', loadNote: 'moderate load' },
+          { movementId: 'ring-dip', stageId: 'banded-ring-dip' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'clean', stageId: 'hang-power-clean-empty', loadNote: 'empty bar' },
+          { movementId: 'dip', stageId: 'banded-dip' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'kelly',
+    name: 'Kelly',
+    wodCategory: 'Girl',
+    format: '5 rounds for time',
+    repScheme: '5 rounds: run, 30 box jumps, 30 wall balls',
+    description:
+      'A longer, grindier benchmark pairing running with two loaded gymnastics/conditioning movements — a real engine test.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'running', loadNote: '400m' },
+          { movementId: 'box-jump', stageId: 'box-jump-standard', loadNote: '24/20 in box' },
+          { movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '20/14 lb' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'running', loadNote: '400m' },
+          { movementId: 'box-jump', stageId: 'box-jump-low' },
+          { movementId: 'wall-ball', stageId: 'wb-light-low' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'running', loadNote: '200m' },
+          { movementId: 'box-jump', stageId: 'step-up' },
+          { movementId: 'back-squat', stageId: 'air-squat-full', loadNote: 'bodyweight, in place of wall ball' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'mary',
+    name: 'Mary',
+    wodCategory: 'Girl',
+    format: '20 min AMRAP',
+    repScheme: '5-10-15, repeating for 20 min',
+    description:
+      'A demanding gymnastics-heavy AMRAP combining an inverted push movement, a single-leg squat, and a pull movement — genuinely advanced even at the RX tier.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'strict-handstand-push-up', stageId: 'strict-hspu-full' },
+          { movementId: 'pistol-squat', stageId: 'pistol-full', loadNote: 'alternating legs' },
+          { movementId: 'pull-up', stageId: 'kipping-pull-up' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'strict-handstand-push-up', stageId: 'box-hspu' },
+          { movementId: 'pistol-squat', stageId: 'assisted-pistol' },
+          { movementId: 'pull-up', stageId: 'banded-pull-up' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'pike-push-up' },
+          { movementId: 'pistol-squat', stageId: 'single-leg-box-squat' },
+          { movementId: 'ring-row', stageId: 'ring-row-standard' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'eva',
+    name: 'Eva',
+    wodCategory: 'Girl',
+    format: '5 rounds for time',
+    repScheme: '5 rounds: 800m run, 30 KB swings, 30 pull-ups',
+    description:
+      'A long, punishing combination of running, heavy kettlebell swings, and pull-ups — one of the tougher Girl WODs by total volume.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'running', loadNote: '800m' },
+          { movementId: 'kettlebell-swing', stageId: 'american-swing', loadNote: '70/53 lb' },
+          { movementId: 'pull-up', stageId: 'kipping-pull-up' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'running', loadNote: '600m' },
+          { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
+          { movementId: 'pull-up', stageId: 'banded-pull-up' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'running', loadNote: '400m' },
+          { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+          { movementId: 'ring-row', stageId: 'ring-row-standard' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'randy',
+    name: 'Randy',
+    wodCategory: 'Hero',
+    format: '75 reps for time',
+    repScheme: '75 reps straight through',
+    description:
+      'A short, brutally heavy single-movement test — one of the more purely strength-and-power focused Hero WODs.',
+    tiers: {
+      rx: {
+        movements: [{ movementId: 'power-snatch', loadNote: '75/55 lb' }],
+      },
+      intermediate: {
+        movements: [{ movementId: 'power-snatch', loadNote: 'moderate load' }],
+      },
+      scaled: {
+        movements: [
+          {
+            movementId: 'snatch',
+            stageId: 'muscle-snatch-empty',
+            loadNote: 'empty bar or light dumbbell snatch',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: 'jt',
+    name: 'JT',
+    wodCategory: 'Hero',
+    format: '21-15-9 for time',
+    repScheme: '21-15-9',
+    description:
+      'Three bodyweight pushing movements of increasing difficulty, in the classic 21-15-9 shape — a Navy SEAL tribute workout.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'strict-handstand-push-up', stageId: 'strict-hspu-full' },
+          { movementId: 'ring-dip', stageId: 'full-ring-dip' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'strict-handstand-push-up', stageId: 'box-hspu' },
+          { movementId: 'ring-dip', stageId: 'banded-ring-dip' },
+          { movementId: 'push-up', stageId: 'full-push-up' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'pike-push-up' },
+          { movementId: 'dip', stageId: 'banded-dip' },
+          { movementId: 'push-up', stageId: 'knee-push-up' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'nate',
+    name: 'Nate',
+    wodCategory: 'Hero',
+    format: '20 min AMRAP',
+    repScheme: '2-4-8, repeating for 20 min',
+    description:
+      'An advanced gymnastics-and-conditioning AMRAP built around the Muscle-Up — a genuine test even for experienced athletes, in tribute to a fallen Navy SEAL.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'bar-muscle-up', stageId: 'kipping-bmu' },
+          { movementId: 'strict-handstand-push-up', stageId: 'strict-hspu-full' },
+          { movementId: 'kettlebell-swing', stageId: 'american-swing', loadNote: '70/53 lb' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'bar-muscle-up', stageId: 'banded-bmu' },
+          { movementId: 'strict-handstand-push-up', stageId: 'box-hspu' },
+          { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'kipping-pull-up', loadNote: 'in place of muscle-up' },
+          { movementId: 'pike-push-up' },
+          { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'ryan',
+    name: 'Ryan',
+    wodCategory: 'Hero',
+    format: '5 rounds for time',
+    repScheme: '5 rounds: 7 muscle-ups, 21 burpees',
+    description:
+      'A high-skill, high-intensity Hero WOD pairing Muscle-Ups with Burpees — short on paper, extremely demanding in practice.',
+    tiers: {
+      rx: {
+        movements: [
+          { movementId: 'ring-muscle-up', stageId: 'strict-rmu' },
+          { movementId: 'burpee', stageId: 'burpee-rx' },
+        ],
+      },
+      intermediate: {
+        movements: [
+          { movementId: 'ring-muscle-up', stageId: 'banded-rmu' },
+          { movementId: 'burpee', stageId: 'burpee-standard' },
+        ],
+      },
+      scaled: {
+        movements: [
+          { movementId: 'pull-up', stageId: 'kipping-pull-up', loadNote: 'in place of muscle-up' },
+          { movementId: 'burpee', stageId: 'burpee-step-back' },
+        ],
+      },
+    },
+  },
 ]
 
 export function getBenchmarkWod(id: string): BenchmarkWod | undefined {
