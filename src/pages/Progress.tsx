@@ -96,6 +96,17 @@ export default function Progress() {
         </div>
       </div>
 
+      <div className="mt-6">
+        <h2 className="text-sm font-semibold text-accent">Tools</h2>
+        <Link
+          to="/tools/1rm-calculator"
+          className="mt-1.5 flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
+        >
+          <span className="font-medium">1RM Calculator</span>
+          <span className="text-xs text-ink-muted">Estimate your one-rep max →</span>
+        </Link>
+      </div>
+
       <h2 className="mt-6 text-sm font-semibold text-accent">Movements tracked</h2>
       {!movements ? (
         <p className="mt-1.5 text-ink-muted">Loading…</p>

@@ -5,6 +5,7 @@ import Breathing from './pages/Breathing'
 import Home from './pages/Home'
 import Library from './pages/Library'
 import MovementDetail from './pages/MovementDetail'
+import OneRepMaxCalculatorPage from './pages/OneRepMaxCalculatorPage'
 import Programs from './pages/Programs'
 import ProgramDetail from './pages/ProgramDetail'
 import Progress from './pages/Progress'
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/tools/1rm-calculator" element={<OneRepMaxCalculatorPage />} />
           <Route path="/timer" element={<Timer />} />
           <Route path="/breathing" element={<Breathing />} />
           <Route path="/wod" element={<Wod />} />

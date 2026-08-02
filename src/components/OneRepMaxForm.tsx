@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import OneRepMaxCalculator from './OneRepMaxCalculator'
 import { useTrainingMax } from '../lib/useTrainingMax'
 import type { Movement } from '../types/movement'
 import type { WeightUnit } from '../types/program'
@@ -25,6 +26,7 @@ export default function OneRepMaxForm({
     return initial
   })
   const [error, setError] = useState<string | null>(null)
+  const [expandedCalcId, setExpandedCalcId] = useState<string | null>(null)
 
   function save() {
     const parsed: Record<string, number> = {}
@@ -64,25 +66,50 @@ export default function OneRepMaxForm({
 
       <div className="mt-3 space-y-2">
         {movementIds.map((id) => (
-          <div key={id} className="flex items-center justify-between gap-2">
-            <label htmlFor={`orm-${id}`} className="text-sm">
-              {movementIndex.get(id)?.name ?? id}
-            </label>
-            <div className="flex items-center gap-1.5">
-              <input
-                id={`orm-${id}`}
-                type="number"
-                inputMode="decimal"
-                value={values[id]}
-                onChange={(e) => {
-                  setValues((prev) => ({ ...prev, [id]: e.target.value }))
-                  setError(null)
-                }}
-                placeholder="0"
-                className="w-20 rounded-md bg-bg-raised px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-accent"
-              />
-              <span className="text-xs text-ink-muted">{unit}</span>
+          <div key={id}>
+            <div className="flex items-center justify-between gap-2">
+              <label htmlFor={`orm-${id}`} className="text-sm">
+                {movementIndex.get(id)?.name ?? id}
+              </label>
+              <div className="flex items-center gap-1.5">
+                <input
+                  id={`orm-${id}`}
+                  type="number"
+                  inputMode="decimal"
+                  value={values[id]}
+                  onChange={(e) => {
+                    setValues((prev) => ({ ...prev, [id]: e.target.value }))
+                    setError(null)
+                  }}
+                  placeholder="0"
+                  className="w-20 rounded-md bg-bg-raised px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+                <span className="text-xs text-ink-muted">{unit}</span>
+              </div>
             </div>
+
+            <button
+              onClick={() => setExpandedCalcId(expandedCalcId === id ? null : id)}
+              className="mt-1 text-xs text-accent-light underline"
+            >
+              {expandedCalcId === id ? 'Hide calculator' : "Don't know it? Estimate it"}
+            </button>
+
+            {expandedCalcId === id && (
+              <div className="mt-1.5">
+                <OneRepMaxCalculator
+                  movementIndex={movementIndex}
+                  movementIds={[id]}
+                  initialMovementId={id}
+                  unit={unit}
+                  onUseEstimate={(movementId, oneRepMax) => {
+                    setValues((prev) => ({ ...prev, [movementId]: oneRepMax.toString() }))
+                    setError(null)
+                    setExpandedCalcId(null)
+                  }}
+                />
+              </div>
+            )}
           </div>
         ))}
       </div>
