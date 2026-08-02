@@ -18,7 +18,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-bg text-ink">
-      <main className={`mx-auto max-w-md px-4 pt-6 ${hideNav ? 'pb-6' : 'pb-24'}`}>
+      <main
+        className={`mx-auto max-w-md px-4 pt-[calc(env(safe-area-inset-top)+1.5rem)] ${hideNav ? 'pb-6' : 'pb-24'}`}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/welcome" element={<Welcome />} />

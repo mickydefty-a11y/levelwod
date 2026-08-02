@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BackLink from '../components/BackLink'
 import BreathingCircle from '../components/BreathingCircle'
 import BreathingRectangle from '../components/BreathingRectangle'
 import VoiceModeToggle from '../components/VoiceModeToggle'
@@ -77,9 +78,7 @@ export default function Breathing() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex w-full items-center justify-between">
-        <button onClick={backToPicker} className="text-sm text-ink-muted">
-          ← Techniques
-        </button>
+        <BackLink onClick={backToPicker} label="Techniques" />
         <div className="flex items-center gap-2">
           {technique.firstTimeNote && (
             <button

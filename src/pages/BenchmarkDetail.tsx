@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import BackLink from '../components/BackLink'
 import BenchmarkResults from '../components/BenchmarkResults'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
@@ -51,9 +52,7 @@ export default function BenchmarkDetail() {
 
   return (
     <div>
-      <Link to="/programs" className="text-sm text-ink-muted">
-        ← Programs
-      </Link>
+      <BackLink to="/programs" label="Programs" />
 
       <div className="mt-2 flex items-baseline justify-between gap-2">
         <h1 className="text-2xl font-semibold">{benchmark.name}</h1>

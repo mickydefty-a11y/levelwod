@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import BackLink from '../components/BackLink'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
@@ -34,9 +35,7 @@ export default function Wod() {
 
   return (
     <div>
-      <Link to="/" className="text-sm text-ink-muted">
-        ← Home
-      </Link>
+      <BackLink to="/" label="Home" />
 
       <h1 className="mt-2 text-2xl font-semibold">Today's WOD</h1>
       <p className="mt-1 text-xs text-ink-muted">

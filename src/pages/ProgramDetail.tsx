@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ActiveDayCard from '../components/ActiveDayCard'
+import BackLink from '../components/BackLink'
 import OneRepMaxForm from '../components/OneRepMaxForm'
 import ProgramBlockRow from '../components/ProgramBlockRow'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
@@ -58,9 +59,7 @@ export default function ProgramDetail() {
 
   return (
     <div>
-      <Link to="/programs" className="text-sm text-ink-muted">
-        ← Programs
-      </Link>
+      <BackLink to="/programs" label="Programs" />
 
       <h1 className="mt-2 text-2xl font-semibold">{program.name}</h1>
       <p className="mt-1 text-xs text-ink-muted">

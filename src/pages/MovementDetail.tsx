@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import BackLink from '../components/BackLink'
 import PersonalBests from '../components/PersonalBests'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { levelIndex } from '../lib/levels'
@@ -61,9 +62,7 @@ export default function MovementDetail() {
 
   return (
     <div>
-      <Link to="/library" className="text-sm text-ink-muted">
-        ← Library
-      </Link>
+      <BackLink to="/library" label="Library" />
 
       <div className="mt-2 flex items-start justify-between gap-3">
         <h1 className="text-2xl font-semibold">{movement.name}</h1>
