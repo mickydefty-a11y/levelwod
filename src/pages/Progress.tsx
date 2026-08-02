@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
+import StrengthStandardsTool from '../components/StrengthStandardsTool'
 import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
-import { loadMovements } from '../lib/loadData'
+import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { getLongestStreak, getMovementsAtOrAboveRX, getTotalSessions } from '../lib/streakStats'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
@@ -66,6 +67,11 @@ export default function Progress() {
       .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
   }, [movements, progress])
 
+  const movementIndex = useMemo(
+    () => (movements ? buildMovementIndex(movements) : null),
+    [movements],
+  )
+
   const longestStreak = getLongestStreak(log)
   const totalSessions = getTotalSessions(log)
   const skillsUnlocked = movements ? getMovementsAtOrAboveRX(movements, progress) : 0
@@ -106,6 +112,12 @@ export default function Progress() {
           <span className="text-xs text-ink-muted">Estimate your one-rep max →</span>
         </Link>
       </div>
+
+      {movementIndex && (
+        <div className="mt-6">
+          <StrengthStandardsTool movementIndex={movementIndex} />
+        </div>
+      )}
 
       <h2 className="mt-6 text-sm font-semibold text-accent">Movements tracked</h2>
       {!movements ? (
