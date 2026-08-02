@@ -12,6 +12,10 @@ export interface MovementStage {
   name: string
   description: string
   graduationCriteria: string
+  // stage-specific demo clip — falls back to nothing (not the movement's
+  // overview video) when unset, since a Dead Hang clip shouldn't play under
+  // a Chest-to-Bar stage just because the movement has *a* video
+  video?: string | null
 }
 
 export interface ScalingLevel {

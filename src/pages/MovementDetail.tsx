@@ -21,12 +21,17 @@ function MovementLink({ id, index }: { id: string; index: Map<string, Movement> 
 export default function MovementDetail() {
   const { id } = useParams<{ id: string }>()
   const [movements, setMovements] = useState<Movement[] | null>(null)
+  const [expandedVideoStageId, setExpandedVideoStageId] = useState<string | null>(null)
   const { progress, setMovementProgress, clearMovementProgress } = useProgress()
   const { resultsForMovement } = useWorkoutLog()
 
   useEffect(() => {
     loadMovements().then(setMovements)
   }, [])
+
+  useEffect(() => {
+    setExpandedVideoStageId(null)
+  }, [id])
 
   const index = useMemo(() => (movements ? buildMovementIndex(movements) : null), [movements])
   const movement = id && index ? index.get(id) : undefined
@@ -179,6 +184,8 @@ export default function MovementDetail() {
             {movement.stages.map((stage, i) => {
               const reached = currentStageIndex >= 0 && i <= currentStageIndex
               const isCurrent = i === currentStageIndex
+              const stageVideoEmbedUrl = getYouTubeEmbedUrl(stage.video)
+              const isVideoExpanded = expandedVideoStageId === stage.id
               return (
                 <li key={stage.id}>
                   <button
@@ -206,6 +213,30 @@ export default function MovementDetail() {
                       Graduate: {stage.graduationCriteria}
                     </p>
                   </button>
+
+                  {stageVideoEmbedUrl && (
+                    <div className="mt-1">
+                      <button
+                        onClick={() =>
+                          setExpandedVideoStageId(isVideoExpanded ? null : stage.id)
+                        }
+                        className="text-xs text-accent-light underline"
+                      >
+                        {isVideoExpanded ? 'Hide demo' : '▶ Watch demo'}
+                      </button>
+                      {isVideoExpanded && (
+                        <div className="mt-2 aspect-video overflow-hidden rounded-lg bg-black">
+                          <iframe
+                            className="h-full w-full"
+                            src={stageVideoEmbedUrl}
+                            title={`${stage.name} demo video`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </li>
               )
             })}
