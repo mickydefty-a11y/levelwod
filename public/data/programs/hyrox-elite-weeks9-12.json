@@ -1,0 +1,130 @@
+{
+  "programId": "hyrox-elite-12wk",
+  "weeks": [
+    {
+      "weekNumber": 9,
+      "focus": "Taper begins — volume drops, sharpness increases",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Running Intervals (reduced volume)", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "6 rounds: 3 min hard pace, 90 sec easy", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Brick A: Stations 1-4 (reduced volume)", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "1km run, 750m ski erg, 1km run, 40m sled push (Rx), 1km run, 40m sled pull (Rx), 1km run, 60 burpee broad jumps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Strength (light)", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "3 sets x 5 reps, light-moderate load", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Brick B: Stations 5-8 (reduced volume)", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "1km run, 750m row, 1km run, 150m farmer carry (Rx), 1km run, 75m sandbag lunge (Rx), 1km run, 75 wall balls (Rx)", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Easy Aerobic", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "30 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 10,
+      "focus": "Continued taper — staying sharp, not adding fatigue",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Running Intervals (short and sharp)", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "5 rounds: 2 min hard pace, 90 sec easy", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Short Brick, Stations 1-4", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "500m run, 500m ski erg, 500m run, 25m sled push, 500m run, 25m sled pull, 500m run, 30 burpee broad jumps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Light Strength", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "back-squat", "targetStageId": "back-squat-loaded", "prescription": "3 sets x 5 reps, light load", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Short Brick, Stations 5-8", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "500m run, 500m row, 500m run, 100m farmer carry, 500m run, 50m sandbag lunge, 500m run, 50 wall balls", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Easy Aerobic", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "25 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 11,
+      "focus": "Final taper week before the race-ready test",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Easy Running", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Light Station Touch-Up", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "sled-push", "targetStageId": null, "prescription": "3 sets x 15m, moderate load", "notes": null },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "2 sets x 12 reps", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Rest", "blocks": [
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "Full rest — recovery matters as much as work this close to a big test." }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Short Shakeout", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "15 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Rest / Very Light Mobility", "blocks": [
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "Staying completely fresh heading into next week's final test." }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 12,
+      "focus": "Race-ready — the final full-Rx simulation",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Easy Running", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "15 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Light Movement", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "2 sets x 10 reps", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Rest", "blocks": [
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "Full rest — one day before the final test." }
+        ]},
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Test: Full Race Simulation, Race-Ready",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "45 sec/side, full race-day style warm-up", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "Full 8-station race sequence, full distance, full Rx loading throughout — treat this exactly like race day",
+              "notes": "The entire point of the last 12 weeks. Compare this time directly to Weeks 4, 6, and 8 — the improvement across those four data points is the real story of this program."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": "End-of-program note: you're genuinely race-ready. This simulation time is your best available predictor for actual race day." }
+          ]
+        },
+        { "dayNumber": 5, "name": "Day 5 — Recovery", "blocks": [
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side, easy movement only", "notes": "Light recovery after yesterday's full test." }
+        ]}
+      ]
+    }
+  ]
+}

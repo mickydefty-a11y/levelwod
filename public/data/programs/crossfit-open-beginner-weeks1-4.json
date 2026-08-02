@@ -1,0 +1,101 @@
+{
+  "id": "crossfit-open-prep-beginner-8wk",
+  "name": "CrossFit Open Prep — Beginner",
+  "level": "Beginner",
+  "category": "Conditioning",
+  "durationWeeks": 8,
+  "daysPerWeek": 3,
+  "description": "An 8-week program building the core movement pool that most CrossFit Open workouts draw from — thrusters, pull-up progressions, wall balls, double unders, and open-style AMRAP formats — all scaled for someone newer to CrossFit.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Core Open movements — first exposure",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Squat + Push", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 12 reps", "notes": null },
+          { "blockType": "skill", "movementId": "push-up", "targetStageId": "incline-push-up", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Pull + Jump Rope", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-assisted", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "single-unders", "targetStageId": null, "prescription": "5 sets x 30 reps", "notes": "Double unders come up constantly in Open workouts — building the base now." },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — First Open-Style AMRAP", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "AMRAP 8 min: 10 air squats, 8 push-ups (incline), 30 sec row", "notes": "First taste of the Open's classic AMRAP-with-a-machine-piece format." },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "focus": "Building volume on core movements",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Squat + Push", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "push-up", "targetStageId": "knee-push-up", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Pull + Jump Rope", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "single-unders", "targetStageId": null, "prescription": "5 sets x 40 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Open-Style AMRAP", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "AMRAP 10 min: 12 air squats, 10 push-ups, 45 sec row", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "focus": "Introducing thrusters and toes-to-bar feeder work",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Thruster Technique", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "thruster", "targetStageId": "thruster-separate-reps", "prescription": "3 sets x 10 reps", "notes": "One of the most common Open movements — worth dedicated technique time." },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Core + Pull", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "hanging-knee-raise", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 12 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Open-Style Couplet", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "5 rounds for time: 8 thrusters (empty bar), 10 ring rows", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Wall balls introduced — a true Open staple",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Wall Ball Technique", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-separate-reps", "prescription": "3 sets x 10 reps", "notes": "Karen and countless Open workouts lean on this movement — worth building early." },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Core + Pull + Rope", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "hanging-knee-to-chest", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "single-unders", "targetStageId": null, "prescription": "5 sets x 50 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Open-Style Triplet", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "AMRAP 12 min: 10 wall balls, 10 ring rows, 20 single unders", "notes": "First month done — every core Open movement pattern has now been touched at least once." },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    }
+  ]
+}

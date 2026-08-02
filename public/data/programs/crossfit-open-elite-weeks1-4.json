@@ -1,0 +1,154 @@
+{
+  "id": "crossfit-open-prep-elite-12wk",
+  "name": "CrossFit Open Prep — Elite",
+  "level": "Advanced",
+  "category": "Conditioning",
+  "durationWeeks": 12,
+  "daysPerWeek": 5,
+  "description": "A 12-week program for advanced athletes peaking for the CrossFit Open — advanced gymnastics (muscle-ups, handstand walk, deficit HSPU), heavy Olympic lifting, high-volume conditioning, and increasingly demanding mock Open workouts, tapering into the Open weeks themselves.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Advanced skill work begins",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Advanced Gymnastics", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "bar-muscle-up", "targetStageId": "multiple-bmu", "prescription": "6 sets x 3 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-muscle-up", "targetStageId": "strict-rmu", "prescription": "5 sets x 1-2 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Heavy Weightlifting", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "clean-and-jerk", "targetStageId": null, "prescription": "6 sets x 1 rep, moderate-heavy", "notes": null },
+          { "blockType": "strength", "movementId": "snatch", "targetStageId": "squat-snatch-elite", "prescription": "6 sets x 1 rep, moderate-heavy", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Conditioning Volume", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "8 rounds: 500m row, 90 sec rest", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Handstand Walk + Deficit HSPU", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "handstand-walk", "targetStageId": "hs-walk-distance", "prescription": "6 attempts, 25 ft+", "notes": null },
+          { "blockType": "skill", "movementId": "strict-handstand-push-up", "targetStageId": "deficit-handstand-push-up", "prescription": "5 sets x 3 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Mock Open Workout", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 20 min: 15 wall balls, 10 chest-to-bar pull-ups, 5 bar muscle-ups, 30 double unders", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "focus": "Building loading and volume",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Advanced Gymnastics", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "bar-muscle-up", "targetStageId": "multiple-bmu", "prescription": "6 sets x 4 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-muscle-up", "targetStageId": "strict-rmu", "prescription": "5 sets x 2 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Heavy Weightlifting", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "clean-and-jerk", "targetStageId": null, "prescription": "6 sets x 1 rep, continued increase", "notes": null },
+          { "blockType": "strength", "movementId": "snatch", "targetStageId": "squat-snatch-elite", "prescription": "6 sets x 1 rep, continued increase", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Conditioning Volume", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "9 rounds: 500m row, 90 sec rest", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Handstand Walk + Deficit HSPU", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "handstand-walk", "targetStageId": "hs-walk-distance", "prescription": "6 attempts, with obstacles/turns", "notes": null },
+          { "blockType": "skill", "movementId": "strict-handstand-push-up", "targetStageId": "deficit-handstand-push-up", "prescription": "5 sets x 4 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Mock Open Workout", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "clean", "targetStageId": "squat-clean-elite", "prescription": "For time: 21-15-9 squat cleans (heavy), ring muscle-ups", "notes": "A demanding Elizabeth/Muscle-up mashup — genuine Open-level difficulty." },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "focus": "Continued build — approaching peak volume",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Advanced Gymnastics", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "bar-muscle-up", "targetStageId": "multiple-bmu", "prescription": "6 sets x 5 reps", "notes": null },
+          { "blockType": "skill", "movementId": "ring-muscle-up", "targetStageId": "strict-rmu", "prescription": "5 sets x 2-3 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Heavy Weightlifting", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "clean-and-jerk", "targetStageId": null, "prescription": "6 sets x 1 rep, near top of this block's range", "notes": null },
+          { "blockType": "strength", "movementId": "snatch", "targetStageId": "squat-snatch-elite", "prescription": "6 sets x 1 rep, near top of this block's range", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Conditioning Volume", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "10 rounds: 500m row, 90 sec rest", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Handstand Walk + Deficit HSPU", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "handstand-walk", "targetStageId": "hs-walk-distance", "prescription": "6 attempts, for max distance", "notes": null },
+          { "blockType": "skill", "movementId": "strict-handstand-push-up", "targetStageId": "deficit-handstand-push-up", "prescription": "5 sets x 5 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]},
+        { "dayNumber": 5, "name": "Day 5 — Mock Open Workout", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 20 min: 15 wall balls, 15 chest-to-bar pull-ups, 3 ring muscle-ups, 40 double unders", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Phase 1 consolidation",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Advanced Gymnastics", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "20 reps", "notes": null },
+          { "blockType": "skill", "movementId": "bar-muscle-up", "targetStageId": "multiple-bmu", "prescription": "6 sets x 5 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Heavy Weightlifting (light)", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "strength", "movementId": "clean-and-jerk", "targetStageId": null, "prescription": "4 sets x 2 reps, light-moderate", "notes": "Deliberately lighter after three demanding weeks." },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Easy Conditioning", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "6 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "rowing", "targetStageId": null, "prescription": "20 minutes easy pace", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 4, "name": "Day 4 — Skill Refresh", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "handstand-walk", "targetStageId": "hs-walk-distance", "prescription": "4 attempts, light", "notes": null },
+          { "blockType": "cooldown", "movementId": "overhead-stability", "targetStageId": null, "prescription": "30 sec hold", "notes": null }
+        ]},
+        {
+          "dayNumber": 5,
+          "name": "Day 5 — Test: Mock Open Workout",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "clean-and-jerk",
+              "targetStageId": null,
+              "prescription": "For time: 15-12-9-6-3 clean and jerks (moderate-heavy), bar muscle-ups",
+              "notes": "End of Phase 1 — a genuinely elite-level mock workout. Note your time for comparison against later phases."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

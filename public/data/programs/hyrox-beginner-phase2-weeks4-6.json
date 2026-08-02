@@ -1,0 +1,137 @@
+{
+  "programId": "hyrox-beginner-8wk",
+  "weeks": [
+    {
+      "weekNumber": 4,
+      "focus": "First brick work — linking running into a station",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Running Base",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "22 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — First Brick: Run + Ski",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "3 rounds: 400m run, 250m ski erg, 2 min rest",
+              "notes": "First time linking a run directly into a station — the 'compromised running' feeling starts here."
+            },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Station Strength: Sled, Carry, Lunge",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "sled-push", "targetStageId": null, "prescription": "4 sets x 15m, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "sled-pull", "targetStageId": null, "prescription": "4 sets x 15m, moderate load", "notes": null },
+            { "blockType": "skill", "movementId": "farmer-carry", "targetStageId": null, "prescription": "4 sets x 30m, moderate implements", "notes": null },
+            { "blockType": "skill", "movementId": "sandbag-lunge", "targetStageId": null, "prescription": "3 sets x 12 reps/side, moderate bag", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 5,
+      "focus": "Brick volume increases — two stations per session",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Running Base",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "25 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Brick: Run + Row + Wall Ball",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "3 rounds: 400m run, 250m row, 15 wall balls (light ball), 2 min rest",
+              "notes": null
+            },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Brick: Run + Sled + Carry",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "3 rounds: 400m run, 20m sled push, 20m sled pull, 30m farmer carry, 2 min rest",
+              "notes": "The most demanding brick combination so far this program."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "focus": "Phase 2 consolidation — race-pace station work",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Running Base",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "25 minutes continuous, easy-moderate pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Brick: Run + Ski + Burpee Broad Jump",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "4 rounds: 400m run, 250m ski erg, 10 burpee broad jumps, 2 min rest",
+              "notes": null
+            },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Brick: Run + Lunge + Wall Ball",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "running",
+              "targetStageId": null,
+              "prescription": "4 rounds: 400m run, 25m sandbag lunge, 15 wall balls, 2 min rest",
+              "notes": "Two phases down — Phase 3 introduces a first shortened race simulation."
+            },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}

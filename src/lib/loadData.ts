@@ -37,6 +37,21 @@ const PROGRAM_FILES = [
   '531-strength-week9-retest.json',
   'russian-squat-program-weeks1-3.json',
   'russian-squat-program-weeks4-6.json',
+  'hyrox-beginner-phase1-weeks1-3.json',
+  'hyrox-beginner-phase2-weeks4-6.json',
+  'hyrox-beginner-phase3-weeks7-8.json',
+  'hyrox-intermediate-weeks1-5.json',
+  'hyrox-intermediate-weeks6-10.json',
+  'hyrox-elite-weeks1-4.json',
+  'hyrox-elite-weeks5-8.json',
+  'hyrox-elite-weeks9-12.json',
+  'crossfit-open-beginner-weeks1-4.json',
+  'crossfit-open-beginner-weeks5-8.json',
+  'crossfit-open-intermediate-weeks1-5.json',
+  'crossfit-open-intermediate-weeks6-10.json',
+  'crossfit-open-elite-weeks1-4.json',
+  'crossfit-open-elite-weeks5-8.json',
+  'crossfit-open-elite-weeks9-12.json',
 ]
 
 async function fetchJson<T>(path: string): Promise<T> {

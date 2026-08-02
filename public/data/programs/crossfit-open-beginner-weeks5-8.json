@@ -1,0 +1,103 @@
+{
+  "programId": "crossfit-open-prep-beginner-8wk",
+  "weeks": [
+    {
+      "weekNumber": 5,
+      "focus": "Adding burpees and box jumps — Open workout staples",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Burpee + Box Jump Technique", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "burpee", "targetStageId": "burpee-standard", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "box-jump", "targetStageId": "box-jump-low", "prescription": "3 sets x 8 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Core + Pull + Wall Ball", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "kipping-knee-raise", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "3 sets x 12 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Open-Style Chipper", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "burpee", "targetStageId": "burpee-standard", "prescription": "For time: 15 burpees, 15 box jumps, 15 wall balls, 15 ring rows, 15 burpees", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 6,
+      "focus": "Building toward a full Open-style workout",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Thruster + Pull-Up Progression", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "3 sets x 10 reps", "notes": null },
+          { "blockType": "skill", "movementId": "pull-up", "targetStageId": "banded-pull-up", "prescription": "3 sets x 6 reps", "notes": "First real pull-up progression work — many Open workouts feature these alongside thrusters." },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Double Under Push", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "double-unders", "targetStageId": "single-double-single-drill", "prescription": "5 sets x 30 sec", "notes": "First double under attempts this program." },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "3 sets x 15 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Mock Open Workout (couplet)", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "AMRAP 10 min: 5 thrusters (empty bar), 5 banded pull-ups", "notes": "The classic Fran-style shape — a genuine Open workout format." },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 7,
+      "focus": "Pulling everything together",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Full Movement Circuit", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "3 sets x 12 reps", "notes": null },
+          { "blockType": "skill", "movementId": "toes-to-bar", "targetStageId": "kipping-knee-raise", "prescription": "3 sets x 12 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Double Unders + Wall Ball", "blocks": [
+          { "blockType": "warmup", "movementId": "shoulder-stability", "targetStageId": null, "prescription": "15 reps", "notes": null },
+          { "blockType": "skill", "movementId": "double-unders", "targetStageId": "du-attempts", "prescription": "6 sets, aiming for 2-5 unbroken", "notes": null },
+          { "blockType": "skill", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "3 sets x 15 reps", "notes": null },
+          { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+        ]},
+        { "dayNumber": 3, "name": "Day 3 — Mock Open Workout (triplet)", "blocks": [
+          { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "AMRAP 15 min: 10 wall balls, 10 box jumps, 10 banded pull-ups", "notes": null },
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]}
+      ]
+    },
+    {
+      "weekNumber": 8,
+      "focus": "Test week — a full mock Open workout",
+      "days": [
+        { "dayNumber": 1, "name": "Day 1 — Light Movement", "blocks": [
+          { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+          { "blockType": "skill", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "2 sets x 8 reps, light", "notes": "Deliberately light — staying fresh for the test." },
+          { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+        ]},
+        { "dayNumber": 2, "name": "Day 2 — Rest / Easy Movement", "blocks": [
+          { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "Light day — the test is tomorrow." }
+        ]},
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Test: Mock Open Workout",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            {
+              "blockType": "metcon",
+              "movementId": "thruster",
+              "targetStageId": "thruster-empty-bar",
+              "prescription": "AMRAP 15 min: 10 thrusters (empty bar), 10 wall balls, 10 banded pull-ups, 20 double under attempts",
+              "notes": "A genuine mock Open workout using every movement pattern built across these 8 weeks. Score your rounds and note it — this is a great benchmark to repeat before the Intermediate program."
+            },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-program note: you've now got the full core Open movement pool under your belt." }
+          ]
+        }
+      ]
+    }
+  ]
+}
