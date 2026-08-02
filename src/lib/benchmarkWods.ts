@@ -7,6 +7,13 @@ import type { BenchmarkWod } from '../types/benchmark'
 // weight/distance independent of whatever skill level the referenced stage
 // happens to be internally tagged at — the stage reference is just "which
 // movement pattern," not a source of truth for the number.
+//
+// Weight loadNotes always lead with "<men>/<women> kg (<men>/<women> lb)" so
+// both unit systems and both standard RX genders are visible at a glance.
+// RX numbers match CrossFit's official kg-equivalent standards where one
+// exists (e.g. Fran's 95/65 lb = 43/29 kg); Intermediate/Scaled numbers
+// scale down from there using standard coaching ratios (~65-75% for
+// Intermediate, ~40-50% for Scaled), rounded to weights gyms actually stock.
 export const BENCHMARK_WODS: BenchmarkWod[] = [
   {
     id: 'fran',
@@ -18,19 +25,27 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     tiers: {
       rx: {
         movements: [
-          { movementId: 'thruster', stageId: 'thruster-elite', loadNote: '95/65 lb' },
+          { movementId: 'thruster', stageId: 'thruster-elite', loadNote: '43/29 kg (95/65 lb)' },
           { movementId: 'pull-up', stageId: 'kipping-pull-up' },
         ],
       },
       intermediate: {
         movements: [
-          { movementId: 'thruster', stageId: 'thruster-loaded', loadNote: 'moderate load' },
+          {
+            movementId: 'thruster',
+            stageId: 'thruster-loaded',
+            loadNote: '29/20 kg (65/45 lb), moderate load',
+          },
           { movementId: 'pull-up', stageId: 'banded-pull-up' },
         ],
       },
       scaled: {
         movements: [
-          { movementId: 'thruster', stageId: 'thruster-empty-bar', loadNote: 'empty bar' },
+          {
+            movementId: 'thruster',
+            stageId: 'thruster-empty-bar',
+            loadNote: '20/15 kg (45/33 lb), empty bar',
+          },
           { movementId: 'ring-row', stageId: 'ring-row-standard' },
         ],
       },
@@ -77,14 +92,14 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
       'Thirty clean & jerks, as fast as possible — pure barbell cycling speed under a moderate, fixed load.',
     tiers: {
       rx: {
-        movements: [{ movementId: 'clean-and-jerk', loadNote: '135/95 lb' }],
+        movements: [{ movementId: 'clean-and-jerk', loadNote: '61/43 kg (135/95 lb)' }],
       },
       intermediate: {
         movements: [
           {
             movementId: 'clean',
             stageId: 'power-clean-light',
-            loadNote: 'moderate load, power clean + push press',
+            loadNote: '43/29 kg (95/65 lb), moderate load, power clean + push press',
           },
         ],
       },
@@ -93,7 +108,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
           {
             movementId: 'clean',
             stageId: 'hang-power-clean-empty',
-            loadNote: 'empty bar, hang power clean + push press',
+            loadNote: '20/15 kg (45/33 lb), empty bar, hang power clean + push press',
           },
         ],
       },
@@ -109,21 +124,33 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
       rx: {
         movements: [
           { movementId: 'running', loadNote: '400m' },
-          { movementId: 'kettlebell-swing', stageId: 'american-swing', loadNote: '53/35 lb' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'american-swing',
+            loadNote: '24/16 kg (53/35 lb)',
+          },
           { movementId: 'pull-up', stageId: 'kipping-pull-up' },
         ],
       },
       intermediate: {
         movements: [
           { movementId: 'running', loadNote: '400m' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing-mod',
+            loadNote: '16/12 kg (35/26 lb)',
+          },
           { movementId: 'pull-up', stageId: 'banded-pull-up' },
         ],
       },
       scaled: {
         movements: [
           { movementId: 'running', loadNote: '200m — brisk walk is fine too' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing',
+            loadNote: '12/8 kg (26/18 lb)',
+          },
           { movementId: 'ring-row', stageId: 'ring-row-standard' },
         ],
       },
@@ -162,13 +189,27 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     description: 'One movement, 150 reps, nowhere to hide — a simple but honest test of wall ball capacity.',
     tiers: {
       rx: {
-        movements: [{ movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '20/14 lb' }],
+        movements: [
+          { movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '9/6 kg (20/14 lb)' },
+        ],
       },
       intermediate: {
-        movements: [{ movementId: 'wall-ball', stageId: 'wb-light-low' }],
+        movements: [
+          {
+            movementId: 'wall-ball',
+            stageId: 'wb-light-low',
+            loadNote: '6/4 kg (14/9 lb)',
+          },
+        ],
       },
       scaled: {
-        movements: [{ movementId: 'wall-ball', stageId: 'wb-separate-reps' }],
+        movements: [
+          {
+            movementId: 'wall-ball',
+            stageId: 'wb-separate-reps',
+            loadNote: '4/3 kg (9/6 lb)',
+          },
+        ],
       },
     },
   },
@@ -181,19 +222,27 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     tiers: {
       rx: {
         movements: [
-          { movementId: 'deadlift', stageId: 'deadlift-loaded', loadNote: '225/155 lb' },
+          { movementId: 'deadlift', stageId: 'deadlift-loaded', loadNote: '102/70 kg (225/155 lb)' },
           { movementId: 'strict-handstand-push-up', stageId: 'strict-hspu-full' },
         ],
       },
       intermediate: {
         movements: [
-          { movementId: 'deadlift', stageId: 'deadlift-empty-bar', loadNote: 'empty barbell' },
+          {
+            movementId: 'deadlift',
+            stageId: 'deadlift-empty-bar',
+            loadNote: '20/15 kg (45/33 lb), empty barbell',
+          },
           { movementId: 'strict-handstand-push-up', stageId: 'box-hspu' },
         ],
       },
       scaled: {
         movements: [
-          { movementId: 'deadlift', stageId: 'kb-deadlift', loadNote: 'light kettlebell deadlift' },
+          {
+            movementId: 'deadlift',
+            stageId: 'kb-deadlift',
+            loadNote: '16/8 kg (35/18 lb), light kettlebell deadlift',
+          },
           {
             movementId: 'strict-handstand-push-up',
             stageId: 'wall-handstand-hold-hspu',
@@ -211,11 +260,17 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     description: "Grace's sibling — thirty snatches for time, testing the same barbell cycling speed under load.",
     tiers: {
       rx: {
-        movements: [{ movementId: 'snatch', stageId: 'squat-snatch-loaded', loadNote: '135/95 lb' }],
+        movements: [
+          { movementId: 'snatch', stageId: 'squat-snatch-loaded', loadNote: '61/43 kg (135/95 lb)' },
+        ],
       },
       intermediate: {
         movements: [
-          { movementId: 'snatch', stageId: 'power-snatch-light', loadNote: 'moderate load, power snatch' },
+          {
+            movementId: 'snatch',
+            stageId: 'power-snatch-light',
+            loadNote: '43/29 kg (95/65 lb), moderate load, power snatch',
+          },
         ],
       },
       scaled: {
@@ -223,7 +278,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
           {
             movementId: 'snatch',
             stageId: 'hang-power-snatch-empty',
-            loadNote: 'empty bar, hang power snatch',
+            loadNote: '20/15 kg (45/33 lb), empty bar, hang power snatch',
           },
         ],
       },
@@ -248,7 +303,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
           { movementId: 'back-squat', stageId: 'air-squat-full' },
           { movementId: 'running', loadNote: '1 mile' },
         ],
-        note: 'Traditionally done wearing a 20/14 lb weight vest — optional, especially your first time.',
+        note: 'Traditionally done wearing a 9/6 kg (20/14 lb) weight vest — optional, especially your first time.',
       },
       intermediate: {
         movements: [
@@ -283,27 +338,47 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     tiers: {
       rx: {
         movements: [
-          { movementId: 'deadlift', stageId: 'deadlift-loaded', loadNote: '155/105 lb' },
-          { movementId: 'clean', stageId: 'hang-power-clean-empty', loadNote: '155/105 lb' },
-          { movementId: 'push-jerk', stageId: 'push-jerk-loaded', loadNote: '155/105 lb' },
+          { movementId: 'deadlift', stageId: 'deadlift-loaded', loadNote: '70/47.5 kg (155/105 lb)' },
+          { movementId: 'clean', stageId: 'hang-power-clean-empty', loadNote: '70/47.5 kg (155/105 lb)' },
+          { movementId: 'push-jerk', stageId: 'push-jerk-loaded', loadNote: '70/47.5 kg (155/105 lb)' },
         ],
       },
       intermediate: {
         movements: [
-          { movementId: 'deadlift', stageId: 'deadlift-empty-bar', loadNote: 'moderate load' },
-          { movementId: 'clean', stageId: 'hang-power-clean-empty', loadNote: 'moderate load' },
-          { movementId: 'push-jerk', stageId: 'push-jerk-empty-bar', loadNote: 'moderate load' },
+          {
+            movementId: 'deadlift',
+            stageId: 'deadlift-empty-bar',
+            loadNote: '52/34 kg (115/75 lb), moderate load',
+          },
+          {
+            movementId: 'clean',
+            stageId: 'hang-power-clean-empty',
+            loadNote: '52/34 kg (115/75 lb), moderate load',
+          },
+          {
+            movementId: 'push-jerk',
+            stageId: 'push-jerk-empty-bar',
+            loadNote: '52/34 kg (115/75 lb), moderate load',
+          },
         ],
       },
       scaled: {
         movements: [
-          { movementId: 'deadlift', stageId: 'kb-deadlift', loadNote: 'light kettlebell deadlift' },
+          {
+            movementId: 'deadlift',
+            stageId: 'kb-deadlift',
+            loadNote: '16/8 kg (35/18 lb), light kettlebell deadlift',
+          },
           {
             movementId: 'clean',
             stageId: 'clean-position-drills',
             loadNote: 'empty bar or PVC, drill the position',
           },
-          { movementId: 'push-jerk', stageId: 'push-jerk-empty-bar', loadNote: 'empty bar' },
+          {
+            movementId: 'push-jerk',
+            stageId: 'push-jerk-empty-bar',
+            loadNote: '20/15 kg (45/33 lb), empty bar',
+          },
         ],
       },
     },
@@ -389,19 +464,27 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     tiers: {
       rx: {
         movements: [
-          { movementId: 'clean', stageId: 'squat-clean-loaded', loadNote: '135/95 lb' },
+          { movementId: 'clean', stageId: 'squat-clean-loaded', loadNote: '61/43 kg (135/95 lb)' },
           { movementId: 'ring-dip', stageId: 'full-ring-dip' },
         ],
       },
       intermediate: {
         movements: [
-          { movementId: 'clean', stageId: 'power-clean-light', loadNote: 'moderate load' },
+          {
+            movementId: 'clean',
+            stageId: 'power-clean-light',
+            loadNote: '43/29 kg (95/65 lb), moderate load',
+          },
           { movementId: 'ring-dip', stageId: 'banded-ring-dip' },
         ],
       },
       scaled: {
         movements: [
-          { movementId: 'clean', stageId: 'hang-power-clean-empty', loadNote: 'empty bar' },
+          {
+            movementId: 'clean',
+            stageId: 'hang-power-clean-empty',
+            loadNote: '20/15 kg (45/33 lb), empty bar',
+          },
           { movementId: 'dip', stageId: 'banded-dip' },
         ],
       },
@@ -420,14 +503,18 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
         movements: [
           { movementId: 'running', loadNote: '400m' },
           { movementId: 'box-jump', stageId: 'box-jump-standard', loadNote: '24/20 in box' },
-          { movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '20/14 lb' },
+          { movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '9/6 kg (20/14 lb)' },
         ],
       },
       intermediate: {
         movements: [
           { movementId: 'running', loadNote: '400m' },
           { movementId: 'box-jump', stageId: 'box-jump-low' },
-          { movementId: 'wall-ball', stageId: 'wb-light-low' },
+          {
+            movementId: 'wall-ball',
+            stageId: 'wb-light-low',
+            loadNote: '6/4 kg (14/9 lb)',
+          },
         ],
       },
       scaled: {
@@ -483,21 +570,33 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
       rx: {
         movements: [
           { movementId: 'running', loadNote: '800m' },
-          { movementId: 'kettlebell-swing', stageId: 'american-swing', loadNote: '70/53 lb' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'american-swing',
+            loadNote: '32/24 kg (70/53 lb)',
+          },
           { movementId: 'pull-up', stageId: 'kipping-pull-up' },
         ],
       },
       intermediate: {
         movements: [
           { movementId: 'running', loadNote: '600m' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing-mod',
+            loadNote: '16/12 kg (35/26 lb)',
+          },
           { movementId: 'pull-up', stageId: 'banded-pull-up' },
         ],
       },
       scaled: {
         movements: [
           { movementId: 'running', loadNote: '400m' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing',
+            loadNote: '12/8 kg (26/18 lb)',
+          },
           { movementId: 'ring-row', stageId: 'ring-row-standard' },
         ],
       },
@@ -513,17 +612,19 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
       'A short, brutally heavy single-movement test — one of the more purely strength-and-power focused Hero WODs.',
     tiers: {
       rx: {
-        movements: [{ movementId: 'power-snatch', loadNote: '75/55 lb' }],
+        movements: [{ movementId: 'power-snatch', loadNote: '34/25 kg (75/55 lb)' }],
       },
       intermediate: {
-        movements: [{ movementId: 'power-snatch', loadNote: 'moderate load' }],
+        movements: [
+          { movementId: 'power-snatch', loadNote: '25/16 kg (55/35 lb), moderate load' },
+        ],
       },
       scaled: {
         movements: [
           {
             movementId: 'snatch',
             stageId: 'muscle-snatch-empty',
-            loadNote: 'empty bar or light dumbbell snatch',
+            loadNote: '20/15 kg (45/33 lb) empty bar, or 10/5 kg (22/11 lb) light dumbbell snatch',
           },
         ],
       },
@@ -574,21 +675,33 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
         movements: [
           { movementId: 'bar-muscle-up', stageId: 'kipping-bmu' },
           { movementId: 'strict-handstand-push-up', stageId: 'strict-hspu-full' },
-          { movementId: 'kettlebell-swing', stageId: 'american-swing', loadNote: '70/53 lb' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'american-swing',
+            loadNote: '32/24 kg (70/53 lb)',
+          },
         ],
       },
       intermediate: {
         movements: [
           { movementId: 'bar-muscle-up', stageId: 'banded-bmu' },
           { movementId: 'strict-handstand-push-up', stageId: 'box-hspu' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing-mod',
+            loadNote: '16/12 kg (35/26 lb)',
+          },
         ],
       },
       scaled: {
         movements: [
           { movementId: 'pull-up', stageId: 'kipping-pull-up', loadNote: 'in place of muscle-up' },
           { movementId: 'pike-push-up' },
-          { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+          {
+            movementId: 'kettlebell-swing',
+            stageId: 'russian-swing',
+            loadNote: '12/8 kg (26/18 lb)',
+          },
         ],
       },
     },

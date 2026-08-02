@@ -66,9 +66,17 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Squatting',
     equipmentTag: 'wall-ball',
     tiers: {
-      rx: { movementId: 'wall-ball', stageId: 'wb-rx' },
-      intermediate: { movementId: 'wall-ball', stageId: 'wb-light-low' },
-      scaled: { movementId: 'wall-ball', stageId: 'wb-separate-reps' },
+      rx: { movementId: 'wall-ball', stageId: 'wb-rx', loadNote: '9/6 kg (20/14 lb)' },
+      intermediate: {
+        movementId: 'wall-ball',
+        stageId: 'wb-light-low',
+        loadNote: '6/4 kg (14/9 lb)',
+      },
+      scaled: {
+        movementId: 'wall-ball',
+        stageId: 'wb-separate-reps',
+        loadNote: '4/3 kg (9/6 lb)',
+      },
     },
     amounts: {
       amrap: { rx: 15, intermediate: 15, scaled: 12 },
@@ -81,9 +89,21 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Hinging',
     equipmentTag: 'kettlebell',
     tiers: {
-      rx: { movementId: 'kettlebell-swing', stageId: 'american-swing' },
-      intermediate: { movementId: 'kettlebell-swing', stageId: 'russian-swing-mod' },
-      scaled: { movementId: 'kettlebell-swing', stageId: 'russian-swing' },
+      rx: {
+        movementId: 'kettlebell-swing',
+        stageId: 'american-swing',
+        loadNote: '24/16 kg (53/35 lb)',
+      },
+      intermediate: {
+        movementId: 'kettlebell-swing',
+        stageId: 'russian-swing-mod',
+        loadNote: '16/12 kg (35/26 lb)',
+      },
+      scaled: {
+        movementId: 'kettlebell-swing',
+        stageId: 'russian-swing',
+        loadNote: '12/8 kg (26/18 lb)',
+      },
     },
     amounts: {
       amrap: { rx: 15, intermediate: 15, scaled: 12 },
@@ -171,9 +191,21 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Dumbbells',
     equipmentTag: 'dumbbell',
     tiers: {
-      rx: { movementId: 'dumbbell-clean', stageId: 'db-clean-rx' },
-      intermediate: { movementId: 'dumbbell-clean', stageId: 'db-clean-full' },
-      scaled: { movementId: 'dumbbell-clean', stageId: 'db-clean-hip' },
+      rx: {
+        movementId: 'dumbbell-clean',
+        stageId: 'db-clean-rx',
+        loadNote: '22.5/15 kg (50/35 lb)',
+      },
+      intermediate: {
+        movementId: 'dumbbell-clean',
+        stageId: 'db-clean-full',
+        loadNote: '17.5/10 kg (40/22 lb)',
+      },
+      scaled: {
+        movementId: 'dumbbell-clean',
+        stageId: 'db-clean-hip',
+        loadNote: '10/5 kg (22/11 lb)',
+      },
     },
     amounts: {
       amrap: { rx: 12, intermediate: 10, scaled: 10 },
@@ -186,9 +218,21 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Kettlebells',
     equipmentTag: 'kettlebell',
     tiers: {
-      rx: { movementId: 'turkish-get-up', stageId: 'getup-moderate-kb' },
-      intermediate: { movementId: 'turkish-get-up', stageId: 'getup-light-kb' },
-      scaled: { movementId: 'turkish-get-up', stageId: 'getup-bodyweight' },
+      rx: {
+        movementId: 'turkish-get-up',
+        stageId: 'getup-moderate-kb',
+        loadNote: '16/8 kg (35/18 lb)',
+      },
+      intermediate: {
+        movementId: 'turkish-get-up',
+        stageId: 'getup-light-kb',
+        loadNote: '12/6 kg (26/13 lb)',
+      },
+      scaled: {
+        movementId: 'turkish-get-up',
+        stageId: 'getup-bodyweight',
+        loadNote: 'bodyweight only, no kettlebell',
+      },
     },
     amounts: {
       amrap: { rx: 6, intermediate: 6, scaled: 6 },
@@ -231,9 +275,15 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Carries',
     equipmentTag: 'dumbbell',
     tiers: {
-      rx: { movementId: 'farmer-carry' },
-      intermediate: { movementId: 'farmer-carry' },
-      scaled: { movementId: 'farmer-carry', loadNote: 'lighter load, shorter distance' },
+      rx: { movementId: 'farmer-carry', loadNote: '24/16 kg per hand (53/35 lb)' },
+      intermediate: {
+        movementId: 'farmer-carry',
+        loadNote: '16/12 kg per hand (35/26 lb)',
+      },
+      scaled: {
+        movementId: 'farmer-carry',
+        loadNote: '10/6 kg per hand (22/13 lb), lighter load, shorter distance',
+      },
     },
     amounts: {
       amrap: { rx: '100m', intermediate: '100m', scaled: '50m' },
@@ -261,9 +311,15 @@ export const WOD_SLOT_TEMPLATES: WodSlotTemplate[] = [
     subcategory: 'Medicine Ball',
     equipmentTag: 'medicine-ball',
     tiers: {
-      rx: { movementId: 'medicine-ball-slam' },
-      intermediate: { movementId: 'medicine-ball-slam' },
-      scaled: { movementId: 'medicine-ball-slam', loadNote: 'lighter ball' },
+      rx: { movementId: 'medicine-ball-slam', loadNote: '9/6 kg (20/14 lb)' },
+      intermediate: {
+        movementId: 'medicine-ball-slam',
+        loadNote: '6/4 kg (14/9 lb)',
+      },
+      scaled: {
+        movementId: 'medicine-ball-slam',
+        loadNote: '4/3 kg (9/6 lb), lighter ball',
+      },
     },
     amounts: {
       amrap: { rx: 15, intermediate: 12, scaled: 10 },
