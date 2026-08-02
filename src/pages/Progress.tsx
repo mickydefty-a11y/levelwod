@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
+import RowingStandardsTool from '../components/RowingStandardsTool'
+import RunningStandardsTool from '../components/RunningStandardsTool'
 import StrengthStandardsTool from '../components/StrengthStandardsTool'
 import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
@@ -113,11 +115,14 @@ export default function Progress() {
         </Link>
       </div>
 
-      {movementIndex && (
-        <div className="mt-6">
-          <StrengthStandardsTool movementIndex={movementIndex} />
+      <div className="mt-6">
+        <h2 className="text-sm font-semibold text-accent">Standards &amp; Percentiles</h2>
+        <div className="mt-1.5 space-y-3">
+          {movementIndex && <StrengthStandardsTool movementIndex={movementIndex} />}
+          <RowingStandardsTool />
+          <RunningStandardsTool />
         </div>
-      )}
+      </div>
 
       <h2 className="mt-6 text-sm font-semibold text-accent">Movements tracked</h2>
       {!movements ? (
