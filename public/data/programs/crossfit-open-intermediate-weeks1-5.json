@@ -129,7 +129,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-rx",
               "prescription": "AMRAP 12 min: 10 wall balls, 8 chest-to-bar pull-ups, 30 double unders",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 720
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -264,7 +269,11 @@
               "movementId": "thruster",
               "targetStageId": "thruster-loaded",
               "prescription": "21-15-9 for time: thrusters (moderate), chest-to-bar pull-ups",
-              "notes": "The Fran shape, but at Intermediate loading and full C2B."
+              "notes": "The Fran shape, but at Intermediate loading and full C2B.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             {
               "blockType": "cooldown",
@@ -392,7 +401,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-rx",
               "prescription": "AMRAP 15 min: 12 wall balls, 9 chest-to-bar pull-ups, 6 burpees",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 900
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -520,7 +534,12 @@
               "movementId": "thruster",
               "targetStageId": "thruster-loaded",
               "prescription": "AMRAP 20 min: 5 thrusters, 10 chest-to-bar pull-ups, 15 wall balls",
-              "notes": "First full mock Open workout this program — score and note your rounds."
+              "notes": "First full mock Open workout this program — score and note your rounds.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -648,7 +667,11 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-rx",
               "prescription": "For time: 21 wall balls, 21 chest-to-bar pull-ups, 21 double unders, 15 wall balls, 15 chest-to-bar pull-ups, 15 double unders, 9 of each",
-              "notes": "End of Phase 1 — Phase 2 pushes toward peak volume and a bigger mock test."
+              "notes": "End of Phase 1 — Phase 2 pushes toward peak volume and a bigger mock test.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             {
               "blockType": "cooldown",

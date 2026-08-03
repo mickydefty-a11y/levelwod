@@ -201,7 +201,11 @@
               "movementId": "kettlebell-swing",
               "targetStageId": "american-swing",
               "prescription": "For time: 5 rounds of 15 KB swings, 15 air squats, 10 push-ups, 20 double unders",
-              "notes": "The full combination test — everything trained across these 8 weeks in one workout. Note your time."
+              "notes": "The full combination test — everything trained across these 8 weeks in one workout. Note your time.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-program note: you've built genuine strength and conditioning using nothing but a kettlebell, a pull-up bar, and bodyweight — no gym required." }
           ]

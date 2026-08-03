@@ -19,7 +19,7 @@
         ]},
         { "dayNumber": 3, "name": "Day 3 — Open-Style Chipper", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "burpee", "targetStageId": "burpee-standard", "prescription": "For time: 15 burpees, 15 box jumps, 15 wall balls, 15 ring rows, 15 burpees", "notes": null },
+          { "blockType": "metcon", "movementId": "burpee", "targetStageId": "burpee-standard", "prescription": "For time: 15 burpees, 15 box jumps, 15 wall balls, 15 ring rows, 15 burpees", "notes": null, "timerConfig": { "type": "stopwatch" }, "scoreType": "time" },
           { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
         ]}
       ]
@@ -42,7 +42,7 @@
         ]},
         { "dayNumber": 3, "name": "Day 3 — Mock Open Workout (couplet)", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "AMRAP 10 min: 5 thrusters (empty bar), 5 banded pull-ups", "notes": "The classic Fran-style shape — a genuine Open workout format." },
+          { "blockType": "metcon", "movementId": "thruster", "targetStageId": "thruster-empty-bar", "prescription": "AMRAP 10 min: 5 thrusters (empty bar), 5 banded pull-ups", "notes": "The classic Fran-style shape — a genuine Open workout format.", "timerConfig": { "type": "amrap", "durationSeconds": 600 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
         ]}
       ]
@@ -65,7 +65,7 @@
         ]},
         { "dayNumber": 3, "name": "Day 3 — Mock Open Workout (triplet)", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "AMRAP 15 min: 10 wall balls, 10 box jumps, 10 banded pull-ups", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-light-low", "prescription": "AMRAP 15 min: 10 wall balls, 10 box jumps, 10 banded pull-ups", "notes": null, "timerConfig": { "type": "amrap", "durationSeconds": 900 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
         ]}
       ]
@@ -92,7 +92,12 @@
               "movementId": "thruster",
               "targetStageId": "thruster-empty-bar",
               "prescription": "AMRAP 15 min: 10 thrusters (empty bar), 10 wall balls, 10 banded pull-ups, 20 double under attempts",
-              "notes": "A genuine mock Open workout using every movement pattern built across these 8 weeks. Score your rounds and note it — this is a great benchmark to repeat before the Intermediate program."
+              "notes": "A genuine mock Open workout using every movement pattern built across these 8 weeks. Score your rounds and note it — this is a great benchmark to repeat before the Intermediate program.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 900
+              },
+              "scoreType": "rounds_and_reps"
             },
             { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": "End-of-program note: you've now got the full core Open movement pool under your belt." }
           ]

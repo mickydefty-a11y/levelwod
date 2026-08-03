@@ -95,7 +95,12 @@
               "movementId": "back-squat",
               "targetStageId": "air-squat-full",
               "prescription": "AMRAP 8 min: 10 air squats, 8 push-ups (incline), 30 sec row",
-              "notes": "First taste of the Open's classic AMRAP-with-a-machine-piece format."
+              "notes": "First taste of the Open's classic AMRAP-with-a-machine-piece format.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 480
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -196,7 +201,12 @@
               "movementId": "back-squat",
               "targetStageId": "air-squat-full",
               "prescription": "AMRAP 10 min: 12 air squats, 10 push-ups, 45 sec row",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 600
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -290,7 +300,11 @@
               "movementId": "thruster",
               "targetStageId": "thruster-empty-bar",
               "prescription": "5 rounds for time: 8 thrusters (empty bar), 10 ring rows",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             {
               "blockType": "cooldown",
@@ -384,7 +398,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-light-low",
               "prescription": "AMRAP 12 min: 10 wall balls, 10 ring rows, 20 single unders",
-              "notes": "First month done — every core Open movement pattern has now been touched at least once."
+              "notes": "First month done — every core Open movement pattern has now been touched at least once.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 720
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",

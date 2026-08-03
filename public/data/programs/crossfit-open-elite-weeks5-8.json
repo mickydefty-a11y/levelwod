@@ -30,7 +30,7 @@
         ]},
         { "dayNumber": 5, "name": "Day 5 — Mock Open Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 20 min: 15 wall balls, 12 chest-to-bar pull-ups, 6 bar muscle-ups, 40 double unders", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 20 min: 15 wall balls, 12 chest-to-bar pull-ups, 6 bar muscle-ups, 40 double unders", "notes": null, "timerConfig": { "type": "amrap", "durationSeconds": 1200 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -71,7 +71,11 @@
               "movementId": "clean-and-jerk",
               "targetStageId": null,
               "prescription": "For time: 3 rounds of 10 clean and jerks (heavy), 10 bar muscle-ups, 20 wall balls",
-              "notes": "The most demanding mock workout so far this program."
+              "notes": "The most demanding mock workout so far this program.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
           ]
@@ -115,7 +119,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-elite",
               "prescription": "AMRAP 20 min: 15 wall balls, 15 chest-to-bar pull-ups, 5 ring muscle-ups, 50 double unders",
-              "notes": "The single most demanding mock workout in the whole program — Week 8 begins backing off toward the taper."
+              "notes": "The single most demanding mock workout in the whole program — Week 8 begins backing off toward the taper.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
           ]
@@ -148,7 +157,7 @@
         ]},
         { "dayNumber": 5, "name": "Day 5 — Shorter Mock Open Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 12 min: 10 wall balls, 8 chest-to-bar pull-ups, 3 bar muscle-ups", "notes": "Shorter and lighter than recent weeks — end of Phase 2." },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 12 min: 10 wall balls, 8 chest-to-bar pull-ups, 3 bar muscle-ups", "notes": "Shorter and lighter than recent weeks — end of Phase 2.", "timerConfig": { "type": "amrap", "durationSeconds": 720 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]

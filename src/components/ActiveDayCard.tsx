@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import CoachsBriefBanner from './CoachsBriefBanner'
 import ProgramBlockRow from './ProgramBlockRow'
 import RpeGrid from './RpeGrid'
@@ -33,6 +34,8 @@ export default function ActiveDayCard({
   const { markCompleted } = useProgramHistory()
   const { addEntry } = useWorkoutLog()
   const { dataFor } = useTrainingMax()
+  const location = useLocation()
+  const returnPath = `${location.pathname}${location.search}`
   const [results, setResults] = useState<Record<number, string>>({})
   const [done, setDone] = useState<Record<number, boolean>>({})
   const [showRpeGrid, setShowRpeGrid] = useState(false)
@@ -121,6 +124,10 @@ export default function ActiveDayCard({
             onToggleDone={() => setDone((prev) => ({ ...prev, [i]: !prev[i] }))}
             programContext={`${program.id} / week ${week.weekNumber} / day ${day.dayNumber}`}
             loadContext={loadContext}
+            sessionId={
+              block.scoreType ? `metcon:${program.id}:w${week.weekNumber}d${day.dayNumber}:${i}` : null
+            }
+            returnPath={returnPath}
           />
         ))}
       </ul>

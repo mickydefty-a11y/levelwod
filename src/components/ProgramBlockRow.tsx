@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CantDoThis from './CantDoThis'
+import MetconResultEntry from './MetconResultEntry'
 import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
 import { calculateLoadWeight, type LoadContext } from '../lib/trainingMax'
-import { timerConfigToPath } from '../lib/timerUrl'
+import { sessionTimerConfigToPath, timerConfigToPath } from '../lib/timerUrl'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
+import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
 import type { ProgramBlock } from '../types/program'
@@ -28,6 +30,8 @@ export default function ProgramBlockRow({
   onToggleDone,
   programContext,
   loadContext,
+  sessionId,
+  returnPath,
 }: {
   block: ProgramBlock
   index: Map<string, Movement>
@@ -43,6 +47,11 @@ export default function ProgramBlockRow({
   // resolved Training Max for percentage-based programs; omitted entirely
   // for every other program, so this has no effect on them
   loadContext?: LoadContext | null
+  // present only for a metcon block with a comparable score (block.scoreType
+  // set) alongside onLogChange — a stable per-occurrence id for the session
+  // result draft, and the path to return to after the Timer's Mark Complete
+  sessionId?: string | null
+  returnPath?: string | null
 }) {
   const movement = index.get(block.movementId)
   const stage = findStage(movement, block.targetStageId)
@@ -60,6 +69,16 @@ export default function ProgramBlockRow({
       : loadContext?.trainingMax[block.movementId]
   const loadWeight =
     block.loadConfig && base != null ? calculateLoadWeight(block.loadConfig, base, loadContext!.unit) : null
+
+  const isScorable = !!(
+    block.scoreType &&
+    block.scoreType !== 'none' &&
+    block.timerConfig &&
+    onLogChange &&
+    sessionId &&
+    returnPath
+  )
+  const { draft, clearDraft } = useSessionResultDraft(isScorable ? sessionId! : '')
 
   return (
     <li className={`rounded-lg px-3 py-2 ${done ? 'bg-accent/15' : 'bg-bg-surface'}`}>
@@ -114,13 +133,27 @@ export default function ProgramBlockRow({
       {movement && <CantDoThis movement={movement} movementIndex={index} />}
 
       <div className="mt-2 flex flex-wrap gap-1.5">
-        {block.timerConfig && (
+        {isScorable && !draft ? (
           <Link
-            to={timerConfigToPath(block.timerConfig, displayMovement?.name)}
-            className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
+            to={sessionTimerConfigToPath(block.timerConfig!, {
+              sessionId: sessionId!,
+              returnTo: returnPath!,
+              label: displayMovement?.name,
+            })}
+            className="inline-flex items-center gap-1 rounded-full bg-accent px-3 py-1 text-xs font-medium text-bg"
           >
-            ⏱ Start Timer
+            ▶ Start Now
           </Link>
+        ) : (
+          block.timerConfig &&
+          !isScorable && (
+            <Link
+              to={timerConfigToPath(block.timerConfig, displayMovement?.name)}
+              className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
+            >
+              ⏱ Start Timer
+            </Link>
+          )
         )}
         {block.logPrompt && onLogChange && !showPRForm && (
           <button
@@ -131,6 +164,18 @@ export default function ProgramBlockRow({
           </button>
         )}
       </div>
+
+      {isScorable && draft && (
+        <MetconResultEntry
+          scoreType={block.scoreType as 'time' | 'rounds_and_reps'}
+          draft={draft}
+          onSave={(text) => {
+            onLogChange!(text)
+            if (!done) onToggleDone?.()
+            clearDraft()
+          }}
+        />
+      )}
 
       {showPRForm && block.logPrompt && (
         <div className="mt-2">

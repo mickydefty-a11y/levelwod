@@ -1,5 +1,6 @@
 import type { TimerConfig } from './timer'
 import type { LogPrompt } from './pr'
+import type { ScoreType } from './scoreType'
 
 export type BlockType = 'warmup' | 'skill' | 'strength' | 'metcon' | 'mobility' | 'cooldown'
 
@@ -27,6 +28,12 @@ export interface ProgramBlock {
   prescription: string
   notes: string | null
   timerConfig?: TimerConfig
+  // present only on metcon blocks with a comparable result (a for-time or
+  // AMRAP piece) — enables the same Start Now -> Timer -> Log Result flow
+  // already built for Benchmark WODs/the WOD Generator. Most metcon blocks
+  // are steady-state/interval conditioning with no comparable score, so this
+  // is deliberately absent on those; they keep the plain "Start Timer" link.
+  scoreType?: ScoreType
   logPrompt?: LogPrompt
   loadConfig?: LoadConfig
 }

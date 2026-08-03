@@ -156,7 +156,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-elite",
               "prescription": "AMRAP 20 min: 15 wall balls, 10 chest-to-bar pull-ups, 5 bar muscle-ups, 30 double unders",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -318,7 +323,11 @@
               "movementId": "clean",
               "targetStageId": "squat-clean-elite",
               "prescription": "For time: 21-15-9 squat cleans (heavy), ring muscle-ups",
-              "notes": "A demanding Elizabeth/Muscle-up mashup — genuine Open-level difficulty."
+              "notes": "A demanding Elizabeth/Muscle-up mashup — genuine Open-level difficulty.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             {
               "blockType": "cooldown",
@@ -480,7 +489,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-elite",
               "prescription": "AMRAP 20 min: 15 wall balls, 15 chest-to-bar pull-ups, 3 ring muscle-ups, 40 double unders",
-              "notes": null
+              "notes": null,
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             {
               "blockType": "cooldown",
@@ -621,7 +635,11 @@
               "movementId": "clean-and-jerk",
               "targetStageId": null,
               "prescription": "For time: 15-12-9-6-3 clean and jerks (moderate-heavy), bar muscle-ups",
-              "notes": "End of Phase 1 — a genuinely elite-level mock workout. Note your time for comparison against later phases."
+              "notes": "End of Phase 1 — a genuinely elite-level mock workout. Note your time for comparison against later phases.",
+              "timerConfig": {
+                "type": "stopwatch"
+              },
+              "scoreType": "time"
             },
             {
               "blockType": "cooldown",

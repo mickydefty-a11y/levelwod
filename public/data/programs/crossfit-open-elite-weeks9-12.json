@@ -27,7 +27,7 @@
         ]},
         { "dayNumber": 5, "name": "Day 5 — Short Sharp Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "For time: 12 wall balls, 12 chest-to-bar pull-ups, 12 double unders, repeat once more", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "For time: 12 wall balls, 12 chest-to-bar pull-ups, 12 double unders, repeat once more", "notes": null, "timerConfig": { "type": "stopwatch" }, "scoreType": "time" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -56,7 +56,7 @@
         ]},
         { "dayNumber": 5, "name": "Day 5 — Short Opener-Style Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 8 min: 8 wall balls, 6 chest-to-bar pull-ups", "notes": "Short and sharp — simulating the feel of a typical 'Open workout 1' opener." },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-elite", "prescription": "AMRAP 8 min: 8 wall balls, 6 chest-to-bar pull-ups", "notes": "Short and sharp — simulating the feel of a typical 'Open workout 1' opener.", "timerConfig": { "type": "amrap", "durationSeconds": 480 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -110,7 +110,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-elite",
               "prescription": "AMRAP 20 min: 15 wall balls, 15 chest-to-bar pull-ups, 5 ring muscle-ups, 50 double unders",
-              "notes": "The full peak test — the same shape as Week 7's hardest workout. Compare directly to see how the taper paid off. This is genuinely Open-ready fitness."
+              "notes": "The full peak test — the same shape as Week 7's hardest workout. Compare directly to see how the taper paid off. This is genuinely Open-ready fitness.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
           ]

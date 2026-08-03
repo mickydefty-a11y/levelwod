@@ -24,7 +24,7 @@
         ]},
         { "dayNumber": 4, "name": "Day 4 — Mock Open Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "For time: 10 rounds of 3 squat cleans, 6 burpees", "notes": null },
+          { "blockType": "metcon", "movementId": "clean", "targetStageId": "squat-clean-loaded", "prescription": "For time: 10 rounds of 3 squat cleans, 6 burpees", "notes": null, "timerConfig": { "type": "stopwatch" }, "scoreType": "time" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -60,7 +60,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-rx",
               "prescription": "AMRAP 20 min: 10 wall balls, 8 chest-to-bar pull-ups, 2 bar muscle-ups, 20 double unders",
-              "notes": "The most demanding mock Open workout this program — a real mix of everything trained so far."
+              "notes": "The most demanding mock Open workout this program — a real mix of everything trained so far.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
           ]
@@ -90,7 +95,7 @@
         ]},
         { "dayNumber": 4, "name": "Day 4 — Short Open-Style Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "AMRAP 8 min: 8 wall balls, 6 chest-to-bar pull-ups", "notes": "Shorter and lighter than recent weeks, on purpose." },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "AMRAP 8 min: 8 wall balls, 6 chest-to-bar pull-ups", "notes": "Shorter and lighter than recent weeks, on purpose.", "timerConfig": { "type": "amrap", "durationSeconds": 480 }, "scoreType": "rounds_and_reps" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -114,7 +119,7 @@
         ]},
         { "dayNumber": 4, "name": "Day 4 — Short Sharp Workout", "blocks": [
           { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
-          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "For time: 15 wall balls, 15 double unders, 10 chest-to-bar pull-ups", "notes": null },
+          { "blockType": "metcon", "movementId": "wall-ball", "targetStageId": "wb-rx", "prescription": "For time: 15 wall balls, 15 double unders, 10 chest-to-bar pull-ups", "notes": null, "timerConfig": { "type": "stopwatch" }, "scoreType": "time" },
           { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
         ]}
       ]
@@ -141,7 +146,12 @@
               "movementId": "wall-ball",
               "targetStageId": "wb-rx",
               "prescription": "AMRAP 20 min: 10 wall balls, 10 chest-to-bar pull-ups, 2 bar muscle-ups, 30 double unders",
-              "notes": "The full test — everything trained across these 10 weeks in one workout. Compare directly to Week 4's mock test to see the real progress."
+              "notes": "The full test — everything trained across these 10 weeks in one workout. Compare directly to Week 4's mock test to see the real progress.",
+              "timerConfig": {
+                "type": "amrap",
+                "durationSeconds": 1200
+              },
+              "scoreType": "rounds_and_reps"
             },
             { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
           ]
