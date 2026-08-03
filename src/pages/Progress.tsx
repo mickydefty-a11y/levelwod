@@ -106,13 +106,22 @@ export default function Progress() {
 
       <div className="mt-6">
         <h2 className="text-sm font-semibold text-accent">Tools</h2>
-        <Link
-          to="/tools/1rm-calculator"
-          className="mt-1.5 flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
-        >
-          <span className="font-medium">1RM Calculator</span>
-          <span className="text-xs text-ink-muted">Estimate your one-rep max →</span>
-        </Link>
+        <div className="mt-1.5 space-y-2">
+          <Link
+            to="/tools/1rm-calculator"
+            className="flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
+          >
+            <span className="font-medium">1RM Calculator</span>
+            <span className="text-xs text-ink-muted">Estimate your one-rep max →</span>
+          </Link>
+          <Link
+            to="/progress/share"
+            className="flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
+          >
+            <span className="font-medium">Share your progress</span>
+            <span className="text-xs text-ink-muted">Export a stats card →</span>
+          </Link>
+        </div>
       </div>
 
       <div className="mt-6">

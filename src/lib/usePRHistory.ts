@@ -45,5 +45,14 @@ export function usePRHistory() {
     [all],
   )
 
-  return { historyFor, addEntry, deleteEntry, lastUnitFor }
+  // Every logged entry across every movement, newest first — used by the
+  // stats card export to find "the most recently logged PR" without the
+  // caller needing to know which movement it belongs to.
+  const allEntries = useCallback((): PREntry[] => {
+    return Object.values(all)
+      .flat()
+      .sort((a, b) => b.date.localeCompare(a.date))
+  }, [all])
+
+  return { historyFor, addEntry, deleteEntry, lastUnitFor, allEntries }
 }

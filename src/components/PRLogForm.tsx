@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { isTimeMetric, parseSeconds } from '../lib/prFormat'
 import { usePRHistory } from '../lib/usePRHistory'
 import { METRIC_LABELS, METRIC_UNITS, type MetricType } from '../types/pr'
@@ -27,6 +28,7 @@ export default function PRLogForm({
   )
   const [valueInput, setValueInput] = useState('')
   const [error, setError] = useState<string | null>(null)
+  const [justSaved, setJustSaved] = useState(false)
 
   function changeMetric(next: MetricType) {
     setMetricType(next)
@@ -49,7 +51,27 @@ export default function PRLogForm({
       programContext,
       notes: null,
     })
-    onSaved?.()
+    setJustSaved(true)
+  }
+
+  if (justSaved) {
+    return (
+      <div className="flex items-center justify-between rounded-lg bg-bg-raised p-3">
+        <p className="text-sm text-ink">PR saved. Want to share it?</p>
+        <div className="flex shrink-0 items-center gap-2">
+          <Link
+            to="/progress/share?template=pr"
+            onClick={() => onSaved?.()}
+            className="rounded-lg bg-accent px-3 py-1.5 text-xs font-medium text-bg"
+          >
+            Share
+          </Link>
+          <button onClick={() => onSaved?.()} className="text-xs text-ink-muted underline">
+            No thanks
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (

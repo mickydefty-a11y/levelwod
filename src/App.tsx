@@ -12,6 +12,7 @@ import ProgramComparisonView from './pages/ProgramComparisonView'
 import ProgramDetail from './pages/ProgramDetail'
 import ProgramQuizPage from './pages/ProgramQuizPage'
 import Progress from './pages/Progress'
+import ShareCard from './pages/ShareCard'
 import Timer from './pages/Timer'
 import Welcome from './pages/Welcome'
 import Wod from './pages/Wod'
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/programs/compare" element={<ProgramComparisonView />} />
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
+          <Route path="/progress/share" element={<ShareCard />} />
           <Route path="/tools/1rm-calculator" element={<OneRepMaxCalculatorPage />} />
           <Route path="/timer" element={<Timer />} />
           <Route path="/breathing" element={<Breathing />} />

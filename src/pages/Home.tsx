@@ -10,7 +10,7 @@ import { useBodyweightProfile } from '../lib/useBodyweightProfile'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
 import { useTodaysWod } from '../lib/useTodaysWod'
-import { useWorkoutLog } from '../lib/useWorkoutLog'
+import { useWorkoutLog, workoutLogStore } from '../lib/useWorkoutLog'
 import { wodSummary } from '../lib/wodDisplay'
 import type { Movement } from '../types/movement'
 import type { Program } from '../types/program'
@@ -24,6 +24,9 @@ export default function Home() {
   const { profile } = useBodyweightProfile()
   const { log } = useWorkoutLog()
   const [showBreathingOffer, setShowBreathingOffer] = useState(false)
+  const [shareOffer, setShareOffer] = useState<{ template: 'journey' | 'streak'; heading: string } | null>(
+    null,
+  )
   const todaysWod = useTodaysWod()
 
   useEffect(() => {
@@ -119,7 +122,21 @@ export default function Home() {
               day={day}
               movementIndex={movementIndex}
               isFinalDay={isFinalDay}
-              onCompleted={() => setShowBreathingOffer(true)}
+              onCompleted={() => {
+                setShowBreathingOffer(true)
+                if (isFinalDay) {
+                  setShareOffer({ template: 'journey', heading: 'Program complete! 🎉' })
+                } else {
+                  // Read a fresh snapshot rather than the `log` closed over by
+                  // this render — addEntry() has already written the new
+                  // session by the time this fires, but this render's `log`
+                  // hasn't caught up yet.
+                  const freshStreak = getCurrentStreak(workoutLogStore.getSnapshot())
+                  if (freshStreak === 3 || freshStreak % 7 === 0) {
+                    setShareOffer({ template: 'streak', heading: `🔥 ${freshStreak}-day streak!` })
+                  }
+                }
+              }}
             />
           </div>
         </div>
@@ -151,6 +168,30 @@ export default function Home() {
             </Link>
             <button
               onClick={() => setShowBreathingOffer(false)}
+              aria-label="Dismiss"
+              className="text-xs text-ink-muted underline"
+            >
+              No thanks
+            </button>
+          </div>
+        </div>
+      )}
+
+      {shareOffer && (
+        <div className="mt-4 flex items-center justify-between rounded-xl bg-bg-surface p-4">
+          <div>
+            <p className="text-sm font-medium">{shareOffer.heading}</p>
+            <p className="mt-0.5 text-xs text-ink-muted">Want to share it?</p>
+          </div>
+          <div className="flex shrink-0 items-center gap-2">
+            <Link
+              to={`/progress/share?template=${shareOffer.template}`}
+              className="rounded-lg bg-accent px-3 py-1.5 text-xs font-medium text-bg"
+            >
+              Share
+            </Link>
+            <button
+              onClick={() => setShareOffer(null)}
               aria-label="Dismiss"
               className="text-xs text-ink-muted underline"
             >
