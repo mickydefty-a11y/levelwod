@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import BackLink from '../components/BackLink'
+import MovementNotes from '../components/MovementNotes'
 import PersonalBests from '../components/PersonalBests'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { levelIndex } from '../lib/levels'
@@ -106,6 +107,8 @@ export default function MovementDetail() {
           ))
         )}
       </div>
+
+      <MovementNotes movementId={movement.id} />
 
       {(movement.prerequisites.length > 0 || movement.variantOf) && (
         <div className="mt-4 text-sm">

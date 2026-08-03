@@ -5,16 +5,49 @@ import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
+import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
 import { useTodaysWod } from '../lib/useTodaysWod'
 import { tierFillLabel, wodFormatLabel } from '../lib/wodDisplay'
 import type { Movement } from '../types/movement'
-import type { WodTier } from '../types/wod'
+import type { WodSlot, WodTier } from '../types/wod'
 
 const TIERS: { id: WodTier; label: string }[] = [
   { id: 'rx', label: 'RX' },
   { id: 'intermediate', label: 'Intermediate' },
   { id: 'scaled', label: 'Scaled' },
 ]
+
+function WodSlotRow({ slot, tier, movement }: { slot: WodSlot; tier: WodTier; movement?: Movement }) {
+  const fill = slot.tiers[tier]
+  const { note, show: showNote, toggle: toggleNote } = useMovementNoteToggle(fill.movementId)
+
+  return (
+    <li className="rounded-xl bg-bg-surface p-4">
+      <p className="text-xs text-ink-muted">{slot.subcategory}</p>
+      <div className="mt-0.5 flex items-center gap-2">
+        <Link to={`/library/${fill.movementId}`} className="text-base font-medium">
+          {tierFillLabel(fill, movement)}
+        </Link>
+        {note && (
+          <button
+            onClick={toggleNote}
+            aria-label={showNote ? 'Hide note' : 'Show note'}
+            className="shrink-0 text-xs text-ink-muted"
+          >
+            📝
+          </button>
+        )}
+      </div>
+      {showNote && note && (
+        <p className="mt-1 rounded-md bg-bg-raised px-2 py-1.5 text-xs italic text-ink-muted">
+          {note.note}
+        </p>
+      )}
+      <p className="mt-1 text-sm text-accent-light">{fill.amount}</p>
+      {fill.loadNote && <p className="mt-0.5 text-xs text-ink-muted">{fill.loadNote}</p>}
+    </li>
+  )
+}
 
 export default function Wod() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
@@ -76,23 +109,14 @@ export default function Wod() {
           />
 
           <ul className="mt-4 space-y-2">
-            {wod.slots.map((slot, i) => {
-              const fill = slot.tiers[tier]
-              const movement = movementIndex.get(fill.movementId)
-              return (
-                <li key={i} className="rounded-xl bg-bg-surface p-4">
-                  <p className="text-xs text-ink-muted">{slot.subcategory}</p>
-                  <Link
-                    to={`/library/${fill.movementId}`}
-                    className="mt-0.5 block text-base font-medium"
-                  >
-                    {tierFillLabel(fill, movement)}
-                  </Link>
-                  <p className="mt-1 text-sm text-accent-light">{fill.amount}</p>
-                  {fill.loadNote && <p className="mt-0.5 text-xs text-ink-muted">{fill.loadNote}</p>}
-                </li>
-              )
-            })}
+            {wod.slots.map((slot, i) => (
+              <WodSlotRow
+                key={i}
+                slot={slot}
+                tier={tier}
+                movement={movementIndex.get(slot.tiers[tier].movementId)}
+              />
+            ))}
           </ul>
         </>
       )}

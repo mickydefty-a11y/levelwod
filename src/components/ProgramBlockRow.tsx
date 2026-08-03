@@ -5,6 +5,7 @@ import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
 import { calculateLoadWeight, type LoadContext } from '../lib/trainingMax'
 import { timerConfigToPath } from '../lib/timerUrl'
+import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
 import { useSubstitutions } from '../lib/useSubstitutions'
 import type { Movement } from '../types/movement'
 import type { ProgramBlock } from '../types/program'
@@ -49,6 +50,9 @@ export default function ProgramBlockRow({
   const { activeSubstituteFor } = useSubstitutions()
   const substituteId = movement ? activeSubstituteFor(movement.id) : null
   const displayMovement = (substituteId && index.get(substituteId)) || movement
+  const { note, show: showNote, toggle: toggleNote } = useMovementNoteToggle(
+    displayMovement?.id ?? block.movementId,
+  )
 
   const base =
     block.loadConfig?.basedOn === 'oneRepMax'
@@ -75,6 +79,15 @@ export default function ProgramBlockRow({
           <Link to={`/library/${displayMovement?.id ?? block.movementId}`} className="text-sm font-medium">
             {displayMovement?.name ?? block.movementId}
           </Link>
+          {note && (
+            <button
+              onClick={toggleNote}
+              aria-label={showNote ? 'Hide note' : 'Show note'}
+              className="shrink-0 text-xs text-ink-muted"
+            >
+              📝
+            </button>
+          )}
         </div>
         <span
           className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${blockTypeStyle[block.blockType]}`}
@@ -83,6 +96,11 @@ export default function ProgramBlockRow({
         </span>
       </div>
       {stage && !substituteId && <p className="mt-0.5 text-xs text-accent-light">{stage.name}</p>}
+      {showNote && note && (
+        <p className="mt-1 rounded-md bg-bg-raised px-2 py-1.5 text-xs italic text-ink-muted">
+          {note.note}
+        </p>
+      )}
       <p className="mt-1 text-xs text-ink-muted">
         {loadWeight != null && (
           <span className="font-semibold text-ink">

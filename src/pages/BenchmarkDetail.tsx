@@ -8,6 +8,8 @@ import { movementFillLabel } from '../lib/benchmarkDisplay'
 import { getBenchmarkWod } from '../lib/benchmarkWods'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
+import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
+import type { BenchmarkMovementFill } from '../types/benchmark'
 import type { Movement } from '../types/movement'
 import type { WodTier } from '../types/wod'
 
@@ -16,6 +18,41 @@ const TIERS: { id: WodTier; label: string }[] = [
   { id: 'intermediate', label: 'Intermediate' },
   { id: 'scaled', label: 'Scaled' },
 ]
+
+function BenchmarkMovementRow({
+  fill,
+  movement,
+}: {
+  fill: BenchmarkMovementFill
+  movement?: Movement
+}) {
+  const { note, show: showNote, toggle: toggleNote } = useMovementNoteToggle(fill.movementId)
+
+  return (
+    <li className="rounded-xl bg-bg-surface p-4">
+      <div className="flex items-center gap-2">
+        <Link to={`/library/${fill.movementId}`} className="text-base font-medium">
+          {movementFillLabel(fill, movement)}
+        </Link>
+        {note && (
+          <button
+            onClick={toggleNote}
+            aria-label={showNote ? 'Hide note' : 'Show note'}
+            className="shrink-0 text-xs text-ink-muted"
+          >
+            📝
+          </button>
+        )}
+      </div>
+      {showNote && note && (
+        <p className="mt-1 rounded-md bg-bg-raised px-2 py-1.5 text-xs italic text-ink-muted">
+          {note.note}
+        </p>
+      )}
+      {fill.loadNote && <p className="mt-1 text-sm text-accent-light">{fill.loadNote}</p>}
+    </li>
+  )
+}
 
 export default function BenchmarkDetail() {
   const { id } = useParams<{ id: string }>()
@@ -106,17 +143,9 @@ export default function BenchmarkDetail() {
           />
 
           <ul className="mt-4 space-y-2">
-            {tierData.movements.map((fill, i) => {
-              const movement = movementIndex.get(fill.movementId)
-              return (
-                <li key={i} className="rounded-xl bg-bg-surface p-4">
-                  <Link to={`/library/${fill.movementId}`} className="text-base font-medium">
-                    {movementFillLabel(fill, movement)}
-                  </Link>
-                  {fill.loadNote && <p className="mt-1 text-sm text-accent-light">{fill.loadNote}</p>}
-                </li>
-              )
-            })}
+            {tierData.movements.map((fill, i) => (
+              <BenchmarkMovementRow key={i} fill={fill} movement={movementIndex.get(fill.movementId)} />
+            ))}
           </ul>
           {tierData.note && <p className="mt-2 text-xs italic text-ink-muted">{tierData.note}</p>}
         </div>
