@@ -1,5 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import BenchmarkDetail from './pages/BenchmarkDetail'
+import BenchmarkLibrary from './pages/BenchmarkLibrary'
 import BottomNav from './components/BottomNav'
 import Breathing from './pages/Breathing'
 import Home from './pages/Home'
@@ -11,8 +12,11 @@ import Programs from './pages/Programs'
 import ProgramComparisonView from './pages/ProgramComparisonView'
 import ProgramDetail from './pages/ProgramDetail'
 import ProgramQuizPage from './pages/ProgramQuizPage'
+import PRHistoryOverview from './pages/PRHistoryOverview'
 import Progress from './pages/Progress'
 import ShareCard from './pages/ShareCard'
+import StandardsHub from './pages/StandardsHub'
+import ThisWeekDetail from './pages/ThisWeekDetail'
 import Timer from './pages/Timer'
 import Welcome from './pages/Welcome'
 import Wod from './pages/Wod'
@@ -38,10 +42,14 @@ export default function App() {
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/progress/share" element={<ShareCard />} />
+          <Route path="/progress/standards" element={<StandardsHub />} />
+          <Route path="/progress/pr-history" element={<PRHistoryOverview />} />
+          <Route path="/progress/this-week" element={<ThisWeekDetail />} />
           <Route path="/tools/1rm-calculator" element={<OneRepMaxCalculatorPage />} />
           <Route path="/timer" element={<Timer />} />
           <Route path="/breathing" element={<Breathing />} />
           <Route path="/wod" element={<Wod />} />
+          <Route path="/benchmarks" element={<BenchmarkLibrary />} />
           <Route path="/benchmarks/:id" element={<BenchmarkDetail />} />
         </Routes>
       </main>

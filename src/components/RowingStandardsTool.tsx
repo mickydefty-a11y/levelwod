@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StandardsDisclaimer from './StandardsDisclaimer'
 import { CITATION } from '../lib/rowingStandardsData'
 import { classifyRowingTime } from '../lib/rowingStandards'
 import { formatSeconds, parseSeconds } from '../lib/prFormat'
@@ -29,24 +30,19 @@ export default function RowingStandardsTool() {
     <div className="rounded-xl bg-bg-surface p-4">
       <h2 className="text-sm font-semibold text-accent">Rowing Standards</h2>
 
-      <div className="mt-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-2">
-        {CITATION ? (
-          <p className="text-xs leading-relaxed text-ink-muted">
-            Rowing data sourced from {CITATION}. People who submit times to Concept2's logbook skew
-            toward more serious, competitive rowers — the 50th percentile here represents a higher
-            fitness level than the general population.
-          </p>
-        ) : (
-          <p className="text-xs leading-relaxed text-yellow-200">
-            <span className="font-semibold">⚠️ Placeholder data — not yet sourced.</span> The
-            percentile times below are illustrative only, not real Concept2 rankings data. They'll
-            be replaced with numbers pulled from Concept2's Online Rankings before this tool is
-            accurate. Don't rely on the percentile shown yet. (Once sourced, remember: logbook
-            submitters skew toward serious, competitive rowers — the 50th percentile represents a
-            higher fitness level than the general population.)
-          </p>
-        )}
-      </div>
+      <StandardsDisclaimer
+        isPlaceholder={!CITATION}
+        summary={
+          CITATION
+            ? "Concept2 logbook data — skews toward competitive rowers. Tap for details."
+            : 'Placeholder data — not yet sourced. Tap for details.'
+        }
+        detail={
+          CITATION
+            ? `Rowing data sourced from ${CITATION}. People who submit times to Concept2's logbook skew toward more serious, competitive rowers — the 50th percentile here represents a higher fitness level than the general population.`
+            : "The percentile times below are illustrative only, not real Concept2 rankings data. They'll be replaced with numbers pulled from Concept2's Online Rankings before this tool is accurate. Don't rely on the percentile shown yet. (Once sourced, remember: logbook submitters skew toward serious, competitive rowers — the 50th percentile represents a higher fitness level than the general population.)"
+        }
+      />
 
       <div className="mt-3 grid grid-cols-2 gap-2">
         <div>

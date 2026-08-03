@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StandardsDisclaimer from './StandardsDisclaimer'
 import { CITATION } from '../lib/runningStandardsData'
 import { calculateAgeGrade } from '../lib/runningStandards'
 import { parseSeconds } from '../lib/prFormat'
@@ -22,22 +23,19 @@ export default function RunningStandardsTool() {
     <div className="rounded-xl bg-bg-surface p-4">
       <h2 className="text-sm font-semibold text-accent">Running Standards</h2>
 
-      <div className="mt-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-2">
-        {CITATION ? (
-          <p className="text-xs leading-relaxed text-ink-muted">
-            Running data uses WMA age-grading standards ({CITATION}). Your age-graded % is your
-            time as a percentage of the world-record standard for your age and gender — a useful
-            reference point, not a precise ranking.
-          </p>
-        ) : (
-          <p className="text-xs leading-relaxed text-yellow-200">
-            <span className="font-semibold">⚠️ Placeholder data — not yet sourced.</span> The
-            age-grading standards below are illustrative only, not the real WMA/Alan Jones
-            age-grading tables. They'll be replaced with the actual published age-grading factor
-            dataset before this tool is accurate. Don't rely on the percentage or tier shown yet.
-          </p>
-        )}
-      </div>
+      <StandardsDisclaimer
+        isPlaceholder={!CITATION}
+        summary={
+          CITATION
+            ? 'WMA age-grading standards — a reference point, not a precise ranking. Tap for details.'
+            : 'Placeholder data — not yet sourced. Tap for details.'
+        }
+        detail={
+          CITATION
+            ? `Running data uses WMA age-grading standards (${CITATION}). Your age-graded % is your time as a percentage of the world-record standard for your age and gender — a useful reference point, not a precise ranking.`
+            : "The age-grading standards below are illustrative only, not the real WMA/Alan Jones age-grading tables. They'll be replaced with the actual published age-grading factor dataset before this tool is accurate. Don't rely on the percentage or tier shown yet."
+        }
+      />
 
       <div className="mt-3 grid grid-cols-2 gap-2">
         <div>

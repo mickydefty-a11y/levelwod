@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import OneRepMaxCalculator from './OneRepMaxCalculator'
+import StandardsDisclaimer from './StandardsDisclaimer'
 import { CITATION } from '../lib/strengthStandardsData'
 import { classifyStrength, STANDARDS_MOVEMENT_IDS, thresholdsFor } from '../lib/strengthStandards'
 import { useBodyweightProfile } from '../lib/useBodyweightProfile'
@@ -57,23 +58,19 @@ export default function StrengthStandardsTool({
     <div className="rounded-xl bg-bg-surface p-4">
       <h2 className="text-sm font-semibold text-accent">Strength Standards</h2>
 
-      <div className="mt-2 rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-2">
-        {CITATION ? (
-          <p className="text-xs leading-relaxed text-ink-muted">
-            These standards are based on general strength training population data (not
-            CrossFit-specific competition data), sourced from {CITATION}. They're a useful
-            reference point, not a precise ranking — actual percentiles vary by training history,
-            sport background, and the specific population being compared against.
-          </p>
-        ) : (
-          <p className="text-xs leading-relaxed text-yellow-200">
-            <span className="font-semibold">⚠️ Placeholder data — not yet sourced.</span> The
-            thresholds below are illustrative only, not real published strength standards. They'll
-            be replaced with numbers from a cited, reputable source (e.g. ExRx.net or Strength
-            Level) before this tool is accurate. Don't rely on the tier shown yet.
-          </p>
-        )}
-      </div>
+      <StandardsDisclaimer
+        isPlaceholder={!CITATION}
+        summary={
+          CITATION
+            ? 'Based on general population data, not CrossFit-specific — tap for details.'
+            : 'Placeholder data — not yet sourced. Tap for details.'
+        }
+        detail={
+          CITATION
+            ? `These standards are based on general strength training population data (not CrossFit-specific competition data), sourced from ${CITATION}. They're a useful reference point, not a precise ranking — actual percentiles vary by training history, sport background, and the specific population being compared against.`
+            : "The thresholds below are illustrative only, not real published strength standards. They'll be replaced with numbers from a cited, reputable source (e.g. ExRx.net or Strength Level) before this tool is accurate. Don't rely on the tier shown yet."
+        }
+      />
 
       <div className="mt-3 grid grid-cols-2 gap-2">
         <div>

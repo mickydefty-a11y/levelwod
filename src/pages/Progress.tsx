@@ -1,11 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
-import RowingStandardsTool from '../components/RowingStandardsTool'
-import RunningStandardsTool from '../components/RunningStandardsTool'
-import StrengthStandardsTool from '../components/StrengthStandardsTool'
+import ExpandableTile from '../components/ExpandableTile'
 import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
-import { buildMovementIndex, loadMovements } from '../lib/loadData'
+import { loadMovements } from '../lib/loadData'
 import { getLongestStreak, getMovementsAtOrAboveRX, getTotalSessions } from '../lib/streakStats'
 import { useProgramHistory } from '../lib/useProgramHistory'
 import { useProgress } from '../lib/useProgress'
@@ -69,11 +67,6 @@ export default function Progress() {
       .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
   }, [movements, progress])
 
-  const movementIndex = useMemo(
-    () => (movements ? buildMovementIndex(movements) : null),
-    [movements],
-  )
-
   const longestStreak = getLongestStreak(log)
   const totalSessions = getTotalSessions(log)
   const skillsUnlocked = movements ? getMovementsAtOrAboveRX(movements, progress) : 0
@@ -105,31 +98,13 @@ export default function Progress() {
       </div>
 
       <div className="mt-6">
-        <h2 className="text-sm font-semibold text-accent">Tools</h2>
-        <div className="mt-1.5 space-y-2">
-          <Link
-            to="/tools/1rm-calculator"
-            className="flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
-          >
-            <span className="font-medium">1RM Calculator</span>
-            <span className="text-xs text-ink-muted">Estimate your one-rep max →</span>
-          </Link>
-          <Link
-            to="/progress/share"
-            className="flex items-center justify-between rounded-xl bg-bg-surface p-3 text-sm"
-          >
-            <span className="font-medium">Share your progress</span>
-            <span className="text-xs text-ink-muted">Export a stats card →</span>
-          </Link>
-        </div>
-      </div>
-
-      <div className="mt-6">
-        <h2 className="text-sm font-semibold text-accent">Standards &amp; Percentiles</h2>
-        <div className="mt-1.5 space-y-3">
-          {movementIndex && <StrengthStandardsTool movementIndex={movementIndex} />}
-          <RowingStandardsTool />
-          <RunningStandardsTool />
+        <h2 className="text-sm font-semibold text-accent">Tools &amp; Insights</h2>
+        <div className="mt-1.5 grid grid-cols-3 gap-2">
+          <ExpandableTile variant="grid" icon="🔥" title="This Week" to="/progress/this-week" />
+          <ExpandableTile variant="grid" icon="📈" title="PR History" to="/progress/pr-history" />
+          <ExpandableTile variant="grid" icon="🏅" title="Standards" to="/progress/standards" />
+          <ExpandableTile variant="grid" icon="🧮" title="1RM Calculator" to="/tools/1rm-calculator" />
+          <ExpandableTile variant="grid" icon="📤" title="Share Progress" to="/progress/share" />
         </div>
       </div>
 

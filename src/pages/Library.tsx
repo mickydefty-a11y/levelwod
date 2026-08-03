@@ -36,6 +36,7 @@ export default function Library() {
   const [category, setCategory] = useState(ALL)
   const [level, setLevel] = useState(ALL)
   const [bodyweightOnly, setBodyweightOnly] = useState(false)
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
   const { choiceFor } = useSubstitutions()
 
   useEffect(() => {
@@ -75,6 +76,15 @@ export default function Library() {
     setCategory(ALL)
     setLevel(ALL)
     setBodyweightOnly(false)
+  }
+
+  function toggleCategory(cat: string) {
+    setExpandedCategories((prev) => {
+      const next = new Set(prev)
+      if (next.has(cat)) next.delete(cat)
+      else next.add(cat)
+      return next
+    })
   }
 
   return (
@@ -140,48 +150,64 @@ export default function Library() {
       ) : grouped.size === 0 ? (
         <p className="mt-4 text-sm text-ink-muted">No movements match your filters.</p>
       ) : (
-        <div className="mt-4 space-y-6">
-          {[...grouped.entries()].map(([cat, subgroups]) => (
-            <section key={cat}>
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-accent">{cat}</h2>
-              <div className="mt-2 space-y-4">
-                {[...subgroups.entries()].map(([subcategory, items]) => (
-                  <div key={subcategory}>
-                    <h3 className="text-xs font-medium text-ink-muted">{subcategory}</h3>
-                    <ul className="mt-1.5 space-y-1.5">
-                      {items.map((movement) => {
-                        const choice = choiceFor(movement.id)
-                        const ongoingSub =
-                          choice?.scope === 'ongoing' ? byId.get(choice.substitutedWith) : null
-                        return (
-                          <li key={movement.id}>
-                            <Link
-                              to={`/library/${movement.id}`}
-                              className="flex items-center justify-between rounded-lg bg-bg-surface px-3 py-2 hover:bg-bg-raised"
-                            >
-                              <span className="text-sm">
-                                {movement.name}
-                                {ongoingSub && (
-                                  <span className="block text-[10px] text-accent-light">
-                                    Swapped for {ongoingSub.name}
+        <div className="mt-4 space-y-3">
+          {[...grouped.entries()].map(([cat, subgroups]) => {
+            const count = [...subgroups.values()].reduce((sum, items) => sum + items.length, 0)
+            const isExpanded = filtersActive || expandedCategories.has(cat)
+            return (
+              <section key={cat}>
+                <button
+                  onClick={() => toggleCategory(cat)}
+                  className="flex w-full items-center justify-between rounded-lg bg-bg-surface px-3 py-2.5"
+                  aria-expanded={isExpanded}
+                >
+                  <span className="text-sm font-semibold uppercase tracking-wide text-accent">{cat}</span>
+                  <span className="flex items-center gap-2 text-xs text-ink-muted">
+                    {count} movement{count === 1 ? '' : 's'}
+                    <span className="text-ink-muted">{isExpanded ? '▲' : '▼'}</span>
+                  </span>
+                </button>
+                {isExpanded && (
+                  <div className="mt-2 space-y-4 pl-1">
+                    {[...subgroups.entries()].map(([subcategory, items]) => (
+                      <div key={subcategory}>
+                        <h3 className="text-xs font-medium text-ink-muted">{subcategory}</h3>
+                        <ul className="mt-1.5 space-y-1.5">
+                          {items.map((movement) => {
+                            const choice = choiceFor(movement.id)
+                            const ongoingSub =
+                              choice?.scope === 'ongoing' ? byId.get(choice.substitutedWith) : null
+                            return (
+                              <li key={movement.id}>
+                                <Link
+                                  to={`/library/${movement.id}`}
+                                  className="flex items-center justify-between rounded-lg bg-bg-surface px-3 py-2 hover:bg-bg-raised"
+                                >
+                                  <span className="text-sm">
+                                    {movement.name}
+                                    {ongoingSub && (
+                                      <span className="block text-[10px] text-accent-light">
+                                        Swapped for {ongoingSub.name}
+                                      </span>
+                                    )}
                                   </span>
-                                )}
-                              </span>
-                              <span
-                                className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${typeBadge[movement.type]}`}
-                              >
-                                {movement.type}
-                              </span>
-                            </Link>
-                          </li>
-                        )
-                      })}
-                    </ul>
+                                  <span
+                                    className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${typeBadge[movement.type]}`}
+                                  >
+                                    {movement.type}
+                                  </span>
+                                </Link>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </section>
-          ))}
+                )}
+              </section>
+            )
+          })}
         </div>
       )}
     </div>

@@ -130,7 +130,7 @@ export default function BenchmarkDetail() {
 
   return (
     <div>
-      <BackLink to="/programs" label="Programs" />
+      <BackLink to="/benchmarks" label="Benchmark WODs" />
 
       <div className="mt-2 flex items-baseline justify-between gap-2">
         <h1 className="text-2xl font-semibold">{benchmark.name}</h1>

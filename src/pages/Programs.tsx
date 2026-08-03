@@ -1,24 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { lastResultLabel } from '../lib/benchmarkDisplay'
+import ExpandableTile from '../components/ExpandableTile'
 import { BENCHMARK_WODS } from '../lib/benchmarkWods'
 import { loadPrograms } from '../lib/loadData'
-import { usePRHistory } from '../lib/usePRHistory'
 import { useProgramHistory } from '../lib/useProgramHistory'
-import type { WodCategory } from '../types/benchmark'
 import type { Program, ProgramCategory } from '../types/program'
 
 const ALL = 'All'
 const LEVEL_ORDER = ['Beginner', 'Intermediate', 'Advanced']
-const BENCHMARK_CATEGORIES: (typeof ALL | WodCategory)[] = [ALL, 'Girl', 'Hero']
 
 export default function Programs() {
   const [programs, setPrograms] = useState<Program[] | null>(null)
   const [level, setLevel] = useState(ALL)
   const [category, setCategory] = useState(ALL)
-  const [benchmarkCategory, setBenchmarkCategory] = useState<typeof ALL | WodCategory>(ALL)
   const { isCompleted } = useProgramHistory()
-  const { historyFor } = usePRHistory()
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -46,10 +41,6 @@ export default function Programs() {
   }, [programs, level, category])
 
   const filtersActive = level !== ALL || category !== ALL
-
-  const filteredBenchmarks = BENCHMARK_WODS.filter(
-    (b) => benchmarkCategory === ALL || b.wodCategory === benchmarkCategory,
-  )
 
   return (
     <div>
@@ -152,45 +143,14 @@ export default function Programs() {
 
       <div className="mt-8">
         <h2 className="text-lg font-semibold">Benchmark WODs</h2>
-        <p className="mt-1 text-xs text-ink-muted">
-          Classic, named workouts worth repeating over time — not something you "start," just do again
-          whenever you want to see how you've progressed.
-        </p>
-
-        <div className="mt-3 flex gap-1.5">
-          {BENCHMARK_CATEGORIES.map((c) => (
-            <button
-              key={c}
-              onClick={() => setBenchmarkCategory(c)}
-              className={`shrink-0 whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium ${
-                benchmarkCategory === c ? 'bg-accent text-bg' : 'bg-bg-surface text-ink-muted'
-              }`}
-            >
-              {c === ALL ? 'All' : `${c} WODs`}
-            </button>
-          ))}
+        <div className="mt-2">
+          <ExpandableTile
+            icon="🏆"
+            title="Benchmark WODs"
+            subtitle={`${BENCHMARK_WODS.length} classics — Girl & Hero WODs`}
+            to="/benchmarks"
+          />
         </div>
-
-        <ul className="mt-3 space-y-2">
-          {filteredBenchmarks.map((b) => {
-            const lastResult = lastResultLabel(historyFor(b.id))
-            return (
-              <li key={b.id}>
-                <Link
-                  to={`/benchmarks/${b.id}`}
-                  className="block rounded-xl bg-bg-surface p-4 hover:bg-bg-raised"
-                >
-                  <div className="flex items-baseline justify-between gap-2">
-                    <h3 className="font-medium">{b.name}</h3>
-                    <span className="shrink-0 text-xs text-accent-light">{b.wodCategory} WOD</span>
-                  </div>
-                  <p className="mt-1 text-xs text-ink-muted">{b.format}</p>
-                  {lastResult && <p className="mt-1 text-xs text-accent-light">{lastResult}</p>}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
       </div>
     </div>
   )
