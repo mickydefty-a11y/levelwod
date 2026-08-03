@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import VoiceModeToggle from '../components/VoiceModeToggle'
 import { paramsToTimerConfig } from '../lib/timerUrl'
+import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useTimer } from '../lib/useTimer'
 import { useTimerVoiceCues } from '../lib/useTimerVoiceCues'
 import { useWakeLock } from '../lib/useWakeLock'
@@ -68,8 +69,17 @@ function Stepper({
 
 export default function TimerPage() {
   const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
   const initial = useMemo(() => paramsToTimerConfig(searchParams), [searchParams])
   const movementLabel = searchParams.get('label')
+  // Present only when launched from the workout session flow (Start Now on
+  // a Benchmark WOD or the WOD Generator) — everyday callers like
+  // ProgramBlockRow's "Start Timer" never set these, so this whole session
+  // affordance stays invisible to them.
+  const sessionId = searchParams.get('sessionId')
+  const returnTo = searchParams.get('returnTo')
+  const isSession = !!(sessionId && returnTo)
+  const { saveDraft } = useSessionResultDraft(sessionId ?? '')
 
   const [type, setType] = useState<TimerType>(initial?.type ?? 'intervals')
   const [workSeconds, setWorkSeconds] = useState(
@@ -115,6 +125,20 @@ export default function TimerPage() {
   useTimerVoiceCues(timer, config, movementLabel)
 
   const isEditing = timer.status === 'idle'
+
+  function commitAndReturn() {
+    if (!isSession) return
+    saveDraft({
+      elapsedSeconds: config.type === 'stopwatch' ? timer.secondsElapsed : undefined,
+      amrapRounds: config.type === 'amrap' ? timer.amrapRounds : undefined,
+    })
+    navigate(returnTo!)
+  }
+
+  function handleMarkComplete() {
+    timer.finish()
+    commitAndReturn()
+  }
 
   return (
     <div>
@@ -256,13 +280,22 @@ export default function TimerPage() {
                     Resume
                   </button>
                 )}
-                {type === 'stopwatch' && (
+                {isSession ? (
                   <button
-                    onClick={timer.finish}
+                    onClick={handleMarkComplete}
                     className="flex-1 rounded-lg bg-accent py-3.5 text-base font-semibold text-bg"
                   >
-                    Finish
+                    Mark Complete
                   </button>
+                ) : (
+                  type === 'stopwatch' && (
+                    <button
+                      onClick={timer.finish}
+                      className="flex-1 rounded-lg bg-accent py-3.5 text-base font-semibold text-bg"
+                    >
+                      Finish
+                    </button>
+                  )
                 )}
                 <button
                   onClick={timer.reset}
@@ -284,10 +317,10 @@ export default function TimerPage() {
                 <p className="mt-3 text-sm text-ink-muted">Rounds completed: {timer.amrapRounds}</p>
               )}
               <button
-                onClick={timer.reset}
+                onClick={isSession ? commitAndReturn : timer.reset}
                 className="mt-8 w-full rounded-lg bg-accent py-3.5 text-base font-semibold text-bg"
               >
-                Done
+                {isSession ? 'Log Result →' : 'Done'}
               </button>
             </>
           )}

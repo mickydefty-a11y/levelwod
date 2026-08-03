@@ -20,6 +20,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Fran',
     wodCategory: 'Girl',
     format: '21-15-9 for time',
+    scoreType: 'time',
     description:
       'One of the most well-known benchmarks in CrossFit — short, brutally intense, and a great one to repeat every few months to track real progress.',
     tiers: {
@@ -56,6 +57,8 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Cindy',
     wodCategory: 'Girl',
     format: '20 min AMRAP',
+    scoreType: 'rounds_and_reps',
+    durationSeconds: 1200,
     repScheme: '5-10-15',
     description:
       'A steady, unglamorous grind — 20 minutes of the same 3 movements, rewarding pacing and consistency over raw power.',
@@ -88,6 +91,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Grace',
     wodCategory: 'Girl',
     format: '30 reps for time',
+    scoreType: 'time',
     description:
       'Thirty clean & jerks, as fast as possible — pure barbell cycling speed under a moderate, fixed load.',
     tiers: {
@@ -119,6 +123,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Helen',
     wodCategory: 'Girl',
     format: '3 rounds for time',
+    scoreType: 'time',
     description: 'A classic engine-and-grip test cycling through running, kettlebell swings, and pull-ups.',
     tiers: {
       rx: {
@@ -161,6 +166,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Annie',
     wodCategory: 'Girl',
     format: '50-40-30-20-10 for time',
+    scoreType: 'time',
     description: 'Descending reps of double-unders and sit-ups — a jump-rope skill test as much as a conditioning piece.',
     tiers: {
       rx: {
@@ -185,6 +191,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Karen',
     wodCategory: 'Girl',
     format: 'For time',
+    scoreType: 'time',
     repScheme: '150 reps',
     description: 'One movement, 150 reps, nowhere to hide — a simple but honest test of wall ball capacity.',
     tiers: {
@@ -218,6 +225,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Diane',
     wodCategory: 'Girl',
     format: '21-15-9 for time',
+    scoreType: 'time',
     description: 'Heavy deadlifts paired with handstand push-ups — a real test of a strong posterior chain and shoulders.',
     tiers: {
       rx: {
@@ -257,6 +265,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Isabel',
     wodCategory: 'Girl',
     format: '30 reps for time',
+    scoreType: 'time',
     description: "Grace's sibling — thirty snatches for time, testing the same barbell cycling speed under load.",
     tiers: {
       rx: {
@@ -289,6 +298,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Murph',
     wodCategory: 'Hero',
     format: 'For time',
+    scoreType: 'time',
     description:
       'A mile to open, a mile to close, and a huge volume of bodyweight work in between — one of the most demanding Hero WODs.',
     originNote:
@@ -331,6 +341,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'DT',
     wodCategory: 'Hero',
     format: '5 rounds for time',
+    scoreType: 'time',
     repScheme: '12-9-6',
     description: 'Five rounds of a barbell triplet — deadlifts, hang power cleans, and push jerks without setting the bar down more than necessary.',
     originNote:
@@ -388,6 +399,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Angie',
     wodCategory: 'Girl',
     format: 'For time, complete each movement fully before moving to the next',
+    scoreType: 'time',
     repScheme: '100-100-100-100, in order',
     description:
       '100 reps each of four bodyweight movements, done in order — a real test of pure work capacity and mental toughness rather than skill.',
@@ -423,6 +435,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Barbara',
     wodCategory: 'Girl',
     format: '5 rounds for time, 3 min rest between rounds',
+    scoreType: 'time',
     repScheme: '20-30-40-50, x5 rounds, 3 min rest between',
     description:
       'Five identical rounds of the same four bodyweight movements as Angie, but broken up with mandatory rest — tests both output and recovery within a session.',
@@ -458,6 +471,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Elizabeth',
     wodCategory: 'Girl',
     format: '21-15-9 for time',
+    scoreType: 'time',
     repScheme: '21-15-9',
     description:
       'A short, heavy pairing of a technical lift and a gymnastics push movement — similar shape to Fran, but with Clean and Ring Dip instead of Thruster and Pull-up.',
@@ -495,6 +509,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Kelly',
     wodCategory: 'Girl',
     format: '5 rounds for time',
+    scoreType: 'time',
     repScheme: '5 rounds: run, 30 box jumps, 30 wall balls',
     description:
       'A longer, grindier benchmark pairing running with two loaded gymnastics/conditioning movements — a real engine test.',
@@ -531,6 +546,8 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Mary',
     wodCategory: 'Girl',
     format: '20 min AMRAP',
+    scoreType: 'rounds_and_reps',
+    durationSeconds: 1200,
     repScheme: '5-10-15, repeating for 20 min',
     description:
       'A demanding gymnastics-heavy AMRAP combining an inverted push movement, a single-leg squat, and a pull movement — genuinely advanced even at the RX tier.',
@@ -563,6 +580,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Eva',
     wodCategory: 'Girl',
     format: '5 rounds for time',
+    scoreType: 'time',
     repScheme: '5 rounds: 800m run, 30 KB swings, 30 pull-ups',
     description:
       'A long, punishing combination of running, heavy kettlebell swings, and pull-ups — one of the tougher Girl WODs by total volume.',
@@ -607,6 +625,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Randy',
     wodCategory: 'Hero',
     format: '75 reps for time',
+    scoreType: 'time',
     repScheme: '75 reps straight through',
     description:
       'A short, brutally heavy single-movement test — one of the more purely strength-and-power focused Hero WODs.',
@@ -635,6 +654,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'JT',
     wodCategory: 'Hero',
     format: '21-15-9 for time',
+    scoreType: 'time',
     repScheme: '21-15-9',
     description:
       'Three bodyweight pushing movements of increasing difficulty, in the classic 21-15-9 shape — a Navy SEAL tribute workout.',
@@ -667,6 +687,8 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Nate',
     wodCategory: 'Hero',
     format: '20 min AMRAP',
+    scoreType: 'rounds_and_reps',
+    durationSeconds: 1200,
     repScheme: '2-4-8, repeating for 20 min',
     description:
       'An advanced gymnastics-and-conditioning AMRAP built around the Muscle-Up — a genuine test even for experienced athletes, in tribute to a fallen Navy SEAL.',
@@ -711,6 +733,7 @@ export const BENCHMARK_WODS: BenchmarkWod[] = [
     name: 'Ryan',
     wodCategory: 'Hero',
     format: '5 rounds for time',
+    scoreType: 'time',
     repScheme: '5 rounds: 7 muscle-ups, 21 burpees',
     description:
       'A high-skill, high-intensity Hero WOD pairing Muscle-Ups with Burpees — short on paper, extremely demanding in practice.',

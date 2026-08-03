@@ -183,7 +183,8 @@ export default function Progress() {
                   </span>
                 </div>
                 <p className="text-xs text-ink-muted">
-                  {entry.programName} · Week {entry.weekNumber}
+                  {entry.programName}
+                  {entry.weekNumber != null ? ` · Week ${entry.weekNumber}` : ''}
                 </p>
                 {entry.results.length > 0 ? (
                   <ul className="mt-1.5 space-y-0.5">

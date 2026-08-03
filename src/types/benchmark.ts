@@ -1,3 +1,4 @@
+import type { ScoreType } from './scoreType'
 import type { WodTier } from './wod'
 
 export type WodCategory = 'Girl' | 'Hero'
@@ -20,6 +21,11 @@ export interface BenchmarkWod {
   name: string
   wodCategory: WodCategory
   format: string
+  scoreType: ScoreType
+  // only meaningful when scoreType is 'rounds_and_reps' — the AMRAP window
+  // needed to configure the Timer via "Start Now"; format is free text
+  // ("20 min AMRAP") so this can't be reliably parsed back out of it
+  durationSeconds?: number
   repScheme?: string
   description: string
   // brief, respectful context — present on Hero WODs

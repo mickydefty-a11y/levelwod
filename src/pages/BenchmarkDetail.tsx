@@ -4,11 +4,17 @@ import BackLink from '../components/BackLink'
 import BenchmarkResults from '../components/BenchmarkResults'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
-import { movementFillLabel } from '../lib/benchmarkDisplay'
+import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
+import { movementFillLabel, timerConfigForBenchmark } from '../lib/benchmarkDisplay'
 import { getBenchmarkWod } from '../lib/benchmarkWods'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
+import { formatValue } from '../lib/prFormat'
+import { sessionTimerConfigToPath } from '../lib/timerUrl'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
+import { usePRHistory } from '../lib/usePRHistory'
+import { useSessionResultDraft } from '../lib/useSessionResultDraft'
+import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { BenchmarkMovementFill } from '../types/benchmark'
 import type { Movement } from '../types/movement'
 import type { WodTier } from '../types/wod'
@@ -73,6 +79,9 @@ export default function BenchmarkDetail() {
     sessionMovementIds,
     movementIndex: movementIndex ?? new Map(),
   })
+  const { draft } = useSessionResultDraft(benchmark?.id ?? '')
+  const { addEntry: addPREntry } = usePRHistory()
+  const { addEntry: addWorkoutLogEntry } = useWorkoutLog()
 
   if (!benchmark) {
     return (
@@ -86,6 +95,38 @@ export default function BenchmarkDetail() {
   }
 
   const tierData = benchmark.tiers[tier]
+
+  function handleSessionCommit(result: SessionResult | null, rpe?: number) {
+    if (result) {
+      addPREntry({
+        movementId: benchmark!.id,
+        metricType: result.metricType,
+        value: result.value,
+        unit: result.unit,
+        date: new Date().toISOString().slice(0, 10),
+        programContext: null,
+        notes: null,
+      })
+    }
+    addWorkoutLogEntry({
+      programId: benchmark!.id,
+      programName: 'Benchmark WOD',
+      dayName: benchmark!.name,
+      completedAt: new Date().toISOString(),
+      results: result
+        ? [
+            {
+              blockIndex: 0,
+              movementId: benchmark!.id,
+              movementName: benchmark!.name,
+              prescription: benchmark!.format,
+              result: formatValue(result.metricType, result.value, result.unit),
+            },
+          ]
+        : [],
+      rpe,
+    })
+  }
 
   return (
     <div>
@@ -109,6 +150,27 @@ export default function BenchmarkDetail() {
       )}
       {!benchmark.memorialTribute && benchmark.originNote && (
         <p className="mt-2 text-xs italic leading-relaxed text-ink-muted">{benchmark.originNote}</p>
+      )}
+
+      {draft ? (
+        <div className="mt-4">
+          <WorkoutSessionComplete
+            sessionId={benchmark.id}
+            scoreType={benchmark.scoreType}
+            onCommit={handleSessionCommit}
+          />
+        </div>
+      ) : (
+        <Link
+          to={sessionTimerConfigToPath(timerConfigForBenchmark(benchmark), {
+            sessionId: benchmark.id,
+            returnTo: `/benchmarks/${benchmark.id}`,
+            label: benchmark.name,
+          })}
+          className="mt-4 block w-full rounded-lg bg-accent py-3 text-center text-base font-semibold text-bg"
+        >
+          Start Now
+        </Link>
       )}
 
       {movementIndex && (
@@ -151,7 +213,7 @@ export default function BenchmarkDetail() {
         </div>
       )}
 
-      <BenchmarkResults benchmarkId={benchmark.id} />
+      <BenchmarkResults benchmarkId={benchmark.id} scoreType={benchmark.scoreType} />
     </div>
   )
 }

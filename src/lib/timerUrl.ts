@@ -33,6 +33,21 @@ export function timerConfigToPath(config: TimerConfig, label?: string | null): s
   return `/timer?${timerConfigToParams(config, label).toString()}`
 }
 
+// Additive session variant used by the workout session flow (Benchmark
+// WODs, WOD Generator) — carries a sessionId and a returnTo path so the
+// Timer page can show "Mark Complete" and hand its captured result back to
+// the caller. Existing callers (e.g. ProgramBlockRow's "Start Timer") never
+// pass these, so their behavior is completely unaffected.
+export function sessionTimerConfigToPath(
+  config: TimerConfig,
+  session: { sessionId: string; returnTo: string; label?: string | null },
+): string {
+  const params = timerConfigToParams(config, session.label)
+  params.set('sessionId', session.sessionId)
+  params.set('returnTo', session.returnTo)
+  return `/timer?${params.toString()}`
+}
+
 export function paramsToTimerConfig(params: URLSearchParams): TimerConfig | null {
   const type = params.get('type')
   const num = (key: string): number | undefined => {

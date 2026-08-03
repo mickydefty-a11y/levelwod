@@ -13,8 +13,11 @@ export interface WorkoutLogEntry {
   id: string
   programId: string
   programName: string
-  weekNumber: number
-  dayNumber: number
+  // absent for sessions with no week/day structure — Benchmark WODs and
+  // WOD Generator sessions, logged through this same store so streaks and
+  // history stay unified across every kind of completed session
+  weekNumber?: number
+  dayNumber?: number
   dayName: string
   completedAt: string
   results: LoggedResult[]
@@ -33,7 +36,10 @@ export function useWorkoutLog() {
   const log = useSyncExternalStore(store.subscribe, store.getSnapshot)
 
   const addEntry = useCallback((entry: Omit<WorkoutLogEntry, 'id'>) => {
-    const id = `${entry.programId}-w${entry.weekNumber}d${entry.dayNumber}-${entry.completedAt}`
+    const id =
+      entry.weekNumber != null && entry.dayNumber != null
+        ? `${entry.programId}-w${entry.weekNumber}d${entry.dayNumber}-${entry.completedAt}`
+        : `${entry.programId}-${entry.completedAt}`
     store.update((prev) => [{ ...entry, id }, ...prev])
   }, [])
 

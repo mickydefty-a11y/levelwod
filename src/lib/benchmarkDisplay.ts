@@ -1,8 +1,20 @@
 import { findStage } from './loadData'
-import { formatSeconds } from './prFormat'
+import { formatValue } from './prFormat'
 import type { Movement } from '../types/movement'
 import type { PREntry } from '../types/pr'
-import type { BenchmarkMovementFill } from '../types/benchmark'
+import type { BenchmarkMovementFill, BenchmarkWod } from '../types/benchmark'
+import type { TimerConfig } from '../types/timer'
+
+// Reuses the exact TimerConfig shapes the Timer feature already supports —
+// "for time" is an open-ended stopwatch, AMRAP needs the benchmark's own
+// durationSeconds (format is free text like "20 min AMRAP" and isn't safely
+// parseable back into a number).
+export function timerConfigForBenchmark(benchmark: BenchmarkWod): TimerConfig {
+  if (benchmark.scoreType === 'rounds_and_reps') {
+    return { type: 'amrap', durationSeconds: benchmark.durationSeconds ?? 1200 }
+  }
+  return { type: 'stopwatch' }
+}
 
 export function movementFillLabel(fill: BenchmarkMovementFill, movement: Movement | undefined): string {
   const name = movement?.name ?? fill.movementId
@@ -22,9 +34,10 @@ export function relativeTimeAgo(dateStr: string): string {
   return `${years} year${years === 1 ? '' : 's'} ago`
 }
 
-// entries should already be this benchmark's PR history (metric type: time)
+// entries should already be this benchmark's PR history
 export function lastResultLabel(entries: PREntry[]): string | null {
   if (entries.length === 0) return null
   const mostRecent = [...entries].sort((a, b) => b.date.localeCompare(a.date))[0]
-  return `Last time: ${formatSeconds(mostRecent.value)}, ${relativeTimeAgo(mostRecent.date)}`
+  const label = mostRecent.metricType === 'rounds_and_reps' ? 'Last score' : 'Last time'
+  return `${label}: ${formatValue(mostRecent.metricType, mostRecent.value, mostRecent.unit)}, ${relativeTimeAgo(mostRecent.date)}`
 }

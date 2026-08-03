@@ -1,4 +1,4 @@
-export type MetricType = 'weight' | 'time' | 'reps' | 'holdTime' | 'distance'
+export type MetricType = 'weight' | 'time' | 'reps' | 'holdTime' | 'distance' | 'rounds_and_reps'
 
 export const METRIC_LABELS: Record<MetricType, string> = {
   weight: 'Weight',
@@ -6,6 +6,7 @@ export const METRIC_LABELS: Record<MetricType, string> = {
   reps: 'Reps',
   holdTime: 'Hold Time',
   distance: 'Distance',
+  rounds_and_reps: 'Rounds + Reps',
 }
 
 // Lower is better for race-style times; everything else, higher is better.
@@ -15,6 +16,7 @@ export const METRIC_LOWER_IS_BETTER: Record<MetricType, boolean> = {
   reps: false,
   holdTime: false,
   distance: false,
+  rounds_and_reps: false,
 }
 
 export const METRIC_UNITS: Record<MetricType, string[]> = {
@@ -23,6 +25,9 @@ export const METRIC_UNITS: Record<MetricType, string[]> = {
   reps: ['reps'],
   holdTime: ['sec'],
   distance: ['m', 'ft'],
+  // display is custom-formatted (see formatRoundsAndReps) rather than a
+  // plain "value unit" pairing, but PREntry still needs some unit string
+  rounds_and_reps: ['rounds'],
 }
 
 export interface PREntry {

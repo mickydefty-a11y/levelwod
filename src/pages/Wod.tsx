@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom'
 import BackLink from '../components/BackLink'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import WarmupSection from '../components/WarmupSection'
+import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
+import { formatValue } from '../lib/prFormat'
+import { sessionTimerConfigToPath } from '../lib/timerUrl'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
+import { usePRHistory } from '../lib/usePRHistory'
+import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useTodaysWod } from '../lib/useTodaysWod'
-import { tierFillLabel, wodFormatLabel } from '../lib/wodDisplay'
+import { todayDateStr } from '../lib/wodGenerator'
+import { scoreTypeForFormat, tierFillLabel, timerConfigForWod, wodFormatLabel } from '../lib/wodDisplay'
+import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
 import type { WodSlot, WodTier } from '../types/wod'
 
@@ -53,6 +60,11 @@ export default function Wod() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const [tier, setTier] = useState<WodTier>('rx')
   const wod = useTodaysWod()
+  const sessionId = `wod-${todayDateStr()}`
+  const scoreType = scoreTypeForFormat(wod.format)
+  const { draft } = useSessionResultDraft(sessionId)
+  const { addEntry: addPREntry } = usePRHistory()
+  const { addEntry: addWorkoutLogEntry } = useWorkoutLog()
 
   useEffect(() => {
     loadMovements().then(setMovements)
@@ -65,6 +77,38 @@ export default function Wod() {
     sessionMovementIds,
     movementIndex: movementIndex ?? new Map(),
   })
+
+  function handleSessionCommit(result: SessionResult | null, rpe?: number) {
+    if (result) {
+      addPREntry({
+        movementId: sessionId,
+        metricType: result.metricType,
+        value: result.value,
+        unit: result.unit,
+        date: new Date().toISOString().slice(0, 10),
+        programContext: null,
+        notes: null,
+      })
+    }
+    addWorkoutLogEntry({
+      programId: sessionId,
+      programName: 'WOD Generator',
+      dayName: wodFormatLabel(wod),
+      completedAt: new Date().toISOString(),
+      results: result
+        ? [
+            {
+              blockIndex: 0,
+              movementId: sessionId,
+              movementName: wodFormatLabel(wod),
+              prescription: wodFormatLabel(wod),
+              result: formatValue(result.metricType, result.value, result.unit),
+            },
+          ]
+        : [],
+      rpe,
+    })
+  }
 
   return (
     <div>
@@ -82,6 +126,23 @@ export default function Wod() {
       )}
 
       <p className="mt-3 text-sm font-medium text-accent-light">{wodFormatLabel(wod)}</p>
+
+      {draft ? (
+        <div className="mt-3">
+          <WorkoutSessionComplete sessionId={sessionId} scoreType={scoreType} onCommit={handleSessionCommit} />
+        </div>
+      ) : (
+        <Link
+          to={sessionTimerConfigToPath(timerConfigForWod(wod), {
+            sessionId,
+            returnTo: '/wod',
+            label: wodFormatLabel(wod),
+          })}
+          className="mt-3 block w-full rounded-lg bg-accent py-3 text-center text-base font-semibold text-bg"
+        >
+          Start Now
+        </Link>
+      )}
 
       <div className="mt-3 flex gap-1.5">
         {TIERS.map((t) => (
