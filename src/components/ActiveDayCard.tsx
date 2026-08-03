@@ -10,7 +10,23 @@ import { useProgramHistory } from '../lib/useProgramHistory'
 import { useTrainingMax } from '../lib/useTrainingMax'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
-import type { Program, ProgramDay, ProgramWeek } from '../types/program'
+import type { Program, ProgramBlock, ProgramDay, ProgramWeek } from '../types/program'
+
+const ACCESSORY_TYPES = new Set<ProgramBlock['blockType']>(['warmup', 'cooldown'])
+
+// Splits off a leading run of warmup blocks and a trailing run of cooldown
+// blocks, so they can collapse into one compact strip each — the middle
+// (skill/strength/metcon) always stays fully visible since that's the actual
+// work someone opened the day to see. Keeps each block's original index (i)
+// so results/done state, keyed positionally, still lines up correctly.
+function splitAccessoryRuns(blocks: ProgramBlock[]) {
+  const indexed = blocks.map((block, i) => ({ block, i }))
+  let start = 0
+  while (start < indexed.length && ACCESSORY_TYPES.has(indexed[start].block.blockType)) start++
+  let end = indexed.length
+  while (end > start && ACCESSORY_TYPES.has(indexed[end - 1].block.blockType)) end--
+  return { leading: indexed.slice(0, start), middle: indexed.slice(start, end), trailing: indexed.slice(end) }
+}
 
 export default function ActiveDayCard({
   program,
@@ -39,6 +55,8 @@ export default function ActiveDayCard({
   const [results, setResults] = useState<Record<number, string>>({})
   const [done, setDone] = useState<Record<number, boolean>>({})
   const [showRpeGrid, setShowRpeGrid] = useState(false)
+  const [showWarmup, setShowWarmup] = useState(false)
+  const [showCooldown, setShowCooldown] = useState(false)
 
   const trainingMaxData = dataFor(program.id)
   const loadContext = trainingMaxData
@@ -69,6 +87,8 @@ export default function ActiveDayCard({
     setResults({})
     setDone({})
     setShowRpeGrid(false)
+    setShowWarmup(false)
+    setShowCooldown(false)
   }, [program.id, week.weekNumber, day.dayNumber])
 
   function handleComplete(rpe?: number) {
@@ -107,29 +127,60 @@ export default function ActiveDayCard({
     onCompleted?.()
   }
 
+  const { leading, middle, trailing } = splitAccessoryRuns(day.blocks)
+
+  function renderBlock({ block, i }: { block: ProgramBlock; i: number }) {
+    return (
+      <ProgramBlockRow
+        key={i}
+        block={block}
+        index={movementIndex}
+        logValue={results[i] ?? ''}
+        onLogChange={(value) => setResults((prev) => ({ ...prev, [i]: value }))}
+        done={done[i] ?? false}
+        onToggleDone={() => setDone((prev) => ({ ...prev, [i]: !prev[i] }))}
+        programContext={`${program.id} / week ${week.weekNumber} / day ${day.dayNumber}`}
+        loadContext={loadContext}
+        sessionId={
+          block.scoreType ? `metcon:${program.id}:w${week.weekNumber}d${day.dayNumber}:${i}` : null
+        }
+        returnPath={returnPath}
+      />
+    )
+  }
+
+  function accessoryStrip(
+    label: string,
+    items: { block: ProgramBlock; i: number }[],
+    expanded: boolean,
+    onExpand: () => void,
+  ) {
+    if (items.length === 0) return null
+    if (expanded) return <>{items.map(renderBlock)}</>
+    const names = items
+      .map(({ block }) => movementIndex.get(block.movementId)?.name ?? block.movementId)
+      .join(', ')
+    return (
+      <li className="rounded-lg bg-bg-surface px-3 py-2">
+        <button onClick={onExpand} className="flex w-full items-center justify-between gap-2 text-left">
+          <span className="text-sm text-ink-muted">
+            <span className="font-medium text-ink">{label}</span> · {names}
+          </span>
+          <span className="shrink-0 text-xs text-ink-muted">Show</span>
+        </button>
+      </li>
+    )
+  }
+
   return (
     <div>
       <div className="mb-3">
         <CoachsBriefBanner lines={briefLines} />
       </div>
       <ul className="space-y-1.5">
-        {day.blocks.map((block, i) => (
-          <ProgramBlockRow
-            key={i}
-            block={block}
-            index={movementIndex}
-            logValue={results[i] ?? ''}
-            onLogChange={(value) => setResults((prev) => ({ ...prev, [i]: value }))}
-            done={done[i] ?? false}
-            onToggleDone={() => setDone((prev) => ({ ...prev, [i]: !prev[i] }))}
-            programContext={`${program.id} / week ${week.weekNumber} / day ${day.dayNumber}`}
-            loadContext={loadContext}
-            sessionId={
-              block.scoreType ? `metcon:${program.id}:w${week.weekNumber}d${day.dayNumber}:${i}` : null
-            }
-            returnPath={returnPath}
-          />
-        ))}
+        {accessoryStrip('Warm-up', leading, showWarmup, () => setShowWarmup(true))}
+        {middle.map(renderBlock)}
+        {accessoryStrip('Cooldown', trailing, showCooldown, () => setShowCooldown(true))}
       </ul>
       {showRpeGrid ? (
         <div className="mt-2">

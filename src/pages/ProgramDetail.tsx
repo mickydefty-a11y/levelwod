@@ -28,6 +28,17 @@ export default function ProgramDetail() {
 
   const isActive = pointer?.programId === id
   const [openWeek, setOpenWeek] = useState<number | null>(isActive ? pointer!.weekNumber : 1)
+  const [expandedDays, setExpandedDays] = useState<Set<string>>(new Set())
+
+  function toggleDay(weekNumber: number, dayNumber: number) {
+    const key = `${weekNumber}-${dayNumber}`
+    setExpandedDays((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }
 
   useEffect(() => {
     loadPrograms().then(setPrograms)
@@ -139,19 +150,18 @@ export default function ProgramDetail() {
                       pointer!.weekNumber === week.weekNumber &&
                       pointer!.dayNumber === day.dayNumber
                     const isFinalDay = isLastDayOf(program, week.weekNumber, day.dayNumber)
-                    return (
-                      <div key={day.dayNumber}>
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
-                            {day.name}
-                          </h3>
-                          {isCurrentDay && (
+
+                    if (isCurrentDay) {
+                      return (
+                        <div key={day.dayNumber}>
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                              {day.name}
+                            </h3>
                             <span className="rounded-full bg-accent/20 px-2 py-0.5 text-[10px] font-medium text-accent-light">
                               You are here
                             </span>
-                          )}
-                        </div>
-                        {isCurrentDay ? (
+                          </div>
                           <div className="mt-1.5">
                             <ActiveDayCard
                               program={program}
@@ -161,8 +171,33 @@ export default function ProgramDetail() {
                               isFinalDay={isFinalDay}
                             />
                           </div>
-                        ) : (
-                          <ul className="mt-1.5 space-y-1.5">
+                        </div>
+                      )
+                    }
+
+                    // Non-active days default collapsed to a one-line summary —
+                    // otherwise every day in an open week (up to 5 days x 8
+                    // blocks for 5/3/1) dumps its full prescription list inline
+                    // regardless of whether it's relevant to today.
+                    const dayKey = `${week.weekNumber}-${day.dayNumber}`
+                    const isDayExpanded = expandedDays.has(dayKey)
+                    return (
+                      <div key={day.dayNumber} className="rounded-lg bg-bg-raised">
+                        <button
+                          onClick={() => toggleDay(week.weekNumber, day.dayNumber)}
+                          className="flex w-full items-center justify-between px-3 py-2.5 text-left"
+                          aria-expanded={isDayExpanded}
+                        >
+                          <span className="text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                            {day.name}
+                          </span>
+                          <span className="flex shrink-0 items-center gap-2 text-xs text-ink-muted">
+                            {day.blocks.length} exercise{day.blocks.length === 1 ? '' : 's'}
+                            <span>{isDayExpanded ? '▲' : '▼'}</span>
+                          </span>
+                        </button>
+                        {isDayExpanded && (
+                          <ul className="space-y-1.5 px-3 pb-3">
                             {day.blocks.map((block, i) => (
                               <ProgramBlockRow
                                 key={i}
