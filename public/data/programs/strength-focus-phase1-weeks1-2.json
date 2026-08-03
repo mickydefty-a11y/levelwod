@@ -9,11 +9,11 @@
   "weeks": [
     {
       "weekNumber": 1,
-      "focus": "Technique under load \u2014 empty bar across all main lifts",
+      "focus": "Technique under load — empty bar across all main lifts",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Squat Focus",
+          "name": "Day 1 — Squat Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -34,7 +34,7 @@
               "movementId": "overhead-squat",
               "targetStageId": "ohs-pvc",
               "prescription": "3 sets x 5 reps",
-              "notes": "Mobility and positioning drill \u2014 feeds directly into Snatch work."
+              "notes": "Mobility and positioning drill — feeds directly into Snatch work."
             },
             {
               "blockType": "metcon",
@@ -54,7 +54,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Pull Focus",
+          "name": "Day 2 — Pull Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -75,7 +75,7 @@
               "movementId": "clean",
               "targetStageId": "clean-position-drills",
               "prescription": "4 sets x 5 reps with PVC",
-              "notes": "Setup, first pull, and catch position \u2014 no bar weight yet."
+              "notes": "Setup, first pull, and catch position — no bar weight yet."
             },
             {
               "blockType": "metcon",
@@ -101,7 +101,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Press Focus",
+          "name": "Day 3 — Press Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -142,7 +142,7 @@
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 \u2014 Olympic Technique + Conditioning",
+          "name": "Day 4 — Olympic Technique + Conditioning",
           "blocks": [
             {
               "blockType": "warmup",
@@ -156,7 +156,7 @@
               "movementId": "snatch",
               "targetStageId": "snatch-position-drills",
               "prescription": "4 sets x 5 reps with PVC",
-              "notes": "Wide grip, first pull, catch overhead \u2014 no bar weight yet."
+              "notes": "Wide grip, first pull, catch overhead — no bar weight yet."
             },
             {
               "blockType": "skill",
@@ -189,7 +189,7 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Squat Focus",
+          "name": "Day 1 — Squat Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -203,7 +203,7 @@
               "movementId": "back-squat",
               "targetStageId": "back-squat-loaded",
               "prescription": "5 sets x 5 reps, light working weight",
-              "notes": "First loaded sets this program \u2014 conservative weight, all reps should look identical to the empty bar."
+              "notes": "First loaded sets this program — conservative weight, all reps should look identical to the empty bar."
             },
             {
               "blockType": "skill",
@@ -230,7 +230,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Pull Focus",
+          "name": "Day 2 — Pull Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -277,7 +277,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Press Focus",
+          "name": "Day 3 — Press Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -318,7 +318,7 @@
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 \u2014 Olympic Technique + Conditioning",
+          "name": "Day 4 — Olympic Technique + Conditioning",
           "blocks": [
             {
               "blockType": "warmup",

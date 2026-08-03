@@ -8,6 +8,7 @@ import MovementDetail from './pages/MovementDetail'
 import OnboardingFlow from './pages/OnboardingFlow'
 import OneRepMaxCalculatorPage from './pages/OneRepMaxCalculatorPage'
 import Programs from './pages/Programs'
+import ProgramComparisonView from './pages/ProgramComparisonView'
 import ProgramDetail from './pages/ProgramDetail'
 import ProgramQuizPage from './pages/ProgramQuizPage'
 import Progress from './pages/Progress'
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/library/:id" element={<MovementDetail />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/programs/quiz" element={<ProgramQuizPage />} />
+          <Route path="/programs/compare" element={<ProgramComparisonView />} />
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/tools/1rm-calculator" element={<OneRepMaxCalculatorPage />} />

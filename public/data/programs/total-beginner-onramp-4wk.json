@@ -2,39 +2,39 @@
   "id": "total-beginner-onramp-4wk",
   "name": "Total Beginner On-Ramp",
   "level": "Beginner",
-  "category": "Foundations",
+  "category": "General Fitness",
   "durationWeeks": 4,
   "daysPerWeek": 3,
   "description": "A gentle 4-week starting point for people who have never exercised before. Short sessions, no equipment, and a direct handoff into Beginner Foundations Week 1 once complete.",
   "weeks": [
     {
       "weekNumber": 1,
-      "focus": "Just moving \u2014 building the habit",
+      "focus": "Just moving — building the habit",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Getting Started",
+          "name": "Day 1 — Getting Started",
           "blocks": [
             {
               "blockType": "warmup",
               "movementId": "running",
               "targetStageId": null,
               "prescription": "5 minute walk",
-              "notes": "This is the whole warmup \u2014 just get moving."
+              "notes": "This is the whole warmup — just get moving."
             },
             {
               "blockType": "strength",
               "movementId": "back-squat",
               "targetStageId": "box-squat",
               "prescription": "2 sets x 8 reps, sitting to a chair",
-              "notes": "A regular chair is fine \u2014 this is about the pattern, not depth yet."
+              "notes": "A regular chair is fine — this is about the pattern, not depth yet."
             },
             {
               "blockType": "skill",
               "movementId": "plank",
               "targetStageId": null,
               "prescription": "3 sets x 10 sec hold",
-              "notes": "Short holds are fine \u2014 this is everyone's starting point."
+              "notes": "Short holds are fine — this is everyone's starting point."
             },
             {
               "blockType": "cooldown",
@@ -47,7 +47,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Getting Started",
+          "name": "Day 2 — Getting Started",
           "blocks": [
             {
               "blockType": "warmup",
@@ -81,7 +81,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Getting Started",
+          "name": "Day 3 — Getting Started",
           "blocks": [
             {
               "blockType": "warmup",
@@ -121,7 +121,7 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Building Consistency",
+          "name": "Day 1 — Building Consistency",
           "blocks": [
             {
               "blockType": "warmup",
@@ -155,7 +155,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Building Consistency",
+          "name": "Day 2 — Building Consistency",
           "blocks": [
             {
               "blockType": "warmup",
@@ -189,7 +189,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Building Consistency",
+          "name": "Day 3 — Building Consistency",
           "blocks": [
             {
               "blockType": "warmup",
@@ -225,25 +225,25 @@
     },
     {
       "weekNumber": 3,
-      "focus": "First real structure \u2014 slightly longer sessions",
+      "focus": "First real structure — slightly longer sessions",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Full Body",
+          "name": "Day 1 — Full Body",
           "blocks": [
             {
               "blockType": "warmup",
               "movementId": "inchworm",
               "targetStageId": null,
               "prescription": "4 reps, slow",
-              "notes": "First time introducing this warmup movement \u2014 take it slow."
+              "notes": "First time introducing this warmup movement — take it slow."
             },
             {
               "blockType": "strength",
               "movementId": "back-squat",
               "targetStageId": "air-squat-full",
               "prescription": "3 sets x 10 reps",
-              "notes": "First attempt at a full squat without the chair \u2014 go as low as feels comfortable."
+              "notes": "First attempt at a full squat without the chair — go as low as feels comfortable."
             },
             {
               "blockType": "skill",
@@ -257,7 +257,7 @@
               "movementId": "rowing",
               "targetStageId": null,
               "prescription": "3 minutes very easy pace",
-              "notes": "First time on a rowing machine if you have access to one \u2014 otherwise substitute another 3 minute walk."
+              "notes": "First time on a rowing machine if you have access to one — otherwise substitute another 3 minute walk."
             },
             {
               "blockType": "cooldown",
@@ -270,7 +270,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Full Body",
+          "name": "Day 2 — Full Body",
           "blocks": [
             {
               "blockType": "warmup",
@@ -304,7 +304,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Full Body",
+          "name": "Day 3 — Full Body",
           "blocks": [
             {
               "blockType": "warmup",
@@ -332,7 +332,7 @@
               "movementId": "running",
               "targetStageId": null,
               "prescription": "3 rounds: 1 min walk, 30 sec light jog if comfortable",
-              "notes": "The jog is entirely optional this week \u2014 walking throughout is completely fine."
+              "notes": "The jog is entirely optional this week — walking throughout is completely fine."
             },
             {
               "blockType": "cooldown",
@@ -347,11 +347,11 @@
     },
     {
       "weekNumber": 4,
-      "focus": "Final week \u2014 preparing for the handoff to Beginner Foundations",
+      "focus": "Final week — preparing for the handoff to Beginner Foundations",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Full Body",
+          "name": "Day 1 — Full Body",
           "blocks": [
             {
               "blockType": "warmup",
@@ -392,7 +392,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Full Body",
+          "name": "Day 2 — Full Body",
           "blocks": [
             {
               "blockType": "warmup",
@@ -426,14 +426,14 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Full Body + Welcome to Week 1",
+          "name": "Day 3 — Full Body + Welcome to Week 1",
           "blocks": [
             {
               "blockType": "warmup",
               "movementId": "bear-crawl",
               "targetStageId": null,
               "prescription": "2 x 8m",
-              "notes": "First introduction \u2014 this is exactly how Beginner Foundations Day 3 opens."
+              "notes": "First introduction — this is exactly how Beginner Foundations Day 3 opens."
             },
             {
               "blockType": "skill",
@@ -467,7 +467,7 @@
               "movementId": "ankle-mobility",
               "targetStageId": null,
               "prescription": "20 sec/side",
-              "notes": "End-of-program note: you're now ready to move straight into Beginner Foundations, Week 1 \u2014 the movements and stages will feel familiar."
+              "notes": "End-of-program note: you're now ready to move straight into Beginner Foundations, Week 1 — the movements and stages will feel familiar."
             }
           ]
         }

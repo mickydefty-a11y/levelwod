@@ -2,18 +2,18 @@
   "id": "olympic-weightlifting-deep-dive-8wk",
   "name": "Olympic Weightlifting Deep Dive",
   "level": "Advanced",
-  "category": "Weightlifting",
+  "category": "Olympic Weightlifting",
   "durationWeeks": 8,
   "daysPerWeek": 4,
   "description": "An 8-week purely technical program for lifters who already have a working Squat Clean and Squat Snatch from Strength Focus and want to refine technique and build toward heavier, more consistent lifts. Recommend a coach or video form-check throughout, given how technical these lifts are.",
   "weeks": [
     {
       "weekNumber": 1,
-      "focus": "Positional mastery \u2014 slow, precise drilling",
+      "focus": "Positional mastery — slow, precise drilling",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Snatch Positions",
+          "name": "Day 1 — Snatch Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -34,7 +34,7 @@
               "movementId": "snatch",
               "targetStageId": "snatch-position-drills",
               "prescription": "5 sets x 3 reps with PVC, pausing 2 sec at each position",
-              "notes": "Slower than a normal warmup drill \u2014 the whole point this week is precision, not speed."
+              "notes": "Slower than a normal warmup drill — the whole point this week is precision, not speed."
             },
             {
               "blockType": "skill",
@@ -54,7 +54,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Clean Positions",
+          "name": "Day 2 — Clean Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -95,7 +95,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Jerk Positions",
+          "name": "Day 3 — Jerk Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -129,7 +129,7 @@
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 \u2014 Full Lift Review + Conditioning",
+          "name": "Day 4 — Full Lift Review + Conditioning",
           "blocks": [
             {
               "blockType": "warmup",
@@ -157,7 +157,7 @@
               "movementId": "rowing",
               "targetStageId": null,
               "prescription": "10 minutes easy pace",
-              "notes": "Kept light on purpose \u2014 conditioning is secondary this program."
+              "notes": "Kept light on purpose — conditioning is secondary this program."
             },
             {
               "blockType": "cooldown",
@@ -176,7 +176,7 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Snatch Positions",
+          "name": "Day 1 — Snatch Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -217,7 +217,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Clean Positions",
+          "name": "Day 2 — Clean Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -258,7 +258,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Jerk Positions",
+          "name": "Day 3 — Jerk Positions",
           "blocks": [
             {
               "blockType": "warmup",
@@ -272,7 +272,7 @@
               "movementId": "split-jerk",
               "targetStageId": "split-jerk-empty-bar",
               "prescription": "5 sets x 3 reps, empty bar",
-              "notes": "Reintroducing the bar to the split \u2014 light and controlled."
+              "notes": "Reintroducing the bar to the split — light and controlled."
             },
             {
               "blockType": "skill",
@@ -292,7 +292,7 @@
         },
         {
           "dayNumber": 4,
-          "name": "Day 4 \u2014 Full Lift Review + Conditioning",
+          "name": "Day 4 — Full Lift Review + Conditioning",
           "blocks": [
             {
               "blockType": "warmup",

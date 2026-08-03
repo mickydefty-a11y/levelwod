@@ -2,7 +2,10 @@ import type { QuizAnswers, QuizRecommendation, ReadinessCheck } from '../types/p
 
 // Readiness checks for the 5 programs with real prerequisites a quiz answer
 // alone can't verify. "Not yet" redirects to fallbackProgramId instead.
-const READINESS_CHECKS: Record<string, ReadinessCheck> = {
+// Exported so other features (e.g. the Program Comparison View's "assumes
+// prior experience" card tag) can reuse this exact list rather than
+// duplicating which programs have real prerequisites.
+export const READINESS_CHECKS: Record<string, ReadinessCheck> = {
   'gymnastics-skills-track-10wk': {
     prompt: 'This program assumes you already have a working strict pull-up and dip. Does that sound like you?',
     fallbackProgramId: 'beginner-foundations-12wk',

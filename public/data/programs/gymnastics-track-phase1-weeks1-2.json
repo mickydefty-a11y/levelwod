@@ -2,18 +2,18 @@
   "id": "gymnastics-skills-track-10wk",
   "name": "Gymnastics Skills Track",
   "level": "Intermediate",
-  "category": "Skills",
+  "category": "Gymnastics",
   "durationWeeks": 10,
   "daysPerWeek": 3,
   "description": "A 10-week track for people who already have basic strict pull-up and dip strength, aimed at building toward kipping efficiency, toes-to-bar, handstand walking, and a first muscle-up.",
   "weeks": [
     {
       "weekNumber": 1,
-      "focus": "Base strength check \u2014 where do strict numbers stand today",
+      "focus": "Base strength check — where do strict numbers stand today",
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Pulling Focus",
+          "name": "Day 1 — Pulling Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -58,7 +58,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Pushing Focus",
+          "name": "Day 2 — Pushing Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -72,7 +72,7 @@
               "movementId": "dip",
               "targetStageId": "full-dip",
               "prescription": "Test max unbroken reps, then 4 sets x 70% of that number",
-              "notes": "Same baseline approach as the pull-up test \u2014 this sets the pushing volume for the track.",
+              "notes": "Same baseline approach as the pull-up test — this sets the pushing volume for the track.",
               "logPrompt": {
                 "metricType": "reps",
                 "suggestedLabel": "Max Parallel Bar Dip reps"
@@ -109,7 +109,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Core + Balance",
+          "name": "Day 3 — Core + Balance",
           "blocks": [
             {
               "blockType": "warmup",
@@ -156,7 +156,7 @@
       "days": [
         {
           "dayNumber": 1,
-          "name": "Day 1 \u2014 Pulling Focus",
+          "name": "Day 1 — Pulling Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -177,7 +177,7 @@
               "movementId": "toes-to-bar",
               "targetStageId": "hanging-knee-raise",
               "prescription": "3 sets x 10 reps",
-              "notes": "First toes-to-bar feeder work \u2014 this track builds toward the full skill by Phase 2."
+              "notes": "First toes-to-bar feeder work — this track builds toward the full skill by Phase 2."
             },
             {
               "blockType": "strength",
@@ -197,7 +197,7 @@
         },
         {
           "dayNumber": 2,
-          "name": "Day 2 \u2014 Pushing Focus",
+          "name": "Day 2 — Pushing Focus",
           "blocks": [
             {
               "blockType": "warmup",
@@ -218,7 +218,7 @@
               "movementId": "handstand-hold",
               "targetStageId": "wall-hs-back",
               "prescription": "4 sets x 15-20 sec hold",
-              "notes": "First back-to-wall attempts \u2014 a genuine balance step up from facing the wall."
+              "notes": "First back-to-wall attempts — a genuine balance step up from facing the wall."
             },
             {
               "blockType": "metcon",
@@ -244,7 +244,7 @@
         },
         {
           "dayNumber": 3,
-          "name": "Day 3 \u2014 Core + Balance",
+          "name": "Day 3 — Core + Balance",
           "blocks": [
             {
               "blockType": "warmup",

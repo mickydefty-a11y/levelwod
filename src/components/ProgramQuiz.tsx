@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { loadPrograms } from '../lib/loadData'
 import { applyReadinessFallback, recommendProgram } from '../lib/programQuiz'
 import type { Program } from '../types/program'
@@ -104,6 +105,15 @@ export default function ProgramQuiz({
 
   function programName(id: string): string {
     return programs?.find((p) => p.id === id)?.name ?? id
+  }
+
+  function compareLink(programId: string): string {
+    const program = programs?.find((p) => p.id === programId)
+    const params = new URLSearchParams()
+    if (program?.category) params.set('category', program.category)
+    if (program?.level) params.set('level', program.level)
+    const query = params.toString()
+    return `/programs/compare${query ? `?${query}` : ''}`
   }
 
   return (
@@ -233,7 +243,14 @@ export default function ProgramQuiz({
             </div>
           )}
 
-          <button onClick={restart} className="mt-4 text-xs text-ink-muted underline">
+          <Link
+            to={compareLink(recommendation.programId)}
+            className="mt-4 block text-xs text-accent-light underline"
+          >
+            See all options in this category →
+          </Link>
+
+          <button onClick={restart} className="mt-2 text-xs text-ink-muted underline">
             Retake the quiz
           </button>
         </div>

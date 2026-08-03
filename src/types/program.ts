@@ -49,7 +49,15 @@ export interface RequiresInput {
   oneRepMaxInputs: string[]
 }
 
-export type ProgramCategory = 'Foundations' | 'Strength' | 'Weightlifting' | 'Skills' | 'Conditioning'
+export type ProgramCategory =
+  | 'General Fitness'
+  | 'Strength'
+  | 'Gymnastics'
+  | 'Conditioning'
+  | 'Functional/Strongman'
+  | 'Olympic Weightlifting'
+  | 'Hyrox'
+  | 'CrossFit Open'
 
 export interface Program {
   id: string
