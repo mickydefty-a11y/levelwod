@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { loadPrograms } from '../lib/loadData'
-import { applyReadinessFallback, recommendProgram } from '../lib/programQuiz'
+import { applyReadinessFallback, recommendForNoGymAccess, recommendProgram } from '../lib/programQuiz'
 import type { Program } from '../types/program'
 import type {
   QuizAnswers,
@@ -35,7 +35,7 @@ const STRONGER_FOCUS_OPTIONS: { id: StrongerFocus; label: string }[] = [
   { id: 'squat-specific', label: 'A short, focused block to push my squat specifically' },
 ]
 
-type Step = 'goal' | 'experience' | 'stronger-focus' | 'readiness' | 'result'
+type Step = 'gym-access' | 'goal' | 'experience' | 'stronger-focus' | 'readiness' | 'result'
 
 // The Program Recommendation Quiz's full question/result flow, extracted so
 // both the standalone /programs/quiz page and onboarding's quiz step render
@@ -52,7 +52,7 @@ export default function ProgramQuiz({
   onSkip?: () => void
 }) {
   const [programs, setPrograms] = useState<Program[] | null>(null)
-  const [step, setStep] = useState<Step>('goal')
+  const [step, setStep] = useState<Step>('gym-access')
   const [answers, setAnswers] = useState<Partial<QuizAnswers>>({})
   const [recommendation, setRecommendation] = useState<QuizRecommendation | null>(null)
 
@@ -63,7 +63,16 @@ export default function ProgramQuiz({
   function restart() {
     setAnswers({})
     setRecommendation(null)
-    setStep('goal')
+    setStep('gym-access')
+  }
+
+  function chooseGymAccess(hasAccess: boolean) {
+    if (hasAccess) {
+      setStep('goal')
+      return
+    }
+    setRecommendation(recommendForNoGymAccess())
+    setStep('result')
   }
 
   function chooseGoal(goal: QuizGoal) {
@@ -118,6 +127,34 @@ export default function ProgramQuiz({
 
   return (
     <div>
+      {step === 'gym-access' && (
+        <div>
+          <h2 className="text-sm font-semibold text-accent">Do you have gym equipment access?</h2>
+          <p className="mt-1 text-xs text-ink-muted">
+            Barbell, pull-up rig, machines — that kind of setup.
+          </p>
+          <div className="mt-2 flex gap-2">
+            <button
+              onClick={() => chooseGymAccess(true)}
+              className="flex-1 rounded-xl bg-bg-surface p-3 text-sm hover:bg-bg-raised"
+            >
+              Yes
+            </button>
+            <button
+              onClick={() => chooseGymAccess(false)}
+              className="flex-1 rounded-xl bg-bg-surface p-3 text-sm hover:bg-bg-raised"
+            >
+              No — home/minimal equipment
+            </button>
+          </div>
+          {onSkip && (
+            <button onClick={onSkip} className="mt-3 text-xs text-ink-muted underline">
+              Skip for now
+            </button>
+          )}
+        </div>
+      )}
+
       {step === 'goal' && (
         <div>
           <h2 className="text-sm font-semibold text-accent">What's your main goal?</h2>
@@ -133,11 +170,12 @@ export default function ProgramQuiz({
               </li>
             ))}
           </ul>
-          {onSkip && (
-            <button onClick={onSkip} className="mt-3 text-xs text-ink-muted underline">
-              Skip for now
-            </button>
-          )}
+          <button
+            onClick={() => setStep('gym-access')}
+            className="mt-3 text-xs text-ink-muted underline"
+          >
+            ← Back
+          </button>
         </div>
       )}
 

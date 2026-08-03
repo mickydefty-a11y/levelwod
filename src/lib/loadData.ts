@@ -52,6 +52,8 @@ const PROGRAM_FILES = [
   'crossfit-open-elite-weeks1-4.json',
   'crossfit-open-elite-weeks5-8.json',
   'crossfit-open-elite-weeks9-12.json',
+  'home-kettlebell-weeks1-4.json',
+  'home-kettlebell-weeks5-8.json',
 ]
 
 async function fetchJson<T>(path: string): Promise<T> {

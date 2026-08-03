@@ -205,6 +205,23 @@ export function recommendProgram(answers: QuizAnswers): QuizRecommendation {
   }
 }
 
+// Equipment access is orthogonal to every goal/experience branch above —
+// with only one minimal-equipment program in the catalog, "no gym access"
+// has exactly one honest answer regardless of what someone's training for,
+// so this short-circuits the whole goal/experience flow rather than forcing
+// equipment access into the goal taxonomy or asking questions whose answers
+// wouldn't change the outcome.
+export function recommendForNoGymAccess(): QuizRecommendation {
+  return {
+    programId: 'home-kettlebell-8wk',
+    reason:
+      "Based on not having gym equipment access, we'd suggest Home & Kettlebell — built entirely from bodyweight and kettlebell movements, needing only a kettlebell and a doorway pull-up bar.",
+    briefReason: "You told us you don't have gym equipment access.",
+    alternatives: [],
+    readinessCheck: null,
+  }
+}
+
 // Applied after a "Not yet" answer to a readiness check — redirects to the
 // feeder program instead of the original recommendation. fallbackReason
 // already reads fine standalone (it never names the destination program

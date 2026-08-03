@@ -58,6 +58,7 @@ export type ProgramCategory =
   | 'Olympic Weightlifting'
   | 'Hyrox'
   | 'CrossFit Open'
+  | 'Minimal Equipment'
 
 export interface Program {
   id: string

@@ -1,0 +1,195 @@
+{
+  "id": "home-kettlebell-8wk",
+  "name": "Home & Kettlebell",
+  "category": "Minimal Equipment",
+  "level": "Beginner",
+  "durationWeeks": 8,
+  "daysPerWeek": 4,
+  "description": "An 8-week program requiring nothing but a kettlebell, a doorway pull-up bar, and space to move — no gym, no barbell, no machines. Built entirely from bodyweight and kettlebell movements already in the library.",
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "focus": "Bodyweight foundations + kettlebell technique",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Bodyweight Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 15 reps", "notes": null },
+            { "blockType": "skill", "movementId": "push-up", "targetStageId": "incline-push-up", "prescription": "3 sets x 10 reps", "notes": "Use a sturdy chair or low table if no bench is available." },
+            { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-assisted", "prescription": "3 sets x 10 reps", "notes": "A doorway suspension trainer or a sturdy table edge both work well here." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Kettlebell Technique",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "kettlebell-swing", "targetStageId": "russian-swing", "prescription": "4 sets x 10 reps", "notes": "First kettlebell work this program — technique focus on the hip hinge." },
+            { "blockType": "skill", "movementId": "back-squat", "targetStageId": "goblet-squat", "prescription": "3 sets x 10 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bodyweight Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 10m", "notes": null },
+            { "blockType": "skill", "movementId": "single-unders", "targetStageId": null, "prescription": "5 sets x 30 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "15 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Kettlebell + Bodyweight Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "kettlebell-swing", "targetStageId": "russian-swing", "prescription": "4 rounds: 10 KB swings, 10 air squats, 8 push-ups", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 2,
+      "focus": "Building consistency",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Bodyweight Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 18 reps", "notes": null },
+            { "blockType": "skill", "movementId": "push-up", "targetStageId": "knee-push-up", "prescription": "3 sets x 10 reps", "notes": null },
+            { "blockType": "skill", "movementId": "ring-row", "targetStageId": "ring-row-standard", "prescription": "3 sets x 10 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Kettlebell Technique",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "kettlebell-swing", "targetStageId": "russian-swing", "prescription": "4 sets x 12 reps", "notes": null },
+            { "blockType": "skill", "movementId": "back-squat", "targetStageId": "goblet-squat", "prescription": "3 sets x 12 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bodyweight Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 12m", "notes": null },
+            { "blockType": "skill", "movementId": "single-unders", "targetStageId": null, "prescription": "5 sets x 40 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "18 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Kettlebell + Bodyweight Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "kettlebell-swing", "targetStageId": "russian-swing", "prescription": "5 rounds: 10 KB swings, 10 air squats, 8 push-ups", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 3,
+      "focus": "Introducing pull-up progression and Turkish Get-Up",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Bodyweight Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 10 taps/side", "notes": null },
+            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "dead-hang", "prescription": "3 sets x 20-30 sec hold", "notes": "First pull-up bar work this program — a doorway bar is all that's needed." },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "push-up", "targetStageId": "knee-push-up", "prescription": "3 sets x 12 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Kettlebell Skill: Turkish Get-Up",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "turkish-get-up", "targetStageId": "getup-bodyweight", "prescription": "3 sets x 3 reps/side, no weight", "notes": "First Turkish Get-Up work — slow and controlled." },
+            { "blockType": "skill", "movementId": "kettlebell-swing", "targetStageId": "russian-swing-mod", "prescription": "4 sets x 12 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bodyweight Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
+            { "blockType": "skill", "movementId": "double-unders", "targetStageId": "single-double-single-drill", "prescription": "5 sets x 30 sec", "notes": "First double under attempts." },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "20 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Kettlebell + Bodyweight Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "kettlebell-swing", "targetStageId": "russian-swing-mod", "prescription": "5 rounds: 12 KB swings, 12 air squats, 10 push-ups, 20 single unders", "notes": null },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    },
+    {
+      "weekNumber": 4,
+      "focus": "Phase 1 consolidation",
+      "days": [
+        {
+          "dayNumber": 1,
+          "name": "Day 1 — Bodyweight Full Body",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "shoulder-taps", "targetStageId": null, "prescription": "2 sets x 12 taps/side", "notes": null },
+            { "blockType": "skill", "movementId": "pull-up", "targetStageId": "scapular-pull-up", "prescription": "3 sets x 8 reps", "notes": null },
+            { "blockType": "strength", "movementId": "back-squat", "targetStageId": "air-squat-full", "prescription": "3 sets x 20 reps", "notes": null },
+            { "blockType": "skill", "movementId": "push-up", "targetStageId": "full-push-up", "prescription": "3 sets x 5-8 reps", "notes": "First full push-up attempts this program." },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 2,
+          "name": "Day 2 — Kettlebell Skill: Turkish Get-Up",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null },
+            { "blockType": "skill", "movementId": "turkish-get-up", "targetStageId": "getup-light-kb", "prescription": "3 sets x 3 reps/side, light KB", "notes": "First loaded get-ups." },
+            { "blockType": "skill", "movementId": "kettlebell-swing", "targetStageId": "russian-swing-mod", "prescription": "4 sets x 15 reps", "notes": null },
+            { "blockType": "cooldown", "movementId": "ankle-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 3,
+          "name": "Day 3 — Bodyweight Conditioning",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "bear-crawl", "targetStageId": null, "prescription": "2 x 15m", "notes": null },
+            { "blockType": "skill", "movementId": "double-unders", "targetStageId": "du-attempts", "prescription": "6 sets, aiming for 2-5 unbroken", "notes": null },
+            { "blockType": "metcon", "movementId": "running", "targetStageId": null, "prescription": "22 minutes continuous, easy pace", "notes": null },
+            { "blockType": "cooldown", "movementId": "hip-mobility", "targetStageId": null, "prescription": "30 sec/side", "notes": null }
+          ]
+        },
+        {
+          "dayNumber": 4,
+          "name": "Day 4 — Kettlebell + Bodyweight Combo",
+          "blocks": [
+            { "blockType": "warmup", "movementId": "inchworm", "targetStageId": null, "prescription": "8 reps", "notes": null },
+            { "blockType": "metcon", "movementId": "kettlebell-swing", "targetStageId": "russian-swing-mod", "prescription": "5 rounds: 15 KB swings, 15 air squats, 10 push-ups, 30 single unders", "notes": "End of Phase 1 — Phase 2 introduces kettlebell cleans and pistol squat work." },
+            { "blockType": "cooldown", "movementId": "thoracic-mobility", "targetStageId": null, "prescription": "10 reps/side", "notes": null }
+          ]
+        }
+      ]
+    }
+  ]
+}
