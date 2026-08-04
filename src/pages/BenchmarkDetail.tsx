@@ -3,13 +3,13 @@ import { Link, useParams } from 'react-router-dom'
 import BackLink from '../components/BackLink'
 import BenchmarkResults from '../components/BenchmarkResults'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
+import InlineSessionTimer from '../components/InlineSessionTimer'
 import WarmupSection from '../components/WarmupSection'
 import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
 import { movementFillLabel, timerConfigForBenchmark } from '../lib/benchmarkDisplay'
 import { getBenchmarkWod } from '../lib/benchmarkWods'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { formatValue } from '../lib/prFormat'
-import { sessionTimerConfigToPath } from '../lib/timerUrl'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
 import { usePRHistory } from '../lib/usePRHistory'
@@ -17,6 +17,7 @@ import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { BenchmarkMovementFill } from '../types/benchmark'
 import type { Movement } from '../types/movement'
+import type { TimerConfig } from '../types/timer'
 import type { WodTier } from '../types/wod'
 
 const TIERS: { id: WodTier; label: string }[] = [
@@ -64,6 +65,7 @@ export default function BenchmarkDetail() {
   const { id } = useParams<{ id: string }>()
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const [tier, setTier] = useState<WodTier>('rx')
+  const [sessionConfig, setSessionConfig] = useState<TimerConfig | null>(null)
 
   useEffect(() => {
     loadMovements().then(setMovements)
@@ -97,6 +99,7 @@ export default function BenchmarkDetail() {
   const tierData = benchmark.tiers[tier]
 
   function handleSessionCommit(result: SessionResult | null, rpe?: number) {
+    setSessionConfig(null)
     if (result) {
       addPREntry({
         movementId: benchmark!.id,
@@ -160,17 +163,17 @@ export default function BenchmarkDetail() {
             onCommit={handleSessionCommit}
           />
         </div>
+      ) : sessionConfig ? (
+        <div className="mt-4">
+          <InlineSessionTimer config={sessionConfig} sessionId={benchmark.id} label={benchmark.name} />
+        </div>
       ) : (
-        <Link
-          to={sessionTimerConfigToPath(timerConfigForBenchmark(benchmark), {
-            sessionId: benchmark.id,
-            returnTo: `/benchmarks/${benchmark.id}`,
-            label: benchmark.name,
-          })}
+        <button
+          onClick={() => setSessionConfig(timerConfigForBenchmark(benchmark))}
           className="mt-4 block w-full rounded-lg bg-accent py-3 text-center text-base font-semibold text-bg"
         >
           Start Now
-        </Link>
+        </button>
       )}
 
       {movementIndex && (

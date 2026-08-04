@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BackLink from '../components/BackLink'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
+import InlineSessionTimer from '../components/InlineSessionTimer'
 import WarmupSection from '../components/WarmupSection'
 import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
 import { formatValue } from '../lib/prFormat'
-import { sessionTimerConfigToPath } from '../lib/timerUrl'
 import { useCoachsBrief } from '../lib/useCoachsBrief'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
 import { usePRHistory } from '../lib/usePRHistory'
@@ -16,6 +16,7 @@ import { todayDateStr } from '../lib/wodGenerator'
 import { scoreTypeForFormat, tierFillLabel, timerConfigForWod, wodFormatLabel } from '../lib/wodDisplay'
 import { useWorkoutLog } from '../lib/useWorkoutLog'
 import type { Movement } from '../types/movement'
+import type { TimerConfig } from '../types/timer'
 import type { WodSlot, WodTier } from '../types/wod'
 
 const TIERS: { id: WodTier; label: string }[] = [
@@ -59,6 +60,7 @@ function WodSlotRow({ slot, tier, movement }: { slot: WodSlot; tier: WodTier; mo
 export default function Wod() {
   const [movements, setMovements] = useState<Movement[] | null>(null)
   const [tier, setTier] = useState<WodTier>('rx')
+  const [sessionConfig, setSessionConfig] = useState<TimerConfig | null>(null)
   const wod = useTodaysWod()
   const sessionId = `wod-${todayDateStr()}`
   const scoreType = scoreTypeForFormat(wod.format)
@@ -79,6 +81,7 @@ export default function Wod() {
   })
 
   function handleSessionCommit(result: SessionResult | null, rpe?: number) {
+    setSessionConfig(null)
     if (result) {
       addPREntry({
         movementId: sessionId,
@@ -131,17 +134,17 @@ export default function Wod() {
         <div className="mt-3">
           <WorkoutSessionComplete sessionId={sessionId} scoreType={scoreType} onCommit={handleSessionCommit} />
         </div>
+      ) : sessionConfig ? (
+        <div className="mt-3">
+          <InlineSessionTimer config={sessionConfig} sessionId={sessionId} label={wodFormatLabel(wod)} />
+        </div>
       ) : (
-        <Link
-          to={sessionTimerConfigToPath(timerConfigForWod(wod), {
-            sessionId,
-            returnTo: '/wod',
-            label: wodFormatLabel(wod),
-          })}
+        <button
+          onClick={() => setSessionConfig(timerConfigForWod(wod))}
           className="mt-3 block w-full rounded-lg bg-accent py-3 text-center text-base font-semibold text-bg"
         >
           Start Now
-        </Link>
+        </button>
       )}
 
       <div className="mt-3 flex gap-1.5">

@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CantDoThis from './CantDoThis'
+import InlineSessionTimer from './InlineSessionTimer'
 import MetconResultEntry from './MetconResultEntry'
 import PRLogForm from './PRLogForm'
 import { findStage } from '../lib/loadData'
 import { calculateLoadWeight, type LoadContext } from '../lib/trainingMax'
-import { sessionTimerConfigToPath, timerConfigToPath } from '../lib/timerUrl'
+import { timerConfigToPath } from '../lib/timerUrl'
 import { useMovementNoteToggle } from '../lib/useMovementNoteToggle'
 import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useSubstitutions } from '../lib/useSubstitutions'
@@ -31,7 +32,6 @@ export default function ProgramBlockRow({
   programContext,
   loadContext,
   sessionId,
-  returnPath,
 }: {
   block: ProgramBlock
   index: Map<string, Movement>
@@ -48,14 +48,14 @@ export default function ProgramBlockRow({
   // for every other program, so this has no effect on them
   loadContext?: LoadContext | null
   // present only for a metcon block with a comparable score (block.scoreType
-  // set) alongside onLogChange — a stable per-occurrence id for the session
-  // result draft, and the path to return to after the Timer's Mark Complete
+  // set) alongside onLogChange — a stable per-occurrence id for the inline
+  // session's result draft
   sessionId?: string | null
-  returnPath?: string | null
 }) {
   const movement = index.get(block.movementId)
   const stage = findStage(movement, block.targetStageId)
   const [showPRForm, setShowPRForm] = useState(false)
+  const [showTimer, setShowTimer] = useState(false)
   const { activeSubstituteFor } = useSubstitutions()
   const substituteId = movement ? activeSubstituteFor(movement.id) : null
   const displayMovement = (substituteId && index.get(substituteId)) || movement
@@ -75,8 +75,7 @@ export default function ProgramBlockRow({
     block.scoreType !== 'none' &&
     block.timerConfig &&
     onLogChange &&
-    sessionId &&
-    returnPath
+    sessionId
   )
   const { draft, clearDraft } = useSessionResultDraft(isScorable ? sessionId! : '')
 
@@ -133,17 +132,13 @@ export default function ProgramBlockRow({
       {movement && <CantDoThis movement={movement} movementIndex={index} />}
 
       <div className="mt-2 flex flex-wrap gap-1.5">
-        {isScorable && !draft ? (
-          <Link
-            to={sessionTimerConfigToPath(block.timerConfig!, {
-              sessionId: sessionId!,
-              returnTo: returnPath!,
-              label: displayMovement?.name,
-            })}
+        {isScorable && !draft && !showTimer ? (
+          <button
+            onClick={() => setShowTimer(true)}
             className="inline-flex items-center gap-1 rounded-full bg-accent px-3 py-1 text-xs font-medium text-bg"
           >
             ▶ Start Now
-          </Link>
+          </button>
         ) : (
           block.timerConfig &&
           !isScorable && (
@@ -165,6 +160,16 @@ export default function ProgramBlockRow({
         )}
       </div>
 
+      {isScorable && showTimer && !draft && (
+        <div className="mt-2">
+          <InlineSessionTimer
+            config={block.timerConfig!}
+            sessionId={sessionId!}
+            label={displayMovement?.name}
+          />
+        </div>
+      )}
+
       {isScorable && draft && (
         <MetconResultEntry
           scoreType={block.scoreType as 'time' | 'rounds_and_reps'}
@@ -173,6 +178,7 @@ export default function ProgramBlockRow({
             onLogChange!(text)
             if (!done) onToggleDone?.()
             clearDraft()
+            setShowTimer(false)
           }}
         />
       )}
