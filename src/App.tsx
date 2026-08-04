@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import BenchmarkDetail from './pages/BenchmarkDetail'
 import BenchmarkLibrary from './pages/BenchmarkLibrary'
@@ -54,6 +55,7 @@ export default function App() {
         </Routes>
       </main>
       {!hideNav && <BottomNav />}
+      <Analytics />
     </div>
   )
 }
