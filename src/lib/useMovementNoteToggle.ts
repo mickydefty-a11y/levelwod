@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useMovementNotes } from './useMovementNotes'
 
-// Backs the small, unobtrusive "📝" icon shown next to a movement name
+// Backs the small, unobtrusive note icon shown next to a movement name
 // during a workout (structured program day, WOD Generator, Benchmark WOD)
 // when that movement has a saved personal note. Collapsed by default — tap
 // to reveal, tap again to hide; never auto-expands.

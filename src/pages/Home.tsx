@@ -109,7 +109,7 @@ export default function Home() {
           </div>
           <p className="mt-0.5 text-xs text-ink-muted">
             Week {week.weekNumber} · {day.name}
-            {isFinalDay && ' · Final day 🏁'}
+            {isFinalDay && ' · Final day'}
           </p>
           <p className="mt-0.5 text-xs text-ink-muted">
             This week: {thisWeekCount} of {program.daysPerWeek}
@@ -125,7 +125,7 @@ export default function Home() {
               onCompleted={() => {
                 setShowBreathingOffer(true)
                 if (isFinalDay) {
-                  setShareOffer({ template: 'journey', heading: 'Program complete! 🎉' })
+                  setShareOffer({ template: 'journey', heading: 'Program complete!' })
                 } else {
                   // Read a fresh snapshot rather than the `log` closed over by
                   // this render — addEntry() has already written the new
@@ -133,7 +133,7 @@ export default function Home() {
                   // hasn't caught up yet.
                   const freshStreak = getCurrentStreak(workoutLogStore.getSnapshot())
                   if (freshStreak === 3 || freshStreak % 7 === 0) {
-                    setShareOffer({ template: 'streak', heading: `🔥 ${freshStreak}-day streak!` })
+                    setShareOffer({ template: 'streak', heading: `${freshStreak}-day streak!` })
                   }
                 }
               }}

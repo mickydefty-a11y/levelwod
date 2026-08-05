@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import VoiceModeToggle from '../components/VoiceModeToggle'
+import { CheckCircleIcon } from '../components/icons'
 import { paramsToTimerConfig } from '../lib/timerUrl'
 import { useSessionResultDraft } from '../lib/useSessionResultDraft'
 import { useTimer } from '../lib/useTimer'
@@ -309,7 +310,9 @@ export default function TimerPage() {
 
           {timer.status === 'done' && (
             <>
-              <p className="text-sm font-semibold uppercase tracking-wide text-accent">Done 🎉</p>
+              <p className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-accent">
+                <CheckCircleIcon className="h-4 w-4" strokeWidth={2} /> Done
+              </p>
               <p className="mt-4 text-5xl font-bold tabular-nums">
                 {config.type === 'stopwatch' ? formatTime(timer.secondsElapsed) : 'Time!'}
               </p>

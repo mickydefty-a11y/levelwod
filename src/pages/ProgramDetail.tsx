@@ -4,6 +4,7 @@ import ActiveDayCard from '../components/ActiveDayCard'
 import BackLink from '../components/BackLink'
 import OneRepMaxForm from '../components/OneRepMaxForm'
 import ProgramBlockRow from '../components/ProgramBlockRow'
+import { CheckCircleIcon, WarningIcon } from '../components/icons'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { isLastDayOf } from '../lib/programProgress'
 import { resolveLoadContext } from '../lib/trainingMax'
@@ -81,15 +82,18 @@ export default function ProgramDetail() {
         {program.level} · {program.durationWeeks} weeks · {program.daysPerWeek} days/week
       </p>
       {isCompleted(program.id) && (
-        <p className="mt-1 text-xs text-accent-light">
-          🎉 Completed {new Date(completedAt(program.id)!).toLocaleDateString()}
+        <p className="mt-1 flex items-center gap-1 text-xs text-accent-light">
+          <CheckCircleIcon className="h-3.5 w-3.5" strokeWidth={2} /> Completed{' '}
+          {new Date(completedAt(program.id)!).toLocaleDateString()}
         </p>
       )}
       <p className="mt-3 text-sm leading-relaxed">{program.description}</p>
 
       {program.safetyNote && (
         <div className="mt-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2.5">
-          <p className="text-xs font-semibold text-amber-400">⚠ Before you start</p>
+          <p className="flex items-center gap-1.5 text-xs font-semibold text-amber-400">
+            <WarningIcon className="h-3.5 w-3.5" strokeWidth={2} /> Before you start
+          </p>
           <p className="mt-1 text-xs leading-relaxed text-amber-100/90">{program.safetyNote}</p>
         </div>
       )}

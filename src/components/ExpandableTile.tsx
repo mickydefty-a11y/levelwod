@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import type { ComponentType, SVGProps } from 'react'
 
 // Reusable summary-first tile: icon + title + optional one-line subtitle,
 // tapping through to a dedicated screen rather than expanding inline —
@@ -7,13 +8,13 @@ import { Link } from 'react-router-dom'
 // Progress dashboard). Keeping every collapsed section looking and
 // behaving the same matters more than any one of them being novel.
 export default function ExpandableTile({
-  icon,
+  icon: Icon,
   title,
   subtitle,
   to,
   variant = 'row',
 }: {
-  icon: string
+  icon: ComponentType<SVGProps<SVGSVGElement>>
   title: string
   subtitle?: string
   to: string
@@ -28,9 +29,7 @@ export default function ExpandableTile({
         to={to}
         className="flex flex-col items-center justify-center gap-1.5 rounded-xl bg-bg-surface p-4 text-center hover:bg-bg-raised"
       >
-        <span className="text-2xl" aria-hidden="true">
-          {icon}
-        </span>
+        <Icon className="h-7 w-7 text-accent" strokeWidth={1.75} aria-hidden="true" />
         <span className="text-xs font-medium">{title}</span>
       </Link>
     )
@@ -38,9 +37,7 @@ export default function ExpandableTile({
 
   return (
     <Link to={to} className="flex items-center gap-3 rounded-xl bg-bg-surface p-4 hover:bg-bg-raised">
-      <span className="text-2xl" aria-hidden="true">
-        {icon}
-      </span>
+      <Icon className="h-6 w-6 shrink-0 text-accent" strokeWidth={1.75} aria-hidden="true" />
       <span className="min-w-0 flex-1">
         <span className="block text-sm font-medium">{title}</span>
         {subtitle && <span className="mt-0.5 block text-xs text-ink-muted">{subtitle}</span>}

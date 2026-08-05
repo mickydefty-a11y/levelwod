@@ -4,6 +4,7 @@ import BackLink from '../components/BackLink'
 import BenchmarkResults from '../components/BenchmarkResults'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import InlineSessionTimer from '../components/InlineSessionTimer'
+import { NoteIcon } from '../components/icons'
 import WarmupSection from '../components/WarmupSection'
 import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
 import { movementFillLabel, timerConfigForBenchmark } from '../lib/benchmarkDisplay'
@@ -45,9 +46,9 @@ function BenchmarkMovementRow({
           <button
             onClick={toggleNote}
             aria-label={showNote ? 'Hide note' : 'Show note'}
-            className="shrink-0 text-xs text-ink-muted"
+            className="shrink-0 text-ink-muted"
           >
-            📝
+            <NoteIcon className="h-3.5 w-3.5" strokeWidth={2} />
           </button>
         )}
       </div>

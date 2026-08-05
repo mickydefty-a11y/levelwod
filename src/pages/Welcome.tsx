@@ -1,26 +1,33 @@
 import { useNavigate } from 'react-router-dom'
+import { HomeIcon, LibraryIcon, ProgramsIcon, TrendingUpIcon } from '../components/icons'
 import { useOnboarding } from '../lib/useOnboarding'
+import type { ComponentType, SVGProps } from 'react'
 
 interface Section {
+  icon: ComponentType<SVGProps<SVGSVGElement>>
   title: string
   body: string
 }
 
 const sections: Section[] = [
   {
-    title: '🏠 Home',
+    icon: HomeIcon,
+    title: 'Home',
     body: "Shows today's session once you've started a program, plus quick stats. This is where you'll spend most of your time day-to-day.",
   },
   {
-    title: '📚 Library',
+    icon: LibraryIcon,
+    title: 'Library',
     body: "Browse every movement. Tap one to see its details, then tap a stage (or level) to mark that as where you're currently at — it highlights so you can track your progress over time. This is about long-term skill level, not a single workout.",
   },
   {
-    title: '📅 Programs',
+    icon: ProgramsIcon,
+    title: 'Programs',
     body: "Pick a structured multi-week plan and tap \"Start this program.\" It'll show you exactly what to do each day, in order.",
   },
   {
-    title: '📈 Progress',
+    icon: TrendingUpIcon,
+    title: 'Progress',
     body: 'See every movement level you\'ve saved, plus a history of every workout you\'ve logged — what you did and when.',
   },
 ]
@@ -44,7 +51,10 @@ export default function Welcome() {
       <div className="mt-4 space-y-3">
         {sections.map((s) => (
           <div key={s.title} className="rounded-xl bg-bg-surface p-4">
-            <h2 className="font-medium">{s.title}</h2>
+            <h2 className="flex items-center gap-2 font-medium">
+              <s.icon className="h-5 w-5 text-accent" strokeWidth={2} />
+              {s.title}
+            </h2>
             <p className="mt-1 text-sm text-ink-muted">{s.body}</p>
           </div>
         ))}

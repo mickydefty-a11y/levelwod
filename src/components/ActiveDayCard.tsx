@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CoachsBriefBanner from './CoachsBriefBanner'
+import { CheckCircleIcon } from './icons'
 import ProgramBlockRow from './ProgramBlockRow'
 import RpeGrid from './RpeGrid'
 import { resolveLoadContext } from '../lib/trainingMax'
@@ -185,9 +186,10 @@ export default function ActiveDayCard({
       ) : (
         <button
           onClick={() => setShowRpeGrid(true)}
-          className="mt-2 w-full rounded-lg bg-accent py-2 text-sm font-medium text-bg"
+          className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-lg bg-accent py-2 text-sm font-medium text-bg"
         >
-          {isFinalDay ? 'Finish program 🎉' : 'Mark day complete'}
+          {isFinalDay && <CheckCircleIcon className="h-4 w-4" strokeWidth={2} />}
+          {isFinalDay ? 'Finish program' : 'Mark day complete'}
         </button>
       )}
     </div>

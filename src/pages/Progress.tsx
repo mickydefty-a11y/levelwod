@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
 import ExpandableTile from '../components/ExpandableTile'
+import { CalculatorIcon, FlameIcon, MedalIcon, ShareIcon, TrendingUpIcon } from '../components/icons'
 import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
 import { loadMovements } from '../lib/loadData'
@@ -100,11 +101,11 @@ export default function Progress() {
       <div className="mt-6">
         <h2 className="text-sm font-semibold text-accent">Tools &amp; Insights</h2>
         <div className="mt-1.5 grid grid-cols-3 gap-2">
-          <ExpandableTile variant="grid" icon="🔥" title="This Week" to="/progress/this-week" />
-          <ExpandableTile variant="grid" icon="📈" title="PR History" to="/progress/pr-history" />
-          <ExpandableTile variant="grid" icon="🏅" title="Standards" to="/progress/standards" />
-          <ExpandableTile variant="grid" icon="🧮" title="1RM Calculator" to="/tools/1rm-calculator" />
-          <ExpandableTile variant="grid" icon="📤" title="Share Progress" to="/progress/share" />
+          <ExpandableTile variant="grid" icon={FlameIcon} title="This Week" to="/progress/this-week" />
+          <ExpandableTile variant="grid" icon={TrendingUpIcon} title="PR History" to="/progress/pr-history" />
+          <ExpandableTile variant="grid" icon={MedalIcon} title="Standards" to="/progress/standards" />
+          <ExpandableTile variant="grid" icon={CalculatorIcon} title="1RM Calculator" to="/tools/1rm-calculator" />
+          <ExpandableTile variant="grid" icon={ShareIcon} title="Share Progress" to="/progress/share" />
         </div>
       </div>
 

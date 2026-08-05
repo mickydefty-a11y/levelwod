@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import OneRepMaxForm from '../components/OneRepMaxForm'
 import ProgramQuiz from '../components/ProgramQuiz'
+import { HomeIcon, LibraryIcon, LightningIcon } from '../components/icons'
 import { buildMovementIndex, loadMovements, loadPrograms } from '../lib/loadData'
 import { useActiveProgram } from '../lib/useActiveProgram'
 import { useBodyweightProfile } from '../lib/useBodyweightProfile'
 import type { Movement } from '../types/movement'
 import type { Program } from '../types/program'
 import type { Gender } from '../types/strengthStandards'
+import type { ComponentType, SVGProps } from 'react'
 
 type Step = 'welcome' | 'profile' | 'quiz' | 'onerepmax' | 'tour'
 
@@ -16,19 +18,19 @@ interface PendingProgram {
   reason: string
 }
 
-const TOUR_CARDS = [
+const TOUR_CARDS: { icon: ComponentType<SVGProps<SVGSVGElement>>; title: string; body: string }[] = [
   {
-    icon: '🏠',
+    icon: HomeIcon,
     title: 'Home',
     body: "This is your Home screen — today's session and your streak live here.",
   },
   {
-    icon: '📚',
+    icon: LibraryIcon,
     title: 'Movement Library',
     body: 'Browse the full Movement Library anytime, filtered by category and level.',
   },
   {
-    icon: '⚡',
+    icon: LightningIcon,
     title: "Today's WOD",
     body: "Try today's generated WOD when you want something extra.",
   },
@@ -93,7 +95,7 @@ export default function OnboardingFlow() {
     <div>
       {step === 'welcome' && (
         <div className="flex min-h-[70vh] flex-col items-center justify-center text-center">
-          <div className="text-6xl">🏋️</div>
+          <img src="/icons/icon-192.png" alt="" className="h-20 w-20 rounded-2xl" />
           <h1 className="mt-4 text-2xl font-semibold">LevelWOD</h1>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-muted">
             Your coach in your pocket — movement progressions, structured programs, and everything
@@ -250,7 +252,10 @@ export default function OnboardingFlow() {
       {step === 'tour' && (
         <div className="flex min-h-[70vh] flex-col">
           <div className="flex flex-1 flex-col items-center justify-center text-center">
-            <div className="text-5xl">{TOUR_CARDS[tourIndex].icon}</div>
+            {(() => {
+              const TourIcon = TOUR_CARDS[tourIndex].icon
+              return <TourIcon className="h-14 w-14 text-accent" strokeWidth={1.75} />
+            })()}
             <h2 className="mt-4 text-lg font-semibold">{TOUR_CARDS[tourIndex].title}</h2>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-ink-muted">
               {TOUR_CARDS[tourIndex].body}

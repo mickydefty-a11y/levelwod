@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CantDoThis from './CantDoThis'
+import { ClockIcon, NoteIcon, PlayIcon, TrophyIcon } from './icons'
 import InlineSessionTimer from './InlineSessionTimer'
 import MetconResultEntry from './MetconResultEntry'
 import PRLogForm from './PRLogForm'
@@ -101,9 +102,9 @@ export default function ProgramBlockRow({
             <button
               onClick={toggleNote}
               aria-label={showNote ? 'Hide note' : 'Show note'}
-              className="shrink-0 text-xs text-ink-muted"
+              className="shrink-0 text-ink-muted"
             >
-              📝
+              <NoteIcon className="h-3.5 w-3.5" strokeWidth={2} />
             </button>
           )}
         </div>
@@ -137,7 +138,7 @@ export default function ProgramBlockRow({
             onClick={() => setShowTimer(true)}
             className="inline-flex items-center gap-1 rounded-full bg-accent px-3 py-1 text-xs font-medium text-bg"
           >
-            ▶ Start Now
+            <PlayIcon className="h-3 w-3" /> Start Now
           </button>
         ) : (
           block.timerConfig &&
@@ -146,7 +147,7 @@ export default function ProgramBlockRow({
               to={timerConfigToPath(block.timerConfig, displayMovement?.name)}
               className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
             >
-              ⏱ Start Timer
+              <ClockIcon className="h-3.5 w-3.5" strokeWidth={2} /> Start Timer
             </Link>
           )
         )}
@@ -155,7 +156,7 @@ export default function ProgramBlockRow({
             onClick={() => setShowPRForm(true)}
             className="inline-flex items-center gap-1 rounded-full bg-accent/20 px-3 py-1 text-xs font-medium text-accent-light"
           >
-            🏆 Log {block.logPrompt.suggestedLabel}
+            <TrophyIcon className="h-3.5 w-3.5" strokeWidth={2} /> Log {block.logPrompt.suggestedLabel}
           </button>
         )}
       </div>

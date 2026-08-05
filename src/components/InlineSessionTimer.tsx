@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { CheckCircleIcon } from './icons'
 import VoiceModeToggle from './VoiceModeToggle'
 import { formatSeconds } from '../lib/prFormat'
 import { useSessionResultDraft } from '../lib/useSessionResultDraft'
@@ -119,8 +120,8 @@ export default function InlineSessionTimer({
 
       {timer.status === 'done' && (
         <>
-          <p className="mt-3 text-center text-sm font-semibold uppercase tracking-wide text-accent">
-            Done 🎉
+          <p className="mt-3 flex items-center justify-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-accent">
+            <CheckCircleIcon className="h-4 w-4" strokeWidth={2} /> Done
           </p>
           <p className="mt-2 text-center text-4xl font-bold tabular-nums">
             {config.type === 'stopwatch' ? formatSeconds(timer.secondsElapsed) : 'Time!'}

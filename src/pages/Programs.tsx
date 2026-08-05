@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ExpandableTile from '../components/ExpandableTile'
+import { CheckCircleIcon, TrophyIcon } from '../components/icons'
 import { BENCHMARK_WODS } from '../lib/benchmarkWods'
 import { loadPrograms } from '../lib/loadData'
 import { useProgramHistory } from '../lib/useProgramHistory'
@@ -122,7 +123,7 @@ export default function Programs() {
                 <div className="flex items-baseline justify-between gap-2">
                   <h2 className="font-medium">{program.name}</h2>
                   <span className="flex shrink-0 items-center gap-1.5">
-                    {isCompleted(program.id) && <span className="text-xs">✅</span>}
+                    {isCompleted(program.id) && <CheckCircleIcon className="h-4 w-4 text-accent" strokeWidth={2} />}
                     <span className="text-xs text-accent-light">{program.level}</span>
                   </span>
                 </div>
@@ -145,7 +146,7 @@ export default function Programs() {
         <h2 className="text-lg font-semibold">Benchmark WODs</h2>
         <div className="mt-2">
           <ExpandableTile
-            icon="🏆"
+            icon={TrophyIcon}
             title="Benchmark WODs"
             subtitle={`${BENCHMARK_WODS.length} classics — Girl & Hero WODs`}
             to="/benchmarks"

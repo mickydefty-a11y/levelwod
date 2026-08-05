@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import BackLink from '../components/BackLink'
 import CoachsBriefBanner from '../components/CoachsBriefBanner'
 import InlineSessionTimer from '../components/InlineSessionTimer'
+import { NoteIcon } from '../components/icons'
 import WarmupSection from '../components/WarmupSection'
 import WorkoutSessionComplete, { type SessionResult } from '../components/WorkoutSessionComplete'
 import { buildMovementIndex, loadMovements } from '../lib/loadData'
@@ -40,9 +41,9 @@ function WodSlotRow({ slot, tier, movement }: { slot: WodSlot; tier: WodTier; mo
           <button
             onClick={toggleNote}
             aria-label={showNote ? 'Hide note' : 'Show note'}
-            className="shrink-0 text-xs text-ink-muted"
+            className="shrink-0 text-ink-muted"
           >
-            📝
+            <NoteIcon className="h-3.5 w-3.5" strokeWidth={2} />
           </button>
         )}
       </div>
