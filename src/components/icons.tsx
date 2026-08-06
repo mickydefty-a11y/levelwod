@@ -177,6 +177,19 @@ export function LightningIcon(props: IconProps) {
   )
 }
 
+export function BookIcon(props: IconProps) {
+  return (
+    <svg {...strokeProps} {...props}>
+      <path
+        d="M12 6.5c-1.5-1-3.5-1.5-6-1.5v13c2.5 0 4.5.5 6 1.5 1.5-1 3.5-1.5 6-1.5V5c-2.5 0-4.5.5-6 1.5Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M12 6.5V19" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function CheckCircleIcon(props: IconProps) {
   return (
     <svg {...strokeProps} {...props}>

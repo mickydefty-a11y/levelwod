@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
 import ExpandableTile from '../components/ExpandableTile'
-import { CalculatorIcon, FlameIcon, MedalIcon, ShareIcon, TrendingUpIcon } from '../components/icons'
+import { BookIcon, CalculatorIcon, FlameIcon, MedalIcon, ShareIcon, TrendingUpIcon } from '../components/icons'
 import VoiceSettingsPanel from '../components/VoiceSettingsPanel'
 import { downloadBackup, resetAllData, restoreBackup } from '../lib/backup'
 import { loadMovements } from '../lib/loadData'
@@ -106,6 +106,7 @@ export default function Progress() {
           <ExpandableTile variant="grid" icon={MedalIcon} title="Standards" to="/progress/standards" />
           <ExpandableTile variant="grid" icon={CalculatorIcon} title="1RM Calculator" to="/tools/1rm-calculator" />
           <ExpandableTile variant="grid" icon={ShareIcon} title="Share Progress" to="/progress/share" />
+          <ExpandableTile variant="grid" icon={BookIcon} title="Glossary" to="/progress/glossary" />
         </div>
       </div>
 

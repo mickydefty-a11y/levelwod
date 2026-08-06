@@ -4,6 +4,7 @@ import BenchmarkDetail from './pages/BenchmarkDetail'
 import BenchmarkLibrary from './pages/BenchmarkLibrary'
 import BottomNav from './components/BottomNav'
 import Breathing from './pages/Breathing'
+import GlossaryHub from './pages/GlossaryHub'
 import Home from './pages/Home'
 import Library from './pages/Library'
 import MovementDetail from './pages/MovementDetail'
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/programs/:id" element={<ProgramDetail />} />
           <Route path="/progress" element={<Progress />} />
           <Route path="/progress/share" element={<ShareCard />} />
+          <Route path="/progress/glossary" element={<GlossaryHub />} />
           <Route path="/progress/standards" element={<StandardsHub />} />
           <Route path="/progress/pr-history" element={<PRHistoryOverview />} />
           <Route path="/progress/this-week" element={<ThisWeekDetail />} />
